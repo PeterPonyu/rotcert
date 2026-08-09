@@ -1,0 +1,99 @@
+% Standalone pgfplots source for the coverage-matched efficiency figure.
+% Data: fig2_series_{naivecoord,hull}.csv, produced verbatim (no recomputed
+% statistics) by extract_data.py from coverage_matched_2026-07-13/results.json
+% and coverage_matched_configB_ext_2026-07-15/results.json. Rebuild via `make`.
+%
+% Single-column span target (IEEE TGRS column width ~3.5in): sized so
+% \includegraphics at \columnwidth in TGRS and at a matching absolute width in
+% the canonical single-column article keeps tick-label text at >=8pt
+% effective at final print size.
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Colorblind-safe categorical palette (fixed order, slots 1 and 6 of the
+% project's default 8-hue categorical theme; independent series from Fig. 1's
+% detector-identity mapping -- this figure encodes baseline identity).
+\definecolor{seriesBlue}{HTML}{2A78D6}
+\definecolor{seriesOrange}{HTML}{EB6834}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=2.3in, height=2.55in,
+  xmin=0.35, xmax=1.95,
+  ymin=-5.65, ymax=0.65,
+  ytick={0,-1,-2,-3,-4,-5},
+  yticklabels={
+    RTMDet--DOTA, ORCNN--DOTA, ORCNN--DIOR-R, RTMDet--DIOR-R,
+    RoI-Trans--DIOR-R, S2A-Net--DIOR-R
+  },
+  y dir=normal,
+  tick label style={font=\fontsize{8}{9}\selectfont},
+  y tick label style={font=\fontsize{8}{9}\selectfont, align=right},
+  label style={font=\fontsize{8.5}{9.5}\selectfont},
+  xlabel={Region-size ratio at matched coverage (GWD $\div$ baseline)},
+  xlabel style={yshift=-1pt},
+  axis lines=left,
+  axis line style={line width=0.4pt},
+  major tick length=2pt,
+  xtick={0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8},
+  x tick label style={
+    /pgf/number format/fixed,
+    /pgf/number format/precision=1,
+    /pgf/number format/fixed zerofill=true,
+  },
+  ytick style={draw=none},
+  x tick style={line width=0.4pt},
+  clip=false,
+  axis on top,
+  legend columns=2,
+  legend style={
+    font=\fontsize{8}{9}\selectfont,
+    at={(0.5,1.02)}, anchor=south,
+    draw=none, fill=none,
+    /tikz/every even column/.append style={column sep=8pt}
+  },
+]
+
+% Parity reference line (ratio = 1: GWD region equals baseline region).
+\draw[densely dashed, black!55, line width=0.7pt]
+  (axis cs:1,-5.65) -- (axis cs:1,0.65);
+\node[font=\fontsize{7.5}{8.5}\selectfont, anchor=south, black!55]
+  at (axis cs:1,0.42) {parity};
+
+\addplot+[
+  only marks, mark=*, mark size=1.7pt,
+  mark options={fill=seriesBlue, draw=black, line width=0.25pt},
+  error bars/.cd, x dir=both, x explicit,
+  error bar style={color=seriesBlue, line width=0.6pt},
+  error mark options={rotate=90, mark size=2.2pt, line width=0.6pt, color=seriesBlue},
+]
+  table [x=ratio_matched_mean,
+         y expr=-\thisrow{cell_idx}+0.16,
+         x error plus expr=\thisrow{ratio_matched_max}-\thisrow{ratio_matched_mean},
+         x error minus expr=\thisrow{ratio_matched_mean}-\thisrow{ratio_matched_min},
+         col sep=comma]
+  {fig2_series_naivecoord.csv};
+\addlegendentry{vs.\ naive-coord}
+
+\addplot+[
+  only marks, mark=diamond*, mark size=2.1pt,
+  mark options={fill=seriesOrange, draw=black, line width=0.25pt},
+  error bars/.cd, x dir=both, x explicit,
+  error bar style={color=seriesOrange, line width=0.6pt},
+  error mark options={rotate=90, mark size=2.2pt, line width=0.6pt, color=seriesOrange},
+]
+  table [x=ratio_matched_mean,
+         y expr=-\thisrow{cell_idx}-0.16,
+         x error plus expr=\thisrow{ratio_matched_max}-\thisrow{ratio_matched_mean},
+         x error minus expr=\thisrow{ratio_matched_mean}-\thisrow{ratio_matched_min},
+         col sep=comma]
+  {fig2_series_hull.csv};
+\addlegendentry{vs.\ hull}
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

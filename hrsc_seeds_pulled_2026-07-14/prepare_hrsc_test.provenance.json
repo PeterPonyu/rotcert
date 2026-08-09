@@ -1,0 +1,14 @@
+{
+  "hrsc_root": "/root/autodl-tmp/HRSC2016-MS",
+  "imageset_file": "/root/autodl-tmp/HRSC2016-MS/ImageSets/source/test.txt",
+  "out_dir": "/root/autodl-tmp/hrsc_dota/test",
+  "class_name": "ship",
+  "n_images": 453,
+  "n_objects": 1878,
+  "n_missing_ann": 0,
+  "n_missing_img": 0,
+  "hbb_crosscheck_median_iou": 0.8146,
+  "hbb_crosscheck_n": 1878,
+  "angle_unit": "radians",
+  "encoding": "robndbox5->poly8 (OpenCV rotation)"
+}

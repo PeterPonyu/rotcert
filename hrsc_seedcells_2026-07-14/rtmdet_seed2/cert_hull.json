@@ -1,0 +1,39 @@
+{
+  "score_name": "hull",
+  "alpha": 0.1,
+  "mondrian_field": "class",
+  "strata": {
+    "ship": {
+      "calibrator": {
+        "q": {
+          "cx": 39.2913818359375,
+          "cy": 36.66217041015625,
+          "half_w": 48.357804552112185,
+          "half_h": 45.2519138405886
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 737,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 737,
+      "set_size_cxcy": 5762.029346078634
+    }
+  },
+  "refused": [],
+  "provenance": {
+    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "timestamp_utc": "2026-07-14T08:32:59.798526+00:00",
+    "seeds": null,
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.1",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+    "git_dirty": true
+  }
+}

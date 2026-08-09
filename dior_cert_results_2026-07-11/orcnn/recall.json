@@ -1,0 +1,1601 @@
+{
+  "beta": 0.2,
+  "delta": 0.05,
+  "per_class": {
+    "airplane": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=705 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.2348 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 705,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.2347828596433738,
+        "headroom": -0.0347828596433738,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "vehicle": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=3308 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.2863 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 3308,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.28630571233552543,
+        "headroom": -0.08630571233552542,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "chimney": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=447 below the LTT-HB Bentkus power floor 14038.9 at beta=0.2, delta=0.05, r_hat=0.1881 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 447,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.18814317673378075,
+        "headroom": 0.011856823266219257,
+        "hoeffding_floor": 24568.025534676708,
+        "bentkus_floor": 14038.871734100976,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "ship": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=1404 below the LTT-HB Bentkus power floor 2963.4 at beta=0.2, delta=0.05, r_hat=0.1742 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 1404,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.17419286835877665,
+        "headroom": 0.025807131641223363,
+        "hoeffding_floor": 5185.939829036147,
+        "bentkus_floor": 2963.3941880206553,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "bridge": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=1299 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.3541 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 1299,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.35407977407026453,
+        "headroom": -0.15407977407026452,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "trainstation": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=501 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.3054 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 501,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.30538922155688625,
+        "headroom": -0.10538922155688624,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "overpass": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=1101 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.2768 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 1101,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.27676050107930217,
+        "headroom": -0.07676050107930216,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "baseballfield": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=1311 below the LTT-HB Bentkus power floor 2851.1 at beta=0.2, delta=0.05, r_hat=0.1737 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 1311,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.17368960389555355,
+        "headroom": 0.026310396104446465,
+        "hoeffding_floor": 4989.444255402206,
+        "bentkus_floor": 2851.111003086975,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "basketballcourt": {
+      "lambda_star": 0.05641744285821915,
+      "certified": true,
+      "realized_risk": 0.11005065856129687,
+      "beta": 0.2,
+      "delta": 0.05,
+      "n_images": 705,
+      "K": 50,
+      "procedure": "bonferroni",
+      "p_value": "eb",
+      "trace": [
+        {
+          "lambda": 0.05641744285821915,
+          "p_value": 2.3577648741093907e-05,
+          "mean_risk": 0.11005065856129687,
+          "rejected": true
+        },
+        {
+          "lambda": 0.4127648213384103,
+          "p_value": 0.0032526602116415503,
+          "mean_risk": 0.13522205336035123,
+          "rejected": false
+        },
+        {
+          "lambda": 0.836118767821059,
+          "p_value": 0.07536529258060067,
+          "mean_risk": 0.15625717662951705,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9271081268787384,
+          "p_value": 0.4975295235809166,
+          "mean_risk": 0.17323623775751434,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9727851585466034,
+          "p_value": 1.0,
+          "mean_risk": 0.1881781285364712,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9867845834517965,
+          "p_value": 1.0,
+          "mean_risk": 0.2072664737278399,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9912413800249295,
+          "p_value": 1.0,
+          "mean_risk": 0.22419431342163706,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9941482165030071,
+          "p_value": 1.0,
+          "mean_risk": 0.24129451745633154,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9964179175240653,
+          "p_value": 1.0,
+          "mean_risk": 0.2583842854503549,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9973001108485825,
+          "p_value": 1.0,
+          "mean_risk": 0.27774155865701217,
+          "rejected": false
+        },
+        {
+          "lambda": 0.997881792029556,
+          "p_value": 1.0,
+          "mean_risk": 0.29620384105546477,
+          "rejected": false
+        },
+        {
+          "lambda": 0.998372923111429,
+          "p_value": 1.0,
+          "mean_risk": 0.3103255290601315,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9986808735497144,
+          "p_value": 1.0,
+          "mean_risk": 0.3255456123653212,
+          "rejected": false
+        },
+        {
+          "lambda": 0.998862512865845,
+          "p_value": 1.0,
+          "mean_risk": 0.34149607443280455,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9990259664399284,
+          "p_value": 1.0,
+          "mean_risk": 0.3571674027105158,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9991711146977483,
+          "p_value": 1.0,
+          "mean_risk": 0.3712687761203998,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9992950312945308,
+          "p_value": 1.0,
+          "mean_risk": 0.38403516851445185,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9993567165063352,
+          "p_value": 1.0,
+          "mean_risk": 0.4003328719930064,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9994016846831963,
+          "p_value": 1.0,
+          "mean_risk": 0.4154759440509721,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9994550050521384,
+          "p_value": 1.0,
+          "mean_risk": 0.4318533452156073,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9994892198212293,
+          "p_value": 1.0,
+          "mean_risk": 0.4492903034504378,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995217783110483,
+          "p_value": 1.0,
+          "mean_risk": 0.46449355173879253,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995594934541352,
+          "p_value": 1.0,
+          "mean_risk": 0.47819623203721745,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995944069356334,
+          "p_value": 1.0,
+          "mean_risk": 0.4939024301566295,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996251670681701,
+          "p_value": 1.0,
+          "mean_risk": 0.510172834299374,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999644759358192,
+          "p_value": 1.0,
+          "mean_risk": 0.5267338289846688,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996658677957496,
+          "p_value": 1.0,
+          "mean_risk": 0.542340398600197,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996866525435935,
+          "p_value": 1.0,
+          "mean_risk": 0.5556752131780127,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997027516365051,
+          "p_value": 1.0,
+          "mean_risk": 0.5726387953011693,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997228851123732,
+          "p_value": 1.0,
+          "mean_risk": 0.5878121520758699,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997348189353943,
+          "p_value": 1.0,
+          "mean_risk": 0.6053625292007151,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997476536400464,
+          "p_value": 1.0,
+          "mean_risk": 0.6253422657761964,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997618293275639,
+          "p_value": 1.0,
+          "mean_risk": 0.6428892656636218,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997760653495789,
+          "p_value": 1.0,
+          "mean_risk": 0.6584325120775288,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997895345395925,
+          "p_value": 1.0,
+          "mean_risk": 0.6736597053562339,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998005756310054,
+          "p_value": 1.0,
+          "mean_risk": 0.6896580345124578,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998115780402203,
+          "p_value": 1.0,
+          "mean_risk": 0.7035770882719372,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998270221510712,
+          "p_value": 1.0,
+          "mean_risk": 0.718039595819551,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998372048747782,
+          "p_value": 1.0,
+          "mean_risk": 0.7348205768558512,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998480253073634,
+          "p_value": 1.0,
+          "mean_risk": 0.7525129460767759,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998574256896973,
+          "p_value": 1.0,
+          "mean_risk": 0.7689319486659911,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998665495794646,
+          "p_value": 1.0,
+          "mean_risk": 0.7866852414724756,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998776640210832,
+          "p_value": 1.0,
+          "mean_risk": 0.8058972194078576,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998896704644573,
+          "p_value": 1.0,
+          "mean_risk": 0.8238044579533941,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999010022805661,
+          "p_value": 1.0,
+          "mean_risk": 0.8396926713947991,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999103351515166,
+          "p_value": 1.0,
+          "mean_risk": 0.8634588539907688,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999195154832334,
+          "p_value": 1.0,
+          "mean_risk": 0.8826091973432398,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999304925908847,
+          "p_value": 1.0,
+          "mean_risk": 0.9025675447483958,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999394762272737,
+          "p_value": 1.0,
+          "mean_risk": 0.9255164358887762,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999477803707123,
+          "p_value": 1.0,
+          "mean_risk": 0.9480161544523247,
+          "rejected": false
+        }
+      ],
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.11005065856129687,
+        "headroom": 0.08994934143870315,
+        "hoeffding_floor": 426.8850756863513,
+        "bentkus_floor": 243.9343289636293,
+        "bentkus_factor": 1.75
+      },
+      "refused": false
+    },
+    "tenniscourt": {
+      "lambda_star": 0.052708741277456284,
+      "certified": true,
+      "realized_risk": 0.1365357022694553,
+      "beta": 0.2,
+      "delta": 0.05,
+      "n_images": 1346,
+      "K": 50,
+      "procedure": "bonferroni",
+      "p_value": "eb",
+      "trace": [
+        {
+          "lambda": 0.052708741277456284,
+          "p_value": 1.0997425625802518e-05,
+          "mean_risk": 0.1365357022694553,
+          "rejected": true
+        },
+        {
+          "lambda": 0.24189311053071702,
+          "p_value": 0.006926229698227392,
+          "mean_risk": 0.15908833331019925,
+          "rejected": false
+        },
+        {
+          "lambda": 0.5848783034451154,
+          "p_value": 0.46391932577857026,
+          "mean_risk": 0.18084064819030019,
+          "rejected": false
+        },
+        {
+          "lambda": 0.7945585284914289,
+          "p_value": 1.0,
+          "mean_risk": 0.20348425468092612,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9137555066420108,
+          "p_value": 1.0,
+          "mean_risk": 0.22255808215971687,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9615769279854638,
+          "p_value": 1.0,
+          "mean_risk": 0.2408149782510346,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9812260535298561,
+          "p_value": 1.0,
+          "mean_risk": 0.25747419294843954,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9900225341320038,
+          "p_value": 1.0,
+          "mean_risk": 0.2748594622849093,
+          "rejected": false
+        },
+        {
+          "lambda": 0.994106150646599,
+          "p_value": 1.0,
+          "mean_risk": 0.2917775264726615,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9964264215863481,
+          "p_value": 1.0,
+          "mean_risk": 0.309684379195636,
+          "rejected": false
+        },
+        {
+          "lambda": 0.99758294163918,
+          "p_value": 1.0,
+          "mean_risk": 0.32521634392893806,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9982024574158143,
+          "p_value": 1.0,
+          "mean_risk": 0.3429982101097811,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9985695444807714,
+          "p_value": 1.0,
+          "mean_risk": 0.3592973193362775,
+          "rejected": false
+        },
+        {
+          "lambda": 0.998847484588623,
+          "p_value": 1.0,
+          "mean_risk": 0.37644017654423995,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9990415266581945,
+          "p_value": 1.0,
+          "mean_risk": 0.3912397160790745,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9991738708043585,
+          "p_value": 1.0,
+          "mean_risk": 0.4056813214551243,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999277388076393,
+          "p_value": 1.0,
+          "mean_risk": 0.4216941024341498,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999360978603363,
+          "p_value": 1.0,
+          "mean_risk": 0.43714098962007236,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9994254876156242,
+          "p_value": 1.0,
+          "mean_risk": 0.4515339964132191,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9994783997535706,
+          "p_value": 1.0,
+          "mean_risk": 0.46603150767928864,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995181536187931,
+          "p_value": 1.0,
+          "mean_risk": 0.48175810592357504,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995628127029964,
+          "p_value": 1.0,
+          "mean_risk": 0.496359780143071,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995990799397838,
+          "p_value": 1.0,
+          "mean_risk": 0.5104478595742377,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996308151556521,
+          "p_value": 1.0,
+          "mean_risk": 0.5257766917274296,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996624216741445,
+          "p_value": 1.0,
+          "mean_risk": 0.541764414120307,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996861286309301,
+          "p_value": 1.0,
+          "mean_risk": 0.5554780358335515,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997096657752991,
+          "p_value": 1.0,
+          "mean_risk": 0.5705689070722681,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997324324384027,
+          "p_value": 1.0,
+          "mean_risk": 0.5849419428074805,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997573290552412,
+          "p_value": 1.0,
+          "mean_risk": 0.6015141431115613,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997793692715314,
+          "p_value": 1.0,
+          "mean_risk": 0.6157780504256827,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997972055357329,
+          "p_value": 1.0,
+          "mean_risk": 0.6311171867548871,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998118281364441,
+          "p_value": 1.0,
+          "mean_risk": 0.645082258226606,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998291234580838,
+          "p_value": 1.0,
+          "mean_risk": 0.6601066533146052,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998467867471734,
+          "p_value": 1.0,
+          "mean_risk": 0.6751946416055704,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998612403869629,
+          "p_value": 1.0,
+          "mean_risk": 0.6910756580776629,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998749111379895,
+          "p_value": 1.0,
+          "mean_risk": 0.7068589017862409,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998849202175529,
+          "p_value": 1.0,
+          "mean_risk": 0.7238182188848596,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999895453453064,
+          "p_value": 1.0,
+          "mean_risk": 0.7392089656649081,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999049383766797,
+          "p_value": 1.0,
+          "mean_risk": 0.7550695462181451,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999130401076103,
+          "p_value": 1.0,
+          "mean_risk": 0.7700495079825824,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999202489852905,
+          "p_value": 1.0,
+          "mean_risk": 0.786459975507463,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999268054962158,
+          "p_value": 1.0,
+          "mean_risk": 0.8026555689043786,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999332427978516,
+          "p_value": 1.0,
+          "mean_risk": 0.8189733276478375,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999394416809082,
+          "p_value": 1.0,
+          "mean_risk": 0.8372957314577422,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999452829360962,
+          "p_value": 1.0,
+          "mean_risk": 0.85570239870454,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999507665634155,
+          "p_value": 1.0,
+          "mean_risk": 0.8758473580484332,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999552965164185,
+          "p_value": 1.0,
+          "mean_risk": 0.8943140553931788,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999595880508423,
+          "p_value": 1.0,
+          "mean_risk": 0.9123222920700196,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999654293060303,
+          "p_value": 1.0,
+          "mean_risk": 0.9300416549842955,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999702334403991,
+          "p_value": 1.0,
+          "mean_risk": 0.9479684185522838,
+          "rejected": false
+        }
+      ],
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.1365357022694553,
+        "headroom": 0.06346429773054471,
+        "hoeffding_floor": 857.5273698161836,
+        "bentkus_floor": 490.0156398949621,
+        "bentkus_factor": 1.75
+      },
+      "refused": false
+    },
+    "airport": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=657 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.4612 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 657,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.4611872146118721,
+        "headroom": -0.2611872146118721,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "windmill": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=809 below the LTT-HB Bentkus power floor 1761.9 at beta=0.2, delta=0.05, r_hat=0.1665 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 809,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.16653078838769425,
+        "headroom": 0.03346921161230576,
+        "hoeffding_floor": 3083.301420075384,
+        "bentkus_floor": 1761.8865257573623,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "dam": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=503 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.5017 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 503,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.5016567263088137,
+        "headroom": -0.30165672630881374,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "Expressway-toll-station": {
+      "certified": false,
+      "refused": true,
+      "reason": "g2_certify_fnr: no matched detections anywhere -- cannot build a confidence lambda grid (every GT is an unconditional miss; G2 refuses)",
+      "n_img": 634
+    },
+    "stadium": {
+      "lambda_star": 0.05053958669304848,
+      "certified": true,
+      "realized_risk": 0.08872707659115425,
+      "beta": 0.2,
+      "delta": 0.05,
+      "n_images": 618,
+      "K": 50,
+      "procedure": "bonferroni",
+      "p_value": "eb",
+      "trace": [
+        {
+          "lambda": 0.05053958669304848,
+          "p_value": 1.4918008536814087e-06,
+          "mean_risk": 0.08872707659115425,
+          "rejected": true
+        },
+        {
+          "lambda": 0.06582247554039468,
+          "p_value": 4.093827143276708e-05,
+          "mean_risk": 0.10463861920172599,
+          "rejected": true
+        },
+        {
+          "lambda": 0.09658070427118515,
+          "p_value": 0.0006168984271496888,
+          "mean_risk": 0.11920172599784248,
+          "rejected": true
+        },
+        {
+          "lambda": 0.1174589604139328,
+          "p_value": 0.008137728672430357,
+          "mean_risk": 0.13538295577130527,
+          "rejected": false
+        },
+        {
+          "lambda": 0.15305115884664106,
+          "p_value": 0.07308480458141715,
+          "mean_risk": 0.1518338727076591,
+          "rejected": false
+        },
+        {
+          "lambda": 0.1896103162090389,
+          "p_value": 0.39211579255325385,
+          "mean_risk": 0.16774541531823084,
+          "rejected": false
+        },
+        {
+          "lambda": 0.21656057046992438,
+          "p_value": 1.0,
+          "mean_risk": 0.1855447680690399,
+          "rejected": false
+        },
+        {
+          "lambda": 0.26209714029516484,
+          "p_value": 1.0,
+          "mean_risk": 0.1995685005393743,
+          "rejected": false
+        },
+        {
+          "lambda": 0.3208753500665937,
+          "p_value": 1.0,
+          "mean_risk": 0.21494066882416393,
+          "rejected": false
+        },
+        {
+          "lambda": 0.3756279268739175,
+          "p_value": 1.0,
+          "mean_risk": 0.2286947141316073,
+          "rejected": false
+        },
+        {
+          "lambda": 0.44121255102206247,
+          "p_value": 1.0,
+          "mean_risk": 0.24460625674217906,
+          "rejected": false
+        },
+        {
+          "lambda": 0.48645360272149657,
+          "p_value": 1.0,
+          "mean_risk": 0.2607874865156418,
+          "rejected": false
+        },
+        {
+          "lambda": 0.5195518087367622,
+          "p_value": 1.0,
+          "mean_risk": 0.27939590075512405,
+          "rejected": false
+        },
+        {
+          "lambda": 0.5650846197897075,
+          "p_value": 1.0,
+          "mean_risk": 0.2971952535059331,
+          "rejected": false
+        },
+        {
+          "lambda": 0.6170936618532452,
+          "p_value": 1.0,
+          "mean_risk": 0.31661272923408845,
+          "rejected": false
+        },
+        {
+          "lambda": 0.6727383188447174,
+          "p_value": 1.0,
+          "mean_risk": 0.33495145631067963,
+          "rejected": false
+        },
+        {
+          "lambda": 0.711716662134443,
+          "p_value": 1.0,
+          "mean_risk": 0.35275080906148865,
+          "rejected": false
+        },
+        {
+          "lambda": 0.75097334372754,
+          "p_value": 1.0,
+          "mean_risk": 0.3713592233009709,
+          "rejected": false
+        },
+        {
+          "lambda": 0.796822822337248,
+          "p_value": 1.0,
+          "mean_risk": 0.38915857605177995,
+          "rejected": false
+        },
+        {
+          "lambda": 0.8404621548798619,
+          "p_value": 1.0,
+          "mean_risk": 0.4053398058252427,
+          "rejected": false
+        },
+        {
+          "lambda": 0.8852677746694915,
+          "p_value": 1.0,
+          "mean_risk": 0.4231391585760518,
+          "rejected": false
+        },
+        {
+          "lambda": 0.896934683408056,
+          "p_value": 1.0,
+          "mean_risk": 0.4401294498381877,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9104477063733705,
+          "p_value": 1.0,
+          "mean_risk": 0.459546925566343,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9281326915536608,
+          "p_value": 1.0,
+          "mean_risk": 0.4773462783171521,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9454535732463915,
+          "p_value": 1.0,
+          "mean_risk": 0.494336569579288,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9562123153282671,
+          "p_value": 1.0,
+          "mean_risk": 0.5137540453074434,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9665306256741895,
+          "p_value": 1.0,
+          "mean_risk": 0.5285868392664509,
+          "rejected": false
+        },
+        {
+          "lambda": 0.975382188874848,
+          "p_value": 1.0,
+          "mean_risk": 0.5458468176914778,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9809215869222369,
+          "p_value": 1.0,
+          "mean_risk": 0.5617583603020495,
+          "rejected": false
+        },
+        {
+          "lambda": 0.984842532204122,
+          "p_value": 1.0,
+          "mean_risk": 0.5784789644012945,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9910116329485056,
+          "p_value": 1.0,
+          "mean_risk": 0.5970873786407767,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9939073917817096,
+          "p_value": 1.0,
+          "mean_risk": 0.616504854368932,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9957033529573557,
+          "p_value": 1.0,
+          "mean_risk": 0.6343042071197411,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9967684799919323,
+          "p_value": 1.0,
+          "mean_risk": 0.6529126213592233,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9974213742479986,
+          "p_value": 1.0,
+          "mean_risk": 0.6707119741100324,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9978330454656056,
+          "p_value": 1.0,
+          "mean_risk": 0.6893203883495146,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9982903925739989,
+          "p_value": 1.0,
+          "mean_risk": 0.7087378640776699,
+          "rejected": false
+        },
+        {
+          "lambda": 0.99856171255209,
+          "p_value": 1.0,
+          "mean_risk": 0.7265372168284789,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9987908060453377,
+          "p_value": 1.0,
+          "mean_risk": 0.7459546925566343,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9991016199394148,
+          "p_value": 1.0,
+          "mean_risk": 0.7629449838187702,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9992157537109998,
+          "p_value": 1.0,
+          "mean_risk": 0.7823624595469255,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9993570326542368,
+          "p_value": 1.0,
+          "mean_risk": 0.801779935275081,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9994657788957868,
+          "p_value": 1.0,
+          "mean_risk": 0.81957928802589,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995411813867335,
+          "p_value": 1.0,
+          "mean_risk": 0.8389967637540453,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9995962568691799,
+          "p_value": 1.0,
+          "mean_risk": 0.8567961165048543,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9996539494212793,
+          "p_value": 1.0,
+          "mean_risk": 0.8762135922330098,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997481037159356,
+          "p_value": 1.0,
+          "mean_risk": 0.8956310679611651,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9997993598178941,
+          "p_value": 1.0,
+          "mean_risk": 0.9134304207119741,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998333244907612,
+          "p_value": 1.0,
+          "mean_risk": 0.9328478964401294,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998652517795563,
+          "p_value": 1.0,
+          "mean_risk": 0.9522653721682848,
+          "rejected": false
+        }
+      ],
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.08872707659115425,
+        "headroom": 0.11127292340884576,
+        "hoeffding_floor": 278.9510184934354,
+        "bentkus_floor": 159.4005819962488,
+        "bentkus_factor": 1.75
+      },
+      "refused": false
+    },
+    "storagetank": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=894 below the LTT-HB Bentkus power floor 3665.2 at beta=0.2, delta=0.05, r_hat=0.1768 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 894,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.1767948758100835,
+        "headroom": 0.02320512418991652,
+        "hoeffding_floor": 6414.150615247147,
+        "bentkus_floor": 3665.2289229983694,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "harbor": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=813 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.4500 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 813,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.4500441210583385,
+        "headroom": -0.2500441210583385,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    },
+    "groundtrackfield": {
+      "lambda_star": 0.054853249341249466,
+      "certified": true,
+      "realized_risk": 0.048373735193976884,
+      "beta": 0.2,
+      "delta": 0.05,
+      "n_images": 1324,
+      "K": 50,
+      "procedure": "bonferroni",
+      "p_value": "eb",
+      "trace": [
+        {
+          "lambda": 0.054853249341249466,
+          "p_value": 3.51482355831812e-24,
+          "mean_risk": 0.048373735193976884,
+          "rejected": true
+        },
+        {
+          "lambda": 0.17106061942723333,
+          "p_value": 4.764247541384186e-20,
+          "mean_risk": 0.06348966575552678,
+          "rejected": true
+        },
+        {
+          "lambda": 0.34958134220570936,
+          "p_value": 1.077865811250276e-15,
+          "mean_risk": 0.08113820553397592,
+          "rejected": true
+        },
+        {
+          "lambda": 0.5349375187134257,
+          "p_value": 1.808823992438584e-12,
+          "mean_risk": 0.09667403970651706,
+          "rejected": true
+        },
+        {
+          "lambda": 0.6559296768538806,
+          "p_value": 1.8608800864104204e-09,
+          "mean_risk": 0.11255394907207596,
+          "rejected": true
+        },
+        {
+          "lambda": 0.7813764482128377,
+          "p_value": 1.1421048568138867e-06,
+          "mean_risk": 0.12965580492015538,
+          "rejected": true
+        },
+        {
+          "lambda": 0.8503792604621576,
+          "p_value": 0.0001441035700089828,
+          "mean_risk": 0.14475195415527742,
+          "rejected": true
+        },
+        {
+          "lambda": 0.8890553099768502,
+          "p_value": 0.007786585357224808,
+          "mean_risk": 0.15968235985229942,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9146423371470704,
+          "p_value": 0.24167342778391787,
+          "mean_risk": 0.17660708291372945,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9333475986305548,
+          "p_value": 1.0,
+          "mean_risk": 0.19162051023833498,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9443076751670059,
+          "p_value": 1.0,
+          "mean_risk": 0.20855452452884476,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9565131498842824,
+          "p_value": 1.0,
+          "mean_risk": 0.22684595741619912,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9632391316550118,
+          "p_value": 1.0,
+          "mean_risk": 0.2425496331463099,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9700723052024841,
+          "p_value": 1.0,
+          "mean_risk": 0.25943029779887783,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9758376802716936,
+          "p_value": 1.0,
+          "mean_risk": 0.2749388577183139,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9807415409963958,
+          "p_value": 1.0,
+          "mean_risk": 0.28987675634201315,
+          "rejected": false
+        },
+        {
+          "lambda": 0.983930208974955,
+          "p_value": 1.0,
+          "mean_risk": 0.30669028437155327,
+          "rejected": false
+        },
+        {
+          "lambda": 0.986294124564346,
+          "p_value": 1.0,
+          "mean_risk": 0.3262018654390256,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9880953844712705,
+          "p_value": 1.0,
+          "mean_risk": 0.3453106267683307,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9897827980469684,
+          "p_value": 1.0,
+          "mean_risk": 0.35963170766796143,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9911766064410307,
+          "p_value": 1.0,
+          "mean_risk": 0.37479409437491007,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9920761670385089,
+          "p_value": 1.0,
+          "mean_risk": 0.3901390087757158,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9929543312715025,
+          "p_value": 1.0,
+          "mean_risk": 0.40759872680189907,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9935766030331047,
+          "p_value": 1.0,
+          "mean_risk": 0.4247437419076392,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9942805068833488,
+          "p_value": 1.0,
+          "mean_risk": 0.44138523234067045,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9949110308471991,
+          "p_value": 1.0,
+          "mean_risk": 0.456422637030643,
+          "rejected": false
+        },
+        {
+          "lambda": 0.995637177934452,
+          "p_value": 1.0,
+          "mean_risk": 0.47171719896417785,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9960691437429311,
+          "p_value": 1.0,
+          "mean_risk": 0.48504891382534887,
+          "rejected": false
+        },
+        {
+          "lambda": 0.99639379126685,
+          "p_value": 1.0,
+          "mean_risk": 0.5003057114084305,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9967066268531644,
+          "p_value": 1.0,
+          "mean_risk": 0.5157899942454324,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9970184880859998,
+          "p_value": 1.0,
+          "mean_risk": 0.5303229751114947,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9973155238190475,
+          "p_value": 1.0,
+          "mean_risk": 0.5448811322111926,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9976649160287818,
+          "p_value": 1.0,
+          "mean_risk": 0.5612456840742339,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9978883636241056,
+          "p_value": 1.0,
+          "mean_risk": 0.5760870738023306,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9981334893070921,
+          "p_value": 1.0,
+          "mean_risk": 0.5932572651417062,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9984196083886283,
+          "p_value": 1.0,
+          "mean_risk": 0.609231585383398,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9986556148042485,
+          "p_value": 1.0,
+          "mean_risk": 0.6249739246151633,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9988992355307754,
+          "p_value": 1.0,
+          "mean_risk": 0.6434541792547835,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9991270121262998,
+          "p_value": 1.0,
+          "mean_risk": 0.6636203423967775,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9993239996384601,
+          "p_value": 1.0,
+          "mean_risk": 0.681111530715005,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999544911238612,
+          "p_value": 1.0,
+          "mean_risk": 0.701598690835851,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999722081544448,
+          "p_value": 1.0,
+          "mean_risk": 0.7263972809667674,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998120835849217,
+          "p_value": 1.0,
+          "mean_risk": 0.7511329305135952,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9998725837590743,
+          "p_value": 1.0,
+          "mean_risk": 0.777190332326284,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999032765018697,
+          "p_value": 1.0,
+          "mean_risk": 0.802870090634441,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999289488305851,
+          "p_value": 1.0,
+          "mean_risk": 0.8285498489425982,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999465154141796,
+          "p_value": 1.0,
+          "mean_risk": 0.8549848942598187,
+          "rejected": false
+        },
+        {
+          "lambda": 0.999961256980896,
+          "p_value": 1.0,
+          "mean_risk": 0.8799093655589124,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999703597049324,
+          "p_value": 1.0,
+          "mean_risk": 0.9070996978851964,
+          "rejected": false
+        },
+        {
+          "lambda": 0.9999800682067871,
+          "p_value": 1.0,
+          "mean_risk": 0.9327794561933535,
+          "rejected": false
+        }
+      ],
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.048373735193976884,
+        "headroom": 0.15162626480602312,
+        "hoeffding_floor": 150.23048681256105,
+        "bentkus_floor": 85.8459924643206,
+        "bentkus_factor": 1.75
+      },
+      "refused": false
+    },
+    "Expressway-Service-area": {
+      "certified": false,
+      "refused": true,
+      "reason": "g2_certify_fnr: no matched detections anywhere -- cannot build a confidence lambda grid (every GT is an unconditional miss; G2 refuses)",
+      "n_img": 565
+    },
+    "golffield": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=491 below the LTT-HB Bentkus power floor 751.4 at beta=0.2, delta=0.05, r_hat=0.1487 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 491,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.1487489089322083,
+        "headroom": 0.051251091067791715,
+        "hoeffding_floor": 1314.9241962082547,
+        "bentkus_floor": 751.3852549761456,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    }
+  },
+  "n_classes": 20,
+  "n_classes_certified": 4,
+  "pooled_marginal": {
+    "certified": false,
+    "refused": true,
+    "reason": "n_img=19435 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.2806 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+    "n_img": 19435,
+    "power_floor": {
+      "beta": 0.2,
+      "delta": 0.05,
+      "grid_size": 50,
+      "r_hat": 0.28057287788179935,
+      "headroom": -0.08057287788179934,
+      "hoeffding_floor": Infinity,
+      "bentkus_floor": Infinity,
+      "bentkus_factor": 1.75
+    },
+    "beta": 0.2,
+    "delta": 0.05,
+    "lambda_star": null
+  }
+}

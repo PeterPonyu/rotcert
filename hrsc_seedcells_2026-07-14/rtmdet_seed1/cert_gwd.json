@@ -1,0 +1,27 @@
+{
+  "score_name": "gwd",
+  "alpha": 0.1,
+  "mondrian_field": "class",
+  "strata": {
+    "ship": {
+      "calibrator": {
+        "q_hat": 52.16850029095643,
+        "alpha": 0.1,
+        "n_cal": 630
+      },
+      "n_cal": 630,
+      "set_size_cxcy": 8550.009097223294
+    }
+  },
+  "refused": [],
+  "provenance": {
+    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "timestamp_utc": "2026-07-14T08:32:52.553891+00:00",
+    "seeds": null,
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.1",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+    "git_dirty": true
+  }
+}

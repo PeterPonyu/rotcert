@@ -1,0 +1,46 @@
+{
+  "beta": 0.2,
+  "delta": 0.05,
+  "per_class": {
+    "ship": {
+      "certified": false,
+      "refused": true,
+      "reason": "n_img=440 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.5568 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+      "n_img": 440,
+      "power_floor": {
+        "beta": 0.2,
+        "delta": 0.05,
+        "grid_size": 50,
+        "r_hat": 0.5568208383854316,
+        "headroom": -0.3568208383854316,
+        "hoeffding_floor": Infinity,
+        "bentkus_floor": Infinity,
+        "bentkus_factor": 1.75
+      },
+      "beta": 0.2,
+      "delta": 0.05,
+      "lambda_star": null
+    }
+  },
+  "n_classes": 1,
+  "n_classes_certified": 0,
+  "pooled_marginal": {
+    "certified": false,
+    "refused": true,
+    "reason": "n_img=440 below the LTT-HB Bentkus power floor inf at beta=0.2, delta=0.05, r_hat=0.5568 (design §2.4/§5 K5 -- refuses rather than reports an uncertifiable number)",
+    "n_img": 440,
+    "power_floor": {
+      "beta": 0.2,
+      "delta": 0.05,
+      "grid_size": 50,
+      "r_hat": 0.5568208383854316,
+      "headroom": -0.3568208383854316,
+      "hoeffding_floor": Infinity,
+      "bentkus_floor": Infinity,
+      "bentkus_factor": 1.75
+    },
+    "beta": 0.2,
+    "delta": 0.05,
+    "lambda_star": null
+  }
+}

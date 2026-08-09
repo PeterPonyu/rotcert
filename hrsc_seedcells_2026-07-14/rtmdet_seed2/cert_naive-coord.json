@@ -1,0 +1,41 @@
+{
+  "score_name": "naive-coord",
+  "alpha": 0.1,
+  "mondrian_field": "class",
+  "strata": {
+    "ship": {
+      "calibrator": {
+        "q": {
+          "cx": 44.2657470703125,
+          "cy": 39.91668701171875,
+          "w": 122.19223022460938,
+          "h": 32.407108306884766,
+          "theta": 3.0157779371652813
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.02,
+        "n_cal": 737,
+        "coord_names": [
+          "cx",
+          "cy",
+          "w",
+          "h",
+          "theta"
+        ]
+      },
+      "n_cal": 737,
+      "set_size_cxcy": 7067.767884582281
+    }
+  },
+  "refused": [],
+  "provenance": {
+    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "timestamp_utc": "2026-07-14T08:32:59.217350+00:00",
+    "seeds": null,
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.1",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+    "git_dirty": true
+  }
+}

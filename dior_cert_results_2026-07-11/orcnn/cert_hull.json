@@ -1,0 +1,396 @@
+{
+  "score_name": "hull",
+  "alpha": 0.1,
+  "mondrian_field": "class",
+  "strata": {
+    "airplane": {
+      "calibrator": {
+        "q": {
+          "cx": 6.3615875244140625,
+          "cy": 6.257965087890625,
+          "half_w": 9.384900215681398,
+          "half_h": 9.631809948360853
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 5589,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 5589,
+      "set_size_cxcy": 159.242370525375
+    },
+    "airport": {
+      "calibrator": {
+        "q": {
+          "cx": 63.21490478515625,
+          "cy": 72.32369995117188,
+          "half_w": 84.63085325137263,
+          "half_h": 109.43919276734619
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 357,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 357,
+      "set_size_cxcy": 18287.74322449416
+    },
+    "baseballfield": {
+      "calibrator": {
+        "q": {
+          "cx": 8.1846923828125,
+          "cy": 9.234306335449219,
+          "half_w": 18.163228491165,
+          "half_h": 18.092200913966195
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 2617,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 2617,
+      "set_size_cxcy": 302.3198268972337
+    },
+    "basketballcourt": {
+      "calibrator": {
+        "q": {
+          "cx": 7.7733306884765625,
+          "cy": 9.255859375,
+          "half_w": 12.744275864787369,
+          "half_h": 14.606979509600478
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 1928,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 1928,
+      "set_size_cxcy": 287.795422911644
+    },
+    "bridge": {
+      "calibrator": {
+        "q": {
+          "cx": 30.821685791015625,
+          "cy": 27.741058349609375,
+          "half_w": 53.210675495536066,
+          "half_h": 48.332158835918676
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 1470,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 1470,
+      "set_size_cxcy": 3420.1047358475626
+    },
+    "chimney": {
+      "calibrator": {
+        "q": {
+          "cx": 14.504302978515625,
+          "cy": 16.6148681640625,
+          "half_w": 18.949791788680614,
+          "half_h": 20.43818736292826
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 808,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 808,
+      "set_size_cxcy": 963.9483271986246
+    },
+    "dam": {
+      "calibrator": {
+        "q": {
+          "cx": 63.03924560546875,
+          "cy": 56.440765380859375,
+          "half_w": 73.25838776609496,
+          "half_h": 84.09192886906601
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 266,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 266,
+      "set_size_cxcy": 14231.933084018528
+    },
+    "golffield": {
+      "calibrator": {
+        "q": {
+          "cx": 93.76348876953125,
+          "cy": 72.64300537109375,
+          "half_w": 111.57687932873796,
+          "half_h": 111.16229662765352
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 459,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 459,
+      "set_size_cxcy": 27245.04647319019
+    },
+    "groundtrackfield": {
+      "calibrator": {
+        "q": {
+          "cx": 9.58953857421875,
+          "cy": 10.377288818359375,
+          "half_w": 16.310447436959976,
+          "half_h": 16.587176291152957
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 1773,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 1773,
+      "set_size_cxcy": 398.05364567786455
+    },
+    "harbor": {
+      "calibrator": {
+        "q": {
+          "cx": 62.048004150390625,
+          "cy": 43.207916259765625,
+          "half_w": 64.13771840922266,
+          "half_h": 53.441343142119706
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 1692,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 1692,
+      "set_size_cxcy": 10723.859869662672
+    },
+    "overpass": {
+      "calibrator": {
+        "q": {
+          "cx": 41.5147705078125,
+          "cy": 45.92071533203125,
+          "half_w": 66.12852360872964,
+          "half_h": 64.01676625310586
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 1183,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 1183,
+      "set_size_cxcy": 7625.551834255457
+    },
+    "ship": {
+      "calibrator": {
+        "q": {
+          "cx": 3.3753204345703125,
+          "cy": 3.766387939453125,
+          "half_w": 4.310766498443996,
+          "half_h": 4.429024157473805
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 30731,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 30731,
+      "set_size_cxcy": 50.85106470622122
+    },
+    "stadium": {
+      "calibrator": {
+        "q": {
+          "cx": 18.454833984375,
+          "cy": 15.071807861328125,
+          "half_w": 25.096441956997694,
+          "half_h": 25.110016012935603
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 600,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 600,
+      "set_size_cxcy": 1112.5908477008343
+    },
+    "storagetank": {
+      "calibrator": {
+        "q": {
+          "cx": 3.9569091796875,
+          "cy": 3.425323486328125,
+          "half_w": 4.756239376534211,
+          "half_h": 4.331525105940727
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 16081,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 16081,
+      "set_size_cxcy": 54.214775785803795
+    },
+    "tenniscourt": {
+      "calibrator": {
+        "q": {
+          "cx": 2.6644287109375,
+          "cy": 3.595672607421875,
+          "half_w": 4.763648065665905,
+          "half_h": 5.777783583745048
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 6498,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 6498,
+      "set_size_cxcy": 38.321653321385384
+    },
+    "trainstation": {
+      "calibrator": {
+        "q": {
+          "cx": 64.81976318359375,
+          "cy": 45.8074951171875,
+          "half_w": 82.27551090709588,
+          "half_h": 74.56898403961827
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 354,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 354,
+      "set_size_cxcy": 11876.923942118883
+    },
+    "vehicle": {
+      "calibrator": {
+        "q": {
+          "cx": 3.3836822509765625,
+          "cy": 3.610260009765625,
+          "half_w": 3.9110355753291515,
+          "half_h": 4.055438067402008
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 12958,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 12958,
+      "set_size_cxcy": 48.863890865817666
+    },
+    "windmill": {
+      "calibrator": {
+        "q": {
+          "cx": 8.92388916015625,
+          "cy": 8.47027587890625,
+          "half_w": 12.884870550876542,
+          "half_h": 13.155636912177243
+        },
+        "alpha": 0.1,
+        "alpha_per_coord": 0.025,
+        "n_cal": 2291,
+        "coord_names": [
+          "cx",
+          "cy",
+          "half_w",
+          "half_h"
+        ]
+      },
+      "n_cal": 2291,
+      "set_size_cxcy": 302.35121239721775
+    }
+  },
+  "refused": [],
+  "provenance": {
+    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "timestamp_utc": "2026-07-11T08:27:32.330438+00:00",
+    "seeds": null,
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.1",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+    "git_dirty": true
+  }
+}

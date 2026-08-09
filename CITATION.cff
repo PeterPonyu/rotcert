@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or the certification protocol, please cite it as below."
+title: "rotcert: distribution-free per-class localization and recall certificates for oriented object detectors"
+type: software
+version: 0.2.0
+date-released: "2026-07-18"
+doi: "10.5281/zenodo.21392293"
+authors:
+  - family-names: "Fu"
+    given-names: "Zeyu"
+    email: "fuzeyu09@gmail.com"
+license: MIT
+abstract: >-
+  rotcert ports conformal prediction to oriented (rotated) object detection in
+  aerial imagery: a seam-continuous, square-safe Gaussian-Wasserstein
+  nonconformity score yields per-class localization certificates (G1) and a
+  Learn-then-Test certified false-negative-rate bound with refusal semantics
+  (G2), validated out-of-sample on DIOR-R, DOTA-v1.0, and HRSC2016-MS with
+  frozen result records.

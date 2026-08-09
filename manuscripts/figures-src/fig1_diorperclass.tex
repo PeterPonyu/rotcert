@@ -1,0 +1,103 @@
+% Standalone pgfplots source for the per-class out-of-sample coverage figure.
+% Data: fig1_series_{ORCNN,RTMDet,RoI-Trans,S2A-Net}.csv and fig1_band.csv,
+% both produced verbatim (no recomputed statistics beyond a min/max of four
+% already-computed per-cell fields) by extract_data.py from
+% dior_perclass_2026-07-15/results.json. Rebuild via `make` in this directory.
+%
+% Two-column span target (IEEE TGRS figure*, full two-column width ~7.16in;
+% canonical single-column \textwidth = 6.5in): sized so \includegraphics at
+% \textwidth in either venue keeps a scale factor close to 1 and tick-label
+% text at >=8pt effective at final print size.
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Colorblind-safe categorical palette (fixed order, 4 series; validated
+% all-pairs slots 1-4 of the project's default 8-hue categorical theme).
+\definecolor{seriesBlue}{HTML}{2A78D6}
+\definecolor{seriesGreen}{HTML}{008300}
+\definecolor{seriesMagenta}{HTML}{E87BA4}
+\definecolor{seriesYellow}{HTML}{EDA100}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+  width=5.6in, height=4.55in,
+  xmin=0.883, xmax=0.917,
+  ymin=-19.65, ymax=0.75,
+  ytick={0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,-17,-18,-19},
+  yticklabels={
+    ship, storage tank, vehicle, tennis court, airplane,
+    baseball field, windmill, basketball court, ground track field,
+    harbor, bridge, overpass, expressway-service-area, chimney,
+    stadium, expressway-toll-station, golf field, airport,
+    train station, dam
+  },
+  y dir=normal,
+  tick label style={font=\fontsize{8}{9}\selectfont},
+  y tick label style={font=\fontsize{8}{9}\selectfont, align=right},
+  label style={font=\fontsize{9}{10}\selectfont},
+  xlabel={Out-of-sample coverage (mean over $R{=}20$ scene-split reseeds)},
+  xlabel style={yshift=-1pt},
+  axis lines=left,
+  axis line style={line width=0.4pt},
+  major tick length=2pt,
+  xtick={0.885,0.89,0.895,0.9,0.905,0.91,0.915},
+  x tick label style={
+    /pgf/number format/fixed,
+    /pgf/number format/precision=3,
+    /pgf/number format/fixed zerofill=true,
+  },
+  ytick style={draw=none},
+  x tick style={line width=0.4pt},
+  every axis plot/.append style={line width=0pt},
+  clip=false,
+  axis on top,
+  legend columns=4,
+  legend style={
+    font=\fontsize{8}{9}\selectfont,
+    at={(0.5,1.015)}, anchor=south,
+    draw=none, fill=none,
+    /tikz/every even column/.append style={column sep=10pt}
+  },
+]
+
+% Reference band: global min-max class coverage across the four cells
+% (fig1_band.csv: global_min_class_coverage=0.8866, global_max_class_coverage=0.9127).
+\fill[black!8] (axis cs:0.8866418288586079,-19.65) rectangle (axis cs:0.9126772111025947,0.75);
+
+% Nominal coverage line (alpha=0.10 => nominal 0.90; fig1_band.csv: nominal_coverage).
+\draw[densely dashed, black!55, line width=0.7pt]
+  (axis cs:0.9,-19.65) -- (axis cs:0.9,0.75);
+\node[font=\fontsize{7.5}{8.5}\selectfont, anchor=south, black!55]
+  at (axis cs:0.9,0.55) {nominal $0.90$};
+
+\addplot[only marks, mark=*, mark size=1.7pt,
+  mark options={fill=seriesBlue, draw=black, line width=0.25pt}]
+  table [x=oos_coverage_mean, y expr=-\thisrow{class_idx}+0.21, col sep=comma]
+  {fig1_series_ORCNN.csv};
+\addlegendentry{Oriented R-CNN}
+
+\addplot[only marks, mark=square*, mark size=1.5pt,
+  mark options={fill=seriesGreen, draw=black, line width=0.25pt}]
+  table [x=oos_coverage_mean, y expr=-\thisrow{class_idx}+0.07, col sep=comma]
+  {fig1_series_RTMDet.csv};
+\addlegendentry{RTMDet-R-l}
+
+\addplot[only marks, mark=triangle*, mark size=2.0pt,
+  mark options={fill=seriesMagenta, draw=black, line width=0.25pt}]
+  table [x=oos_coverage_mean, y expr=-\thisrow{class_idx}-0.07, col sep=comma]
+  {fig1_series_RoI-Trans.csv};
+\addlegendentry{RoI Transformer}
+
+\addplot[only marks, mark=diamond*, mark size=2.0pt,
+  mark options={fill=seriesYellow, draw=black, line width=0.25pt}]
+  table [x=oos_coverage_mean, y expr=-\thisrow{class_idx}-0.21, col sep=comma]
+  {fig1_series_S2A-Net.csv};
+\addlegendentry{S2A-Net}
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,68 @@
+{
+  "gate": "K3 reproduction gate (design 05-APP-rotdet-cert.md, A2 amendment)",
+  "frozen_rule": "|measured_val_map - published_val_map| <= tol; tol=0.5 mAP (K3 '\u00b10.5')",
+  "frozen_target_source": "AOPG published DIOR-R table (jbwang1997/AOPG, Apache-2.0)",
+  "aopg_dior_table": {
+    "RetinaNet-O": 57.55,
+    "Faster RCNN-O": 59.54,
+    "Gliding Vertex": 60.06,
+    "RoI Transformer": 63.87,
+    "AOPG": 64.41
+  },
+  "aopg_target_used": 64.41,
+  "tolerance": 0.5,
+  "eval_split_note": "in-house eval runs on DIOR-R test.txt (11,738 imgs) == AOPG's split",
+  "category_caveat": "The AOPG DIOR-R table contains NO Oriented R-CNN or RTMDet row; the \u00b10.5 identity-reproduction tolerance is defined for same-method reproduction. Verdicts below apply the frozen function against the AOPG-source DIOR-R reference (64.41) exactly as frozen; the gap is a cross-method gap, disclosed not chased (K3).",
+  "detectors": {
+    "oriented_rcnn_r50_1x": {
+      "measured_map": 62.61,
+      "checkpoint": "orcnn_dior/seed_0/epoch_12.pth",
+      "config": "oriented-rcnn-le90_r50_fpn_1x_dior.py",
+      "schedule": "1x (12 epochs)",
+      "source_log": "dior_train_results_2026-07-10 :: orcnn_dior_seed0_train.log Epoch(val)[12][11738/11738] dota/mAP: 0.6261",
+      "gate_vs_aopg_target": {
+        "measured_val_map": 62.61,
+        "published_val_map": 64.41,
+        "tolerance": 0.5,
+        "gap": -1.7999999999999972,
+        "passed": false,
+        "note": "GATE FAILED: no certification arm runs on this detector until fixed (K3)"
+      },
+      "nearest_table_row": "RoI Transformer",
+      "nearest_row_map": 63.87,
+      "gate_vs_nearest_row": {
+        "measured_val_map": 62.61,
+        "published_val_map": 63.87,
+        "tolerance": 0.5,
+        "gap": -1.259999999999998,
+        "passed": false,
+        "note": "GATE FAILED: no certification arm runs on this detector until fixed (K3)"
+      }
+    },
+    "rtmdet_r_l_3x": {
+      "measured_map": 68.36,
+      "checkpoint": "rtmdet_r_dior/seed_0/epoch_36.pth",
+      "config": "rotated_rtmdet_l-3x-dior.py",
+      "schedule": "3x (36 epochs); best epoch_24=69.65, deployed epoch_36=68.36",
+      "source_log": "dior_train_results_2026-07-10 :: rtmdet_r_dior_seed0_resume.log Epoch(val)[36][11738/11738] dota/mAP: 0.6836",
+      "gate_vs_aopg_target": {
+        "measured_val_map": 68.36,
+        "published_val_map": 64.41,
+        "tolerance": 0.5,
+        "gap": 3.950000000000003,
+        "passed": false,
+        "note": "GATE FAILED: no certification arm runs on this detector until fixed (K3)"
+      },
+      "nearest_table_row": "AOPG",
+      "nearest_row_map": 64.41,
+      "gate_vs_nearest_row": {
+        "measured_val_map": 68.36,
+        "published_val_map": 64.41,
+        "tolerance": 0.5,
+        "gap": 3.950000000000003,
+        "passed": false,
+        "note": "GATE FAILED: no certification arm runs on this detector until fixed (K3)"
+      }
+    }
+  }
+}

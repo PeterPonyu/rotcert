@@ -1,0 +1,9 @@
+{
+  "mmrotate_commit": "3ff004e",
+  "config": "/root/mmrotate/configs/oriented_rcnn/oriented-rcnn-le90_r50_fpn_1x_dior.py",
+  "checkpoint": "/root/autodl-tmp/dior_r/work_dirs/orcnn_dior/seed_0/epoch_12.pth",
+  "angle_convention_declared": "le90",
+  "score_thr": 0.05,
+  "n_images": 11738,
+  "n_detections": 160610
+}

@@ -1,0 +1,198 @@
+{
+  "score_name": "gwd",
+  "alpha": 0.1,
+  "mondrian_field": "class",
+  "strata": {
+    "airplane": {
+      "calibrator": {
+        "q_hat": 8.003184956749894,
+        "alpha": 0.1,
+        "n_cal": 6349
+      },
+      "n_cal": 6349,
+      "set_size_cxcy": 201.2220550855435
+    },
+    "airport": {
+      "calibrator": {
+        "q_hat": 74.24581826289486,
+        "alpha": 0.1,
+        "n_cal": 435
+      },
+      "n_cal": 435,
+      "set_size_cxcy": 17317.845812504715
+    },
+    "baseballfield": {
+      "calibrator": {
+        "q_hat": 8.696011409500933,
+        "alpha": 0.1,
+        "n_cal": 2865
+      },
+      "n_cal": 2865,
+      "set_size_cxcy": 237.569166766336
+    },
+    "basketballcourt": {
+      "calibrator": {
+        "q_hat": 8.626072611582615,
+        "alpha": 0.1,
+        "n_cal": 1953
+      },
+      "n_cal": 1953,
+      "set_size_cxcy": 233.76317208486643
+    },
+    "bridge": {
+      "calibrator": {
+        "q_hat": 30.901171802401826,
+        "alpha": 0.1,
+        "n_cal": 1523
+      },
+      "n_cal": 1523,
+      "set_size_cxcy": 2999.8515918233497
+    },
+    "chimney": {
+      "calibrator": {
+        "q_hat": 15.596996533388683,
+        "alpha": 0.1,
+        "n_cal": 855
+      },
+      "n_cal": 855,
+      "set_size_cxcy": 764.2436236557156
+    },
+    "dam": {
+      "calibrator": {
+        "q_hat": 73.10004420324177,
+        "alpha": 0.1,
+        "n_cal": 284
+      },
+      "n_cal": 284,
+      "set_size_cxcy": 16787.46622224143
+    },
+    "expressway-service-area": {
+      "calibrator": {
+        "q_hat": 54.21037979970663,
+        "alpha": 0.1,
+        "n_cal": 988
+      },
+      "n_cal": 988,
+      "set_size_cxcy": 9232.403408078915
+    },
+    "expressway-toll-station": {
+      "calibrator": {
+        "q_hat": 7.147828419241776,
+        "alpha": 0.1,
+        "n_cal": 552
+      },
+      "n_cal": 552,
+      "set_size_cxcy": 160.50852747130955
+    },
+    "golffield": {
+      "calibrator": {
+        "q_hat": 77.72724149905213,
+        "alpha": 0.1,
+        "n_cal": 477
+      },
+      "n_cal": 477,
+      "set_size_cxcy": 18980.007638102772
+    },
+    "groundtrackfield": {
+      "calibrator": {
+        "q_hat": 12.241357682322091,
+        "alpha": 0.1,
+        "n_cal": 1763
+      },
+      "n_cal": 1763,
+      "set_size_cxcy": 470.7702915014801
+    },
+    "harbor": {
+      "calibrator": {
+        "q_hat": 38.270445983522265,
+        "alpha": 0.1,
+        "n_cal": 1778
+      },
+      "n_cal": 1778,
+      "set_size_cxcy": 4601.2615358482035
+    },
+    "overpass": {
+      "calibrator": {
+        "q_hat": 48.10651433574352,
+        "alpha": 0.1,
+        "n_cal": 1204
+      },
+      "n_cal": 1204,
+      "set_size_cxcy": 7270.389083042387
+    },
+    "ship": {
+      "calibrator": {
+        "q_hat": 3.600021131457915,
+        "alpha": 0.1,
+        "n_cal": 32112
+      },
+      "n_cal": 32112,
+      "set_size_cxcy": 40.715518774243776
+    },
+    "stadium": {
+      "calibrator": {
+        "q_hat": 19.60320135984709,
+        "alpha": 0.1,
+        "n_cal": 576
+      },
+      "n_cal": 576,
+      "set_size_cxcy": 1207.2685148485339
+    },
+    "storagetank": {
+      "calibrator": {
+        "q_hat": 3.878744109466238,
+        "alpha": 0.1,
+        "n_cal": 18963
+      },
+      "n_cal": 18963,
+      "set_size_cxcy": 47.26418034667112
+    },
+    "tenniscourt": {
+      "calibrator": {
+        "q_hat": 3.814808610404477,
+        "alpha": 0.1,
+        "n_cal": 6577
+      },
+      "n_cal": 6577,
+      "set_size_cxcy": 45.718858777805714
+    },
+    "trainstation": {
+      "calibrator": {
+        "q_hat": 65.78226090236306,
+        "alpha": 0.1,
+        "n_cal": 363
+      },
+      "n_cal": 363,
+      "set_size_cxcy": 13594.632266394634
+    },
+    "vehicle": {
+      "calibrator": {
+        "q_hat": 3.6845943490519373,
+        "alpha": 0.1,
+        "n_cal": 16704
+      },
+      "n_cal": 16704,
+      "set_size_cxcy": 42.6510017638177
+    },
+    "windmill": {
+      "calibrator": {
+        "q_hat": 9.602731002699825,
+        "alpha": 0.1,
+        "n_cal": 2369
+      },
+      "n_cal": 2369,
+      "set_size_cxcy": 289.6939325879729
+    }
+  },
+  "refused": [],
+  "provenance": {
+    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "timestamp_utc": "2026-07-11T13:41:27.905148+00:00",
+    "seeds": null,
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.1",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+    "git_dirty": true
+  }
+}

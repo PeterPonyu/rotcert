@@ -1,0 +1,10 @@
+{
+  "annfiles_dir": "/root/autodl-tmp/hrsc_dota/test/annfiles",
+  "n_annfiles": 453,
+  "n_gt_records": 1878,
+  "n_difficult_seen": 0,
+  "difficult_policy": "include",
+  "n_difficult_dropped": 0,
+  "n_degenerate_skipped": 0,
+  "angle_convention": "le90 (rotcert.gwd.canonicalize_le90)"
+}

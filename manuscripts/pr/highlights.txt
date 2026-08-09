@@ -1,0 +1,5 @@
+- Per-class conformal localization certificates for oriented detectors on DIOR-R
+- Seam-continuous, square-safe Gaussian-Wasserstein nonconformity score
+- All 20 DIOR-R classes certified across four detector architectures
+- Actionable readouts: center radius, orientation extent, rotated-IoU floor
+- Learn-then-Test certified recall with explicit power-floor refusals

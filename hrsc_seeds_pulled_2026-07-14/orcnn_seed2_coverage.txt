@@ -1,0 +1,1 @@
+COVER /root/autodl-tmp/hrsc_rotcert_results/hrsc_test_dets_orcnn_seed2.jsonl: records=5252 distinct_images=453 floor=400 passed=True

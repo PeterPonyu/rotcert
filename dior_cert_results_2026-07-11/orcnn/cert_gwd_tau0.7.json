@@ -1,0 +1,180 @@
+{
+  "score_name": "gwd",
+  "alpha": 0.1,
+  "mondrian_field": "class",
+  "strata": {
+    "airplane": {
+      "calibrator": {
+        "q_hat": 7.050492967740737,
+        "alpha": 0.1,
+        "n_cal": 4540
+      },
+      "n_cal": 4540,
+      "set_size_cxcy": 156.16684635254956
+    },
+    "airport": {
+      "calibrator": {
+        "q_hat": 53.12901114274365,
+        "alpha": 0.1,
+        "n_cal": 135
+      },
+      "n_cal": 135,
+      "set_size_cxcy": 8867.74790078612
+    },
+    "baseballfield": {
+      "calibrator": {
+        "q_hat": 8.645566682845443,
+        "alpha": 0.1,
+        "n_cal": 2364
+      },
+      "n_cal": 2364,
+      "set_size_cxcy": 234.82092926378434
+    },
+    "basketballcourt": {
+      "calibrator": {
+        "q_hat": 9.19941516377128,
+        "alpha": 0.1,
+        "n_cal": 1843
+      },
+      "n_cal": 1843,
+      "set_size_cxcy": 265.87059663789523
+    },
+    "bridge": {
+      "calibrator": {
+        "q_hat": 31.898050652670925,
+        "alpha": 0.1,
+        "n_cal": 877
+      },
+      "n_cal": 877,
+      "set_size_cxcy": 3196.5253974325774
+    },
+    "chimney": {
+      "calibrator": {
+        "q_hat": 16.28495031871422,
+        "alpha": 0.1,
+        "n_cal": 773
+      },
+      "n_cal": 773,
+      "set_size_cxcy": 833.1491367185037
+    },
+    "dam": {
+      "calibrator": {
+        "q_hat": 42.90980089106071,
+        "alpha": 0.1,
+        "n_cal": 108
+      },
+      "n_cal": 108,
+      "set_size_cxcy": 5784.460654317676
+    },
+    "golffield": {
+      "calibrator": {
+        "q_hat": 59.76868407899959,
+        "alpha": 0.1,
+        "n_cal": 328
+      },
+      "n_cal": 328,
+      "set_size_cxcy": 11222.697602526338
+    },
+    "groundtrackfield": {
+      "calibrator": {
+        "q_hat": 14.061635143248466,
+        "alpha": 0.1,
+        "n_cal": 1677
+      },
+      "n_cal": 1677,
+      "set_size_cxcy": 621.1858050417956
+    },
+    "harbor": {
+      "calibrator": {
+        "q_hat": 39.026411096610055,
+        "alpha": 0.1,
+        "n_cal": 1063
+      },
+      "n_cal": 1063,
+      "set_size_cxcy": 4784.836504268045
+    },
+    "overpass": {
+      "calibrator": {
+        "q_hat": 41.02911834047603,
+        "alpha": 0.1,
+        "n_cal": 850
+      },
+      "n_cal": 850,
+      "set_size_cxcy": 5288.5211074619465
+    },
+    "ship": {
+      "calibrator": {
+        "q_hat": 3.670847409059375,
+        "alpha": 0.1,
+        "n_cal": 28623
+      },
+      "n_cal": 28623,
+      "set_size_cxcy": 42.33334019923419
+    },
+    "stadium": {
+      "calibrator": {
+        "q_hat": 21.93679479959044,
+        "alpha": 0.1,
+        "n_cal": 522
+      },
+      "n_cal": 522,
+      "set_size_cxcy": 1511.806534973539
+    },
+    "storagetank": {
+      "calibrator": {
+        "q_hat": 4.108404376322929,
+        "alpha": 0.1,
+        "n_cal": 13848
+      },
+      "n_cal": 13848,
+      "set_size_cxcy": 53.026900049354886
+    },
+    "tenniscourt": {
+      "calibrator": {
+        "q_hat": 3.965678294055652,
+        "alpha": 0.1,
+        "n_cal": 6242
+      },
+      "n_cal": 6242,
+      "set_size_cxcy": 49.40658463514914
+    },
+    "trainstation": {
+      "calibrator": {
+        "q_hat": 43.65871362840538,
+        "alpha": 0.1,
+        "n_cal": 193
+      },
+      "n_cal": 193,
+      "set_size_cxcy": 5988.137216028992
+    },
+    "vehicle": {
+      "calibrator": {
+        "q_hat": 3.658545933623863,
+        "alpha": 0.1,
+        "n_cal": 10203
+      },
+      "n_cal": 10203,
+      "set_size_cxcy": 42.05008681605097
+    },
+    "windmill": {
+      "calibrator": {
+        "q_hat": 7.448055536893973,
+        "alpha": 0.1,
+        "n_cal": 1257
+      },
+      "n_cal": 1257,
+      "set_size_cxcy": 174.2752383399955
+    }
+  },
+  "refused": [],
+  "provenance": {
+    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "timestamp_utc": "2026-07-11T08:36:04.720632+00:00",
+    "seeds": null,
+    "python_version": "3.13.5",
+    "numpy_version": "2.5.1",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+    "git_dirty": true
+  }
+}

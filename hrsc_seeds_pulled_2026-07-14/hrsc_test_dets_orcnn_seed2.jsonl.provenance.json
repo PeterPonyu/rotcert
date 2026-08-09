@@ -1,0 +1,9 @@
+{
+  "mmrotate_commit": "3ff004eb21ea040455b5585db229edba4037f1bf",
+  "config": "/root/mmrotate/configs/oriented_rcnn/oriented-rcnn-le90_r50_fpn_1x_hrsc.py",
+  "checkpoint": "/root/autodl-tmp/hrsc_dota/work_dirs/orcnn_hrsc/seed_2/epoch_12.pth",
+  "angle_convention_declared": "le90",
+  "score_thr": 0.05,
+  "n_images": 453,
+  "n_detections": 5252
+}

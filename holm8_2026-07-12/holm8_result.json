@@ -1,0 +1,166 @@
+{
+ "family_size": 8,
+ "alpha": 0.05,
+ "results": [
+  {
+   "baseline": "naive-coord",
+   "detector": "rtmdet",
+   "dataset": "dota",
+   "eval_coverage_gwd": 0.9016,
+   "eval_coverage_baseline": 0.936,
+   "n_eval_pairs": 20997,
+   "point_log_ratio": -0.39996956975033543,
+   "ci_log_ratio": [
+    -0.3999695697503355,
+    -0.3999695697503353
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.6703404443523567,
+   "n_classes": 20997,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "hull",
+   "detector": "rtmdet",
+   "dataset": "dota",
+   "eval_coverage_gwd": 0.9016,
+   "eval_coverage_baseline": 0.9428,
+   "n_eval_pairs": 20997,
+   "point_log_ratio": -0.146516526580033,
+   "ci_log_ratio": [
+    -0.14651652658003303,
+    -0.14651652658003297
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.8637114580202734,
+   "n_classes": 20997,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "naive-coord",
+   "detector": "orcnn",
+   "dataset": "dota",
+   "eval_coverage_gwd": 0.8968,
+   "eval_coverage_baseline": 0.9391,
+   "n_eval_pairs": 20872,
+   "point_log_ratio": -0.5181266760066351,
+   "ci_log_ratio": [
+    -0.5181266760066353,
+    -0.5181266760066351
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.5956353214171679,
+   "n_classes": 20872,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "hull",
+   "detector": "orcnn",
+   "dataset": "dota",
+   "eval_coverage_gwd": 0.8968,
+   "eval_coverage_baseline": 0.9421,
+   "n_eval_pairs": 20872,
+   "point_log_ratio": -0.2485906492109393,
+   "ci_log_ratio": [
+    -0.24859064921093935,
+    -0.2485906492109393
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.7798991603872099,
+   "n_classes": 20872,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "naive-coord",
+   "detector": "orcnn",
+   "dataset": "dior",
+   "eval_coverage_gwd": 0.9019,
+   "eval_coverage_baseline": 0.9366,
+   "n_eval_pairs": 36417,
+   "point_log_ratio": -1.114964667042048,
+   "ci_log_ratio": [
+    -1.1149646670420486,
+    -1.1149646670420479
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.32792686532103976,
+   "n_classes": 36417,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "hull",
+   "detector": "orcnn",
+   "dataset": "dior",
+   "eval_coverage_gwd": 0.9019,
+   "eval_coverage_baseline": 0.9493,
+   "n_eval_pairs": 36417,
+   "point_log_ratio": -0.7418285538697775,
+   "ci_log_ratio": [
+    -0.7418285538697776,
+    -0.7418285538697773
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.47624228417978093,
+   "n_classes": 36417,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "naive-coord",
+   "detector": "rtmdet",
+   "dataset": "dior",
+   "eval_coverage_gwd": 0.9065,
+   "eval_coverage_baseline": 0.9346,
+   "n_eval_pairs": 40976,
+   "point_log_ratio": -0.9109058293037408,
+   "ci_log_ratio": [
+    -0.9109058293037409,
+    -0.9109058293037403
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.40215977088713106,
+   "n_classes": 40976,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  },
+  {
+   "baseline": "hull",
+   "detector": "rtmdet",
+   "dataset": "dior",
+   "eval_coverage_gwd": 0.9065,
+   "eval_coverage_baseline": 0.9503,
+   "n_eval_pairs": 40976,
+   "point_log_ratio": -0.5200603405405273,
+   "ci_log_ratio": [
+    -0.5200603405405274,
+    -0.5200603405405272
+   ],
+   "p_value": 0.0004997501249375312,
+   "ratio": 0.5944846753612725,
+   "n_classes": 40976,
+   "p_holm": 0.00399800099950025,
+   "reject_holm": true
+  }
+ ],
+ "provenance": {
+  "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/audit.py",
+  "timestamp_utc": "2026-07-12T09:20:08.299060+00:00",
+  "seeds": null,
+  "python_version": "3.13.5",
+  "numpy_version": "2.5.1",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "git_sha": "78a0bfb72d9b542f8159d64c37cef8fe36101960",
+  "git_dirty": true
+ },
+ "protocol": {
+  "alpha_coverage": 0.1,
+  "split": "40/20/40 seed0 single",
+  "frozen_per": "apps-design/05 sha256 4764b230 + SIGN-OFF-RECORD-2026-07-11",
+  "elapsed_s": 20.9
+ }
+}

@@ -9,7 +9,7 @@ import json, sys, time
 import numpy as np
 from scipy.stats import bootstrap as scipy_bootstrap
 
-ROOT = "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert"
+ROOT = "${REPO_ROOT}"
 sys.path.insert(0, ROOT)
 from rotcert import io as _io, certify as _certify, splits as _splits
 from rotcert.scores import SCORES

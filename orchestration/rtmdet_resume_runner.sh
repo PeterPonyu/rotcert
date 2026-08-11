@@ -11,9 +11,9 @@
 set -uo pipefail
 source /root/miniconda3/etc/profile.d/conda.sh && conda activate mm
 
-WORK="${WORK:-/root/autodl-tmp/dior_r/work_dirs/rtmdet_r_dior/seed_0}"
+WORK="${WORK:-${AUTODL_TMP}/dior_r/work_dirs/rtmdet_r_dior/seed_0}"
 CFG="${CFG:-/root/mmrotate/configs/rotated_rtmdet/rotated_rtmdet_l-3x-dior.py}"
-RES="${RES:-/root/autodl-tmp/rotcert_dior_train_results}"
+RES="${RES:-${AUTODL_TMP}/rotcert_dior_train_results}"
 CKPT="$WORK/epoch_36.pth"
 
 if [ ! -s "$CKPT" ]; then
@@ -34,8 +34,8 @@ if [ -s "$CKPT" ] && python3 -c "import torch; torch.load('$CKPT', map_location=
   printf 'OK\n' > "$RES/markers/RTMDET_R_DIOR_TRAIN.marker"
   printf 'OK\n' > "$RES/markers/RTMDET_R_DIOR_CKPT_INTEGRITY.marker"
   echo "$(date -Iseconds) rtmdet resume: epoch_36 integral -- markers refreshed OK"
-  tar --warning=no-file-changed -czf /root/autodl-tmp/rotcert_dior_train.tar.gz \
-    "$RES" /root/autodl-tmp/dior_r/work_dirs 2>/dev/null
+  tar --warning=no-file-changed -czf ${AUTODL_TMP}/rotcert_dior_train.tar.gz \
+    "$RES" ${AUTODL_TMP}/dior_r/work_dirs 2>/dev/null
   echo "$(date -Iseconds) rtmdet resume: training tar refreshed"
 
   export CHAIN_CONDA_ENV=mm

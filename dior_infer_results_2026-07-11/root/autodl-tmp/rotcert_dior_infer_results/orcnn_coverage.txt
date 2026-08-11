@@ -1,2 +1,2 @@
-COVERAGE /root/autodl-tmp/rotcert_dior_infer_results/dior_test_dets_orcnn.jsonl: records=160610 distinct_images=11723 floor=11000 passed=True
-COVERAGE /root/autodl-tmp/rotcert_dior_infer_results/dior_test_dets_orcnn.jsonl: records=160610 distinct_images=11723 floor=11000 passed=True
+COVERAGE ${AUTODL_TMP}/rotcert_dior_infer_results/dior_test_dets_orcnn.jsonl: records=160610 distinct_images=11723 floor=11000 passed=True
+COVERAGE ${AUTODL_TMP}/rotcert_dior_infer_results/dior_test_dets_orcnn.jsonl: records=160610 distinct_images=11723 floor=11000 passed=True

@@ -148,7 +148,7 @@
   }
  ],
  "provenance": {
-  "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/audit.py",
+  "script": "${REPO_ROOT}/rotcert/audit.py",
   "timestamp_utc": "2026-07-12T09:20:08.299060+00:00",
   "seeds": null,
   "python_version": "3.13.5",

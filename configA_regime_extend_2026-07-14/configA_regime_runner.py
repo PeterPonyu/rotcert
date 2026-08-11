@@ -19,7 +19,7 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path("/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert")
+ROOT = _portal_repo_root()
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "coverage_matched_2026-07-13"))
 sys.path.insert(0, str(ROOT / "coverage_matched_regime_2026-07-13"))

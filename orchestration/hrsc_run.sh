@@ -18,11 +18,11 @@ exec > >(tee -a "$LOG") 2>&1
 echo "=== hrsc_run start $(date -Iseconds) ==="
 
 MMROTATE_COMMIT=3ff004eb21ea040455b5585db229edba4037f1bf
-HRSC_ROOT="${HRSC_ROOT:-/root/autodl-tmp/HRSC2016-MS}"
-DOTA="${DOTA:-/root/autodl-tmp/hrsc_dota}"
+HRSC_ROOT="${HRSC_ROOT:-${AUTODL_TMP}/HRSC2016-MS}"
+DOTA="${DOTA:-${AUTODL_TMP}/hrsc_dota}"
 MMR="${MMR:-/root/mmrotate}"
 ORCH=/root/reliability-commons/tools/rotcert/orchestration
-RES=/root/autodl-tmp/hrsc_rotcert_results
+RES=${AUTODL_TMP}/hrsc_rotcert_results
 WORK="$DOTA/work_dirs"
 MK="$RES/markers"
 mkdir -p "$RES" "$MK" "$WORK"
@@ -212,8 +212,8 @@ done
 for s in ${RTMDET_SEEDS//,/ }; do
   cp "$WORK/rtmdet_hrsc/seed_$s/epoch_${RTMDET_EPOCHS}.pth" "$RES/checkpoints/rtmdet_seed${s}_epoch_${RTMDET_EPOCHS}.pth" 2>/dev/null
 done
-DEST=/root/autodl-tmp/hrsc_rotcert.tar.gz
-tar --warning=no-file-changed -czf "$DEST" -C /root/autodl-tmp hrsc_rotcert_results 2>>"$LOG"
+DEST=${AUTODL_TMP}/hrsc_rotcert.tar.gz
+tar --warning=no-file-changed -czf "$DEST" -C ${AUTODL_TMP} hrsc_rotcert_results 2>>"$LOG"
 if [ -s "$DEST" ]; then
   echo "tarred -> $DEST ($(stat -c%s "$DEST") bytes)"
   if [ "${#FAILED[@]}" -eq 0 ]; then echo "HRSC_RUN_ALL_DONE"; else echo "HRSC_RUN_PARTIAL_DONE failed=[${FAILED[*]}]"; fi

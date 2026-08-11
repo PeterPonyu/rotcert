@@ -60,5 +60,5 @@ vehicle 0.8994 (n_cal 16 704).
 ## Provenance
 - Frozen inputs untouched (read-only). Suite unaffected (only new result files added).
 - All numbers above trace to `results.json` (written by `perclass_conditional_coverage.py`).
-- Env: `/home/zeyufu/miniconda3/envs/dl/bin/python`,
+- Env: `${CONDA_ROOT}/envs/dl/bin/python`,
   `PYTHONPATH=reliability-commons:reliability-commons/tools/rotcert`.

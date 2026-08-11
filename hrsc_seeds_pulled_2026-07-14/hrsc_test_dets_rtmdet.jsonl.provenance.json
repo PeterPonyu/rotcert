@@ -1,7 +1,7 @@
 {
   "mmrotate_commit": "3ff004eb21ea040455b5585db229edba4037f1bf",
   "config": "/root/mmrotate/configs/rotated_rtmdet/rotated-rtmdet_l-3x-hrsc.py",
-  "checkpoint": "/root/autodl-tmp/hrsc_dota/work_dirs/rtmdet_hrsc/seed_0/epoch_36.pth",
+  "checkpoint": "${AUTODL_TMP}/hrsc_dota/work_dirs/rtmdet_hrsc/seed_0/epoch_36.pth",
   "angle_convention_declared": "le90",
   "score_thr": 0.05,
   "n_images": 453,

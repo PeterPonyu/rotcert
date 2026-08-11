@@ -47,3 +47,8 @@ val_substrate_2026-07-10/
 # Scratch
 manuscripts/figures-src/review/
 orchestration/.omc/
+.cursor/
+.playwright-mcp/
+.env
+.env.*
+!.env.example

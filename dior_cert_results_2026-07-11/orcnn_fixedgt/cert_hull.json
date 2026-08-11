@@ -426,7 +426,7 @@
   },
   "refused": [],
   "provenance": {
-    "script": "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert/rotcert/certify.py",
+    "script": "${REPO_ROOT}/rotcert/certify.py",
     "timestamp_utc": "2026-07-11T13:15:55.011586+00:00",
     "seeds": null,
     "python_version": "3.13.5",

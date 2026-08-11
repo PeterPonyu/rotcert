@@ -36,7 +36,7 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path("/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert")
+ROOT = _portal_repo_root()
 sys.path.insert(0, str(ROOT))
 import numpy as np  # noqa: E402
 from rotcert import io as _io, certify as _certify, splits as _splits, audit as _audit  # noqa: E402

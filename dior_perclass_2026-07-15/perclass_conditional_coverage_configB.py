@@ -37,8 +37,8 @@ import time
 
 import numpy as np
 
-ROOT = "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons/tools/rotcert"
-sys.path.insert(0, "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons")
+ROOT = "${REPO_ROOT}"
+sys.path.insert(0, str(_portal_commons_root()))
 sys.path.insert(0, ROOT)
 
 from rotcert import certify as _certify  # noqa: E402

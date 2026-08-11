@@ -64,7 +64,32 @@ def _portal_repo_root():
             return p
     return here
 
-ROOT = "${REPO_ROOT}"
+def _data_root():
+    import os
+    from pathlib import Path
+    return Path(os.environ.get("DATA_ROOT", Path.home() / "data")).expanduser()
+
+def _portfolio_root():
+    """Parent of theme repos when laid out as a portfolio sibling tree."""
+    from pathlib import Path
+    r = _portal_repo_root()
+    parent = r.parent
+    markers = ("reliability-commons", "inspect-gate", "materials-mlip-research", "asr-gate")
+    if any((parent / m).exists() for m in markers):
+        return parent
+    return parent
+
+def _autodl_tmp():
+    import os
+    from pathlib import Path
+    return Path(os.environ.get("AUTODL_TMP", "/tmp/autodl-tmp"))
+
+def _conda_root():
+    import os
+    from pathlib import Path
+    return Path(os.environ.get("CONDA_ROOT", Path.home() / "miniconda3")).expanduser()
+
+ROOT = str(_portal_repo_root())
 sys.path.insert(0, str(_portal_commons_root()))
 sys.path.insert(0, ROOT)
 

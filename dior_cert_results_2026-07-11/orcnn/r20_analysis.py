@@ -12,7 +12,59 @@ import json, sys, time
 import numpy as np
 from scipy.stats import bootstrap as scipy_bootstrap
 
-ROOT = "${REPO_ROOT}"
+
+def _portal_commons_root():
+    import os
+    from pathlib import Path
+    for key in ("COMMONS_ROOT", "RELIABILITY_COMMONS"):
+        v = os.environ.get(key)
+        if v:
+            p = Path(v).expanduser().resolve()
+            if p.is_dir():
+                return p
+    here = Path(__file__).resolve()
+    for parent in [here.parent, *here.parents]:
+        for cand in (parent / "reliability-commons", parent.parent / "reliability-commons"):
+            if cand.is_dir():
+                return cand
+    raise RuntimeError(
+        "Set COMMONS_ROOT to the reliability-commons checkout (or place it as a sibling of this repo)."
+    )
+
+def _portal_repo_root():
+    from pathlib import Path
+    here = Path(__file__).resolve().parent
+    for p in [here, *here.parents]:
+        if (p / ".git").exists() or (p / "pyproject.toml").exists() or (p / "README.md").exists():
+            return p
+    return here
+
+def _data_root():
+    import os
+    from pathlib import Path
+    return Path(os.environ.get("DATA_ROOT", Path.home() / "data")).expanduser()
+
+def _portfolio_root():
+    """Parent of theme repos when laid out as a portfolio sibling tree."""
+    from pathlib import Path
+    r = _portal_repo_root()
+    parent = r.parent
+    markers = ("reliability-commons", "inspect-gate", "materials-mlip-research", "asr-gate")
+    if any((parent / m).exists() for m in markers):
+        return parent
+    return parent
+
+def _autodl_tmp():
+    import os
+    from pathlib import Path
+    return Path(os.environ.get("AUTODL_TMP", "/tmp/autodl-tmp"))
+
+def _conda_root():
+    import os
+    from pathlib import Path
+    return Path(os.environ.get("CONDA_ROOT", Path.home() / "miniconda3")).expanduser()
+
+ROOT = str(_portal_repo_root())
 sys.path.insert(0, ROOT)
 from rotcert import io as _io, certify as _certify, splits as _splits
 from rotcert.scores import SCORES

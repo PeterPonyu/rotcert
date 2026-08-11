@@ -1,1 +1,1 @@
-COVER /root/autodl-tmp/hrsc_rotcert_results/hrsc_test_dets_orcnn_seed1.jsonl: records=4978 distinct_images=453 floor=400 passed=True
+COVER ${AUTODL_TMP}/hrsc_rotcert_results/hrsc_test_dets_orcnn_seed1.jsonl: records=4978 distinct_images=453 floor=400 passed=True

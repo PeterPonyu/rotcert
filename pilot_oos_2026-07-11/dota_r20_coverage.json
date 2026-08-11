@@ -3,7 +3,7 @@
   "alpha": 0.1,
   "nominal_coverage": 0.9,
   "n_repeats": 20,
-  "matched": "pilot_results_2026-07-10/pulled/root/autodl-tmp/rotcert_results/pilot/matched.jsonl",
+  "matched": "pilot_results_2026-07-10/pulled${AUTODL_TMP}/rotcert_results/pilot/matched.jsonl",
   "marginal_coverage_across_repeats": {
     "mean": 0.8879291063851358,
     "std": 0.02397434001854473,

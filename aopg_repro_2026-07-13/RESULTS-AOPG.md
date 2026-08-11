@@ -136,7 +136,7 @@ a sanity check, not a load-bearing claim.
   `root/autodl-tmp/rotcert_dior_train_results/orcnn_dior_seed0_train.log` (ORCNN
   epoch 12) and `rtmdet_r_dior_seed0_resume.log` (RTMDet epoch 36); scalars at
   `root/autodl-tmp/dior_r/work_dirs/*/seed_0/*/vis_data/scalars.json`.
-- Deployed-checkpoint match: `dior_infer_results_2026-07-11/root/autodl-tmp/`
+- Deployed-checkpoint match: `dior_infer_results_2026-07-11${AUTODL_TMP}/`
   `rotcert_dior_infer_results/dior_test_dets_{orcnn,rtmdet}.jsonl.provenance.json`
   (`epoch_12.pth` / `epoch_36.pth`; mmrotate commit `3ff004e`).
 - On-box AOPG repro markers were `AOPG_REPRO_ORCNN=SKIPPED_DISCLOSED` /

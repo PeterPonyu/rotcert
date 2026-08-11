@@ -1,7 +1,7 @@
 {
   "mmrotate_commit": "3ff004e",
   "config": "/root/mmrotate/configs/oriented_rcnn/oriented-rcnn-le90_r50_fpn_1x_dota.py",
-  "checkpoint": "/root/autodl-tmp/orcnn_dota_published.pth",
+  "checkpoint": "${AUTODL_TMP}/orcnn_dota_published.pth",
   "angle_convention_declared": "le90",
   "score_thr": 0.05,
   "n_images": 5297,

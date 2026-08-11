@@ -46,16 +46,16 @@ source "${RELIABILITY_COMMONS}/tools/boxkit/chain_lib.sh"
 # Tunables (env-overridable, named defaults -- NO hardcoded paths/counts inline
 # in the stages below).
 # ---------------------------------------------------------------------------
-RESULTS_DIR="${RESULTS_DIR:-/root/autodl-tmp/rotcert_dior_infer_results}"
+RESULTS_DIR="${RESULTS_DIR:-${AUTODL_TMP}/rotcert_dior_infer_results}"
 
 # --- training-chain handoff (its markers dir + work dir; must match the train chain) ---
-TRAIN_RESULTS_DIR="${TRAIN_RESULTS_DIR:-/root/autodl-tmp/rotcert_dior_train_results}"
+TRAIN_RESULTS_DIR="${TRAIN_RESULTS_DIR:-${AUTODL_TMP}/rotcert_dior_train_results}"
 TRAIN_MARKERS_DIR="${TRAIN_MARKERS_DIR:-$TRAIN_RESULTS_DIR/markers}"
 ORCNN_CKPT_MARKER="${ORCNN_CKPT_MARKER:-ORCNN_DIOR_CKPT_INTEGRITY}"
 RTMDET_CKPT_MARKER="${RTMDET_CKPT_MARKER:-RTMDET_R_DIOR_CKPT_INTEGRITY}"
 
 # --- DIOR-R staged layout (mirrors next_boot_rotcert_dior_train.sh) ---
-DIOR_R_ROOT="${DIOR_R_ROOT:-/root/autodl-tmp/dior_r}"
+DIOR_R_ROOT="${DIOR_R_ROOT:-${AUTODL_TMP}/dior_r}"
 DIOR_R_OBB_ANN_SUBDIR="${DIOR_R_OBB_ANN_SUBDIR:-Annotations/Oriented Bounding Boxes}"
 DIOR_R_TEST_IMG_SUBDIR="${DIOR_R_TEST_IMG_SUBDIR:-JPEGImages-test}"
 DIOR_R_IMAGESETS_SUBDIR="${DIOR_R_IMAGESETS_SUBDIR:-ImageSets/Main}"

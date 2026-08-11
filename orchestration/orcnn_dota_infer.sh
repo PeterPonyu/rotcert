@@ -10,14 +10,14 @@ source /root/miniconda3/etc/profile.d/conda.sh && conda activate "${CHAIN_CONDA_
 export CHAIN_LOG="${CHAIN_LOG:-/root/orcnn_dota_infer.log}"
 source /root/reliability-commons/tools/boxkit/chain_lib.sh
 
-RESULTS_DIR="${RESULTS_DIR:-/root/autodl-tmp/orcnn_dota_results}"
+RESULTS_DIR="${RESULTS_DIR:-${AUTODL_TMP}/orcnn_dota_results}"
 MARKERS_DIR="$RESULTS_DIR/markers"
 mkdir -p "$RESULTS_DIR" "$MARKERS_DIR"
 
 CKPT_URL="${CKPT_URL:-https://download.openmmlab.com/mmrotate/v0.1.0/oriented_rcnn/oriented_rcnn_r50_fpn_fp16_1x_dota_le90/oriented_rcnn_r50_fpn_fp16_1x_dota_le90-57c88621.pth}"
-CKPT="${CKPT:-/root/autodl-tmp/orcnn_dota_published.pth}"
+CKPT="${CKPT:-${AUTODL_TMP}/orcnn_dota_published.pth}"
 CONFIG="${CONFIG:-/root/mmrotate/configs/oriented_rcnn/oriented-rcnn-le90_r50_fpn_1x_dota.py}"
-IMAGES="${IMAGES:-/root/autodl-tmp/dota/val/images}"   # SAME dir as the pilot (grid comparability)
+IMAGES="${IMAGES:-${AUTODL_TMP}/dota/val/images}"   # SAME dir as the pilot (grid comparability)
 CLASSES="${CLASSES:-plane,ship,storage-tank,baseball-diamond,tennis-court,basketball-court,ground-track-field,harbor,bridge,large-vehicle,small-vehicle,helicopter,roundabout,soccer-ball-field,swimming-pool}"
 MMROTATE_COMMIT="${MMROTATE_COMMIT:-3ff004e}"
 DETS="$RESULTS_DIR/dota_val_dets_orcnn.jsonl"

@@ -98,10 +98,10 @@ what turns "efficiency walked back" into a defensible, mechanistic result.
 
 ## 3. Datasets — status and the HRSC recipe (verified)
 
-- **DOTA-v1.0** — box-side public mirror `/root/autodl-pub/DOTA` (~30 GB, zero download); val tiles
+- **DOTA-v1.0** — box-side public mirror `${AUTODL_PUB}/DOTA` (~30 GB, zero download); val tiles
   already the substrate for the two existing DOTA cells. New DOTA detectors reuse the identical val
   crops → the certification is directly comparable across detectors (same scenes, same matcher).
-- **DIOR-R** — staged on the box data disk (`/root/autodl-tmp/dior_r`, 23,463 imgs); in-house
+- **DIOR-R** — staged on the box data disk (`${AUTODL_TMP}/dior_r`, 23,463 imgs); in-house
   checkpoints + detection substrate already pulled (`dior_infer_results_2026-07-11/`,
   `dior_train_results_2026-07-10/`). No new dataset work.
 - **HRSC2016 — the one real data gap, and it is nearly closed.** The sourcing doc's **gdown Route 1 is

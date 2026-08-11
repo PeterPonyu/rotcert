@@ -1,6 +1,6 @@
 {
-  "annfiles_dir": "/root/autodl-tmp/dior_r/Annotations/Oriented Bounding Boxes",
-  "imageset_file": "/root/autodl-tmp/dior_r/ImageSets/Main/test.txt",
+  "annfiles_dir": "${AUTODL_TMP}/dior_r/Annotations/Oriented Bounding Boxes",
+  "imageset_file": "${AUTODL_TMP}/dior_r/ImageSets/Main/test.txt",
   "n_annfiles": 11738,
   "n_gt_records": 124445,
   "n_robndbox5": 0,

@@ -33,9 +33,9 @@ MANIFEST="$HERE/dota_zoo_manifest.json"
 DRY=0; [ "${1:-}" = "--dry-run" ] && DRY=1
 PY="${ZOO_PY:-python3}"
 MMR="${MMR:-/root/mmrotate}"
-RESULTS_DIR="${RESULTS_DIR:-/root/autodl-tmp/dota_zoo_results}"
-IMAGES="${IMAGES:-/root/autodl-tmp/dota/val/images}"           # SAME dir as existing DOTA cells (grid comparability)
-CKPT_CACHE="${CKPT_CACHE:-/root/autodl-tmp/dota_zoo_ckpts}"
+RESULTS_DIR="${RESULTS_DIR:-${AUTODL_TMP}/dota_zoo_results}"
+IMAGES="${IMAGES:-${AUTODL_TMP}/dota/val/images}"           # SAME dir as existing DOTA cells (grid comparability)
+CKPT_CACHE="${CKPT_CACHE:-${AUTODL_TMP}/dota_zoo_ckpts}"
 MMROTATE_COMMIT="${MMROTATE_COMMIT:-3ff004eb21ea040455b5585db229edba4037f1bf}"
 CLASSES="${CLASSES:-plane,ship,storage-tank,baseball-diamond,tennis-court,basketball-court,ground-track-field,harbor,bridge,large-vehicle,small-vehicle,helicopter,roundabout,soccer-ball-field,swimming-pool}"
 MIN_IMAGES="${MIN_IMAGES:-400}"

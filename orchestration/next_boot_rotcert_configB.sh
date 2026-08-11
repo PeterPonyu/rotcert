@@ -66,7 +66,7 @@ SCORE_THR="${SCORE_THR:-0.05}"
 export MMROTATE_COMMIT
 
 # --- DIOR-R staged layout (mirrors next_boot_rotcert_dior_{train,infer}.sh) ---
-DIOR_R_ROOT="${DIOR_R_ROOT:-/root/autodl-tmp/dior_r}"
+DIOR_R_ROOT="${DIOR_R_ROOT:-${AUTODL_TMP}/dior_r}"
 DIOR_R_OBB_ANN_SUBDIR="${DIOR_R_OBB_ANN_SUBDIR:-Annotations/Oriented Bounding Boxes}"
 DIOR_R_TRAINVAL_IMG_SUBDIR="${DIOR_R_TRAINVAL_IMG_SUBDIR:-JPEGImages-trainval}"
 DIOR_R_TEST_IMG_SUBDIR="${DIOR_R_TEST_IMG_SUBDIR:-JPEGImages-test}"
@@ -98,16 +98,16 @@ S2ANET_BATCH="${S2ANET_BATCH:-2}"                     # one-stage; 2 is the sche
 DIOR_SEED="${DIOR_SEED:-0}"
 
 # --- HRSC 3-seed arm (delegates to hrsc_run.sh) ---
-HRSC_MS_ZIP="${HRSC_MS_ZIP:-/root/autodl-tmp/HRSC2016-MS.zip}"
-HRSC_ROOT="${HRSC_ROOT:-/root/autodl-tmp/HRSC2016-MS}"
+HRSC_MS_ZIP="${HRSC_MS_ZIP:-${AUTODL_TMP}/HRSC2016-MS.zip}"
+HRSC_ROOT="${HRSC_ROOT:-${AUTODL_TMP}/HRSC2016-MS}"
 HRSC_MS_MD5="${HRSC_MS_MD5:-167501c0de0d6015a109a4abddd77fb1}"       # verified local prefetch 2026-07-13
 export HRSC_ROOT
 export ORCNN_SEEDS="${ORCNN_SEEDS:-0,1,2}"            # Config B: 3-seed training-variance
 export RTMDET_SEEDS="${RTMDET_SEEDS:-0,1,2}"
-RESULTS_HRSC="${RESULTS_HRSC:-/root/autodl-tmp/hrsc_rotcert_results}"
+RESULTS_HRSC="${RESULTS_HRSC:-${AUTODL_TMP}/hrsc_rotcert_results}"
 
 # --- results / markers ---
-RESULTS_DIOR="${RESULTS_DIOR:-/root/autodl-tmp/rotcert_configB_dior_results}"
+RESULTS_DIOR="${RESULTS_DIOR:-${AUTODL_TMP}/rotcert_configB_dior_results}"
 MARKERS_DIR="${MARKERS_DIR:-$RESULTS_DIOR/../configB_markers}"
 [ "$DRY" -eq 1 ] || mkdir -p "$RESULTS_DIOR" "$MARKERS_DIR"
 

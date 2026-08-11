@@ -1,7 +1,7 @@
 {
-  "hrsc_root": "/root/autodl-tmp/HRSC2016-MS",
-  "imageset_file": "/root/autodl-tmp/HRSC2016-MS/ImageSets/source/train.txt",
-  "out_dir": "/root/autodl-tmp/hrsc_dota/train",
+  "hrsc_root": "${AUTODL_TMP}/HRSC2016-MS",
+  "imageset_file": "${AUTODL_TMP}/HRSC2016-MS/ImageSets/source/train.txt",
+  "out_dir": "${AUTODL_TMP}/hrsc_dota/train",
   "class_name": "ship",
   "n_images": 436,
   "n_objects": 1733,

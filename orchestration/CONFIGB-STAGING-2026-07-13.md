@@ -119,10 +119,10 @@ JSONL is reused. Clean marker `ROTCERT_CONFIGB_ALL_DONE`; any gate failure →
 ## Expected outputs and where the LOCAL certify step picks up
 
 Box tar (via `chain_epilogue`) carries:
-- DIOR-R arm (`$RESULTS_DIOR = /root/autodl-tmp/rotcert_configB_dior_results/`):
+- DIOR-R arm (`$RESULTS_DIOR = ${AUTODL_TMP}/rotcert_configB_dior_results/`):
   `dior_test_dets_roi_trans.jsonl`, `dior_test_dets_s2anet.jsonl`, `dior_test_gt.jsonl`
   (+ provenance), the two deployed configs, train logs, coverage txts.
-- HRSC arm (`$RESULTS_HRSC = /root/autodl-tmp/hrsc_rotcert_results/`, produced by
+- HRSC arm (`$RESULTS_HRSC = ${AUTODL_TMP}/hrsc_rotcert_results/`, produced by
   `hrsc_run.sh`): per-seed `hrsc_test_dets_{orcnn,rtmdet}[_seed{1,2}].jsonl`,
   `hrsc_test_gt.jsonl`, per-seed final checkpoints, configs, provenance.
 - `configB_markers/` (all per-stage + per-detector markers).

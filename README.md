@@ -159,7 +159,7 @@ Runs on the AutoDL box (mmrotate + a GPU for RTMDet-R-l inference; everything
 downstream is CPU-only, per design §4.7's "one GPU pass, then CPU forever" shape).
 
 ```bash
-export DOTA_SRC=/root/autodl-pub/DOTA
+export DOTA_SRC=${AUTODL_PUB}/DOTA
 export MMROTATE_COMMIT=<pinned-sha>          # REQUIRED, no default
 export RTMDET_R_CONFIG=<path-to-vendored-config>
 export RTMDET_R_CHECKPOINT=<path-to-zoo-checkpoint>
@@ -189,7 +189,7 @@ stands that pipeline up on the box.
 ```bash
 # HARD Phase-0 gate: a human reads the DIOR-R terms (incl. the derived-weights rehost
 # clause) and touches the license-review marker before ANY training runs.
-touch /root/autodl-tmp/dior_r/DIOR_R_LICENSE_REVIEWED       # only after a real review
+touch ${AUTODL_TMP}/dior_r/DIOR_R_LICENSE_REVIEWED       # only after a real review
 
 export MMROTATE_COMMIT=<pinned-sha>                         # REQUIRED (training carries the pins now)
 export ORCNN_DIOR_CONFIG=<vendored-orcnn-r50-dior-config>   # REQUIRED for the orcnn stage

@@ -11,7 +11,7 @@ images, ~188k instances. train/val public GT, test GT server-only. This tool
 calibrates and evaluates on **val only** (design §4.2); the test server is touched at
 most once per PAPER, for the final reported mAP, never for certification.
 
-- Local mirror (read-only, box-side): `/root/autodl-pub/DOTA` (~30 GB, zero
+- Local mirror (read-only, box-side): `${AUTODL_PUB}/DOTA` (~30 GB, zero
   download).
 - mmrotate split-crops (1024x1024, 200px overlap) add roughly another ~2x on disk.
 - **v1.5 is a Phase-3 ablation arm ONLY** — it is a superset of v1.0 and cannot serve
@@ -25,7 +25,7 @@ non-permissive, counts mismatch), the second dataset falls back to **HRSC2016** 
 **DOTA-v2.0** — never DOTA-v1.5 (barred, see above).
 
 - **Staged state (2026-07-10):** DIOR-R is **fully staged from ModelScope** to the box
-  data disk at `/root/autodl-tmp/dior_r/` (project state): 23463 images = 11725 trainval
+  data disk at `${AUTODL_TMP}/dior_r/` (project state): 23463 images = 11725 trainval
   + 11738 test (`JPEGImages-trainval` / `JPEGImages-test`), one OBB xml per image under
   `Annotations/Oriented Bounding Boxes/`, and split lists under `ImageSets/Main/`. Still
   owed at Phase 0: the size/checksum/per-class-count audit + the human **license review**.

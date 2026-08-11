@@ -33,15 +33,15 @@ DRY=0; [ "${1:-}" = "--dry-run" ] && DRY=1
 
 # ---- tunables (env-overridable, named defaults) ----
 MMROTATE_COMMIT="${MMROTATE_COMMIT:-3ff004eb21ea040455b5585db229edba4037f1bf}"
-HRSC_MS_ZIP="${HRSC_MS_ZIP:-/root/autodl-tmp/HRSC2016-MS.zip}"
-HRSC_ROOT="${HRSC_ROOT:-/root/autodl-tmp/HRSC2016-MS}"
+HRSC_MS_ZIP="${HRSC_MS_ZIP:-${AUTODL_TMP}/HRSC2016-MS.zip}"
+HRSC_ROOT="${HRSC_ROOT:-${AUTODL_TMP}/HRSC2016-MS}"
 HRSC_MS_MD5="${HRSC_MS_MD5:-167501c0de0d6015a109a4abddd77fb1}"       # verified local prefetch 2026-07-13
 export HRSC_ROOT MMROTATE_COMMIT
 export ORCNN_SEEDS="${ORCNN_SEEDS:-0}"                               # Config B: e.g. 0,1,2
 export RTMDET_SEEDS="${RTMDET_SEEDS:-0}"
-RESULTS_HRSC="${RESULTS_HRSC:-/root/autodl-tmp/hrsc_rotcert_results}"
-RESULTS_ZOO="${RESULTS_ZOO:-/root/autodl-tmp/dota_zoo_results}"
-DOTA_VAL_IMAGES="${DOTA_VAL_IMAGES:-/root/autodl-tmp/dota_split/val/images}"  # box_dota_crops.sh output: literal-gated 5297 ss_val crops, NOT the 458 raw val images
+RESULTS_HRSC="${RESULTS_HRSC:-${AUTODL_TMP}/hrsc_rotcert_results}"
+RESULTS_ZOO="${RESULTS_ZOO:-${AUTODL_TMP}/dota_zoo_results}"
+DOTA_VAL_IMAGES="${DOTA_VAL_IMAGES:-${AUTODL_TMP}/dota_split/val/images}"  # box_dota_crops.sh output: literal-gated 5297 ss_val crops, NOT the 458 raw val images
 MMR="${MMR:-/root/mmrotate}"
 
 HRSC_RUN="$SCRIPT_DIR/hrsc_run.sh"

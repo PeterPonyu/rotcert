@@ -1,6 +1,6 @@
 #!/bin/bash
 # next_boot_rotcert.sh -- rotcert box chain (design §7/§8): prologue -> stage DOTA
-# from /root/autodl-pub + DIOR-R box-side fetch -> Phase 0 (staging audit +
+# from ${AUTODL_PUB} + DIOR-R box-side fetch -> Phase 0 (staging audit +
 # reproduction gate) -> Phase-1 PILOT (1 detector x DOTA x 2 repeats, K1 metrics
 # computed) -> epilogue. Marker: ROTCERT_PILOT_ALL_DONE.
 #
@@ -29,10 +29,10 @@ source "${RELIABILITY_COMMONS}/tools/boxkit/chain_lib.sh"
 # Tunables (env-overridable, named defaults -- no hardcoded paths/tolerances
 # inline in the stages below).
 # ---------------------------------------------------------------------------
-RESULTS_DIR="${RESULTS_DIR:-/root/autodl-tmp/rotcert_results}"
-DOTA_SRC="${DOTA_SRC:-/root/autodl-pub/DOTA}"
+RESULTS_DIR="${RESULTS_DIR:-${AUTODL_TMP}/rotcert_results}"
+DOTA_SRC="${DOTA_SRC:-${AUTODL_PUB}/DOTA}"
 DIOR_R_URL="${DIOR_R_URL:-}"           # required for the DIOR-R stage; empty = skip (disclosed)
-DIOR_R_DEST="${DIOR_R_DEST:-/root/autodl-tmp/dior_r}"
+DIOR_R_DEST="${DIOR_R_DEST:-${AUTODL_TMP}/dior_r}"
 DEVICE="${DEVICE:-cuda:0}"
 SEED="${SEED:-0}"
 

@@ -74,7 +74,7 @@ SKIP_RTMDET="${SKIP_RTMDET:-0}"            # 1 -> ORCNN-only arm (see COST NOTE)
 export MMROTATE_COMMIT
 
 # --- DIOR-R staged layout (mirrors next_boot_rotcert_dior_{train,infer}.sh / configB) ---
-DIOR_R_ROOT="${DIOR_R_ROOT:-/root/autodl-tmp/dior_r}"
+DIOR_R_ROOT="${DIOR_R_ROOT:-${AUTODL_TMP}/dior_r}"
 DIOR_R_TEST_IMG_SUBDIR="${DIOR_R_TEST_IMG_SUBDIR:-JPEGImages-test}"
 DIOR_R_IMAGESETS_SUBDIR="${DIOR_R_IMAGESETS_SUBDIR:-ImageSets/Main}"
 DIOR_R_TEST_IMAGESET="${DIOR_R_TEST_IMAGESET:-$DIOR_R_ROOT/$DIOR_R_IMAGESETS_SUBDIR/test.txt}"
@@ -103,7 +103,7 @@ ORCNN_SEEDS="${ORCNN_SEEDS:-1,2}"
 RTMDET_SEEDS="${RTMDET_SEEDS:-1,2}"
 
 # --- results / markers ---
-RESULTS_DIOR_SEEDS="${RESULTS_DIOR_SEEDS:-/root/autodl-tmp/rotcert_dior_seeds_results}"
+RESULTS_DIOR_SEEDS="${RESULTS_DIOR_SEEDS:-${AUTODL_TMP}/rotcert_dior_seeds_results}"
 MARKERS_DIR="${MARKERS_DIR:-$RESULTS_DIOR_SEEDS/../dior_seeds_markers}"
 [ "$DRY" -eq 1 ] || mkdir -p "$RESULTS_DIOR_SEEDS" "$MARKERS_DIR"
 

@@ -46,10 +46,10 @@ source "${RELIABILITY_COMMONS}/tools/boxkit/chain_lib.sh"
 # Tunables (env-overridable, named defaults -- NO hardcoded paths/counts/tols
 # inline in the stages below).
 # ---------------------------------------------------------------------------
-RESULTS_DIR="${RESULTS_DIR:-/root/autodl-tmp/rotcert_dior_train_results}"
+RESULTS_DIR="${RESULTS_DIR:-${AUTODL_TMP}/rotcert_dior_train_results}"
 
 # --- DIOR-R staged layout (design A2: staged from ModelScope to the data disk) ---
-DIOR_R_ROOT="${DIOR_R_ROOT:-/root/autodl-tmp/dior_r}"
+DIOR_R_ROOT="${DIOR_R_ROOT:-${AUTODL_TMP}/dior_r}"
 DIOR_R_OBB_ANN_SUBDIR="${DIOR_R_OBB_ANN_SUBDIR:-Annotations/Oriented Bounding Boxes}"
 DIOR_R_TRAINVAL_IMG_SUBDIR="${DIOR_R_TRAINVAL_IMG_SUBDIR:-JPEGImages-trainval}"
 DIOR_R_TEST_IMG_SUBDIR="${DIOR_R_TEST_IMG_SUBDIR:-JPEGImages-test}"

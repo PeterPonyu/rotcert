@@ -1,7 +1,7 @@
 {
   "mmrotate_commit": "3ff004e",
   "config": "/root/mmrotate/configs/rotated_rtmdet/rotated_rtmdet_l-3x-dior.py",
-  "checkpoint": "/root/autodl-tmp/dior_r/work_dirs/rtmdet_r_dior/seed_0/epoch_36.pth",
+  "checkpoint": "${AUTODL_TMP}/dior_r/work_dirs/rtmdet_r_dior/seed_0/epoch_36.pth",
   "angle_convention_declared": "le90",
   "score_thr": 0.05,
   "n_images": 11738,

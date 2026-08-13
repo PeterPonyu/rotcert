@@ -1,0 +1,31 @@
+{{ $data := .Site.Data.dior_classes }}
+<section aria-labelledby="dior-title">
+  <h2 id="dior-title">DIOR-R per-class G1 cards</h2>
+  <p>All 20 classes certify for G1 at &alpha;=0.10 (none refused). G2 chips are the companion recall decision on the same class, not a G1 failure.</p>
+  <div class="table-wrap">
+    <table class="num-table sortable" id="dior-table">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th data-sort="n"><button type="button">n<sub>cal</sub></button></th>
+          <th>ORCNN G1</th>
+          <th>RTMDet-R G1</th>
+          <th>G2 ORCNN</th>
+          <th>G2 RTMDet-R</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $data.classes }}
+        <tr>
+          <td>{{ .name }}</td>
+          <td class="mono" data-n="{{ .n_cal }}">{{ .n_cal }}</td>
+          <td class="mono">{{ printf "%.3f" .orcnn }}</td>
+          <td class="mono">{{ printf "%.3f" .rtmdet }}</td>
+          <td><span class="chip-status {{ .g2_orcnn }}">{{ .g2_orcnn }}</span></td>
+          <td><span class="chip-status {{ .g2_rtmdet }}">{{ .g2_rtmdet }}</span></td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>

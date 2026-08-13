@@ -1,0 +1,29 @@
+<section class="geometry-widget" aria-labelledby="rotator-title">
+  <h2 id="rotator-title">Seam versus GWD</h2>
+  <p>Drag predicted heading. Coordinate-wise nonconformity jumps at the ±90° seam; GWD does not. Square toggle shows the unidentifiable heading case. Schematic only — no new science.</p>
+  <form class="controls">
+    <label>Predicted heading
+      <input id="theta-pred" type="range" min="-90" max="90" value="25" step="1">
+      <output id="theta-out" for="theta-pred">25°</output>
+    </label>
+    <label class="check">
+      <input id="square-toggle" type="checkbox">
+      Square box
+    </label>
+  </form>
+  <svg id="rotator" viewBox="0 0 640 280" width="100%" role="img" aria-labelledby="rotator-caption">
+    <title id="rotator-caption">Predicted and ground-truth oriented boxes with GWD disk and a coordinate-gap marker</title>
+    <rect class="paper-bg" x="0" y="0" width="640" height="280" fill="#F7F5F0"/>
+    <g id="gt-box" fill="none" stroke="#111111" stroke-width="2" stroke-dasharray="6 4"></g>
+    <g id="pred-box" fill="none" stroke="#0072B2" stroke-width="2"></g>
+    <circle id="gwd-disk" cx="220" cy="140" r="36" fill="none" stroke="#007A00" stroke-width="2"/>
+    <path id="wedge" fill="#007A00" fill-opacity="0.12" stroke="#007A00"></path>
+    <g id="coord-mark" stroke="#E69F00" stroke-width="2"></g>
+  </svg>
+  <dl class="score-readout">
+    <div><dt>Coordinate gap</dt><dd id="coord-gap" class="mono">—</dd></div>
+    <div><dt>GWD score</dt><dd id="gwd-score" class="mono">—</dd></div>
+    <div><dt>Square</dt><dd id="square-state">elongated</dd></div>
+  </dl>
+  <noscript><p class="muted">Without scripts, the static figure below is the argument: a seam jump in coordinate-wise scores, none in GWD.</p></noscript>
+</section>

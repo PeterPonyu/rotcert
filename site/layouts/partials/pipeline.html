@@ -1,0 +1,18 @@
+<section class="pipeline" aria-labelledby="pipeline-title">
+  <h2 id="pipeline-title">Certificate pipeline</h2>
+  <p class="muted">Web schematic of the manuscript overview. The dashed box is a refuse gate, not an empty result.</p>
+  <ol class="flow">
+    <li><a href="{{ "geometry/" | relURL }}">Input OBB</a></li>
+    <li>Sealed detector</li>
+    <li>Match (rotated IoU ≥ 0.5)</li>
+    <li>GWD score</li>
+    <li class="fork">
+      <a class="g1" href="{{ "g1/" | relURL }}">G1 localization</a>
+      <a class="g2" href="{{ "g2/" | relURL }}">G2 recall</a>
+    </li>
+    <li class="refuse"><a href="{{ "limits/" | relURL }}">Refuse gate</a></li>
+  </ol>
+  <figure class="web-fig">
+    <img src="{{ "web-figures/pipeline.svg" | relURL }}" width="960" height="220" alt="Flow from oriented box through GWD score, then G1 green fork, G2 orange fork, and a dashed refuse gate.">
+  </figure>
+</section>

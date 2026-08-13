@@ -1,0 +1,94 @@
+# G1 out-of-sample coverage. interval=bca is a BCa 95% CI; interval=reseed is
+# mean [min, max] over R=20 scene reseeds (extension cells).
+nominal: 0.90
+cells:
+  - id: dota-rtmdet
+    label: DOTA-v1.0 · RTMDet-R
+    dataset: DOTA-v1.0
+    detector: RTMDet-R
+    coverage: 0.8879
+    lo: 0.8774
+    hi: 0.8979
+    interval: bca
+    stress: true
+  - id: dota-orcnn
+    label: DOTA-v1.0 · Oriented R-CNN
+    dataset: DOTA-v1.0
+    detector: Oriented R-CNN
+    coverage: 0.8902
+    lo: 0.8780
+    hi: 0.8995
+    interval: bca
+    stress: true
+  - id: dior-orcnn
+    label: DIOR-R · Oriented R-CNN
+    dataset: DIOR-R
+    detector: Oriented R-CNN
+    coverage: 0.9004
+    lo: 0.8987
+    hi: 0.9020
+    interval: bca
+    stress: false
+  - id: dior-rtmdet
+    label: DIOR-R · RTMDet-R
+    dataset: DIOR-R
+    detector: RTMDet-R
+    coverage: 0.9012
+    lo: 0.8995
+    hi: 0.9030
+    interval: bca
+    stress: false
+  - id: hrsc-orcnn
+    label: HRSC2016-MS · Oriented R-CNN
+    dataset: HRSC2016-MS
+    detector: Oriented R-CNN
+    coverage: 0.8989
+    lo: 0.8528
+    hi: 0.9500
+    interval: reseed
+    stress: false
+  - id: hrsc-rtmdet
+    label: HRSC2016-MS · RTMDet-R
+    dataset: HRSC2016-MS
+    detector: RTMDet-R
+    coverage: 0.9085
+    lo: 0.8659
+    hi: 0.9568
+    interval: reseed
+    stress: false
+  - id: dota-roit
+    label: DOTA-v1.0 · RoI Transformer
+    dataset: DOTA-v1.0
+    detector: RoI Transformer
+    coverage: 0.8882
+    lo: 0.7431
+    hi: 0.9736
+    interval: reseed
+    stress: true
+  - id: dota-reppoints
+    label: DOTA-v1.0 · Oriented RepPoints
+    dataset: DOTA-v1.0
+    detector: Oriented RepPoints
+    coverage: 0.8988
+    lo: 0.7818
+    hi: 0.9720
+    interval: reseed
+    stress: true
+  - id: dior-roit
+    label: DIOR-R · RoI Transformer
+    dataset: DIOR-R
+    detector: RoI Transformer
+    coverage: 0.9014
+    lo: 0.8919
+    hi: 0.9113
+    interval: reseed
+    stress: false
+  - id: dior-s2anet
+    label: DIOR-R · S2A-Net
+    dataset: DIOR-R
+    detector: S2A-Net
+    coverage: 0.9006
+    lo: 0.8941
+    hi: 0.9074
+    interval: reseed
+    stress: false

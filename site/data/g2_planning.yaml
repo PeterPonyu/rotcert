@@ -1,0 +1,90 @@
+# DIOR-R Oriented R-CNN G2 planning (beta=0.20, delta=0.05). Descriptive inversion.
+certified:
+  - name: groundtrackfield
+    r_hat: 0.048
+    floor: 86
+    readout: certified
+  - name: stadium
+    r_hat: 0.089
+    floor: 160
+    readout: certified
+  - name: basketballcourt
+    r_hat: 0.110
+    floor: 244
+    readout: certified
+  - name: expressway-service-area
+    r_hat: 0.112
+    floor: 253
+    readout: certified
+  - name: tenniscourt
+    r_hat: 0.137
+    floor: 491
+    readout: certified
+finite:
+  - name: golffield
+    n_img: 491
+    r_hat: 0.149
+    floor: 752
+    readout: "+261 images, or beta at least 0.21"
+  - name: windmill
+    n_img: 809
+    r_hat: 0.167
+    floor: 1762
+    readout: "+953 images, or beta at least 0.22"
+  - name: baseballfield
+    n_img: 1311
+    r_hat: 0.174
+    floor: 2852
+    readout: "+1541 images, or beta at least 0.21"
+  - name: ship
+    n_img: 1404
+    r_hat: 0.174
+    floor: 2964
+    readout: "+1560 images, or beta at least 0.21"
+  - name: storagetank
+    n_img: 894
+    r_hat: 0.177
+    floor: 3666
+    readout: "+2772 images, or beta at least 0.22"
+  - name: chimney
+    n_img: 447
+    r_hat: 0.188
+    floor: 14039
+    readout: "+13592 images, or beta at least 0.26"
+unreachable:
+  - name: airplane
+    n_img: 705
+    r_hat: 0.235
+    readout: "unreachable at beta=0.20; beta at least 0.29"
+  - name: airport
+    n_img: 657
+    r_hat: 0.461
+    readout: "unreachable at beta=0.20; beta at least 0.52"
+  - name: bridge
+    n_img: 1299
+    r_hat: 0.354
+    readout: "unreachable at beta=0.20; beta at least 0.39"
+  - name: dam
+    n_img: 503
+    r_hat: 0.502
+    readout: "unreachable at beta=0.20; beta at least 0.56"
+  - name: expressway-toll-station
+    n_img: 634
+    r_hat: 0.238
+    readout: "unreachable at beta=0.20; beta at least 0.29"
+  - name: harbor
+    n_img: 813
+    r_hat: 0.450
+    readout: "unreachable at beta=0.20; beta at least 0.50"
+  - name: overpass
+    n_img: 1101
+    r_hat: 0.277
+    readout: "unreachable at beta=0.20; beta at least 0.32"
+  - name: trainstation
+    n_img: 501
+    r_hat: 0.305
+    readout: "unreachable at beta=0.20; beta at least 0.37"
+  - name: vehicle
+    n_img: 3308
+    r_hat: 0.286
+    readout: "unreachable at beta=0.20; beta at least 0.31"

@@ -1,0 +1,13 @@
+title: Angle-aware conformal certification for oriented object detection in aerial imagery
+cells: 10
+datasets: 3
+detectors: 5
+dior_g1: "20/20"
+dior_g1_note: four architectures, none refused
+g2_beta: "0.20"
+g2_delta: "0.05"
+g2_dota: "2/15"
+g2_s2anet: "7/20"
+g2_hrsc: "0/1"
+alpha: "0.10"
+repeats: 20

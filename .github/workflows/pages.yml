@@ -1,0 +1,77 @@
+name: Deploy companion Pages
+
+on:
+  push:
+    branches: [pages/rotcert-companion]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.124.1"
+    steps:
+      - name: Install Hugo CLI (extended)
+        run: |
+          set -euo pipefail
+          DEB="${{ runner.temp }}/hugo.deb"
+          URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          for i in 1 2 3 4 5; do
+            if wget --tries=3 --timeout=30 -O "$DEB" "$URL" && [ -s "$DEB" ]; then
+              break
+            fi
+            echo "wget attempt $i failed; retrying in 10s..."
+            sleep 10
+          done
+          [ -s "$DEB" ] || { echo "Failed to download Hugo after 5 attempts" >&2; exit 1; }
+          sudo dpkg -i "$DEB"
+          hugo version | grep -F "extended"
+
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d # v4
+
+      - name: Build with Hugo
+        working-directory: site
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Figure allowlist, leak scan, extract-hash
+        run: python3 site/scripts/gate.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: ./site/public
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/pages/rotcert-companion'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

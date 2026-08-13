@@ -1,0 +1,123 @@
+# DIOR-R per-class G1 OOS coverage (R=20 mean) and G2 companion for two core cells.
+# g2_orcnn / g2_rtmdet: certified | refused
+classes:
+  - name: ship
+    n_cal: 30731
+    orcnn: 0.899
+    rtmdet: 0.899
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: storagetank
+    n_cal: 16081
+    orcnn: 0.900
+    rtmdet: 0.900
+    g2_orcnn: refused
+    g2_rtmdet: certified
+  - name: vehicle
+    n_cal: 12958
+    orcnn: 0.904
+    rtmdet: 0.899
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: tenniscourt
+    n_cal: 6498
+    orcnn: 0.897
+    rtmdet: 0.907
+    g2_orcnn: certified
+    g2_rtmdet: certified
+  - name: airplane
+    n_cal: 5589
+    orcnn: 0.898
+    rtmdet: 0.900
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: baseballfield
+    n_cal: 2617
+    orcnn: 0.901
+    rtmdet: 0.898
+    g2_orcnn: refused
+    g2_rtmdet: certified
+  - name: windmill
+    n_cal: 2291
+    orcnn: 0.900
+    rtmdet: 0.895
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: basketballcourt
+    n_cal: 1928
+    orcnn: 0.898
+    rtmdet: 0.894
+    g2_orcnn: certified
+    g2_rtmdet: certified
+  - name: groundtrackfield
+    n_cal: 1773
+    orcnn: 0.903
+    rtmdet: 0.905
+    g2_orcnn: certified
+    g2_rtmdet: certified
+  - name: harbor
+    n_cal: 1692
+    orcnn: 0.901
+    rtmdet: 0.899
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: bridge
+    n_cal: 1470
+    orcnn: 0.906
+    rtmdet: 0.902
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: overpass
+    n_cal: 1183
+    orcnn: 0.898
+    rtmdet: 0.895
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: expressway-service-area
+    n_cal: 962
+    orcnn: 0.896
+    rtmdet: 0.905
+    g2_orcnn: certified
+    g2_rtmdet: certified
+  - name: chimney
+    n_cal: 808
+    orcnn: 0.899
+    rtmdet: 0.900
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: stadium
+    n_cal: 600
+    orcnn: 0.906
+    rtmdet: 0.891
+    g2_orcnn: certified
+    g2_rtmdet: refused
+  - name: expressway-toll-station
+    n_cal: 508
+    orcnn: 0.913
+    rtmdet: 0.898
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: golffield
+    n_cal: 459
+    orcnn: 0.887
+    rtmdet: 0.899
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: airport
+    n_cal: 357
+    orcnn: 0.906
+    rtmdet: 0.896
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: trainstation
+    n_cal: 354
+    orcnn: 0.902
+    rtmdet: 0.899
+    g2_orcnn: refused
+    g2_rtmdet: refused
+  - name: dam
+    n_cal: 266
+    orcnn: 0.913
+    rtmdet: 0.903
+    g2_orcnn: refused
+    g2_rtmdet: refused

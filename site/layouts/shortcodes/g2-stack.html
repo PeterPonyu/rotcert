@@ -1,0 +1,47 @@
+{{ $data := .Site.Data.g2_cells }}
+<section class="g2-stack" aria-labelledby="g2-stack-title">
+  <h2 id="g2-stack-title">Certified / refused at frozen &beta;</h2>
+  <p>(&beta;,&delta;)=({{ printf "%.2f" $data.beta }}, {{ printf "%.2f" $data.delta }}) unless the slider is moved. The slider only switches among frozen columns; it does not recompute certificates.</p>
+  <label class="slider-label">Illustrative &beta;
+    <select id="beta-select">
+      <option value="020" selected>0.20 (preregistered)</option>
+      <option value="025">0.25</option>
+      <option value="030">0.30</option>
+      <option value="040">0.40</option>
+    </select>
+  </label>
+  <div class="table-wrap">
+    <table class="num-table" id="g2-table">
+      <thead>
+        <tr>
+          <th>Cell</th>
+          <th>Certified</th>
+          <th>Finite floor</th>
+          <th>Unreachable</th>
+          <th>Total</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $data.cells }}
+        <tr
+          data-c020="{{ .certified }}"
+          data-f020="{{ .finite_floor }}"
+          data-u020="{{ .unreachable }}"
+          data-c025="{{ .at_025 }}"
+          data-c030="{{ .at_030 }}"
+          data-c040="{{ .at_040 }}"
+          data-total="{{ .total }}">
+          <td>{{ .label }}</td>
+          <td class="mono cert-c">{{ .certified }}/{{ .total }}</td>
+          <td class="mono cert-f">{{ .finite_floor }}</td>
+          <td class="mono cert-u">{{ .unreachable }}</td>
+          <td class="mono">{{ .total }}</td>
+          <td>{{ with .refuse }}{{ . }}{{ else }}{{ with .classes }}certified: {{ . }}{{ end }}{{ end }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Columns at &beta;&gt;0.20 show certified counts only (frozen sweep). Finite-floor and unreachable split is tabulated at &beta;=0.20.</p>
+</section>

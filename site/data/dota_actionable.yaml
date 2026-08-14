@@ -1,0 +1,165 @@
+# DOTA-v1.0 RTMDet-R pilot actionable G1 readouts (alpha=0.10).
+# dagger: orientation unconstrained (near-square, aspect ratio <= 1.05).
+pilot:
+  - name: ship
+    n_cal: 18125
+    r_center: 3.50
+    dtheta: 11.1
+    unconstrained: false
+    iou_floor: 0.757
+    status: certified
+  - name: small-vehicle
+    n_cal: 10394
+    r_center: 3.14
+    dtheta: 14.2
+    unconstrained: false
+    iou_floor: 0.708
+    status: certified
+  - name: large-vehicle
+    n_cal: 8727
+    r_center: 3.73
+    dtheta: 6.6
+    unconstrained: false
+    iou_floor: 0.778
+    status: certified
+  - name: storage-tank
+    n_cal: 4291
+    r_center: 2.80
+    dtheta: 90
+    unconstrained: true
+    iou_floor: 0.684
+    status: certified
+  - name: plane
+    n_cal: 4299
+    r_center: 7.48
+    dtheta: 42.6
+    unconstrained: false
+    iou_floor: 0.808
+    status: certified
+  - name: harbor
+    n_cal: 4007
+    r_center: 19.14
+    dtheta: 25.0
+    unconstrained: false
+    iou_floor: 0.671
+    status: certified
+  - name: tennis-court
+    n_cal: 1510
+    r_center: 2.97
+    dtheta: 2.9
+    unconstrained: false
+    iou_floor: 0.902
+    status: certified
+  - name: bridge
+    n_cal: 681
+    r_center: 9.34
+    dtheta: 34.9
+    unconstrained: false
+    iou_floor: 0.613
+    status: certified
+  - name: swimming-pool
+    n_cal: 660
+    r_center: 6.59
+    dtheta: 31.3
+    unconstrained: false
+    iou_floor: 0.616
+    status: certified
+  - name: baseball-diamond
+    n_cal: 347
+    r_center: 10.30
+    dtheta: 90
+    unconstrained: true
+    iou_floor: 0.726
+    status: certified
+  - name: basketball-court
+    n_cal: 266
+    r_center: 6.37
+    dtheta: 13.2
+    unconstrained: false
+    iou_floor: 0.833
+    status: certified
+  - name: roundabout
+    n_cal: 262
+    r_center: 5.55
+    dtheta: 90
+    unconstrained: true
+    iou_floor: 0.753
+    status: certified
+  - name: soccer-ball-field
+    n_cal: 238
+    r_center: 17.52
+    dtheta: 24.5
+    unconstrained: false
+    iou_floor: 0.701
+    status: certified
+  - name: ground-track-field
+    n_cal: 205
+    r_center: 22.09
+    dtheta: 26.1
+    unconstrained: false
+    iou_floor: 0.791
+    status: certified
+  - name: helicopter
+    n_cal: 119
+    r_center: 12.01
+    dtheta: 47.2
+    unconstrained: false
+    iou_floor: 0.686
+    status: certified
+reppoints:
+  - name: plane
+    n_cal: 4355
+    r_center: 13.14
+    dtheta: 90
+    unconstrained: true
+    iou_floor: 0.719
+    status: certified
+  - name: harbor
+    n_cal: 631
+    r_center: 17.51
+    dtheta: 26.4
+    unconstrained: false
+    iou_floor: 0.611
+    status: certified
+  - name: baseball-diamond
+    n_cal: 295
+    r_center: 20.19
+    dtheta: 90
+    unconstrained: true
+    iou_floor: 0.663
+    status: certified
+  - name: swimming-pool
+    n_cal: 275
+    r_center: 8.04
+    dtheta: 37.8
+    unconstrained: false
+    iou_floor: 0.591
+    status: certified
+  - name: ground-track-field
+    n_cal: 42
+    r_center: 33.75
+    dtheta: 32.2
+    unconstrained: false
+    iou_floor: 0.736
+    status: certified
+  - name: ship
+    n_cal: 12
+    r_center: 50.90
+    dtheta: 90
+    unconstrained: true
+    iou_floor: 0.553
+    status: certified
+  - name: soccer-ball-field
+    n_cal: 4
+    r_center: null
+    dtheta: null
+    unconstrained: false
+    iou_floor: null
+    status: "refused: vacuous"
+  - name: large-vehicle
+    n_cal: 3
+    r_center: null
+    dtheta: null
+    unconstrained: false
+    iou_floor: null
+    status: "refused: vacuous"

@@ -1,0 +1,97 @@
+beta: 0.20
+delta: 0.05
+cells:
+  - id: dota-pilot
+    label: DOTA-v1.0 · RTMDet-R
+    certified: 2
+    total: 15
+    finite_floor: 12
+    unreachable: 1
+    at_025: 8
+    at_030: 9
+    at_040: 10
+    classes: "small-vehicle, tennis-court"
+  - id: dior-orcnn
+    label: DIOR-R · Oriented R-CNN
+    certified: 5
+    total: 20
+    finite_floor: 6
+    unreachable: 9
+    at_025: 10
+    at_030: 13
+    at_040: 17
+    classes: "basketballcourt, tenniscourt, stadium, groundtrackfield, expressway-service-area"
+  - id: dior-rtmdet
+    label: DIOR-R · RTMDet-R
+    certified: 6
+    total: 20
+    finite_floor: 8
+    unreachable: 6
+    at_025: 12
+    at_030: 12
+    at_040: 15
+    classes: "basketballcourt, tenniscourt, groundtrackfield, expressway-service-area, baseballfield, storagetank"
+  - id: dior-roit
+    label: DIOR-R · RoI Transformer
+    certified: 5
+    total: 20
+    finite_floor: 5
+    unreachable: 10
+    at_025: 10
+    at_030: 14
+    at_040: 17
+    classes: "basketballcourt, tenniscourt, stadium, groundtrackfield, expressway-service-area"
+  - id: dior-s2anet
+    label: DIOR-R · S2A-Net
+    certified: 7
+    total: 20
+    finite_floor: 4
+    unreachable: 9
+    at_025: 10
+    at_030: 12
+    at_040: 13
+    classes: "baseballfield, basketballcourt, groundtrackfield, ship, stadium, storagetank, tenniscourt"
+  - id: hrsc-orcnn
+    label: HRSC2016-MS · Oriented R-CNN
+    certified: 0
+    total: 1
+    finite_floor: 0
+    unreachable: 1
+    at_025: 0
+    at_030: 0
+    at_040: 0
+    classes: ""
+    refuse: "power floor (440 images, realized risk 0.5464)"
+  - id: hrsc-rtmdet
+    label: HRSC2016-MS · RTMDet-R
+    certified: 0
+    total: 1
+    finite_floor: 0
+    unreachable: 1
+    at_025: 0
+    at_030: 0
+    at_040: 0
+    classes: ""
+    refuse: "power floor (440 images, realized risk 0.6076)"
+  - id: dota-roit
+    label: DOTA-v1.0 · RoI Transformer
+    certified: 0
+    total: 15
+    finite_floor: 1
+    unreachable: 14
+    at_025: 0
+    at_030: 0
+    at_040: 0
+    classes: ""
+    refuse: "power floor (1093 images, realized risk 0.9380)"
+  - id: dota-reppoints
+    label: DOTA-v1.0 · Oriented RepPoints
+    certified: 0
+    total: 15
+    finite_floor: 2
+    unreachable: 13
+    at_025: 0
+    at_030: 0
+    at_040: 1
+    classes: ""
+    refuse: "power floor (1093 images, realized risk 0.8496)"

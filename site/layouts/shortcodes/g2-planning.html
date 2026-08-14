@@ -1,0 +1,23 @@
+{{ $data := .Site.Data.g2_planning }}
+<section aria-labelledby="plan-title">
+  <h2 id="plan-title">G2 planning inversion (DIOR-R · Oriented R-CNN)</h2>
+  <p>Descriptive inversion at (&beta;,&delta;)=(0.20, 0.05). “Needs +N images” is a planning readout, not a new certificate.</p>
+  <h3>Certified</h3>
+  <ul class="plan-list">
+    {{ range $data.certified }}
+    <li><span class="chip-status certified">certified</span> {{ .name }} · realized risk {{ printf "%.3f" .r_hat }} · floor {{ .floor }} images</li>
+    {{ end }}
+  </ul>
+  <h3>Refused: finite floor</h3>
+  <ul class="plan-list">
+    {{ range $data.finite }}
+    <li><span class="chip-status refused">finite floor</span> {{ .name }} ({{ .n_img }} images, risk {{ printf "%.3f" .r_hat }}) · {{ .readout }}</li>
+    {{ end }}
+  </ul>
+  <h3>Refused: unreachable</h3>
+  <ul class="plan-list">
+    {{ range $data.unreachable }}
+    <li><span class="chip-status refused">unreachable</span> {{ .name }} ({{ .n_img }} images, risk {{ printf "%.3f" .r_hat }}) · {{ .readout }}</li>
+    {{ end }}
+  </ul>
+</section>

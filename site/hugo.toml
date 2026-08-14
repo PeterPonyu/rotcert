@@ -1,0 +1,22 @@
+baseURL = "https://peterponyu.github.io/rotcert/"
+languageCode = "en-us"
+title = "Angle-aware conformal certification for oriented object detection in aerial imagery"
+enableRobotsTXT = true
+canonifyURLs = false
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.extensions]
+typographer = true
+
+[params]
+author = "Zeyu Fu"
+orcid = "0009-0001-8329-0108"
+status = "GWD score · G1 ball · G2 refuse"
+github = "https://github.com/PeterPonyu/rotcert"
+zenodo = "https://doi.org/10.5281/zenodo.21392293"
+doi = "10.5281/zenodo.21392293"
+description = "Seam-continuous GWD nonconformity, Mondrian G1 localization certificates, and Learn-then-Test G2 recall certificates with refuse gates for oriented boxes."

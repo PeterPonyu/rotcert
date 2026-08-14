@@ -1,0 +1,33 @@
+{{ $data := .Site.Data.g1_cells }}
+<section class="forest" aria-labelledby="forest-title">
+  <h2 id="forest-title">G1 out-of-sample coverage</h2>
+  <p>Nominal coverage 0.90 as a spine, not a success badge. DOTA cells are tagged exchangeability stress. Hover is optional; the table is the record.</p>
+  <div class="chips" role="group" aria-label="Dataset filter">
+    <button type="button" class="chip is-on" data-filter="all">All</button>
+    <button type="button" class="chip" data-filter="DIOR-R">DIOR-R</button>
+    <button type="button" class="chip" data-filter="DOTA-v1.0">DOTA-v1.0</button>
+    <button type="button" class="chip" data-filter="HRSC2016-MS">HRSC2016-MS</button>
+  </div>
+  <div class="table-wrap">
+    <table class="num-table">
+      <thead>
+        <tr>
+          <th>Cell</th>
+          <th>Coverage</th>
+          <th>Interval</th>
+          <th>Kind</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $data.cells }}
+        <tr data-dataset="{{ .dataset }}" {{ if .stress }}class="stress"{{ end }} title="{{ .label }}">
+          <td>{{ .label }}{{ if .stress }} <span class="tag">exchangeability stress</span>{{ end }}</td>
+          <td class="mono">{{ printf "%.4f" .coverage }}</td>
+          <td class="mono">[{{ printf "%.4f" .lo }}, {{ printf "%.4f" .hi }}]</td>
+          <td>{{ if eq .interval "bca" }}BCa 95%{{ else }}R=20 reseed min–max{{ end }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>

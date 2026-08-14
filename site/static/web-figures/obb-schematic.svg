@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-labelledby="t d">
+  <title id="t">Seam versus square GWD schematic</title>
+  <desc id="d">Left: elongated oriented boxes with a GWD disk and heading wedge. Right: near-square boxes with unconstrained heading. Orange tick marks the ±90° seam.</desc>
+  <rect width="640" height="280" fill="#F7F5F0"/>
+  <g font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" fill="#111111">
+    <text x="24" y="28">Elongated · seam-continuous GWD</text>
+    <text x="360" y="28">Near-square · heading unconstrained</text>
+  </g>
+  <g transform="translate(150 150)">
+    <circle r="42" fill="none" stroke="#007A00" stroke-width="2"/>
+    <path d="M0 0 L42 0 A42 42 0 0 0 30 -30 Z" fill="#007A00" fill-opacity="0.15" stroke="#007A00"/>
+    <g transform="rotate(-18)">
+      <rect x="-70" y="-16" width="140" height="32" fill="none" stroke="#0072B2" stroke-width="2"/>
+      <line x1="70" y1="0" x2="82" y2="-7" stroke="#0072B2" stroke-width="2"/>
+      <rect x="-64" y="-10" width="128" height="20" fill="none" stroke="#111111" stroke-width="1.6" stroke-dasharray="6 4"/>
+    </g>
+  </g>
+  <g transform="translate(470 150)">
+    <circle r="28" fill="none" stroke="#007A00" stroke-width="2"/>
+    <g transform="rotate(8)">
+      <rect x="-32" y="-30" width="64" height="60" fill="none" stroke="#0072B2" stroke-width="2"/>
+      <rect x="-26" y="-24" width="52" height="48" fill="none" stroke="#111111" stroke-width="1.6" stroke-dasharray="6 4"/>
+    </g>
+  </g>
+  <g transform="translate(150 150)" fill="none" stroke="#E69F00" stroke-width="2">
+    <circle r="70"/>
+    <line x1="70" y1="0" x2="82" y2="0"/>
+    <line transform="rotate(90)" x1="70" y1="0" x2="82" y2="0"/>
+    <line transform="rotate(-90)" x1="70" y1="0" x2="82" y2="0"/>
+  </g>
+</svg>

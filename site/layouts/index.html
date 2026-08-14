@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article class="page thesis">
+  <header class="page-head">
+    <p class="kicker">GWD · G1 · G2 · refuse</p>
+    <h1>{{ .Title }}</h1>
+    <p class="status-line">{{ .Site.Params.status }}</p>
+    <p class="byline">{{ .Site.Params.author }} · ORCID {{ .Site.Params.orcid }}</p>
+  </header>
+
+  {{ .Content }}
+
+  <section class="glance" aria-label="Frozen glance numbers">
+    <!-- source: glance.yaml from tab:g1oos / tab:g2 -->
+    {{ $g := .Site.Data.glance }}
+    <div class="stat-grid">
+      <article class="stat-card">
+        <p class="stat-num">{{ $g.cells }}</p>
+        <p class="stat-label">G1 cells</p>
+        <p class="stat-note">{{ $g.datasets }} datasets · {{ $g.detectors }} detector families</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-num">{{ $g.dior_g1 }}</p>
+        <p class="stat-label">DIOR-R classes G1-certified</p>
+        <p class="stat-note">{{ $g.dior_g1_note }}</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-num">G2</p>
+        <p class="stat-label">(&beta;,&delta;)=({{ $g.g2_beta }}, {{ $g.g2_delta }})</p>
+        <p class="stat-note">DOTA pilot {{ $g.g2_dota }} · DIOR-R S2A-Net {{ $g.g2_s2anet }} · HRSC {{ $g.g2_hrsc }}</p>
+      </article>
+    </div>
+  </section>
+
+  {{ partial "pipeline.html" . }}
+
+  <nav class="next-links" aria-label="Continue">
+    <a href="{{ "geometry/" | relURL }}">Why GWD</a>
+    <a href="{{ "g1/" | relURL }}">G1 localization</a>
+    <a href="{{ "g2/" | relURL }}">G2 recall</a>
+    <a href="{{ "evidence/" | relURL }}">Frozen evidence</a>
+  </nav>
+</article>
+{{ end }}

@@ -1,0 +1,22 @@
+{{ $data := .Site.Data.dota_actionable }}
+<section aria-labelledby="dota-title">
+  <h2 id="dota-title">DOTA-v1.0 RTMDet-R actionable G1 readouts</h2>
+  <p>&alpha;=0.10. Orientation unconstrained when the box is near-square (aspect ≤ 1.05). The GWD ball carries coverage; any axis-aligned envelope is reporting-only.</p>
+  <div class="card-grid">
+    {{ range $data.pilot }}
+    <article class="cert-card {{ if eq .status "certified" }}ok{{ else }}refuse{{ end }}">
+      <header>
+        <h3>{{ .name }}</h3>
+        <span class="chip-status {{ if eq .status "certified" }}certified{{ else }}refused{{ end }}">{{ .status }}</span>
+      </header>
+      <dl>
+        <dt>n<sub>cal</sub></dt><dd class="mono">{{ .n_cal }}</dd>
+        <dt>r<sub>center</sub></dt><dd class="mono">{{ if .r_center }}{{ printf "%.2f" .r_center }} px{{ else }}—{{ end }}</dd>
+        <dt>&Delta;&theta;<sub>max</sub></dt>
+        <dd class="mono">{{ if .unconstrained }}unconstrained (near-square){{ else if .dtheta }}{{ printf "%.1f" .dtheta }}°{{ else }}—{{ end }}</dd>
+        <dt>IoU floor</dt><dd class="mono">{{ if .iou_floor }}{{ printf "%.3f" .iou_floor }}{{ else }}—{{ end }}</dd>
+      </dl>
+    </article>
+    {{ end }}
+  </div>
+</section>

@@ -1,4 +1,4 @@
-# DIOR-R per-class G1 OOS coverage (R=20 mean) and G2 companion for two core cells.
+# DIOR-R per-class G1 OOS coverage (R=20 mean) and G2 pairing for two core cells.
 # g2_orcnn / g2_rtmdet: certified | refused
 classes:
   - name: ship

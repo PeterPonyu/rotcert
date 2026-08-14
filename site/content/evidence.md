@@ -10,6 +10,6 @@ The forest below is the G1 out-of-sample record. DIOR-R cells sit on the 0.90 sp
 
 {{< dior-table >}}
 
-Ground-truth angle roses in the manuscript are **GT angles, not certificate degrees**. They are not replayed here as if they were Δθ certificates.
+Ground-truth angle roses are **GT angles, not certificate degrees**. They are not replayed here as if they were Δθ certificates.
 
 Coverage-matched compactness is **DIOR-R-specific**: near parity on DOTA, and it reverses on HRSC. Holm-8 size-ratio tests are **descriptive** (one scalar pair per cell). Do not read this page as “GWD always smaller.”

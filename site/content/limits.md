@@ -14,6 +14,6 @@ lede: Vacuous, finite-floor, and unreachable are first-class states. Several stu
 
 **Single-seed DIOR-R training.** Detector weights are not a multi-seed zoo. Extension cells use reseeds of the conformal split, not retrained detectors.
 
-**Detector reproduction gaps.** Oriented detectors are sealed inputs. This companion does not claim a drop-in training stack.
+**Detector reproduction gaps.** Oriented detectors are sealed inputs. RotCert does not claim a drop-in training stack.
 
-**Not claimed.** Acceptance at *Pattern Recognition*. An arXiv identifier. A hosted manuscript PDF. A live recomputation of conformal quantiles in the browser.
+**Not claimed.** A new detector loss. Universal compactness of GWD. A live recomputation of conformal quantiles in the browser.

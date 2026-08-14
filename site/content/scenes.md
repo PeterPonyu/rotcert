@@ -6,4 +6,4 @@ lede: Predicted OBB, ground truth, center radius, orientation wedge — four plu
 
 {{< scenes-grid >}}
 
-Panel numbers in the manuscript showcase come from the frozen S2A-Net DIOR-R record. This companion does not host those photographs.
+Panel numbers come from the frozen S2A-Net DIOR-R record. Photographs are not hosted; the tiles are oriented-box schematics.

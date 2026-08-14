@@ -15,4 +15,4 @@ Gaussian–Wasserstein distance (GWD) is used here **only as a nonconformity sco
   <figcaption>Static fallback: elongated seam (left) versus near-square unconstrained heading (right). The green disk is the GWD ball reported as a center-offset radius; the wedge is omitted when heading is unconstrained.</figcaption>
 </figure>
 
-Naive coordinate-wise coverage is **regime-dependent** (angle strata), not a universal failure of every baseline. The manuscript scopes that comparison; this page does not promote “GWD always smaller.”
+Naive coordinate-wise coverage is **regime-dependent** (angle strata), not a universal failure of every baseline. That comparison is scoped; this page does not promote “GWD always smaller.”

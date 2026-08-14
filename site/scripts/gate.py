@@ -36,6 +36,18 @@ FORBIDDEN = [
     "/home/",
     "paper_pr.pdf",
     "paper_ieeetran.pdf",
+    "Pattern Recognition",
+    "TGRS",
+    "this paper",
+    "manuscript",
+    "submission",
+    "journal",
+    "Elsevier",
+    "not accepted",
+    "methods companion",
+    "PDF kit",
+    "arxiv",
+    "companion",
 ]
 
 ROUTES = [

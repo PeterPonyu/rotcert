@@ -10,5 +10,5 @@ title: "Angle-aware conformal certification for oriented object detection in aer
   <li><strong>G2</strong> is a Learn-then-Test Hoeffding–Bentkus certified rotated-IoU false-negative-rate bound that <strong>refuses</strong> below its power floor instead of emitting a number it cannot back.</li>
   <li>The operator-facing object is a <strong>per-class certificate card</strong>: center-offset radius (px), orientation half-extent (deg) or unconstrained, rotated-IoU floor — or an explicit refuse with a planning readout.</li>
   <li>Evidence is frozen and scoped: ten G1 cells, three aerial datasets (DIOR-R, DOTA-v1.0, HRSC2016-MS), five detector architectures; all 20 DIOR-R classes certify for G1; DOTA overlapping crops are a diagnosed exchangeability stress case (~1–1.2 points below nominal).</li>
-  <li>This site is a <strong>methods companion</strong> for those certificates and refusals — not a detector, not a product landing, not a remote-sensing data portal.</li>
+  <li>The objects here are those <strong>certificates and refusals</strong> — GWD balls, G1/G2 cards, and a dashed refuse gate — not a detector and not a data portal.</li>
 </ol>

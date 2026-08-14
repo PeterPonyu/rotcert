@@ -6,7 +6,7 @@ lede: Cite the software and the frozen records. Related work is consumed, not cl
 
 **Software (v0.2.0)**
 
-<pre class="cli">@software{fu_rotcert_2026,
+<pre class="cite-block">@software{fu_rotcert_2026,
   author = {Fu, Zeyu},
   title  = {rotcert: distribution-free per-class localization and recall
             certificates for oriented object detectors},

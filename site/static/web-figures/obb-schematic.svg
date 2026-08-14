@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-labelledby="t d">
   <title id="t">Seam versus square GWD schematic</title>
-  <desc id="d">Left: elongated oriented boxes with a GWD disk and heading wedge. Right: near-square boxes with unconstrained heading. Orange tick marks the ±90° seam.</desc>
+  <desc id="d">Left: elongated oriented boxes with a GWD disk and heading wedge. Right: near-square boxes with unconstrained heading. Orange tick marks the Â±90Â° seam.</desc>
   <rect width="640" height="280" fill="#F7F5F0"/>
   <g font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" fill="#111111">
-    <text x="24" y="28">Elongated · seam-continuous GWD</text>
-    <text x="360" y="28">Near-square · heading unconstrained</text>
+    <text x="24" y="28">Elongated Â· seam-continuous GWD</text>
+    <text x="360" y="28">Near-square Â· heading unconstrained</text>
   </g>
   <g transform="translate(150 150)">
     <circle r="42" fill="none" stroke="#007A00" stroke-width="2"/>

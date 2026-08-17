@@ -9,6 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta name="theme-color" content="#F7F5F0">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 {{ $css := resources.Get "css/main.css" | minify }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ $js := resources.Get "js/enhance.js" | minify }}

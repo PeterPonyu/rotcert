@@ -38,6 +38,7 @@ jobs:
             sleep 10
           done
           [ -s "$DEB" ] || { echo "Failed to download Hugo after 5 attempts" >&2; exit 1; }
+          echo "381a34f66b505b6d9774a70362b2ce2bde142d4a2cf781030e7cc8cfff7d6de1  $DEB" | sha256sum -c -
           sudo dpkg -i "$DEB"
           hugo version | grep -F "extended"
 

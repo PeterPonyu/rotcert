@@ -4,6 +4,8 @@ kicker: Cite
 lede: Cite the software and the frozen records. Related work is consumed, not claimed.
 ---
 
+Record status: frozen science. Code and reserved DOI. Not a venue package.
+
 **Software (v0.2.0)**
 
 <pre class="cite-block">@software{fu_rotcert_2026,

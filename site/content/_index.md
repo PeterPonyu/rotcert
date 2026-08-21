@@ -2,7 +2,7 @@
 title: "Angle-aware conformal certification for oriented object detection in aerial imagery"
 ---
 
-<ol class="thesis-lines">
+<ol class="argument-lines">
   <li>Oriented detectors emit a point OBB and say nothing distribution-free about how far the true box may lie, or how many objects they silently miss.</li>
   <li>An OBB angle lives on ℝ/πℤ: a ±90° seam and square-box unidentifiability make coordinate-wise conformalization geometrically misspecified, not merely “a bit loose.”</li>
   <li>RotCert conformalizes a <strong>seam-continuous, square-safe Gaussian–Wasserstein (GWD) nonconformity</strong> (GWD is consumed as a score, not claimed as a new detector loss).</li>

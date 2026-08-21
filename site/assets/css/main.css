@@ -146,11 +146,11 @@ main { max-width: 58rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
 .status-line { color: var(--g2); font-weight: 600; }
 .byline { color: var(--mute); }
 
-.thesis-lines {
+.argument-lines {
   margin: 0;
   padding-left: 1.2rem;
 }
-.thesis-lines li { margin: 0.55rem 0; }
+.argument-lines li { margin: 0.55rem 0; }
 
 .stat-grid {
   display: grid;

@@ -4,7 +4,7 @@ Angle-aware conformal certification for oriented object detection in aerial imag
 
 Frozen records: Zenodo DOI [10.5281/zenodo.21392293](https://doi.org/10.5281/zenodo.21392293).
 
-## Thesis
+## Argument
 
 Oriented detectors emit a point oriented bounding box (OBB) and say nothing
 distribution-free about how far the true box may lie, or how many objects they

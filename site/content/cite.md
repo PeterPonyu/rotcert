@@ -4,7 +4,7 @@ kicker: Cite
 lede: Cite the software and the frozen records. Related work is consumed, not claimed.
 ---
 
-Record status: frozen science. Code and reserved DOI. Not a venue package.
+Record status: frozen science. The code and records archive is public at 10.5281/zenodo.21392293. Not a venue package.
 
 **Software (v0.2.0)**
 

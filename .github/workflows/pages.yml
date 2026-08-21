@@ -4,12 +4,14 @@ on:
   push:
     branches: [pages/rotcert-companion]
   pull_request:
+    branches: [pages/rotcert-companion]
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -22,6 +24,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       HUGO_VERSION: "0.124.1"
     steps:
@@ -69,6 +73,9 @@ jobs:
 
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/pages/rotcert-companion'
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

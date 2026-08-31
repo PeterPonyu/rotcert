@@ -1,7 +1,7 @@
 #!/bin/bash
 # next_boot_rotcert_configA.sh -- Config-A one-command box runner (2026-07-13).
 #
-# Produces the substrate for the Config-A grid jump (COMPUTE-PLAN-2026-07-13.md):
+# Produces the substrate for the Config-A grid jump (compute plan):
 #   Stage 1  HRSC2016-MS 3rd-dataset arm  -- hrsc_run.sh: convert (angle-convention
 #            refuse-gate) -> smoke (1-epoch finite-loss) -> full train (2 detectors,
 #            ORCNN_SEEDS/RTMDET_SEEDS) -> infer test -> GT prep -> tar. Sentinel:

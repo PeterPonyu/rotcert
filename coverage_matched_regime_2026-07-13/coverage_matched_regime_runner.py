@@ -6,7 +6,7 @@ Question this runner answers
 The parent coverage-matched ablation (coverage_matched_2026-07-13) found, at MATCHED
 realized coverage, GWD is smaller than naive-coord on DIOR-R (~0.79-0.83x), a WASH on
 DOTA (~0.93x), and always LARGER than the hull. The efficiency story was walked back to
-"GWD is coverage-efficient only vs naive on DIOR-R." The proposed repair (COMPUTE-PLAN
+"GWD is coverage-efficient only vs naive on DIOR-R." The proposed repair (compute plan
 §5): GWD's matched-coverage advantage should track OBJECT ELONGATION -- it should win on
 elongated objects (where a seam-continuous, angle-aware score matters) and be neutral on
 compact ones. This runner tests that mechanistically, WITHIN each existing cell, by

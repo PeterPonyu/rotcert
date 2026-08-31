@@ -1,7 +1,7 @@
 #!/bin/bash
 # next_boot_rotcert_configB.sh -- Config-B one-command box runner (2026-07-13).
 #
-# Config B = Config A PLUS two depth arms (COMPUTE-PLAN-2026-07-13.md sec.2 "Config B"):
+# Config B = Config A PLUS two depth arms (compute plan sec.2 "Config B"):
 #   (i)  cross-family detector breadth on the HARD dataset: train RoI Transformer AND
 #        S2A-Net on DIOR-R in-house (1x schedule, ~8 GPU-h each), then infer the DIOR-R
 #        held-out TEST split so the new cells join the existing DIOR grid.

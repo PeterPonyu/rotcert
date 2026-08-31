@@ -60,11 +60,13 @@ manuscripts/pr/*submission_source*.zip.sha256
 manuscripts/tgrs/
 **/PROPOSED-TEX.md
 
-# Superseded journal-agnostic draft; the maintained manuscript is manuscripts/pr/
-manuscripts/paper.tex
-manuscripts/paper.pdf
-manuscripts/paper_pr.pdf
-manuscripts/refs.bib
+# Manuscript sources are not tracked here. This branch carries the software, the
+# frozen result records, and the figure-generation scripts, which is what the
+# paper's data-availability statement points to.
+manuscripts/*.tex
+manuscripts/*.pdf
+manuscripts/*.bib
+manuscripts/pr/
 
 # Scratch
 manuscripts/figures-src/review/

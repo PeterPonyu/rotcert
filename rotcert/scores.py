@@ -465,8 +465,8 @@ roster (the audit Holm family, every default) iterates ``SCORES`` and is
 unchanged. ``g1_calibrate``/``g1_coverage``/the CLI ``calibrate`` command
 resolve these names only when the caller asks for one BY NAME; whether
 ``naive-coord-scaled`` enters the confirmatory roster (vs staying a disclosed
-exploratory arm) is a prereg-freeze decision recorded in the apps-design/05
-addendum (2026-07-10)."""
+exploratory arm) is a prereg-freeze decision recorded in the protocol
+specification addendum (2026-07-10)."""
 
 
 def b1_score(scaled: bool = False) -> Any:

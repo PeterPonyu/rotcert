@@ -1,7 +1,7 @@
 # Path hygiene (portal tip)
 
 This repository's **current tip** is maintained without developer workstation absolute paths
-(`/home/<user>/…`, `Desktop/…` layouts) or agent tooling state (`.omx/`).
+(`/home/<user>/…`, `Desktop/…` layouts) or local tooling state directories.
 
 Experiment scripts resolve external roots via environment variables when needed:
 

@@ -1,4 +1,4 @@
-# DIOR-R + DOTA certification report (consolidated, final) — 2026-07-11 (write-geo)
+# DIOR-R + DOTA certification report (consolidated, final) — 2026-07-11
 
 CPU certification mirroring the DOTA pilot protocol (α=0.10, β=0.20, δ=0.05, rotated-IoU τ=0.5, per-class
 Mondrian). **Primary G1 metric is out-of-sample R=20 scene-split coverage** (in-sample `audit.json` is
@@ -52,7 +52,7 @@ Refusals are honest: some classes have an **infinite** LTT-HB power floor (reali
 fall below the Bentkus image floor. DIOR-R certifies more than DOTA (more images/class); RTMDet (denser dets,
 more TPs) certifies more than ORCNN.
 
-## naive-coord conditional coverage (red-team C2 premise — DESCRIPTIVE only, no Holm)
+## naive-coord conditional coverage (review item C2 premise — DESCRIPTIVE only, no Holm)
 The paper's premise: naive coordinate-wise (Bonferroni-box) CP breaks at the angle seam / square regime.
 Angle-regime audit (`audit_naive.json`, nominal 0.90):
 

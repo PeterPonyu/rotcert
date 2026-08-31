@@ -1,7 +1,7 @@
 # Coverage-matched efficiency ablation (Part A) — RESULTS
 
 **Date:** 2026-07-13 · **Runner:** `coverage_matched_runner.py` · **Output:** `results.json`
-**Purpose:** repair the efficiency-claim support gap (red-team M3 / M1). The Holm-8 head-to-head and
+**Purpose:** repair the efficiency-claim support gap (internal review items M3 / M1). The Holm-8 head-to-head and
 its R=20 companion contrast GWD vs. baselines at **identical nominal** α=0.10, where the union-bound
 baselines **over-cover** (realized eval coverage 0.915–0.948) while GWD sits near nominal. Part of the
 GWD size advantage is therefore the price of baseline over-coverage, not a sharper region. This

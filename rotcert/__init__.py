@@ -1,7 +1,7 @@
 """rotcert: angle-aware GWD-based conformal certification for oriented object detection.
 
-See ``apps-design/05-APP-rotdet-cert.md`` for the full design; ``README.md`` in this
-directory for the quickstart and the deviations-from-design-doc register.
+See ``README.md`` in this directory for the quickstart and the
+deviations-from-specification register.
 
 Modules
 -------

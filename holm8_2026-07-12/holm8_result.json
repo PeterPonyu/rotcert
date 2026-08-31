@@ -160,7 +160,7 @@
  "protocol": {
   "alpha_coverage": 0.1,
   "split": "40/20/40 seed0 single",
-  "frozen_per": "apps-design/05 sha256 4764b230 + SIGN-OFF-RECORD-2026-07-11",
+  "frozen_per": "protocol specification sha256 4764b230 + sign-off 2026-07-11",
   "elapsed_s": 20.9
  }
 }

@@ -44,6 +44,28 @@ configB_pulled_2026-07-15/
 pilot_results_2026-07-10/
 val_substrate_2026-07-10/
 
+# Internal planning, review, and venue material: never publish on this branch
+COMPUTE-PLAN-*.md
+SOTA-REPRODUCTION-PLAN-*.md
+SIGN-OFF-RECORD-*.md
+manuscripts/*-MEMO.md
+manuscripts/RED-TEAM-REPORT.md
+manuscripts/*-REPORT-2026-*.md
+manuscripts/DATA-AUDIT-*.md
+manuscripts/pr/DESK-*.md
+manuscripts/pr/cover_letter*.md
+manuscripts/pr/highlights.txt
+manuscripts/pr/*submission_source*.zip
+manuscripts/pr/*submission_source*.zip.sha256
+manuscripts/tgrs/
+**/PROPOSED-TEX.md
+
+# Superseded journal-agnostic draft; the maintained manuscript is manuscripts/pr/
+manuscripts/paper.tex
+manuscripts/paper.pdf
+manuscripts/paper_pr.pdf
+manuscripts/refs.bib
+
 # Scratch
 manuscripts/figures-src/review/
 orchestration/.omc/

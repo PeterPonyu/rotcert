@@ -1,6 +1,6 @@
 # In-sample → out-of-sample G1 coverage correction (2026-07-11)
 
-**Author:** write-geo. **Trigger:** red-team finding (verified). **Scope:** corrects the G1 marginal-coverage
+**Trigger:** internal adversarial review finding (verified). **Scope:** corrects the G1 marginal-coverage
 number the rotcert paper reports; does not touch frozen inputs.
 
 ## The defect (confirmed)

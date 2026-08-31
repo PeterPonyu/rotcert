@@ -1,7 +1,7 @@
 # rotcert data manifest
 
-Source of record: `apps-design/05-APP-rotdet-cert.md` (the design, REVISED with the
-2026-07-10 CRITIC-PASS note), `SOTA-REPRODUCTION-PLAN-2026-07-10.md` §1/§3/§5 (the
+Source of record: the frozen RotCert protocol specification (revised with the
+2026-07-10 review note) and the SOTA reproduction plan §1/§3/§5 (the
 RTMDet-R-l anchor, mmrotate staleness, container spec).
 
 ## Datasets

@@ -2,23 +2,37 @@ cff-version: 1.2.0
 message: "If you use this software or the certification protocol, please cite it as below."
 title: "rotcert: distribution-free per-class localization and recall certificates for oriented object detectors"
 type: software
-version: 0.1.0
-date-released: "2026-07-16"
-doi: "10.5281/zenodo.21392293"
+version: 0.2.0
+date-released: "2026-08-31"
+doi: "10.5281/zenodo.22211671"
 repository-code: "https://github.com/PeterPonyu/rotcert"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.21392292"
     description: "Concept DOI; always resolves to the latest published version."
   - type: doi
-    value: "10.5281/zenodo.21392293"
-    description: "Version DOI for the 0.1.0 archive cited by the manuscript."
+    value: "10.5281/zenodo.22211671"
+    description: "Version DOI for the 0.2.0 archive cited by the manuscript."
 authors:
   - family-names: "Fu"
     given-names: "Zeyu"
     email: "fuzeyu09@gmail.com"
     orcid: "https://orcid.org/0009-0001-8329-0108"
-    affiliation: "Independent Researcher"
+    affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
+  - family-names: "Pu"
+    given-names: "Xin"
+    affiliation: "Department of Hematology, the Third Affiliated Hospital of Chongqing Medical University (FangDa Hospital), Chongqing, China"
+  - family-names: "Yu"
+    given-names: "Kuan"
+    affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
+  - family-names: "Wang"
+    given-names: "Junping"
+    email: "wangjunping@tmmu.edu.cn"
+    affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
+  - family-names: "Wang"
+    given-names: "Song"
+    email: "swang1981@tmmu.edu.cn"
+    affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Chongqing Engineering Research Center for Nanomedicine, College of Preventive Medicine, Army Medical University, Chongqing, China"
 license: MIT
 abstract: >-
   rotcert ports conformal prediction to oriented (rotated) object detection in

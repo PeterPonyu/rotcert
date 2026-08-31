@@ -32,7 +32,7 @@ cells (1.66×, 1.75×) fall within that same band. Coverage-matched to ≤0.0001
 
 ## Manuscript integration
 
-Both `manuscripts/paper.tex` and `manuscripts/tgrs/paper_ieeetran.tex`:
+Both manuscript variants maintained at the time:
 - `tab:covmatched` — 4 new rows (RoI-Trans/S2A-Net × naive/hull); caption updated to disclose that these two
   cells' "nominal" column comes from this ablation's own R=20 nominal-α mean, not the preregistered Holm-8
   family (Table `tab:r20holm`, untouched — these cells were never part of that signed freeze).
@@ -41,7 +41,7 @@ Both `manuscripts/paper.tex` and `manuscripts/tgrs/paper_ieeetran.tex`:
   detectors" (ORCNN/RTMDet only) to "all four detectors," citing the new 0.76–0.85× range.
 - `tab:naive` (angle-regime coverage) — 2 new rows (DIOR-RoI-Trans, DIOR-S2ANet) sourced directly from
   `configB_cells_2026-07-15/{roi_trans,s2anet}/{audit_naive.json,audit_gwd.json}` (no new computation; these
-  audits were already produced by the P4 agent). One new paragraph discloses that S2A-Net's naive-coordinate
+  audits already existed). One new paragraph discloses that S2A-Net's naive-coordinate
   boundary coverage (0.867) is the only DIOR-R regime cell in the study that dips clearly below nominal —
   deeper than DIOR-ORCNN's marginal dip (0.898) — while its square over-coverage (0.988) is the highest of
   any cell in the table; direction (boundary worst, square best) is unchanged, magnitude is not.
@@ -49,8 +49,7 @@ Both `manuscripts/paper.tex` and `manuscripts/tgrs/paper_ieeetran.tex`:
   `coverage_matched_regime_runner.py`'s conditioning logic on the two new cells, which was not requested);
   left untouched along with all surrounding "four original cells" language, which remains accurate as written.
 
-Backups taken before editing: `manuscripts/paper.tex.bak-pre-covmatched-ext`,
-`manuscripts/tgrs/paper_ieeetran.tex.bak-pre-covmatched-ext`. Both files compile via `latexmk -pdf` with zero
+Backups were taken before editing. Both files compile via `latexmk -pdf` with zero
 undefined references or multiply-defined labels (only pre-existing, unrelated overfull-hbox/font-shape
 warnings). Every new number in both manuscripts was re-extracted from `results.json` /
 `configB_cells_2026-07-15/*/audit_*.json` and diffed against the manuscript text; all match. A line-level diff

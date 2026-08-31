@@ -125,7 +125,7 @@ a sanity check, not a load-bearing claim.
 - `aopg_repro_result.json` — machine-readable gate record (both detectors, vs
   AOPG target and vs nearest row).
 - `RESULTS-AOPG.md` — this file.
-- `PROPOSED-TEX.md` — drop-in manuscript text (canonical + TGRS kit slots).
+- `PROPOSED-TEX.md` — drop-in manuscript text (kept out of this branch).
 
 ## 7. Provenance
 

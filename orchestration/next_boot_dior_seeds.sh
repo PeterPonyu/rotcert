@@ -33,7 +33,7 @@
 # detector at ~10 min/epoch on DIOR-R (batch 8), so a seed is ~6-8 GPU-h -- NOT the ~24
 # GPU-h a naive "3x => 3x cost" reading would suggest (two-stage ORCNN 1x is ~40 min/epoch
 # x 12ep ~= 8 GPU-h; the per-epoch rates differ by ~4x). Empirically measured on the box's
-# seed-0 run (COMPUTE-PLAN-2026-07-13.md line 224: "RTMDet-R-l 3x on DIOR-R (36 ep, batch
+# seed-0 run (compute plan: "RTMDet-R-l 3x on DIOR-R (36 ep, batch
 # 8): ~6-8 GPU-h, ~10 min/epoch"). Because RTMDet seeds are therefore CHEAP and the critic
 # asked for BOTH core detectors, SKIP_RTMDET defaults to 0 (run both). Set SKIP_RTMDET=1
 # for the ORCNN-only variant (~16 GPU-h instead of ~28-32).

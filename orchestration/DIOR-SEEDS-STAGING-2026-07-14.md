@@ -92,7 +92,7 @@ Fold the DIOR spread numbers into the seed-variance section (alongside the HRSC
 demonstrated on the DIOR-R dataset the coverage-matched efficiency result actually defends,
 not only on HRSC.
 
-## 3. Cost / benefit (honest, from COMPUTE-PLAN-2026-07-13.md measured rates)
+## 3. Cost / benefit (honest, from the compute plan's measured rates)
 
 | Variant                         | New cells | GPU-h (box) | Defends |
 |---------------------------------|-----------|-------------|---------|

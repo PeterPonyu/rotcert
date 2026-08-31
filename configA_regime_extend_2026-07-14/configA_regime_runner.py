@@ -7,7 +7,7 @@ dota_zoo/S2ANET-EXCLUDED-2026-07-14.md and zoo_gliding_vertex/GLIDINGVERTEX-EXCL
 Reuses coverage_matched_regime_2026-07-13's run_cell() verbatim (same protocol,
 same helpers) on NEW cells only -- does not touch the frozen parent's results.json.
 
-Registered prediction under test (COMPUTE-PLAN-2026-07-13.md lines 199-205):
+Registered prediction under test (compute plan, 2026-07-13):
 "on HRSC (all ships, extreme aspect ratios) GWD should win most decisively" --
 i.e. HRSC's pooled (regime='all') GWD-vs-naive-coord ratio should be the LOWEST
 (most below 1.0) of all cells: DOTA ~wash (~0.93x, frozen parent), DIOR-R ~0.8x

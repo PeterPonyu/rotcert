@@ -2,7 +2,7 @@
 
 **Scope.** LOCAL staging only. No GPU was run, no AutoDL/boxkit API touched, no frozen
 result dir or manuscript modified. This note records what was built for the Config-B
-box run (COMPUTE-PLAN-2026-07-13.md sec.2 "Config B"), what was verified locally, and
+box run (compute plan sec.2 "Config B"), what was verified locally, and
 what remains box-day-only.
 
 Config B = Config A **plus** two depth arms:
@@ -135,7 +135,7 @@ Box tar (via `chain_epilogue`) carries:
    - `s2anet` DIOR-R     — same DIOR-R test GT.
    - HRSC seed-0 cells for ORCNN + RTMDet — gt = `hrsc_test_gt.jsonl`; the seed-1/2 dets
      are the training-variance replicates for the same GT.
-2. Then the **coverage-matched regime extension** (COMPUTE-PLAN sec.5): append each new
+2. Then the **coverage-matched regime extension** (compute plan sec.5): append each new
    cell's `matched.jsonl` to the coverage-matched runner's `CELLS` list and re-run (CPU),
    including the HRSC 3-seed replicates for the detector-training-variance row. This is
    where the elongation hypothesis (GWD wins at matched coverage on HRSC's extreme

@@ -1,7 +1,7 @@
 #!/bin/bash
 # next_boot_dior_seeds.sh -- DIOR-R multi-seed arm one-command box runner (2026-07-14).
 #
-# The TGRS/ISPRS workload critic's recommended experimental addition: 2 EXTRA training
+# Recommended experimental addition from the workload review: 2 EXTRA training
 # seeds (1,2) for the two CORE in-house detectors on DIOR-R -- the one dataset where the
 # coverage-matched efficiency claim survives. The existing cells are seed 0 (already
 # trained + certified, dior_cert_results_2026-07-11/{orcnn,rtmdet}). This chain adds

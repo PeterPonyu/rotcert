@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+REPO = ROOT.parent
 PUBLIC = ROOT / "public"
 STATIC = ROOT / "static"
 ALLOWLIST = ROOT / "FIGURE_ALLOWLIST.txt"
@@ -49,6 +50,39 @@ FORBIDDEN = [
     "arxiv",
     "companion",
 ]
+
+# The checks above only see the rendered site. This branch is a public repo, so
+# every tracked file is browsable on GitHub whether or not the site links it.
+# These markers are journal-submission packaging and internal review process,
+# which must not sit on the public tip at all.
+REPO_FORBIDDEN = [
+    "paper_pr.pdf",
+    "paper_pr.tex",
+    "paper_ieeetran",
+    "cover_letter",
+    "DESK-GATE",
+    "DESK-CHECK",
+    "Editorial Manager",
+    "Pattern Recognition",
+    "Elsevier",
+    "desk-reject",
+    "desk return",
+    "submission_source",
+    "RED-TEAM-REPORT",
+    "VENUE-FIT",
+]
+
+# "TGRS" alone is a legitimate citation for the DIOR-R dataset paper
+# (Cheng et al., TGRS 2022), so it is matched only in a venue-targeting sense.
+REPO_FORBIDDEN_RE = [
+    re.compile(r"TGRS(?!\s+\d{4})[^.\n]{0,40}\b(?:kit|odds|reviewer|scale|grid|submission)\b", re.I),
+]
+
+REPO_SKIP_DIRS = {".git", "public", "resources", "node_modules", "__pycache__", ".venv"}
+REPO_TEXT_SUFFIXES = {
+    ".md", ".txt", ".py", ".sh", ".tex", ".bib", ".toml", ".yaml", ".yml",
+    ".cff", ".json", ".html", ".css", ".js",
+}
 
 ROUTES = [
     "index.html",
@@ -123,6 +157,44 @@ def check_leaks() -> None:
     print(f"ok: leak scan ({len(files)} files)")
 
 
+def check_repo_surface() -> None:
+    """Fail if submission/venue material reappears anywhere on the public tip."""
+    problems: list[str] = []
+    scanned = 0
+    for path in REPO.rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(REPO)
+        if any(part in REPO_SKIP_DIRS for part in rel.parts):
+            continue
+        # A forbidden name in the path itself is a leak even for binaries.
+        for token in REPO_FORBIDDEN:
+            if token.lower() in rel.as_posix().lower():
+                problems.append(f"{rel}: forbidden path token {token!r}")
+        if path.suffix.lower() not in REPO_TEXT_SUFFIXES:
+            continue
+        if rel == Path("site/scripts/gate.py"):
+            continue  # this file necessarily names what it blocks
+        try:
+            body = path.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        scanned += 1
+        lower = body.lower()
+        for token in REPO_FORBIDDEN:
+            if token.lower() in lower:
+                problems.append(f"{rel}: forbidden {token!r}")
+        for pattern in REPO_FORBIDDEN_RE:
+            m = pattern.search(body)
+            if m:
+                problems.append(f"{rel}: venue-targeting text {m.group(0)!r}")
+    if problems:
+        for p in sorted(set(problems)):
+            print(f"  {p}", file=sys.stderr)
+        fail(f"repo surface: {len(set(problems))} submission/venue leak(s) on the public tip")
+    print(f"ok: repo surface ({scanned} text files)")
+
+
 def check_routes_and_prefix() -> None:
     for rel in ROUTES:
         path = PUBLIC / rel
@@ -174,6 +246,7 @@ def main() -> None:
     check_allowlist()
     check_pdfs()
     check_leaks()
+    check_repo_surface()
     check_routes_and_prefix()
     check_numbers()
     extract_hash()

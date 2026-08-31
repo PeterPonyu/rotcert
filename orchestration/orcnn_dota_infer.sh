@@ -1,7 +1,7 @@
 #!/bin/bash
 # orcnn_dota_infer.sh -- box-side one-shot (box-reuse round, 2026-07-11):
 # score the PUBLISHED mmrotate Oriented R-CNN DOTA checkpoint over the SAME
-# DOTA val images the pilot used, producing the fourth cell of the TGRS
+# DOTA val images the pilot used, producing the fourth cell of the
 # 2x2 detector-x-dataset grid (RTMDet-DOTA pilot / ORCNN-DIOR / RTMDet-DIOR
 # already exist). Inference-only; no training, no certification (local).
 set -uo pipefail

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """R=20 scene-split repeats for the DIOR-R ORCNN GWD G1 certificate.
 
-Design-mandated out-of-sample protocol (apps-design 05 §4.2): for each of R=20
+Design-mandated out-of-sample protocol (protocol specification §4.2): for each of R=20
 repeated scene-level splits (split-seed = repeat index, 40/20/40 cal/match/eval),
 fit the GLOBAL GWD split-conformal q_hat on the calibration scenes and measure
 marginal coverage on the held-out EVAL scenes. Reports per-repeat coverage + a

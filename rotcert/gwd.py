@@ -1,6 +1,6 @@
 """Angle-aware Gaussian-Wasserstein-distance (GWD) nonconformity (design §2.2d, §2.3).
 
-This module IS the paper's centerpiece (apps-design/05-APP-rotdet-cert.md §2). Every
+This module IS the paper's centerpiece (protocol specification §2). Every
 other module in ``rotcert`` is plumbing around this one.
 
 The le90 long-edge convention

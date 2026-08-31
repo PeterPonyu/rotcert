@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""C2 confirmatory Holm-8 head-to-head (FROZEN per apps-design/05 sha256
-4764b230... + SIGN-OFF-RECORD-2026-07-11): 2 baseline contrasts (B1
+"""C2 confirmatory Holm-8 head-to-head (FROZEN per protocol specification
+sha256 4764b230... + sign-off 2026-07-11): 2 baseline contrasts (B1
 naive-coord+Bonferroni, B2 axis-aligned hull) x 2 detectors x 2 datasets
 = 8 one-sided tests (H1: GWD set size < baseline at IDENTICAL NOMINAL
 calibration -- NOT matched realized coverage; see the calibration note
@@ -133,7 +133,7 @@ def main():
                   f"cov g/b={g_cov:.4f}/{b_cov:.4f}", flush=True)
     holm = _audit.holm8_confirmatory(cells_out, alpha=0.05)
     holm["protocol"] = {"alpha_coverage": ALPHA_COV, "split": "40/20/40 seed0 single",
-                       "frozen_per": "apps-design/05 sha256 4764b230 + SIGN-OFF-RECORD-2026-07-11",
+                       "frozen_per": "protocol specification sha256 4764b230 + sign-off 2026-07-11",
                        "elapsed_s": round(time.time() - t0, 1)}
     out = OUT / "holm8_result.json"
     json.dump(holm, open(out, "w"), indent=1, default=str)

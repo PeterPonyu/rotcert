@@ -8,7 +8,7 @@ reimplemented.
 
 ## 1. Frozen wording (quoted)
 
-**K3, main text** (`apps-design/05-APP-rotdet-cert.md` §5, sha-pinned in the
+**K3, main text** (protocol specification §5, sha-pinned in the
 2026-07-11 sign-off):
 
 > **K3 (reproduction gate — binding, SOTA-REPRODUCTION-PLAN §3).** … the

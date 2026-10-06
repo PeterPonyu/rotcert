@@ -1,28 +1,10 @@
-"""rotcert: angle-aware GWD-based conformal certification for oriented object detection.
+"""Geometry-aware conformal localization and diagnostic reliability auditing.
 
-See ``README.md`` in this directory for the quickstart and the
-deviations-from-specification register.
-
-Modules
--------
-gwd       Gaussian-Wasserstein-distance nonconformity: OBB->(mu,Sigma), the closed-form
-          2x2 Bures term, le90 canonicalization. THE paper's centerpiece.
-sets      G1 coverage sets: the GWD-ball certificate + its conservative per-parameter
-          envelope (reporting-only).
-matching  Rotated-IoU / hull-IoU (shapely) + the preregistered greedy matching rule.
-splits    Scene-level (never crop-level) 3-way repeated calibration/matching/eval splits.
-scores    The six nonconformity constructions (gwd, naive-coord, hull, wrapped-coord,
-          doubled, iou) through one calibrate/cover/set-size interface.
-ltt       Learn-then-Test (Hoeffding-Bentkus / empirical-Bernstein) for the G2 certified
-          image-level FNR, plus the a-priori LTT-HB power floor.
-certify   G1 (per-Mondrian-cell split conformal) + G2 (certified FNR) + the honest-
-          uncertainty refusal rules.
-audit     Scene-clustered bootstrap coverage CIs, the confirmatory Holm-8, K1
-          premise-death.
-io        Canonical detections/GT/matched JSONL schemas.
-cli       ``rotcert {ingest,match,calibrate,recall,certify,audit,report}``.
+G1 is conditional on matched true positives and exchangeability. Numerical shape
+extents and G2 threshold passes are diagnostics. See README for the G2 output change
+and the earlier version needed to replay the first-submission results.
 """
 
-__version__ = "0.1.0.dev0"
+__version__ = "0.3.0"
 
 __all__ = ["__version__"]

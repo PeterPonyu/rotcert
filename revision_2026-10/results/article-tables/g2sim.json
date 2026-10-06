@@ -1,0 +1,110 @@
+{
+ "v1_scenarios": 768,
+ "v1_draws": 15360000,
+ "v1_bad": 2,
+ "v1_bad_x8": 2,
+ "v1_worst_rate": 5e-05,
+ "v1_worst_cp": 0.00023717102659408986,
+ "dior_eta": 0.00125,
+ "grid_scenarios": 384,
+ "grid_draws": 1536000,
+ "grid_bad": 0,
+ "grid_cp": 0.00074865268801778,
+ "joint_settings": 24,
+ "joint_draws": 480000,
+ "joint_m": 20000,
+ "delta": 0.025,
+ "joint_boundary_errors": 1,
+ "joint_boundary_worst_cp": 0.00023717102659408986,
+ "joint_empirical_errors": 0,
+ "joint_grid_boundary_errors": 0,
+ "joint_grid_empirical_errors": 0,
+ "joint_hoeffding_boundary_errors": 1,
+ "joint_union_boundary_errors": 0,
+ "joint_cp_zero": 0.00014977539622296285,
+ "rows": 96,
+ "with_plan": 54,
+ "mean_at_or_above": 42,
+ "obs_eb": 4,
+ "obs_hoeffding": 5,
+ "obs_union": 4,
+ "exp_eb": 4.6305000000000005,
+ "exp_hoeffding": 6.1315,
+ "nstar_ratio_median": 1.001520555265354,
+ "eb_smaller_nstar": 27,
+ "p": {
+  "0.5": {
+   "n": 54,
+   "median": 0.00825,
+   "q10": 0.0,
+   "min": 0.0,
+   "below_half": 54
+  },
+  "1": {
+   "n": 54,
+   "median": 0.51275,
+   "q10": 0.505,
+   "min": 0.4885,
+   "below_half": 2
+  },
+  "1.5": {
+   "n": 54,
+   "median": 0.9572499999999999,
+   "q10": 0.883325,
+   "min": 0.81325,
+   "below_half": 0
+  },
+  "2": {
+   "n": 54,
+   "median": 0.99925,
+   "q10": 0.98255,
+   "min": 0.94575,
+   "below_half": 0
+  }
+ },
+ "realized": {
+  "1.0": {
+   "n": 54,
+   "median": 0.50475,
+   "q10": 0.30695,
+   "min": 0.0255,
+   "below_half": 18
+  },
+  "1.5": {
+   "n": 54,
+   "median": 0.8105,
+   "q10": 0.41775,
+   "min": 0.036,
+   "below_half": 9
+  }
+ },
+ "pooled": {
+  "m": 108000,
+  "no_plan_fraction": 0.058305555555555555,
+  "quantiles": {
+   "0.1": 0.4714285714285714,
+   "0.25": 0.7425149700598802,
+   "0.5": 0.9871794871794872,
+   "0.75": 1.3960843373493976,
+   "0.9": 4.072815533980583
+  },
+  "below_half": 0.11128703703703703,
+  "half_to_two": 0.7321018518518518,
+  "above_two": 0.15661111111111112
+ },
+ "pilot_m": 2000,
+ "no_plan_hard": 11,
+ "plan_cap_exp": 9,
+ "fixed_plans_above_cap": 0,
+ "hard_pilots": 2000,
+ "hard_pilots_mean_at_or_above": 981,
+ "hard_pilots_above_cap": 3,
+ "hardest": {
+  "label": "DIOR-R S2ANet vehicle",
+  "plugin_n": 1810251,
+  "no_plan": 0.492,
+  "finite_median": 0.01433558108792648,
+  "realized_x1": 0.0255,
+  "realized_x15": 0.036
+ }
+}

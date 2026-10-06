@@ -43,9 +43,9 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Sequence
 
 import numpy as np
-from relmetrics import bootstrap as _bootstrap
-from relmetrics import multiplicity as _multiplicity
-from relmetrics import provenance as _provenance
+from rotcert._vendor.relmetrics import bootstrap as _bootstrap
+from rotcert._vendor.relmetrics import multiplicity as _multiplicity
+from rotcert._vendor.relmetrics import provenance as _provenance
 
 from rotcert.gwd import canonicalize_le90
 

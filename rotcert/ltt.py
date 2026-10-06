@@ -1,39 +1,15 @@
-"""Learn-then-Test (LTT) certified image-level FNR + the a-priori power floor (design
-§2.4).
+"""Risk-matrix threshold tests and the historical fitted support screen.
 
-This module mirrors ``tools/asr-gate/asr_gate/ltt.py``'s validated Hoeffding-Bentkus /
-empirical-Bernstein bounded-mean construction (same p-value functions, same
-Bonferroni-over-grid / fixed-sequence selection machinery, same non-monotone-ratio
-motivation) -- see that module's docstring for the full derivation and validity
-proofs, not repeated here. The one genuine adaptation for ``rotcert``:
+The p-value calculations and threshold selection are numerical primitives. Their
+probability interpretation additionally requires a candidate family independent of
+the tested data (or a suitable uniform argument), valid pointwise tests and
+independent scene sampling. This module cannot verify those premises. It therefore
+reports ``diagnostic_pass`` and never promotes a numerical rejection to
+``certified=True``. Function names are retained for source compatibility.
 
-Per-IMAGE risk, not per-row accept/reject
---------------------------------------------
-``asr-gate``'s G1 certifies a set of independently-decided per-UTTERANCE accept/reject
-calls (each utterance's own score determines its own fate at a given lambda). G2 here
-certifies a per-IMAGE miss rate ``R_i(lambda) = (# GT in image i unmatched-or-matched-
-by-a-detection-below-confidence-lambda) / (# GT in image i)`` (design §2.4) -- the
-exchangeable unit is the SCENE/image (design §2.4, M3), and raising ``lambda`` can
-change MULTIPLE detections' retain/discard status within one image at once, so there is
-no single "this row's own score" gating a whole image the way ``asr-gate``'s per-
-utterance construction assumes. :func:`ltt_certify_matrix` therefore takes a
-PRECOMPUTED ``(n_images, K)`` risk matrix (``risk_matrix[i, k] = R_i(lambda_grid[k])``,
-computed image-side in ``rotcert.certify`` from the matched-detections table) and tests
-``H0(lambda): E[R(lambda)] > beta`` directly via the bounded-mean p-value on
-``Y_i(lambda) = R_i(lambda)`` (already in ``[0, 1]`` for every lambda -- no
-accept/reject imputation step is needed here, unlike ``asr-gate``'s ``Y = alpha +
-(loss-alpha)*accept_mask`` construction, precisely because the loss IS the full
-realized per-image quantity at that lambda already).
-
-A-priori power floor (design §2.4, the ``asr-gate`` LTT-HB power-failure scar)
------------------------------------------------------------------------------------
-``asr-gate``'s pilot hit a real LTT-HB power failure (memory 2026-07-09): a
-calibration set too small for the grid size / effect size certified NOTHING.
-:func:`power_floor_n_img` implements the design's own a-priori arithmetic
-(``n_img >~ ln(G/delta) / (2*(beta-R_hat)^2)``, Bentkus tightening ~1.5-2x) so
-``rotcert`` can REFUSE a per-class FNR certificate before wasting a run on a
-class/image count that was never going to have power, per the tool's binding refusal
-table (design §3.3).
+The fitted support screen is an archived heuristic, not a proved Bentkus
+correction or a sufficient data-collection budget. Historical result files retain
+their original schema; reproducing those files requires their original code version.
 """
 
 from __future__ import annotations
@@ -134,7 +110,7 @@ def ltt_certify_matrix(
     procedure: str = "bonferroni",
     p_value: str = "eb",
 ) -> Dict[str, Any]:
-    """LTT certificate for a precomputed per-image risk matrix (design §2.4, G2).
+    """Diagnostic threshold tests for a precomputed per-scene risk matrix.
 
     Parameters
     ----------
@@ -149,7 +125,7 @@ def ltt_certify_matrix(
         Failure probability.
     procedure:
         ``"bonferroni"`` (default, ordering-free -- every lambda tested at level
-        ``delta/K``, select the certified lambda with the SMALLEST value, i.e. the
+        ``delta/K``, select the passing lambda with the SMALLEST value, i.e. the
         most detections retained / least conservative among the valid ones) or
         ``"fixed-sequence"`` (walk from the most conservative -- highest -- lambda
         downward, stop at the first non-rejection; kept for parity with
@@ -160,7 +136,8 @@ def ltt_certify_matrix(
     Returns
     -------
     dict
-        ``lambda_star`` (float or ``None`` if VACUOUS), ``certified`` (bool),
+        ``lambda_star`` (diagnostic threshold or ``None``), ``diagnostic_pass`` (bool),
+        ``certified`` (always false), ``validity`` (``diagnostic_only``),
         ``realized_risk`` (mean risk at ``lambda_star``, or ``None``), ``beta``,
         ``delta``, ``n_images``, ``K``, ``procedure``, ``p_value``, ``trace`` (list of
         ``{"lambda", "p_value", "rejected", "mean_risk"}``, ascending-lambda order for
@@ -169,9 +146,11 @@ def ltt_certify_matrix(
     risk_matrix = np.asarray(risk_matrix, dtype=float)
     if risk_matrix.ndim != 2 or risk_matrix.size == 0:
         raise ValueError("ltt_certify_matrix: risk_matrix must be a non-empty 2-D array")
-    if np.any((risk_matrix < -1e-9) | (risk_matrix > 1.0 + 1e-9)):
+    if not np.all(np.isfinite(risk_matrix)) or np.any((risk_matrix < -1e-9) | (risk_matrix > 1.0 + 1e-9)):
         raise ValueError("ltt_certify_matrix: risk_matrix must be bounded in [0, 1]")
     grid = np.asarray(sorted(float(v) for v in lambda_grid), dtype=float)
+    if grid.size == 0 or not np.all(np.isfinite(grid)):
+        raise ValueError("lambda_grid must be non-empty and finite")
     if risk_matrix.shape[1] != grid.size:
         raise ValueError("ltt_certify_matrix: risk_matrix column count must equal len(lambda_grid)")
     if not 0.0 < beta < 1.0:
@@ -226,6 +205,8 @@ def ltt_certify_matrix(
         return {
             "lambda_star": None,
             "certified": False,
+            "diagnostic_pass": False,
+            "validity": "diagnostic_only",
             "realized_risk": None,
             "beta": float(beta),
             "delta": float(delta),
@@ -238,7 +219,9 @@ def ltt_certify_matrix(
 
     return {
         "lambda_star": lambda_star,
-        "certified": True,
+        "certified": False,
+        "diagnostic_pass": True,
+        "validity": "diagnostic_only",
         "realized_risk": float(np.mean(risk_sorted[:, lambda_star_idx])),
         "beta": float(beta),
         "delta": float(delta),
@@ -253,30 +236,12 @@ def ltt_certify_matrix(
 def power_floor_n_img(
     beta: float, delta: float, grid_size: int, r_hat: float, bentkus_factor: float = 1.75
 ) -> Dict[str, Any]:
-    """A-priori LTT-HB power floor on the number of class-bearing images (design §2.4,
-    the exact pre-Phase-0 arithmetic): ``n_img >~ ln(grid_size/delta) / (2 *
-    (beta - r_hat)^2)`` (Hoeffding), tightened by ``bentkus_factor`` (design: "Bentkus
-    tightens these ~1.5-2x").
+    """Historical fitted screen, conditional on the current empirical mean.
 
-    Parameters
-    ----------
-    beta, delta, grid_size:
-        Target FNR bound, failure probability, candidate-threshold grid size.
-    r_hat:
-        Realized (or assumed, pre-Phase-0) per-image miss rate; ``headroom = beta -
-        r_hat`` must be positive or the floor is infinite (no amount of data helps
-        certify a risk bound the point estimate already violates).
-    bentkus_factor:
-        Divides the Hoeffding floor to get the (tighter) Bentkus-adjusted floor;
-        design's own worked examples (headroom 0.15/0.10/0.05 -> ~155/345/1380
-        Hoeffding, ~90/180/700 Bentkus) are consistent with ``bentkus_factor ~= 1.75``
-        (the geometric-ish midpoint of the stated 1.5-2x range), the default here.
-
-    Returns
-    -------
-    dict
-        ``headroom``, ``hoeffding_floor``, ``bentkus_floor`` (both ``inf`` if
-        ``headroom <= 0``), plus the echoed inputs.
+    The returned ``bentkus_floor`` name is retained for archived-schema
+    compatibility; the fitted factor is not a proved Bentkus correction. An
+    infinite value means the current empirical mean reaches beta, not that
+    future samples cannot help. Neither finite value is a sufficient budget.
     """
     if not 0.0 < beta < 1.0:
         raise ValueError("power_floor_n_img: beta must be in (0, 1)")

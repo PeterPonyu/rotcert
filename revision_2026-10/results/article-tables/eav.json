@@ -1,0 +1,155 @@
+{
+ "cells": 16,
+ "cells_with_both_radii_finite": 15,
+ "analytic_over_gwd_radius": [
+  3.2929831574867166,
+  6.236984140125558
+ ],
+ "margin_radius_available": 0,
+ "per_cell": {
+  "dior-orcnn-s0": {
+   "gwd_cov": "0.908387882034873",
+   "gwd_radius": "0.4061255590845431",
+   "analytic_cov": "0.905531970341156",
+   "analytic_radius": "1.3965791615203806",
+   "margin_cov": "0.905531970341156",
+   "uncorrected_cov": "0.9082486755518975",
+   "scp_cov": "0.9052802651344306"
+  },
+  "dior-orcnn-s1": {
+   "gwd_cov": "0.8877334877049414",
+   "gwd_radius": "0.3599575041169202",
+   "analytic_cov": "0.8950390161868473",
+   "analytic_radius": "1.3577076838070596",
+   "margin_cov": "0.8950390161868473",
+   "uncorrected_cov": "0.8958398572190974",
+   "scp_cov": "0.8929066837782761"
+  },
+  "dior-orcnn-s2": {
+   "gwd_cov": "0.895375597241026",
+   "gwd_radius": "0.39202141739853646",
+   "analytic_cov": "0.9027097070700547",
+   "analytic_radius": "1.4087179113974178",
+   "margin_cov": "0.9027097070700547",
+   "uncorrected_cov": "0.9048105354846282",
+   "scp_cov": "0.9032039982785344"
+  },
+  "dior-orcnn-s3": {
+   "gwd_cov": "0.8960137920017047",
+   "gwd_radius": "0.36671511183947697",
+   "analytic_cov": "0.8946492621140629",
+   "analytic_radius": "1.3609218902483395",
+   "margin_cov": "0.8946492621140629",
+   "uncorrected_cov": "0.8988984726936105",
+   "scp_cov": "0.8992382362942692"
+  },
+  "dior-orcnn-s4": {
+   "gwd_cov": "0.8918982784972324",
+   "gwd_radius": "0.37898867982985174",
+   "analytic_cov": "0.8929684916277358",
+   "analytic_radius": "1.3808609684508053",
+   "margin_cov": "0.8929684916277358",
+   "uncorrected_cov": "0.8961626014736128",
+   "scp_cov": "0.8926919698011009"
+  },
+  "dior-roit-s0": {
+   "gwd_cov": "0.9069661959666216",
+   "gwd_radius": "0.34831675220781033",
+   "analytic_cov": "0.9182221585330833",
+   "analytic_radius": "1.3625942302025922",
+   "margin_cov": "0.9182221585330833",
+   "uncorrected_cov": "0.9161779285163794",
+   "scp_cov": "0.9133936379680696"
+  },
+  "dior-roit-s1": {
+   "gwd_cov": "0.8882321213200983",
+   "gwd_radius": "0.3289277596162918",
+   "analytic_cov": "0.8859065700807657",
+   "analytic_radius": "1.2895974952148408",
+   "margin_cov": "0.8859065700807657",
+   "uncorrected_cov": "0.8916862197849523",
+   "scp_cov": "0.892438797955194"
+  },
+  "dior-roit-s2": {
+   "gwd_cov": "0.9062495141790498",
+   "gwd_radius": "0.35348688970670555",
+   "analytic_cov": "0.903753721343213",
+   "analytic_radius": "1.3528561971429665",
+   "margin_cov": "0.903753721343213",
+   "uncorrected_cov": "0.9026163427216016",
+   "scp_cov": "0.9030856960545137"
+  },
+  "dior-rtmdet-s0": {
+   "gwd_cov": "0.9050163070074964",
+   "gwd_radius": "0.34202168262758204",
+   "analytic_cov": "0.8954764339821203",
+   "analytic_radius": "1.3145437017867212",
+   "margin_cov": "0.8954241327268901",
+   "uncorrected_cov": "0.8966773477339866",
+   "scp_cov": "0.8954978573593582"
+  },
+  "dior-rtmdet-s1": {
+   "gwd_cov": "0.886535234308673",
+   "gwd_radius": "0.31818813240024013",
+   "analytic_cov": "0.8910516265084352",
+   "analytic_radius": "1.2957369655432407",
+   "margin_cov": "0.8910516265084352",
+   "uncorrected_cov": "0.8899818278225711",
+   "scp_cov": "0.8902387142069452"
+  },
+  "dior-rtmdet-s2": {
+   "gwd_cov": "0.895030317761665",
+   "gwd_radius": "0.33505523352468514",
+   "analytic_cov": "0.8971693858854961",
+   "analytic_radius": "1.3198505136255037",
+   "margin_cov": "0.8971693858854961",
+   "uncorrected_cov": "0.8975189782138374",
+   "scp_cov": "0.8976389620155786"
+  },
+  "dior-s2anet-s0": {
+   "gwd_cov": "0.9041326267562028",
+   "gwd_radius": "0.468698085440746",
+   "analytic_cov": "0.9039040926368702",
+   "analytic_radius": "1.6341418996874129",
+   "margin_cov": "0.9039040926368702",
+   "uncorrected_cov": "0.9026919925781455",
+   "scp_cov": "0.9030668370995192"
+  },
+  "dior-s2anet-s1": {
+   "gwd_cov": "0.909983074727007",
+   "gwd_radius": "0.48570832201685993",
+   "analytic_cov": "0.9028339941520003",
+   "analytic_radius": "1.5994293238526542",
+   "margin_cov": "0.9028339941520003",
+   "uncorrected_cov": "0.9060474704987177",
+   "scp_cov": "0.9040567221341391"
+  },
+  "dior-s2anet-s2": {
+   "gwd_cov": "0.9018200379810409",
+   "gwd_radius": "0.4557633081026912",
+   "analytic_cov": "0.9003885663258453",
+   "analytic_radius": "1.5949745953252656",
+   "margin_cov": "0.9003885663258453",
+   "uncorrected_cov": "0.9034383650449584",
+   "scp_cov": "0.9025445275848396"
+  },
+  "orcnn-s0-val200": {
+   "gwd_cov": "0.9042794691460107",
+   "gwd_radius": "Infinity",
+   "analytic_cov": "0.9197700629492631",
+   "analytic_radius": "Infinity",
+   "margin_cov": "0.9197700629492631",
+   "uncorrected_cov": "0.9035714442582853",
+   "scp_cov": "0.8929593067450735"
+  },
+  "hrsid-orcnn-s0": {
+   "gwd_cov": "0.7937203879446472",
+   "gwd_radius": "0.21034446592095746",
+   "analytic_cov": "0.8771780851584325",
+   "analytic_radius": "1.3119150979121925",
+   "margin_cov": "0.8771780851584325",
+   "uncorrected_cov": "0.8771780851584325",
+   "scp_cov": "0.8776522435273277"
+  }
+ }
+}

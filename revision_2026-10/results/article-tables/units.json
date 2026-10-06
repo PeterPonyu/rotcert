@@ -1,0 +1,55 @@
+{
+ "dior_images": 11738,
+ "dior_candidates": 63,
+ "dior_candidate_images": 51,
+ "dior_candidate_share_percent": 0.4344862838643721,
+ "dior_exact_duplicates": 0,
+ "dior_across_certificate": 40,
+ "dior_across_fixed": 37,
+ "dior_across_shift": 35,
+ "hrsid_chips": 5604,
+ "hrsid_panoramas": 137,
+ "hrsid_overlapping_pairs": 12727,
+ "dota_sources": 458,
+ "dota_tiles": 4652,
+ "dv_adjacent_dup_rgb": 8,
+ "dv_adjacent_pairs_rgb": 8961,
+ "dv_adjacent_dup_ir": 9,
+ "dv_adjacent_pairs_ir": 8979,
+ "dior_components": 9,
+ "dior_exclusion_hcp_pp": [
+  -0.0008331218943724572,
+  0.005043526909087603
+ ],
+ "dior_exclusion_pooled_pp": [
+  0.039161734193271514,
+  0.07004861047537059
+ ],
+ "dior_exclusion_max_split_pp": {
+  "hcp": 0.0822684782175731,
+  "pooled": 0.20985657271177516
+ },
+ "dv_val_test_pairs": 4,
+ "dv_val_test_pair_names": [
+  [
+   "test/01531",
+   "val/00269"
+  ],
+  [
+   "test/01536",
+   "val/00269"
+  ],
+  [
+   "test/06128",
+   "val/00808"
+  ],
+  [
+   "test/07995",
+   "val/01064"
+  ]
+ ],
+ "dv_not_screened_rgb": 964,
+ "dv_not_screened_ir": 605,
+ "dv_unmatched_test_rgb": 10461,
+ "dv_unmatched_test_ir": 5322
+}

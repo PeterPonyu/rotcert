@@ -4,11 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rotcert"
-version = "0.1.0.dev0"
-description = "Angle-aware GWD-based conformal certification for oriented object detection (DOTA + DIOR-R) -- a thin wrapper over relmetrics."
+version = "0.3.0"
+description = "Geometry-aware conformal localization and diagnostic reliability auditing for oriented object detection."
 requires-python = ">=3.9"
 dependencies = [
-    "relmetrics>=0.1",
     "numpy>=1.22",
     "scipy>=1.8",
     "shapely>=2.0",
@@ -22,4 +21,7 @@ test = ["pytest>=7"]
 rotcert = "rotcert.cli:main"
 
 [tool.setuptools]
-packages = ["rotcert"]
+packages = ["rotcert", "rotcert._vendor", "rotcert._vendor.relmetrics"]
+
+[tool.setuptools.package-data]
+"rotcert._vendor.relmetrics" = ["LICENSE", "README.md"]

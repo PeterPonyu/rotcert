@@ -186,6 +186,8 @@ def _cmd_calibrate(args: argparse.Namespace) -> int:
 
 
 def _cmd_recall(args: argparse.Namespace) -> int:
+    if args.classes and not args.mondrian:
+        raise _certify.CertifyError("--classes requires --mondrian")
     rows = _io.load_jsonl(args.matched)
     relevant = [r for r in rows if r.get("match_type") in ("tp", "fn")]
     if not relevant:
@@ -201,17 +203,17 @@ def _cmd_recall(args: argparse.Namespace) -> int:
     if args.mondrian:
         by_class = {cls: list(scenes.values()) for cls, scenes in by_key.items()}
         result = _certify.g2_certify_fnr_mondrian(
-            by_class, beta=args.beta, delta=args.delta,
+            by_class, beta=args.beta, delta=args.delta, class_roster=args.classes,
             procedure=args.ltt_procedure, p_value=args.ltt_pvalue,
         )
-        summary = f"recall: n_classes={result['n_classes']} certified={result['n_classes_certified']}"
+        summary = f"recall: diagnostic_only n_classes={result['n_classes']} threshold_passes={result['n_classes_diagnostic_pass']}"
     else:
         scenes = list(next(iter(by_key.values())).values())
         result = _certify.g2_certify_fnr(
             scenes, beta=args.beta, delta=args.delta,
             procedure=args.ltt_procedure, p_value=args.ltt_pvalue,
         )
-        summary = f"recall: certified={result['certified']} lambda_star={result.get('lambda_star')}"
+        summary = f"recall: diagnostic_only threshold_pass={result['diagnostic_pass']} lambda_star={result.get('lambda_star')}"
 
     _emit(result, args.out, args.json, summary)
     return 0
@@ -252,7 +254,9 @@ def _cmd_certify(args: argparse.Namespace) -> int:
         env = _sets.envelope(np.array(d["obb"]), q_hat)
         regions.append(
             {"image_id": d["image_id"], "class": d["class"], "obb": d["obb"],
-             "q_hat": q_hat, "envelope": env, "refused": False}
+             "q_hat": q_hat, "envelope": env, "refused": False,
+             "coverage_scope": "matched_tp_under_exchangeability",
+             "shape_status": env["status"]}
         )
     _io.write_jsonl(args.out, regions)
     print(f"certify: n={len(regions)} refused={n_refused} -> {args.out}")
@@ -381,7 +385,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_cal.add_argument("--json", action="store_true")
     p_cal.set_defaults(func=_cmd_calibrate)
 
-    p_recall = sub.add_parser("recall", help="G2: certified rotated-IoU FNR via LTT-HB")
+    p_recall = sub.add_parser("recall", help="G2: diagnostic scene-average miss-risk threshold tests")
+    p_recall.add_argument("--classes", nargs="+", help="Predetermined class family for --mondrian; absent classes retain their budget")
     p_recall.add_argument("--matched", required=True)
     p_recall.add_argument("--risk", default="fnr", choices=["fnr"])
     p_recall.add_argument("--beta", type=float, default=0.20)
@@ -389,12 +394,12 @@ def build_parser() -> argparse.ArgumentParser:
     p_recall.add_argument("--method", default="ltt-hb", choices=["ltt-hb"])
     p_recall.add_argument("--ltt-procedure", default="bonferroni", choices=["bonferroni", "fixed-sequence"])
     p_recall.add_argument("--ltt-pvalue", default="eb", choices=["eb", "hb"])
-    p_recall.add_argument("--mondrian", action="store_true", help="per-class certification + pooled fallback")
+    p_recall.add_argument("--mondrian", action="store_true", help="class-family diagnostic tests; no pooled fallback")
     p_recall.add_argument("-o", "--out", default=None)
     p_recall.add_argument("--json", action="store_true")
     p_recall.set_defaults(func=_cmd_recall)
 
-    p_certify = sub.add_parser("certify", help="apply a G1 cert -> per-box GWD-ball + envelope")
+    p_certify = sub.add_parser("certify", help="apply conditional G1 calibration -> exact center bounds + sampled shape")
     p_certify.add_argument("--cert", required=True)
     p_certify.add_argument("--dets", required=True)
     p_certify.add_argument("-o", "--out", required=True)

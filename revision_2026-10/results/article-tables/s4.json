@@ -1,0 +1,522 @@
+{
+ "dior-orcnn-s0": {
+  "brightness_070": {
+   "drop": -0.003012493646385339,
+   "drop_interval": [
+    -0.01437907429508622,
+    0.004807551654672399
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.007821913564348915,
+   "recovery_interval": [
+    -0.0056383472432521755,
+    0.018539194229969656
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.914850287463729,
+   "clean_cal_cov": 0.9070283738993801,
+   "recall": 0.7356175083309796,
+   "recall_drop": -0.022486186084106352,
+   "recall_drop_interval": [
+    -0.027794199556736364,
+    -0.017066738857000892
+   ],
+   "success_clean_thr": 0.6647203909487901,
+   "success_recal": 0.6704055247364402
+  },
+  "contrast_070": {
+   "drop": -0.007549628023762134,
+   "drop_interval": [
+    -0.01836631042073144,
+    0.0013386075763414734
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.006272609196688594,
+   "recovery_interval": [
+    -0.006405148782859114,
+    0.015743247014235483
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9087638487186919,
+   "clean_cal_cov": 0.9024912395220033,
+   "recall": 0.7365798171569617,
+   "recall_drop": -0.021523877258124213,
+   "recall_drop_interval": [
+    -0.026615164353759574,
+    -0.01622556670412189
+   ],
+   "success_clean_thr": 0.6624387690919953,
+   "success_recal": 0.6661680833165221
+  },
+  "gamma_150": {
+   "drop": -0.007296898739163948,
+   "drop_interval": [
+    -0.013964042158417391,
+    -0.0021018544820284035
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.005605253926571185,
+   "recovery_interval": [
+    -0.0029325360018361327,
+    0.011671248426899174
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9083492227331726,
+   "clean_cal_cov": 0.9027439688066015,
+   "recall": 0.7390176893259752,
+   "recall_drop": -0.019086005089110736,
+   "recall_drop_interval": [
+    -0.0242736857534198,
+    -0.013706882166625974
+   ],
+   "success_clean_thr": 0.6646865350690362,
+   "success_recal": 0.6683522001321962
+  },
+  "saturation_035": {
+   "drop": -0.00784604546938128,
+   "drop_interval": [
+    -0.015367067043424892,
+    -0.00252368266851849
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.01230753754469982,
+   "recovery_interval": [
+    0.004087866495587209,
+    0.019070073737445934
+   ],
+   "recovery_resolution": "positive",
+   "recal_cov": 0.914502359621084,
+   "clean_cal_cov": 0.9021948220763841,
+   "recall": 0.7336975017995939,
+   "recall_drop": -0.02440619261549204,
+   "recall_drop_interval": [
+    -0.03013245496000675,
+    -0.018622962504745794
+   ],
+   "success_clean_thr": 0.6595656925980894,
+   "success_recal": 0.668694005568863
+  },
+  "blue_cast_115": {
+   "drop": -0.021601621316829855,
+   "drop_interval": [
+    -0.03166769330562125,
+    -0.01599982972689379
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.023210723338515038,
+   "recovery_interval": [
+    0.01570971498311679,
+    0.03335837461593461
+   ],
+   "recovery_resolution": "positive",
+   "recal_cov": 0.9116499695674506,
+   "clean_cal_cov": 0.8884392462289356,
+   "recall": 0.6898366947920611,
+   "recall_drop": -0.06826699962302485,
+   "recall_drop_interval": [
+    -0.07550127079556558,
+    -0.061029368713481066
+   ],
+   "success_clean_thr": 0.6103802294204953,
+   "success_recal": 0.6266038089697611
+  },
+  "clean_anchor": 0.9100408675457654,
+  "clean_recall": 0.758103694415086,
+  "clean_success": 0.6879617531463356
+ },
+ "dior-roit-s0": {
+  "brightness_070": {
+   "drop": -0.010563789258967282,
+   "drop_interval": [
+    -0.0183645602074032,
+    -0.00017854882016713391
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "numerically_unresolved",
+   "recovery": 0.006287468933456886,
+   "recovery_interval": [
+    -0.007684585800606377,
+    0.017679506439361076
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9076043420293581,
+   "clean_cal_cov": 0.9013168730959012,
+   "recall": 0.7518493736428529,
+   "recall_drop": -0.021169993198944193,
+   "recall_drop_interval": [
+    -0.02579542013917163,
+    -0.01653362842579875
+   ],
+   "success_clean_thr": 0.6759364128854412,
+   "success_recal": 0.6809633874964415
+  },
+  "contrast_070": {
+   "drop": -0.009372547630532635,
+   "drop_interval": [
+    -0.01708646394993994,
+    0.0006707755427669955
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.008791411813709571,
+   "recovery_interval": [
+    -0.003268243359360423,
+    0.017682892504806588
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9112995265380455,
+   "clean_cal_cov": 0.9025081147243359,
+   "recall": 0.7506266006489168,
+   "recall_drop": -0.02239276619288022,
+   "recall_drop_interval": [
+    -0.027151868622406837,
+    -0.017646660651782796
+   ],
+   "success_clean_thr": 0.6753800364501898,
+   "success_recal": 0.682093909605813
+  },
+  "gamma_150": {
+   "drop": -0.008656179006375608,
+   "drop_interval": [
+    -0.012658842866667505,
+    -0.0010398851047335234
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.006547801898553418,
+   "recovery_interval": [
+    5.2005765901634975e-05,
+    0.013532569842524612
+   ],
+   "recovery_resolution": "numerically_unresolved",
+   "recal_cov": 0.9097722852470463,
+   "clean_cal_cov": 0.9032244833484929,
+   "recall": 0.7566129863328294,
+   "recall_drop": -0.0164063805089677,
+   "recall_drop_interval": [
+    -0.0213039792165001,
+    -0.011588385715264259
+   ],
+   "success_clean_thr": 0.681489037138422,
+   "success_recal": 0.6863647621314357
+  },
+  "saturation_035": {
+   "drop": -0.014465090289700333,
+   "drop_interval": [
+    -0.019052135028049446,
+    -0.006866211577663045
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.005617657508001139,
+   "recovery_interval": [
+    -0.001974180352781576,
+    0.012489787829638095
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9030332295731693,
+   "clean_cal_cov": 0.8974155720651682,
+   "recall": 0.7455921565105591,
+   "recall_drop": -0.02742721033123796,
+   "recall_drop_interval": [
+    -0.03299298126988377,
+    -0.02208890149459659
+   ],
+   "success_clean_thr": 0.6671581378685887,
+   "success_recal": 0.671632944001163
+  },
+  "blue_cast_115": {
+   "drop": -0.02273903264605215,
+   "drop_interval": [
+    -0.030465598006162935,
+    -0.016431494769828765
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.01891098402892033,
+   "recovery_interval": [
+    0.011256889256650875,
+    0.029445122626228483
+   ],
+   "recovery_resolution": "positive",
+   "recal_cov": 0.9080526137377367,
+   "clean_cal_cov": 0.8891416297088164,
+   "recall": 0.7112218715990843,
+   "recall_drop": -0.06179749524271272,
+   "recall_drop_interval": [
+    -0.06853635219813672,
+    -0.05498290520313867
+   ],
+   "success_clean_thr": 0.6297330777762735,
+   "success_recal": 0.6433432382676582
+  },
+  "clean_anchor": 0.9118806623548685,
+  "clean_recall": 0.7730193668417971,
+  "clean_success": 0.7028396510135774
+ },
+ "dior-rtmdet-s0": {
+  "brightness_070": {
+   "drop": -0.00634968197047403,
+   "drop_interval": [
+    -0.011671197672584167,
+    0.001832405376610374
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.0027660128261165484,
+   "recovery_interval": [
+    -0.006092490072693134,
+    0.01245917016268971
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9033315580400794,
+   "clean_cal_cov": 0.9005655452139628,
+   "recall": 0.7995508095066886,
+   "recall_drop": -0.005119668876802264,
+   "recall_drop_interval": [
+    -0.008717655183890491,
+    -0.001529722631749981
+   ],
+   "success_clean_thr": 0.7204013666132504,
+   "success_recal": 0.7224797451142609
+  },
+  "contrast_070": {
+   "drop": -0.0055545350364660795,
+   "drop_interval": [
+    -0.011523412833596985,
+    0.002669948261255431
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.0024197936936039,
+   "recovery_interval": [
+    -0.0066526401582826765,
+    0.009891015207009104
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9037804858415747,
+   "clean_cal_cov": 0.9013606921479708,
+   "recall": 0.80260978638378,
+   "recall_drop": -0.0020606919997108175,
+   "recall_drop_interval": [
+    -0.0056699915868982705,
+    0.00154149391748628
+   ],
+   "success_clean_thr": 0.7228326203886419,
+   "success_recal": 0.7246940715095685
+  },
+  "gamma_150": {
+   "drop": -0.0032112294881188053,
+   "drop_interval": [
+    -0.006690061794414906,
+    0.0029067042573100244
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.003827889885440139,
+   "recovery_interval": [
+    -0.002070716152317536,
+    0.00975024554970014
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9075318875817582,
+   "clean_cal_cov": 0.903703997696318,
+   "recall": 0.8015521801418319,
+   "recall_drop": -0.003118298241658879,
+   "recall_drop_interval": [
+    -0.007234851897897296,
+    0.0008765761767430511
+   ],
+   "success_clean_thr": 0.7238750952895014,
+   "success_recal": 0.7266403001413507
+  },
+  "saturation_035": {
+   "drop": -0.007128848633490392,
+   "drop_interval": [
+    -0.011465295159705482,
+    -0.00029233337163354526
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.0025904932648296297,
+   "recovery_interval": [
+    -0.0028716570266369605,
+    0.012239549811723599
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9023768718157761,
+   "clean_cal_cov": 0.8997863785509465,
+   "recall": 0.7931486526124113,
+   "recall_drop": -0.011521825771079519,
+   "recall_drop_interval": [
+    -0.016664051846909216,
+    -0.006569554483609465
+   ],
+   "success_clean_thr": 0.7131626227361338,
+   "success_recal": 0.7158926835428945
+  },
+  "blue_cast_115": {
+   "drop": -0.013029667314884641,
+   "drop_interval": [
+    -0.016327904644301505,
+    -0.004683308674695942
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.010410880799024302,
+   "recovery_interval": [
+    0.002177917070248002,
+    0.017337969037228458
+   ],
+   "recovery_resolution": "positive",
+   "recal_cov": 0.9042964406685765,
+   "clean_cal_cov": 0.8938855598695522,
+   "recall": 0.7908605932686427,
+   "recall_drop": -0.013809885114848153,
+   "recall_drop_interval": [
+    -0.01888200999660474,
+    -0.008781656147550502
+   ],
+   "success_clean_thr": 0.7066608363737238,
+   "success_recal": 0.7149158937161679
+  },
+  "clean_anchor": 0.9069152271844368,
+  "clean_recall": 0.8046704783834908,
+  "clean_success": 0.72959400461716
+ },
+ "dior-s2anet-s0": {
+  "brightness_070": {
+   "drop": -0.009395219376078678,
+   "drop_interval": [
+    -0.018998060330164258,
+    -0.0010788275999966384
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "numerically_unresolved",
+   "recovery": 0.0009456764647796101,
+   "recovery_interval": [
+    -0.00940080046098369,
+    0.012346743873601938
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9002212041709011,
+   "clean_cal_cov": 0.8992755277061215,
+   "recall": 0.756714394195877,
+   "recall_drop": -0.014876597707345174,
+   "recall_drop_interval": [
+    -0.01947487996837358,
+    -0.010244822111665533
+   ],
+   "success_clean_thr": 0.6758748866393033,
+   "success_recal": 0.6779985608915686
+  },
+  "contrast_070": {
+   "drop": -0.008941077202109793,
+   "drop_interval": [
+    -0.017746280374377338,
+    0.0014456701390375935
+   ],
+   "drop_level": 0.996875,
+   "drop_resolution": "interval_includes_zero",
+   "recovery": 0.0020255747698799675,
+   "recovery_interval": [
+    -0.008104252935562046,
+    0.013211626776724564
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9017552446499704,
+   "clean_cal_cov": 0.8997296698800904,
+   "recall": 0.751993583404096,
+   "recall_drop": -0.019597408499126168,
+   "recall_drop_interval": [
+    -0.02476238855600442,
+    -0.014494339850196998
+   ],
+   "success_clean_thr": 0.6731186316828757,
+   "success_recal": 0.675484042407404
+  },
+  "gamma_150": {
+   "drop": -0.006027463252352594,
+   "drop_interval": [
+    -0.012636797540856259,
+    -0.0003899194477091229
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.0019288405435883282,
+   "recovery_interval": [
+    -0.005564266526918635,
+    0.009516187563382279
+   ],
+   "recovery_resolution": "interval_includes_zero",
+   "recal_cov": 0.9045721243734359,
+   "clean_cal_cov": 0.9026432838298476,
+   "recall": 0.7621870482874227,
+   "recall_drop": -0.009403943615799548,
+   "recall_drop_interval": [
+    -0.014189222654315532,
+    -0.004495700731947022
+   ],
+   "success_clean_thr": 0.6837633832868639,
+   "success_recal": 0.685950933507203
+  },
+  "saturation_035": {
+   "drop": -0.010274278848506069,
+   "drop_interval": [
+    -0.016657826320544068,
+    -0.003495937333347524
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.010303845377023668,
+   "recovery_interval": [
+    0.0035519229656685203,
+    0.018399826798460625
+   ],
+   "recovery_resolution": "positive",
+   "recal_cov": 0.9087003136107178,
+   "clean_cal_cov": 0.8983964682336941,
+   "recall": 0.748141256488284,
+   "recall_drop": -0.023449735414938222,
+   "recall_drop_interval": [
+    -0.02888723576868034,
+    -0.01809334332821941
+   ],
+   "success_clean_thr": 0.6687259950860152,
+   "success_recal": 0.6773237310666407
+  },
+  "blue_cast_115": {
+   "drop": -0.023885543771120288,
+   "drop_interval": [
+    -0.0316644605855153,
+    -0.015447918216971297
+   ],
+   "drop_level": 0.95,
+   "drop_resolution": "negative",
+   "recovery": 0.027234970220789245,
+   "recovery_interval": [
+    0.01798836658837598,
+    0.036705489110568715
+   ],
+   "recovery_resolution": "positive",
+   "recal_cov": 0.9120201735318691,
+   "clean_cal_cov": 0.8847852033110799,
+   "recall": 0.7199735827424877,
+   "recall_drop": -0.05161740916073454,
+   "recall_drop_interval": [
+    -0.05819956791178144,
+    -0.044898621169219645
+   ],
+   "success_clean_thr": 0.6326572202815084,
+   "success_recal": 0.653273707259672
+  },
+  "clean_anchor": 0.9086707470822002,
+  "clean_recall": 0.7715909919032222,
+  "clean_success": 0.6970668744585661
+ }
+}

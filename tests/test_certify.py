@@ -96,12 +96,14 @@ class TestG2CertifyFnr:
             scenes.append(confs)
         return scenes
 
-    def test_certifies_with_enough_images(self):
+    def test_numerical_pass_is_not_a_certificate(self):
         rng = np.random.default_rng(0)
         scenes = self._gen_scenes(rng, 500)
         res = g2_certify_fnr(scenes, beta=0.2, delta=0.05)
-        assert res["certified"]
-        assert not res["refused"]
+        assert res["diagnostic_pass"]
+        assert not res["certified"]
+        assert res["refused"]
+        assert res["grid_source"] == "same_sample_quantiles"
 
     def test_refuses_below_power_floor(self):
         rng = np.random.default_rng(1)
@@ -121,7 +123,7 @@ class TestG2CertifyFnr:
 
 
 class TestG2Mondrian:
-    def test_pooled_fallback_present_for_refused_class(self):
+    def test_class_budget_and_no_dependent_pooled_fallback(self):
         rng = np.random.default_rng(0)
 
         def gen(n):
@@ -129,11 +131,45 @@ class TestG2Mondrian:
 
         by_class = {"common": gen(400), "rare": gen(5)}
         res = g2_certify_fnr_mondrian(by_class, beta=0.2, delta=0.05)
-        assert res["per_class"]["common"]["certified"]
+        assert res["per_class"]["common"]["diagnostic_pass"]
         assert res["per_class"]["rare"]["refused"]
-        assert res["pooled_marginal"]["certified"]
-        assert res["n_classes_certified"] == 1
+        assert res["pooled_marginal"] is None
+        assert res["delta_per_class"] == pytest.approx(0.025)
+        assert res["n_classes_certified"] == 0
+        assert res["n_classes_diagnostic_pass"] == 1
 
     def test_empty_raises(self):
         with pytest.raises(CertifyError):
             g2_certify_fnr_mondrian({}, beta=0.2, delta=0.05)
+
+
+def test_absent_classes_remain_in_declared_error_budget():
+    res = g2_certify_fnr_mondrian({"common": [[0.9]] * 600},
+                               class_roster=["common", "absent"], lambda_grid=[0.0])
+    assert res["n_classes"] == 2
+    assert res["per_class"]["common"]["delta"] == pytest.approx(0.025)
+    assert res["per_class"]["absent"]["reason"] == "no_class_data"
+    assert not res["per_class"]["absent"]["diagnostic_pass"]
+    assert not res["certified"]
+
+
+@pytest.mark.parametrize("roster", [[], ["a", "a"], ["b"]])
+def test_invalid_declared_class_family_fails(roster):
+    with pytest.raises(CertifyError):
+        g2_certify_fnr_mondrian({"a": [[0.9]]}, class_roster=roster)
+
+
+def test_unsorted_supplied_grid_keeps_risk_columns_aligned():
+    scenes = [[0.3, 0.8]] * 600
+    a = g2_certify_fnr(scenes, lambda_grid=[0.9, 0.0, 0.5])
+    b = g2_certify_fnr(scenes, lambda_grid=[0.0, 0.5, 0.9])
+    assert a["trace"] == b["trace"]
+    assert a["lambda_star"] == b["lambda_star"] == 0.0
+    assert a["grid_source"] == "caller_supplied_unverified"
+    assert not a["certified"]
+
+
+@pytest.mark.parametrize("grid", [[], [float("nan")]])
+def test_invalid_supplied_grid_fails(grid):
+    with pytest.raises(CertifyError):
+        g2_certify_fnr([[0.9]] * 100, lambda_grid=grid)

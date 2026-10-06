@@ -1,0 +1,3582 @@
+{
+ "schema": "rotcert.diorval-results.v2",
+ "design_sha256": "a3cfcfe14effa987295b7b1b0d3b6d9662a59db92e58aeb6258ef74cf8bd6aad",
+ "manifest_sha256": "33d6feb8d2d4201bf4d4f846195cbdfcd8a7d5e13f4a9d854582d4a9d0fa16ce",
+ "cells_sha256": "65391948ce9d2addce6d72cd82fdc3f5d7ab5fdbe2fdd8f8f4805b3cd61a0049",
+ "level": 0.9916666666666667,
+ "cells": [
+  {
+   "cell": "diorval-orcnn-s0",
+   "primary": {
+    "pooled": 0.8692890793802895,
+    "hcp": 0.9070621124787719,
+    "difference": 0.037773033098482345,
+    "point_complete": true,
+    "difference_interval": [
+     0.031117763545503028,
+     0.04100525607025312
+    ],
+    "hcp_interval_99_1667": [
+     0.8938262951390563,
+     0.9082317124805995
+    ],
+    "hcp_interval_95": [
+     0.8957960501653169,
+     0.9064297174052248
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5337,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 49,
+      "eval_unique_min": 53,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8463491301655054,
+        0.8996158160138678
+       ],
+       [
+        0.8797302796801963,
+        0.9213197005196601
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 18,
+      "eval_unique_min": 17,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8678864246810892,
+        0.9337281211019386
+       ],
+       [
+        0.8662077541941121,
+        0.9327337520945611
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 97,
+      "eval_unique_min": 100,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8509746312321022,
+        0.8919738164553075
+       ],
+       [
+        0.8847325188465485,
+        0.9166230483347161
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 47,
+      "eval_unique_min": 45,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8610925965873908,
+        0.9157569184698731
+       ],
+       [
+        0.8779126061460327,
+        0.9232177804251928
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 56,
+      "eval_unique_min": 56,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8628099867065219,
+        0.910222186960931
+       ],
+       [
+        0.8794205390852837,
+        0.9210147116316382
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 28,
+      "eval_unique_min": 26,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.854457511331169,
+        0.9141294022437257
+       ],
+       [
+        0.8732199096206458,
+        0.9281758725752364
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 8,
+      "eval_unique_min": 9,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8570030460066331,
+        0.9356787291548694
+       ],
+       [
+        0.859864825189267,
+        0.936840216323467
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 26,
+      "eval_unique_min": 27,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8502912239121376,
+        0.9082888194810693
+       ],
+       [
+        0.874631310608003,
+        0.9289719893971439
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 24,
+      "eval_unique_min": 23,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8682076542902541,
+        0.9271975930611228
+       ],
+       [
+        0.8690587861452275,
+        0.9277903381028139
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 26,
+      "eval_unique_min": 27,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8641527526440939,
+        0.9261747567854538
+       ],
+       [
+        0.8679201188735765,
+        0.9285022294852976
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 70,
+      "eval_unique_min": 73,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8569284219476404,
+        0.9032762918774362
+       ],
+       [
+        0.8792830027008041,
+        0.9192121778562712
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 36,
+      "eval_unique_min": 31,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8583646934468364,
+        0.9119576015670989
+       ],
+       [
+        0.8814819059108214,
+        0.9235976838861814
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 64,
+      "eval_unique_min": 63,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8735869703038482,
+        0.9178752215118172
+       ],
+       [
+        0.8800498018126375,
+        0.9197320374864669
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 119,
+      "eval_unique_min": 111,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.4751875633830661,
+        0.542437227600371
+       ],
+       [
+        0.8859610274778614,
+        0.9147566381281358
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 39,
+      "eval_unique_min": 41,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8745037452976426,
+        0.9238000401704045
+       ],
+       [
+        0.8752357190193852,
+        0.9243595629987867
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 60,
+      "eval_unique_min": 56,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8434267082479664,
+        0.9020336307750298
+       ],
+       [
+        0.8838234492913705,
+        0.9201780017169502
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 111,
+      "eval_unique_min": 107,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8484757710858298,
+        0.8892970714397525
+       ],
+       [
+        0.8877885662328715,
+        0.914935452971064
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 21,
+      "eval_unique_min": 19,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8668153794266628,
+        0.9301228180896646
+       ],
+       [
+        0.8666886602637448,
+        0.9308106957445658
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 296,
+      "eval_unique_min": 287,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8826369761429694,
+        0.9028539947870421
+       ],
+       [
+        0.8929317173508085,
+        0.9086041274337465
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 60,
+      "eval_unique_min": 59,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7805056544485756,
+        0.8392547102093191
+       ],
+       [
+        0.8792151187373045,
+        0.9208264538520884
+       ]
+      ]
+     }
+    ],
+    "reading_frozen_rule": "NO_UNDERCOVERAGE_DETECTED",
+    "reading_amendment_rule": "WITHIN_1PP_SUPPORTED",
+    "tail_monte_carlo": {
+     "lower_end_bracket": [
+      0.8929651619482302,
+      0.894150287284344
+     ],
+     "upper_end_bracket": [
+      0.9080391691734924,
+      0.908588201513173
+     ],
+     "frozen_rule_mc_sensitive": false,
+     "amendment_rule_mc_sensitive": false,
+     "five_block_labels": [
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ]
+     ],
+     "five_blocks_agree": true
+    }
+   },
+   "fixed_role": {
+    "pooled": 0.8875719560874901,
+    "hcp": 0.9218224268373156,
+    "difference": 0.03425047074982557,
+    "point_complete": true,
+    "difference_interval": [
+     0.021988424797907608,
+     0.04826914811131886
+    ],
+    "hcp_interval_99_1667": [
+     0.8896739167809857,
+     0.9362996104369147
+    ],
+    "hcp_interval_95": [
+     0.8976110523819645,
+     0.9311186938685098
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5337,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 65,
+      "eval_unique_min": 64,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.777395101876367,
+        0.9403279638333986
+       ],
+       [
+        0.8167779680365297,
+        0.9496408913137946
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 30,
+      "eval_unique_min": 22,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.739711137581894,
+        0.967741935483871
+       ],
+       [
+        0.7333333333333333,
+        0.9672131147540983
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 117,
+      "eval_unique_min": 106,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.806910569105691,
+        0.914308998829896
+       ],
+       [
+        0.8296862431000528,
+        0.947820412972282
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 49,
+      "eval_unique_min": 56,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7512509018759018,
+        0.9669431233432091
+       ],
+       [
+        0.765426731078905,
+        0.9689661855118953
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 63,
+      "eval_unique_min": 77,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8403605681467128,
+        0.985818100089901
+       ],
+       [
+        0.8628083980070902,
+        0.9869281045751634
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 32,
+      "eval_unique_min": 36,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.879731186534984,
+        1.0
+       ],
+       [
+        0.9090770509977827,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 18,
+      "eval_unique_min": 13,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7435897435897436,
+        1.0
+       ],
+       [
+        0.7555555555555555,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 34,
+      "eval_unique_min": 35,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7872223091364206,
+        0.9565217391304348
+       ],
+       [
+        0.8238636363636364,
+        0.9767508687516705
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 30,
+      "eval_unique_min": 33,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8333333333333334,
+        0.9875
+       ],
+       [
+        0.8333333333333334,
+        0.9875
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 34,
+      "eval_unique_min": 34,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8539325842696629,
+        1.0
+       ],
+       [
+        0.8620689655172413,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 90,
+      "eval_unique_min": 81,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7882189542483661,
+        0.9265555913780398
+       ],
+       [
+        0.8195245726495727,
+        0.941667944785276
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 46,
+      "eval_unique_min": 43,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7987772047224687,
+        0.939719967829202
+       ],
+       [
+        0.8151299221611722,
+        0.9522518982793625
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 73,
+      "eval_unique_min": 80,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7686551745405206,
+        0.9194660205566245
+       ],
+       [
+        0.7582781456953642,
+        0.9085714285714286
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 141,
+      "eval_unique_min": 127,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.4836264393181024,
+        0.6048842196496039
+       ],
+       [
+        0.8955459330283837,
+        0.9641711956521737
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 49,
+      "eval_unique_min": 55,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7886178861788617,
+        0.9833333333333333
+       ],
+       [
+        0.784,
+        0.983336776859504
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 73,
+      "eval_unique_min": 66,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8143558775349703,
+        0.946767785719128
+       ],
+       [
+        0.8393696682206309,
+        0.9523214285714287
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 124,
+      "eval_unique_min": 129,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8437746232464276,
+        0.9393800184326342
+       ],
+       [
+        0.8827184579639936,
+        0.9689211002761472
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 25,
+      "eval_unique_min": 31,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.9041030031612223,
+        1.0
+       ],
+       [
+        0.9058704292527823,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 306,
+      "eval_unique_min": 329,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8436472638548473,
+        0.8972736131219268
+       ],
+       [
+        0.8384350610730582,
+        0.902210150631745
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 72,
+      "eval_unique_min": 73,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7486626436781609,
+        0.930757341287641
+       ],
+       [
+        0.8941281507483789,
+        1.0
+       ]
+      ]
+     }
+    ]
+   },
+   "detection_counts": {
+    "tp": 29494,
+    "fp": 26077,
+    "fn": 5944,
+    "val_images_with_gt": 5863
+   }
+  },
+  {
+   "cell": "diorval-roit-s0",
+   "primary": {
+    "pooled": 0.8737079889876694,
+    "hcp": 0.9073571191395435,
+    "difference": 0.033649130151874096,
+    "point_complete": true,
+    "difference_interval": [
+     0.02969881357475445,
+     0.03924749094170703
+    ],
+    "hcp_interval_99_1667": [
+     0.8936665579201142,
+     0.9080403931095528
+    ],
+    "hcp_interval_95": [
+     0.8957687457375103,
+     0.9068135455829477
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5322,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 51,
+      "eval_unique_min": 53,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8515178148094682,
+        0.9025039993069125
+       ],
+       [
+        0.8799602365524164,
+        0.9214365526097195
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 20,
+      "eval_unique_min": 17,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8671415512712248,
+        0.9310706205524508
+       ],
+       [
+        0.8671415512712248,
+        0.9310706205524508
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 102,
+      "eval_unique_min": 98,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8621810333014339,
+        0.9022711770315491
+       ],
+       [
+        0.8851532345359028,
+        0.9163652455619852
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 41,
+      "eval_unique_min": 46,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8615329019063828,
+        0.9145999230209996
+       ],
+       [
+        0.8770776330305242,
+        0.9230010028153396
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 57,
+      "eval_unique_min": 53,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8521068247184743,
+        0.9019329757579472
+       ],
+       [
+        0.8784315325027952,
+        0.9216330495391598
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 23,
+      "eval_unique_min": 26,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8537348407373214,
+        0.9154005283231704
+       ],
+       [
+        0.8727823169559437,
+        0.9278503881293719
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 6,
+      "eval_unique_min": 8,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       1e-05,
+       1e-05
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.853367919155838,
+        0.9382370100744487
+       ],
+       [
+        0.8553219980028405,
+        0.9406311291494919
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 26,
+      "eval_unique_min": 26,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8582652241718216,
+        0.9149139606167587
+       ],
+       [
+        0.8776463362603767,
+        0.926974691798118
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 20,
+      "eval_unique_min": 24,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8682102777916739,
+        0.9275044319837187
+       ],
+       [
+        0.869096480762184,
+        0.9290393272796893
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 25,
+      "eval_unique_min": 22,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.867995026848262,
+        0.9277432119685565
+       ],
+       [
+        0.8690808624878341,
+        0.9285212680900552
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 71,
+      "eval_unique_min": 71,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8575977790219358,
+        0.9017200556972926
+       ],
+       [
+        0.8801856889914716,
+        0.9195884269286025
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 39,
+      "eval_unique_min": 36,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.843985071575949,
+        0.9040760604971966
+       ],
+       [
+        0.8807333539879546,
+        0.9237341860963596
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 60,
+      "eval_unique_min": 62,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8744613914415879,
+        0.9187768140113687
+       ],
+       [
+        0.8801775373179404,
+        0.9210013271008617
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 119,
+      "eval_unique_min": 122,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.49549868483561266,
+        0.5633298074327073
+       ],
+       [
+        0.8868134745690436,
+        0.9147144816386303
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 42,
+      "eval_unique_min": 40,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8747434318798017,
+        0.9238871910231871
+       ],
+       [
+        0.8745988218131712,
+        0.9232662083161988
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 60,
+      "eval_unique_min": 59,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8565635884650795,
+        0.9102698763173857
+       ],
+       [
+        0.8843341937078223,
+        0.9196837162753788
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 112,
+      "eval_unique_min": 107,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8424896937204092,
+        0.8888749838019825
+       ],
+       [
+        0.8858726682671223,
+        0.9149798654262093
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 14,
+      "eval_unique_min": 18,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8674424011817509,
+        0.9326895878938901
+       ],
+       [
+        0.8666700046258794,
+        0.9322566409655036
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 301,
+      "eval_unique_min": 301,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8870061563808144,
+        0.9066648339968861
+       ],
+       [
+        0.8929807707583755,
+        0.9086837237332842
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 56,
+      "eval_unique_min": 60,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7774413845207268,
+        0.8366451870303152
+       ],
+       [
+        0.8796706278232108,
+        0.9205121785782144
+       ]
+      ]
+     }
+    ],
+    "reading_frozen_rule": "NO_UNDERCOVERAGE_DETECTED",
+    "reading_amendment_rule": "WITHIN_1PP_SUPPORTED",
+    "tail_monte_carlo": {
+     "lower_end_bracket": [
+      0.8929327747144639,
+      0.8938802733489322
+     ],
+     "upper_end_bracket": [
+      0.9078658650325672,
+      0.9086934737887159
+     ],
+     "frozen_rule_mc_sensitive": false,
+     "amendment_rule_mc_sensitive": false,
+     "five_block_labels": [
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ]
+     ],
+     "five_blocks_agree": true
+    }
+   },
+   "fixed_role": {
+    "pooled": 0.8719941183188796,
+    "hcp": 0.9063332556636459,
+    "difference": 0.034339137344766235,
+    "point_complete": true,
+    "difference_interval": [
+     0.021641294928252022,
+     0.04511261482045944
+    ],
+    "hcp_interval_99_1667": [
+     0.8720913754789351,
+     0.9232631409133312
+    ],
+    "hcp_interval_95": [
+     0.8804324561487219,
+     0.917628590418928
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5322,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 69,
+      "eval_unique_min": 53,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7994774382374631,
+        0.9362786640079761
+       ],
+       [
+        0.8194370567375887,
+        0.9586292859809096
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 25,
+      "eval_unique_min": 25,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7719024122807018,
+        0.9848484848484849
+       ],
+       [
+        0.7719024122807018,
+        0.9848484848484849
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 108,
+      "eval_unique_min": 109,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7747018287046478,
+        0.9273601357202782
+       ],
+       [
+        0.7952044025157233,
+        0.9376699205638845
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 51,
+      "eval_unique_min": 57,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8306192178301094,
+        0.9703703703703703
+       ],
+       [
+        0.8469917588520147,
+        0.9810305801921656
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 60,
+      "eval_unique_min": 67,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7570030310684517,
+        0.9210578118524657
+       ],
+       [
+        0.7801313048653474,
+        0.9328370730241411
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 35,
+      "eval_unique_min": 36,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8397435897435898,
+        0.9935064935064936
+       ],
+       [
+        0.8388782051282052,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 8,
+      "eval_unique_min": 18,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.6730769230769231,
+        1.0
+       ],
+       [
+        0.6756587837837839,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 35,
+      "eval_unique_min": 30,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8507462686567164,
+        0.9782608695652174
+       ],
+       [
+        0.858083976833977,
+        0.9796020408163264
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 32,
+      "eval_unique_min": 28,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7160052910052912,
+        0.984375
+       ],
+       [
+        0.7160052910052912,
+        0.984375
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 31,
+      "eval_unique_min": 31,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7741880247459125,
+        0.9852994458653026
+       ],
+       [
+        0.7734348958333334,
+        0.9861111111111112
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 81,
+      "eval_unique_min": 85,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8461538461538461,
+        0.9565217391304348
+       ],
+       [
+        0.8601128867151957,
+        0.9653179190751445
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 50,
+      "eval_unique_min": 45,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7766168548805815,
+        0.9358241786186552
+       ],
+       [
+        0.7855074179292929,
+        0.9330633479366874
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 75,
+      "eval_unique_min": 74,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8227932508104921,
+        0.9424726350271649
+       ],
+       [
+        0.8292134607726006,
+        0.9492308659569118
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 135,
+      "eval_unique_min": 140,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.4919322593345524,
+        0.6192716849577631
+       ],
+       [
+        0.8829424354945364,
+        0.9620181594148907
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 47,
+      "eval_unique_min": 59,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8292657520325203,
+        0.964
+       ],
+       [
+        0.8307070739141478,
+        0.965118806875632
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 78,
+      "eval_unique_min": 74,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8122346238515529,
+        0.936300143858319
+       ],
+       [
+        0.8281874340047416,
+        0.9422189930097632
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 128,
+      "eval_unique_min": 135,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8759831135392678,
+        0.9495049162866108
+       ],
+       [
+        0.9023240550475895,
+        0.962801118782672
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 27,
+      "eval_unique_min": 24,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7741935483870968,
+        0.9818181818181818
+       ],
+       [
+        0.7741935483870968,
+        0.9818181818181818
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 320,
+      "eval_unique_min": 336,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8635545944578038,
+        0.9137886404369946
+       ],
+       [
+        0.8608720709015456,
+        0.9157034412888192
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 82,
+      "eval_unique_min": 68,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.6592509107468124,
+        0.8666802168021679
+       ],
+       [
+        0.7943522895810159,
+        0.9519249999999999
+       ]
+      ]
+     }
+    ]
+   },
+   "detection_counts": {
+    "tp": 29621,
+    "fp": 19852,
+    "fn": 5817,
+    "val_images_with_gt": 5863
+   }
+  },
+  {
+   "cell": "diorval-rtmdet-s0",
+   "primary": {
+    "pooled": 0.8738644708896356,
+    "hcp": 0.9081445405083862,
+    "difference": 0.03428006961875063,
+    "point_complete": true,
+    "difference_interval": [
+     0.030123798918864308,
+     0.039379160111799906
+    ],
+    "hcp_interval_99_1667": [
+     0.8938630967113012,
+     0.908277154348632
+    ],
+    "hcp_interval_95": [
+     0.8956929031159093,
+     0.9063492143676251
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5418,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 52,
+      "eval_unique_min": 54,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8563259082277174,
+        0.9044808400892032
+       ],
+       [
+        0.8804556621659524,
+        0.920609461715282
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 23,
+      "eval_unique_min": 22,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8686252446980599,
+        0.9285561242044865
+       ],
+       [
+        0.8686252446980599,
+        0.9285561242044865
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 99,
+      "eval_unique_min": 99,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8586846653032542,
+        0.8971517573689345
+       ],
+       [
+        0.8857522078937571,
+        0.9163597530046192
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 45,
+      "eval_unique_min": 46,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8605075255349595,
+        0.913834322140567
+       ],
+       [
+        0.8777312030501959,
+        0.9230284956719783
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 60,
+      "eval_unique_min": 57,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8586077215122183,
+        0.9057011449276828
+       ],
+       [
+        0.8796265544200741,
+        0.9209052428061923
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 27,
+      "eval_unique_min": 25,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.851220900884769,
+        0.9122483843271598
+       ],
+       [
+        0.8722467430089299,
+        0.9274942033522845
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 10,
+      "eval_unique_min": 9,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8575854663818916,
+        0.9348825043665431
+       ],
+       [
+        0.8607039734682109,
+        0.9368346907273636
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 25,
+      "eval_unique_min": 23,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8564270941701366,
+        0.9136150669669523
+       ],
+       [
+        0.8761475952113326,
+        0.9271210307444809
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 24,
+      "eval_unique_min": 26,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8684735561468323,
+        0.9266867992621719
+       ],
+       [
+        0.8696515191666963,
+        0.9279373191415027
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 26,
+      "eval_unique_min": 28,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8681611546475266,
+        0.9261164326393984
+       ],
+       [
+        0.8709457172049571,
+        0.9287869596173662
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 74,
+      "eval_unique_min": 73,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8614153984915475,
+        0.9068354472614001
+       ],
+       [
+        0.8801699124137368,
+        0.919280794639276
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 34,
+      "eval_unique_min": 37,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8527195278385866,
+        0.9057097794206561
+       ],
+       [
+        0.882401840649596,
+        0.9229791725579188
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 67,
+      "eval_unique_min": 64,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8736472507070636,
+        0.9168024184274265
+       ],
+       [
+        0.8802482357771836,
+        0.9199436640801084
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 118,
+      "eval_unique_min": 118,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.4836729585132331,
+        0.5518136251066639
+       ],
+       [
+        0.887099619486012,
+        0.9150592543255499
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 41,
+      "eval_unique_min": 42,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8726695722982549,
+        0.9229084273019619
+       ],
+       [
+        0.8744437106595988,
+        0.9243695549104478
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 56,
+      "eval_unique_min": 61,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8652334431124203,
+        0.9111442101709963
+       ],
+       [
+        0.8844602605602255,
+        0.9194366249855308
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 112,
+      "eval_unique_min": 112,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8454358649904602,
+        0.8891496212344908
+       ],
+       [
+        0.8867492424564837,
+        0.9149727766035413
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 20,
+      "eval_unique_min": 22,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8659358005754123,
+        0.928462972369134
+       ],
+       [
+        0.8665075305470266,
+        0.9287649387520716
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 309,
+      "eval_unique_min": 305,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8801665992611446,
+        0.9009943407657469
+       ],
+       [
+        0.8928205463650518,
+        0.908823885510584
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 61,
+      "eval_unique_min": 59,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7786689923993587,
+        0.8371003425418673
+       ],
+       [
+        0.8794869457870748,
+        0.9204954691367848
+       ]
+      ]
+     }
+    ],
+    "reading_frozen_rule": "NO_UNDERCOVERAGE_DETECTED",
+    "reading_amendment_rule": "WITHIN_1PP_SUPPORTED",
+    "tail_monte_carlo": {
+     "lower_end_bracket": [
+      0.8932922834010419,
+      0.8942303506277518
+     ],
+     "upper_end_bracket": [
+      0.9078541077546053,
+      0.908666610835336
+     ],
+     "frozen_rule_mc_sensitive": false,
+     "amendment_rule_mc_sensitive": false,
+     "five_block_labels": [
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ]
+     ],
+     "five_blocks_agree": true
+    }
+   },
+   "fixed_role": {
+    "pooled": 0.8751930381049291,
+    "hcp": 0.9096044739267661,
+    "difference": 0.03441143582183703,
+    "point_complete": true,
+    "difference_interval": [
+     0.02239690256554384,
+     0.042350828838333174
+    ],
+    "hcp_interval_99_1667": [
+     0.8820186294189032,
+     0.9237269421786882
+    ],
+    "hcp_interval_95": [
+     0.8882554575493155,
+     0.9188141057115802
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5418,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 61,
+      "eval_unique_min": 66,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8493814814814815,
+        0.9679497354497355
+       ],
+       [
+        0.8617006703584961,
+        0.9767190904139433
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 34,
+      "eval_unique_min": 34,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8372093023255814,
+        0.9878048780487805
+       ],
+       [
+        0.8372093023255814,
+        0.9878048780487805
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 110,
+      "eval_unique_min": 118,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.788913890235414,
+        0.8834809966677593
+       ],
+       [
+        0.8022179552824714,
+        0.9083726700556766
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 60,
+      "eval_unique_min": 57,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8225768766958095,
+        0.9352697814039408
+       ],
+       [
+        0.8263358778625954,
+        0.9444444444444444
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 67,
+      "eval_unique_min": 66,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8197278911564626,
+        0.9557554659031754
+       ],
+       [
+        0.8645833333333334,
+        0.9651203165374677
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 36,
+      "eval_unique_min": 36,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.810126582278481,
+        0.9625
+       ],
+       [
+        0.8190967987804877,
+        0.9675324675324676
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 13,
+      "eval_unique_min": 18,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8076923076923077,
+        1.0
+       ],
+       [
+        0.8095238095238095,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 33,
+      "eval_unique_min": 34,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8243243243243243,
+        0.958925759722878
+       ],
+       [
+        0.8370786516853933,
+        0.971830985915493
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 38,
+      "eval_unique_min": 35,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.82926026957638,
+        0.9634146341463414
+       ],
+       [
+        0.8295385254988914,
+        0.9634146341463414
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 35,
+      "eval_unique_min": 37,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7586206896551724,
+        0.9666758241758241
+       ],
+       [
+        0.7552998065764024,
+        0.968421052631579
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 79,
+      "eval_unique_min": 87,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8140957446808511,
+        0.9459499919080757
+       ],
+       [
+        0.8273809523809523,
+        0.9518072289156626
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 41,
+      "eval_unique_min": 55,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7967180504680504,
+        0.9339477795505915
+       ],
+       [
+        0.8331818834900733,
+        0.9721751207729468
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 78,
+      "eval_unique_min": 74,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7905247177828513,
+        0.9300284856308936
+       ],
+       [
+        0.7956969625618082,
+        0.9270074980519377
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 142,
+      "eval_unique_min": 128,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.4963520213744695,
+        0.6126531972431775
+       ],
+       [
+        0.8767650709757028,
+        0.9504622943478334
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 53,
+      "eval_unique_min": 52,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8165069003371755,
+        0.9823008849557522
+       ],
+       [
+        0.820171052631579,
+        0.9830508474576272
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 65,
+      "eval_unique_min": 81,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8178655791198599,
+        0.9196291244587356
+       ],
+       [
+        0.8312218605196544,
+        0.9276940724415039
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 128,
+      "eval_unique_min": 124,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7822749311470238,
+        0.8967879549773125
+       ],
+       [
+        0.8187557188627801,
+        0.9172887250344961
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 29,
+      "eval_unique_min": 29,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.9154929577464789,
+        1.0
+       ],
+       [
+        0.9154929577464789,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 324,
+      "eval_unique_min": 337,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8758008397233378,
+        0.9176035535513036
+       ],
+       [
+        0.8819735475268407,
+        0.9238276380341266
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 81,
+      "eval_unique_min": 62,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7016122631848438,
+        0.8630607947262405
+       ],
+       [
+        0.7979789331672893,
+        0.948613782051282
+       ]
+      ]
+     }
+    ]
+   },
+   "detection_counts": {
+    "tp": 30720,
+    "fp": 60806,
+    "fn": 4718,
+    "val_images_with_gt": 5863
+   }
+  },
+  {
+   "cell": "diorval-s2anet-s0",
+   "primary": {
+    "pooled": 0.8617593488339962,
+    "hcp": 0.8990925710068118,
+    "difference": 0.03733322217281565,
+    "point_complete": true,
+    "difference_interval": [
+     0.03313979360816997,
+     0.04229947391199648
+    ],
+    "hcp_interval_99_1667": [
+     0.8932849004400413,
+     0.908857035832854
+    ],
+    "hcp_interval_95": [
+     0.8955389414338772,
+     0.906734946031737
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5287,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 54,
+      "eval_unique_min": 52,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8394828503647512,
+        0.8920813067032226
+       ],
+       [
+        0.8782441338507213,
+        0.9217966800449817
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 13,
+      "eval_unique_min": 13,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8619701323951124,
+        0.9353796294585683
+       ],
+       [
+        0.8619701323951124,
+        0.9353796294585683
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 96,
+      "eval_unique_min": 104,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8571888418951702,
+        0.8948709167619403
+       ],
+       [
+        0.8855807145426955,
+        0.9173015214066665
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 48,
+      "eval_unique_min": 41,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8545862216438335,
+        0.9074550265584669
+       ],
+       [
+        0.8775275769981299,
+        0.9240714489529542
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 50,
+      "eval_unique_min": 53,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8534069763575375,
+        0.904288265030462
+       ],
+       [
+        0.8775600159875517,
+        0.9219240075949183
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 27,
+      "eval_unique_min": 25,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8441337212191038,
+        0.907608719842659
+       ],
+       [
+        0.8709214428979911,
+        0.9277345003454469
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 7,
+      "eval_unique_min": 7,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8521948199391927,
+        0.9390201354015933
+       ],
+       [
+        0.8546371001910156,
+        0.9407909857696821
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 28,
+      "eval_unique_min": 27,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8569980819903398,
+        0.9130417685639913
+       ],
+       [
+        0.8783880787372566,
+        0.9272405912907273
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 24,
+      "eval_unique_min": 25,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8660223182548031,
+        0.9258108741536794
+       ],
+       [
+        0.8680249968981117,
+        0.928419562280568
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 27,
+      "eval_unique_min": 24,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8723473029902056,
+        0.9292062061881461
+       ],
+       [
+        0.8710608654187614,
+        0.9281229175054075
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 69,
+      "eval_unique_min": 72,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8514615711835597,
+        0.8975670507534587
+       ],
+       [
+        0.8799218344013766,
+        0.9189416483284438
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 35,
+      "eval_unique_min": 33,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8569206850942338,
+        0.9153838799107071
+       ],
+       [
+        0.878849757657985,
+        0.9238205981759331
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 61,
+      "eval_unique_min": 58,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8808585343369923,
+        0.9258817157171276
+       ],
+       [
+        0.8801618367099582,
+        0.9203739118076341
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 118,
+      "eval_unique_min": 119,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.4643536672389449,
+        0.5329991787921459
+       ],
+       [
+        0.8856364369025536,
+        0.9157375675896541
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 36,
+      "eval_unique_min": 37,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8708449628361477,
+        0.9237807682576934
+       ],
+       [
+        0.8729014715356377,
+        0.9256977305443598
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 61,
+      "eval_unique_min": 58,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8555049501607542,
+        0.9098196872279339
+       ],
+       [
+        0.8837289500658585,
+        0.918849324582701
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 108,
+      "eval_unique_min": 111,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8267471819749099,
+        0.8660170546871016
+       ],
+       [
+        0.8876156453671823,
+        0.9149719453176406
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 16,
+      "eval_unique_min": 16,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8644692393210834,
+        0.9324438149065328
+       ],
+       [
+        0.8652002942323882,
+        0.9330624992356803
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 315,
+      "eval_unique_min": 305,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8847075972636116,
+        0.9055720523465196
+       ],
+       [
+        0.8924596891763378,
+        0.9086705319238388
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 62,
+      "eval_unique_min": 61,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7766957617420527,
+        0.8373534010248458
+       ],
+       [
+        0.8804571945239884,
+        0.9208144061792725
+       ]
+      ]
+     }
+    ],
+    "reading_frozen_rule": "NO_UNDERCOVERAGE_DETECTED",
+    "reading_amendment_rule": "WITHIN_1PP_SUPPORTED",
+    "tail_monte_carlo": {
+     "lower_end_bracket": [
+      0.892712188113712,
+      0.8938483864679393
+     ],
+     "upper_end_bracket": [
+      0.90858668616871,
+      0.9091989659717765
+     ],
+     "frozen_rule_mc_sensitive": false,
+     "amendment_rule_mc_sensitive": false,
+     "five_block_labels": [
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ],
+      [
+       "NO_UNDERCOVERAGE_DETECTED",
+       "WITHIN_1PP_SUPPORTED"
+      ]
+     ],
+     "five_blocks_agree": true
+    }
+   },
+   "fixed_role": {
+    "pooled": 0.87832661172522,
+    "hcp": 0.9129004638151293,
+    "difference": 0.034573852089909374,
+    "point_complete": true,
+    "difference_interval": [
+     0.026050785416920727,
+     0.05295051312733657
+    ],
+    "hcp_interval_99_1667": [
+     0.8817264992616471,
+     0.9302239017343763
+    ],
+    "hcp_interval_95": [
+     0.8893407499602481,
+     0.9249531240936547
+    ],
+    "missing_draws": 0,
+    "draws": 5000,
+    "tp_bearing_sources": 5287,
+    "per_class": [
+     {
+      "cls": "airplane",
+      "cal_unique_min": 72,
+      "eval_unique_min": 60,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7736084401709402,
+        0.934176991964669
+       ],
+       [
+        0.8166666666666667,
+        0.9619047619047618
+       ]
+      ]
+     },
+     {
+      "cls": "airport",
+      "cal_unique_min": 16,
+      "eval_unique_min": 26,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.759987341772152,
+        1.0
+       ],
+       [
+        0.759987341772152,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "baseballfield",
+      "cal_unique_min": 111,
+      "eval_unique_min": 120,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8165303881540469,
+        0.9408446508711074
+       ],
+       [
+        0.8595544029747011,
+        0.9566816669073928
+       ]
+      ]
+     },
+     {
+      "cls": "basketballcourt",
+      "cal_unique_min": 53,
+      "eval_unique_min": 61,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8070140629351156,
+        0.9363636363636364
+       ],
+       [
+        0.8175153409904108,
+        0.9373374999999999
+       ]
+      ]
+     },
+     {
+      "cls": "bridge",
+      "cal_unique_min": 65,
+      "eval_unique_min": 62,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8333333333333334,
+        0.9640287769784173
+       ],
+       [
+        0.8566176470588235,
+        0.9793430768188591
+       ]
+      ]
+     },
+     {
+      "cls": "chimney",
+      "cal_unique_min": 34,
+      "eval_unique_min": 35,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.6975308641975309,
+        0.9310398706896551
+       ],
+       [
+        0.7229693008225617,
+        0.9459532112757918
+       ]
+      ]
+     },
+     {
+      "cls": "dam",
+      "cal_unique_min": 15,
+      "eval_unique_min": 11,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7941176470588235,
+        1.0
+       ],
+       [
+        0.8,
+        1.0
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-service-area",
+      "cal_unique_min": 38,
+      "eval_unique_min": 34,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7348446196660483,
+        0.9425287356321839
+       ],
+       [
+        0.7530025364616361,
+        0.9695121951219512
+       ]
+      ]
+     },
+     {
+      "cls": "expressway-toll-station",
+      "cal_unique_min": 34,
+      "eval_unique_min": 31,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7930871828236826,
+        0.9696969696969697
+       ],
+       [
+        0.7954545454545454,
+        0.9705882352941176
+       ]
+      ]
+     },
+     {
+      "cls": "golffield",
+      "cal_unique_min": 37,
+      "eval_unique_min": 32,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7733181818181819,
+        0.9859203834115805
+       ],
+       [
+        0.7808219178082192,
+        0.9863059977786004
+       ]
+      ]
+     },
+     {
+      "cls": "groundtrackfield",
+      "cal_unique_min": 93,
+      "eval_unique_min": 81,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8192754067115922,
+        0.9419354838709677
+       ],
+       [
+        0.8420978293190603,
+        0.955309931324058
+       ]
+      ]
+     },
+     {
+      "cls": "harbor",
+      "cal_unique_min": 44,
+      "eval_unique_min": 44,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8188766267376516,
+        0.9833333333333334
+       ],
+       [
+        0.8576643755328217,
+        0.990315583157153
+       ]
+      ]
+     },
+     {
+      "cls": "overpass",
+      "cal_unique_min": 66,
+      "eval_unique_min": 68,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7903713768115942,
+        0.9867592953296108
+       ],
+       [
+        0.8103909051208974,
+        0.9944452811244981
+       ]
+      ]
+     },
+     {
+      "cls": "ship",
+      "cal_unique_min": 138,
+      "eval_unique_min": 129,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.42630144879848586,
+        0.5440431740131176
+       ],
+       [
+        0.7878690267915336,
+        0.9246133813050401
+       ]
+      ]
+     },
+     {
+      "cls": "stadium",
+      "cal_unique_min": 49,
+      "eval_unique_min": 49,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7920499549954997,
+        0.9814814814814815
+       ],
+       [
+        0.7946365987983979,
+        0.9819819819819819
+       ]
+      ]
+     },
+     {
+      "cls": "storagetank",
+      "cal_unique_min": 75,
+      "eval_unique_min": 68,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8865686992300628,
+        0.9767980624126806
+       ],
+       [
+        0.897178408764148,
+        0.9780923861931324
+       ]
+      ]
+     },
+     {
+      "cls": "tenniscourt",
+      "cal_unique_min": 127,
+      "eval_unique_min": 134,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7734287136484168,
+        0.8683151549071483
+       ],
+       [
+        0.8205947564849694,
+        0.9292148355326066
+       ]
+      ]
+     },
+     {
+      "cls": "trainstation",
+      "cal_unique_min": 19,
+      "eval_unique_min": 25,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8107991612301958,
+        0.9852941176470589
+       ],
+       [
+        0.8107991612301958,
+        0.9852941176470589
+       ]
+      ]
+     },
+     {
+      "cls": "vehicle",
+      "cal_unique_min": 332,
+      "eval_unique_min": 327,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.8658821297196032,
+        0.9206849534727863
+       ],
+       [
+        0.8769055036909916,
+        0.9350285061279879
+       ]
+      ]
+     },
+     {
+      "cls": "windmill",
+      "cal_unique_min": 77,
+      "eval_unique_min": 80,
+      "missing_inner_evaluations": 0,
+      "infinite_threshold_fraction_pooled_hcp": [
+       0.0,
+       0.0
+      ],
+      "coverage_intervals95_marginal_pooled_hcp": [
+       [
+        0.7600817543297415,
+        0.9076436707408045
+       ],
+       [
+        0.8744849286515953,
+        0.9793213631311766
+       ]
+      ]
+     }
+    ]
+   },
+   "detection_counts": {
+    "tp": 29413,
+    "fp": 164716,
+    "fn": 6025,
+    "val_images_with_gt": 5863
+   }
+  }
+ ],
+ "reading_rules": {
+  "frozen": "CHECK_FAILED if the 99.1667% HCP class-macro interval lies entirely below 0.90; otherwise NO_UNDERCOVERAGE_DETECTED (not a verification)",
+  "amendment": "WITHIN_1PP_SUPPORTED if its lower end is at least 0.89, else INCONCLUSIVE"
+ },
+ "script_sha256": "c26b64632e139fa92df4e65dd0e7e4e1062cfe85d06be00e1fd03678e0758400"
+}

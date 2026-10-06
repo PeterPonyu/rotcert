@@ -1,27 +1,14 @@
-"""G1 (per-detection coverage) + G2 (certified rotated-IoU FNR) certification, and the
-honest-uncertainty refusal rules that gate both (design §2.3, §2.4, §3.3).
+"""Matched-TP conformal calibration and diagnostic scene-average miss-risk tests.
 
-G1 -- per-Mondrian-cell split conformal (design §2.3)
---------------------------------------------------------
-:func:`g1_calibrate` fits one of the six :mod:`rotcert.scores` constructions per
-Mondrian stratum (typically class; any field works) on MATCHED true-positive pairs
-only (design's "conditional-on-detection" caveat -- unmatched GT/detections are G2's
-job, never G1's). A stratum whose calibration size violates the certifiability floor
-``alpha_min = 1 / (n_cal + 1) > alpha`` is REFUSED (design §3.3 refusal table row 1):
-no certificate for that stratum, recorded loudly in ``refused``, never silently pooled
-into a neighboring stratum.
+G1 requires exchangeable calibration and future matched-TP scores within the
+chosen stratum. Scene splitting does not establish object-level exchangeability.
+False positives lie outside this conditional population.
 
-G2 -- certified image-level FNR via LTT-HB (design §2.4)
--------------------------------------------------------------
-:func:`g2_certify_fnr` operates on already SCENE-aggregated match data (design's "the
-exchangeable unit for G2 is the IMAGE," M3): for each scene, the list of matched
-confidences for its ground-truth boxes (``None`` for a GT never matched at any
-confidence). It builds the per-scene, per-candidate-lambda risk matrix and calls
-:func:`rotcert.ltt.ltt_certify_matrix`, gated by the a-priori power floor
-(:func:`rotcert.ltt.power_floor_n_img`) -- BELOW the floor, the function refuses the
-per-class certificate and (when ``pooled_fallback=True``) recommends falling back to
-the pooled-marginal FNR (design §2.4/§5 K5's preregistered remedy), never silently
-returning an uncertifiable number.
+G2 preserves numerical threshold tests but makes no validated risk-control claim.
+The default grid is estimated from the tested records. A supplied grid alone does
+not verify its independence or scene sampling. All G2 outputs are diagnostic;
+``certified`` is always false. Mondrian tests allocate delta over the declared
+class family and never pool repeated class-by-scene rows as independent scenes.
 """
 
 from __future__ import annotations
@@ -29,7 +16,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Sequence
 
 import numpy as np
-from relmetrics import provenance as _provenance
+from rotcert._vendor.relmetrics import provenance as _provenance
 
 from rotcert import ltt as _ltt
 from rotcert.scores import (
@@ -313,15 +300,17 @@ def g2_certify_fnr(
     p_value: str = "eb",
     bentkus_factor: float = 1.75,
 ) -> Dict[str, Any]:
-    """G2: certified per-image FNR via LTT-HB, gated by the a-priori power floor
-    (design §2.4). See module docstring; this is the single-stratum (e.g. one class,
-    or the pooled-marginal) certificate -- :func:`g2_certify_fnr_mondrian` wraps this
-    per class with the K5 pooled-fallback remedy.
+    """Return a diagnostic threshold pass, subject to the historical screen.
+
+    ``lambda_star`` is a numerical readout, not a certified deployment threshold.
+    ``refused`` refers to a probability certificate and is always true in this
+    diagnostic interface. Frozen historical results are not regenerated here.
     """
     n_img = len(scene_gt_confidences)
     if n_img == 0:
         raise CertifyError("g2_certify_fnr: scene_gt_confidences must be non-empty")
 
+    grid_source = "same_sample_quantiles" if lambda_grid is None else "caller_supplied_unverified"
     all_confs = [c for confs in scene_gt_confidences for c in confs if c is not None]
     if lambda_grid is None:
         if not all_confs:
@@ -331,8 +320,10 @@ def g2_certify_fnr(
             )
         lambda_grid = _ltt.build_lambda_grid(np.array(all_confs), n_grid=n_grid, min_accept_frac=min_accept_frac)
 
-    risk_matrix = image_risk_matrix(scene_gt_confidences, lambda_grid)
     grid_sorted = np.asarray(sorted(float(v) for v in lambda_grid))
+    if grid_sorted.size == 0 or not np.all(np.isfinite(grid_sorted)):
+        raise CertifyError("lambda_grid must be non-empty and finite")
+    risk_matrix = image_risk_matrix(scene_gt_confidences, grid_sorted)
     r_hat = float(np.mean(risk_matrix[:, 0]))  # most permissive lambda (retain everything)
 
     power_floor = _ltt.power_floor_n_img(beta, delta, grid_sorted.size, r_hat, bentkus_factor=bentkus_factor)
@@ -341,12 +332,14 @@ def g2_certify_fnr(
     if not powered:
         return {
             "certified": False,
+            "diagnostic_pass": False,
+            "validity": "diagnostic_only",
+            "grid_source": grid_source,
             "refused": True,
             "reason": (
-                f"n_img={n_img} below the LTT-HB Bentkus power floor "
+                f"n_img={n_img} below the historical fitted power floor "
                 f"{power_floor['bentkus_floor']:.1f} at beta={beta}, delta={delta}, "
-                f"r_hat={r_hat:.4f} (design §2.4/§5 K5 -- refuses rather than reports "
-                "an uncertifiable number)"
+                f"r_hat={r_hat:.4f}; this screen is not a sufficient sample budget"
             ),
             "n_img": n_img,
             "power_floor": power_floor,
@@ -359,7 +352,8 @@ def g2_certify_fnr(
         risk_matrix, grid_sorted, beta=beta, delta=delta, procedure=procedure, p_value=p_value
     )
     result["power_floor"] = power_floor
-    result["refused"] = not result["certified"]
+    result["refused"] = True
+    result["grid_source"] = grid_source
     return result
 
 
@@ -367,37 +361,48 @@ def g2_certify_fnr_mondrian(
     scene_gt_confidences_by_class: Dict[Any, Sequence[Sequence[Optional[float]]]],
     beta: float = 0.20,
     delta: float = 0.05,
+    class_roster: Optional[Sequence[Any]] = None,
     **kwargs: Any,
 ) -> Dict[str, Any]:
-    """Per-class G2, with the K5 pooled-marginal fallback for classes below the power
-    floor (design §2.4/§5): the pooled FNR (all scenes across all classes, computed
-    once) is always reported alongside so a refused class still has an honest fallback
-    number, explicitly flagged as coverage-debt (design §2.4).
+    """Diagnostic class-family tests with equal delta allocation.
+
+    Supply the predetermined ``class_roster`` to retain absent classes in K.
+    Without it, the family consists only of input keys and is explicitly marked
+    as such. Neither mode verifies a prospective protocol. No pooled fallback
+    is computed: concatenated class-by-scene rows can repeat the same scene.
     """
     if not scene_gt_confidences_by_class:
-        raise CertifyError("g2_certify_fnr_mondrian: scene_gt_confidences_by_class must be non-empty")
-
-    pooled_scenes: List[Sequence[Optional[float]]] = []
-    for scenes in scene_gt_confidences_by_class.values():
-        pooled_scenes.extend(scenes)
-    pooled = g2_certify_fnr(pooled_scenes, beta=beta, delta=delta, **kwargs)
-
+        raise CertifyError("g2_certify_fnr_mondrian: scene records must be non-empty")
+    roster = list(scene_gt_confidences_by_class if class_roster is None else class_roster)
+    if not roster or len(set(roster)) != len(roster):
+        raise CertifyError("class_roster must be non-empty and unique")
+    if set(scene_gt_confidences_by_class) - set(roster):
+        raise CertifyError("class_roster must include every input class")
+    if not 0.0 < delta < 1.0:
+        raise CertifyError("delta must be in (0, 1)")
+    delta_per_class = delta / len(roster)
     per_class: Dict[Any, Dict[str, Any]] = {}
-    n_certified = 0
-    for cls, scenes in scene_gt_confidences_by_class.items():
-        try:
-            res = g2_certify_fnr(scenes, beta=beta, delta=delta, **kwargs)
-        except CertifyError as e:
-            res = {"certified": False, "refused": True, "reason": str(e), "n_img": len(scenes)}
+    for cls in roster:
+        scenes = scene_gt_confidences_by_class.get(cls, [])
+        if not scenes:
+            res = {"certified": False, "diagnostic_pass": False, "refused": True,
+                   "validity": "diagnostic_only", "reason": "no_class_data",
+                   "n_img": 0, "delta": delta_per_class, "lambda_star": None}
+        else:
+            try:
+                res = g2_certify_fnr(scenes, beta=beta, delta=delta_per_class, **kwargs)
+            except CertifyError as e:
+                res = {"certified": False, "diagnostic_pass": False, "refused": True,
+                       "validity": "diagnostic_only", "reason": str(e),
+                       "n_img": len(scenes), "delta": delta_per_class, "lambda_star": None}
         per_class[cls] = res
-        if res.get("certified"):
-            n_certified += 1
-
     return {
-        "beta": float(beta),
-        "delta": float(delta),
-        "per_class": per_class,
-        "n_classes": len(scene_gt_confidences_by_class),
-        "n_classes_certified": n_certified,
-        "pooled_marginal": pooled,
+        "beta": float(beta), "delta": float(delta), "delta_per_class": delta_per_class,
+        "class_roster": roster,
+        "family_source": "input_keys_only" if class_roster is None else "caller_declared",
+        "per_class": per_class, "n_classes": len(roster),
+        "n_classes_diagnostic_pass": sum(bool(r["diagnostic_pass"]) for r in per_class.values()),
+        "n_classes_certified": 0, "certified": False, "validity": "diagnostic_only",
+        "pooled_marginal": None,
+        "pooled_marginal_status": "not_computed_class_scene_rows_are_not_independent",
     }

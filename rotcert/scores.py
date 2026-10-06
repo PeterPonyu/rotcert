@@ -86,7 +86,7 @@ from dataclasses import dataclass
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import numpy as np
-from relmetrics import conformal as _conformal
+from rotcert._vendor.relmetrics import conformal as _conformal
 
 from rotcert.gwd import canonicalize_le90, obb_gwd
 from rotcert.matching import obb_to_polygon, rotated_iou

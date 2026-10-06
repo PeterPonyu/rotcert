@@ -78,13 +78,15 @@ class TestPowerFloor:
 
 
 class TestLttCertifyMatrix:
-    def test_certifies_when_risk_controlled(self):
+    def test_low_risk_pass_is_explicitly_diagnostic(self):
         rng = np.random.default_rng(0)
         n_img, K = 400, 25
         grid = np.linspace(0.1, 0.9, K)
         risk = np.clip(0.02 + grid[None, :] * 0.15 + rng.normal(scale=0.02, size=(n_img, K)), 0, 1)
         res = ltt_certify_matrix(risk, grid, beta=0.20, delta=0.05)
-        assert res["certified"]
+        assert res["diagnostic_pass"]
+        assert not res["certified"]
+        assert res["validity"] == "diagnostic_only"
         assert res["realized_risk"] <= 0.20 + 0.03
 
     def test_vacuous_when_risk_too_high(self):

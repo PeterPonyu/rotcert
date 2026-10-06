@@ -1,5 +1,4 @@
-"""Tests for rotcert.sets: GWD-ball membership + the conservative envelope, including
-the ball-subseteq-envelope property (design's reader-warning requirement)."""
+"""GWD membership, exact center containment and numerical shape diagnostics."""
 
 from __future__ import annotations
 
@@ -62,11 +61,13 @@ class TestShapeEnvelope:
         assert env["theta_full_arc"]
         assert env["theta"] == (-np.pi / 2, np.pi / 2)
 
-    def test_tiny_q_hat_degenerate_collapses_to_point(self):
+    def test_tiny_q_hat_reports_unavailable_shape_bounds(self):
         pred = np.array([50.0, 50.0, 20.0, 10.0, np.deg2rad(30)])
         env = shape_envelope(pred, q_hat=1e-8, n_w=15, n_h=9, n_theta=31)
         assert env["degenerate"]
-        assert env["w"] == (pytest.approx(20.0), pytest.approx(20.0))
+        assert env["w"] is None and env["h"] is None and env["theta"] is None
+        assert env["status"] == "insufficient_grid_resolution"
+        assert env["continuous_outer_bound"] is False
 
     def test_seam_adjacent_arc_wraps(self):
         pred = np.array([50.0, 50.0, 20.0, 10.0, np.deg2rad(89)])
@@ -79,45 +80,36 @@ class TestShapeEnvelope:
         assert (lo - 1e-6 <= pred_t <= hi + 1e-6) or (lo - 1e-6 <= pred_t + np.pi <= hi + 1e-6)
 
 
-class TestBallSubsetEnvelope:
-    """The reader-warning property: EVERY point in the GWD-ball must fall within the
-    reported per-parameter envelope (design §2.3)."""
+class TestExactCenterContainment:
+    def test_off_grid_ball_member_need_not_be_in_sampled_shape_extent(self):
+        # Positive-radius ball has members even when the coarse grid misses them.
+        pred = np.array([0., 0., 20., 10., 0.3])
+        q = 1e-4
+        candidate = pred.copy()
+        candidate[2] += q
+        assert gwd_ball_membership(pred, candidate, q)
+        result = envelope(pred, q, n_w=3, n_h=2, n_theta=2)
+        assert result["w"] is None
+        assert result["cx"] == (-q, q)
+        assert result["cy"] == (-q, q)
 
-    @pytest.mark.parametrize(
-        "pred,q",
-        [
-            (np.array([50.0, 50.0, 20.0, 10.0, np.deg2rad(30)]), 3.0),
-            (np.array([50.0, 50.0, 20.0, 10.0, np.deg2rad(89)]), 3.0),
-            (np.array([50.0, 50.0, 15.0, 14.5, np.deg2rad(10)]), 2.0),
-            (np.array([10.0, 10.0, 30.0, 5.0, np.deg2rad(-89.5)]), 2.5),
-        ],
-    )
-    def test_rejection_sampled_ball_points_within_envelope(self, pred, q):
+    def test_random_ball_members_obey_exact_center_bounds(self):
+        pred = np.array([10., 20., 30., 5., 0.3]); q = 3.
         rng = np.random.default_rng(42)
-        env = envelope(pred, q)
-        cx, cy = pred[0], pred[1]
-        w_lo, w_hi = env["w"]
-        h_lo, h_hi = env["h"]
-        th_lo, th_hi = env["theta"]
+        candidates = np.tile(pred, (200, 1))
+        candidates[:, :2] += rng.normal(size=(200, 2))
+        members = candidates[gwd_ball_membership(pred, candidates, q)]
+        assert len(members) > 100
+        bounds = center_envelope(pred, q)
+        assert np.all((members[:, 0] >= bounds["cx"][0]) & (members[:, 0] <= bounds["cx"][1]))
+        assert np.all((members[:, 1] >= bounds["cy"][0]) & (members[:, 1] <= bounds["cy"][1]))
 
-        n_checked = 0
-        for _ in range(3000):
-            cand = pred + rng.normal(scale=[q * 1.5, q * 1.5, q * 1.5, q * 1.5, 0.3], size=5)
-            cand[2] = abs(cand[2]) + 0.5
-            cand[3] = abs(cand[3]) + 0.1
-            if not gwd_ball_membership(pred, cand, q):
-                continue
-            n_checked += 1
-            wc, hc, thc = canonicalize_le90(cand[2], cand[3], cand[4])
-            wc, hc, thc = float(wc), float(hc), float(thc)
+    @pytest.mark.parametrize("radius", [-1., float("nan"), float("inf")])
+    def test_invalid_shape_radius_is_rejected(self, radius):
+        with pytest.raises(ValueError):
+            shape_envelope(np.array([0., 0., 20., 10., 0.3]), radius)
 
-            assert (cx - q - 1e-6) <= cand[0] <= (cx + q + 1e-6)
-            assert (cy - q - 1e-6) <= cand[1] <= (cy + q + 1e-6)
-            assert (w_lo - 1e-6) <= wc <= (w_hi + 1e-6)
-            assert (h_lo - 1e-6) <= hc <= (h_hi + 1e-6)
-            if not env["theta_full_arc"]:
-                ok_th = (th_lo - 1e-6) <= thc <= (th_hi + 1e-6)
-                if not ok_th and th_hi > np.pi / 2:
-                    ok_th = (th_lo - 1e-6) <= (thc + np.pi) <= (th_hi + 1e-6)
-                assert ok_th
-        assert n_checked > 20  # sanity: the sampler actually found ball members
+    def test_nonempty_grid_is_explicitly_uncertified(self):
+        result = shape_envelope(np.array([0., 0., 20., 10., 0.3]), 3.)
+        assert result["status"] == "sampled_feasible_extrema"
+        assert result["continuous_outer_bound"] is False

@@ -1,0 +1,86 @@
+{
+ "size_q1_hcp": [
+  0.9806458399074366,
+  0.9944549068842854
+ ],
+ "size_q4_hcp": [
+  0.8748483846069026,
+  0.8974416266338957
+ ],
+ "size_q4_pooled": [
+  0.8032855498587422,
+  0.8442899283607248
+ ],
+ "aspect3_pooled": [
+  0.8464851171627612,
+  0.8698967043777669
+ ],
+ "rare_hcp": [
+  0.9018050541516246,
+  0.9166115155526141
+ ],
+ "sparse_hcp": [
+  0.8847368994443839,
+  0.9035643377139075
+ ],
+ "dense_hcp": [
+  0.9734916763863853,
+  0.9949659150498165
+ ],
+ "orientation_hcp": [
+  0.9164336750543647,
+  0.9682969787291695
+ ],
+ "square_hcp": [
+  0.9164336750543647,
+  0.9601536245799328
+ ],
+ "size_q4_pairs": [
+  8951,
+  9557
+ ],
+ "size_q4_scenes": [
+  3389,
+  3490
+ ],
+ "strata_with_interval_below_90": [
+  [
+   "Q1 (sparsest)",
+   "dior-orcnn-s0"
+  ],
+  [
+   "Q4 (largest)",
+   "dior-orcnn-s0"
+  ],
+  [
+   "Q4 (largest)",
+   "dior-rtmdet-s0"
+  ],
+  [
+   "Q4 (largest)",
+   "dior-s2anet-s0"
+  ]
+ ],
+ "pairs": [
+  88596,
+  100142
+ ],
+ "score_s_max": 0.016015310000000227,
+ "calibrate_evaluate_project_s_max": 0.011236450999999814,
+ "load_and_score_s_max": 0.0733645300000001,
+ "reproduction_max_abs_diff_pp": 0.0,
+ "cost_compare": {
+  "gwd": 0.011667121987557039,
+  "doubled_angle": 0.005370996019337326,
+  "eav_margin": 7.903115228982642,
+  "cal_eval_max": 0.02030377698247321,
+  "cal_eval_display_upper": 0.021,
+  "eval_coverage_class_macro": {
+   "gwd": 0.8985384473308985,
+   "doubled_angle": 0.9347534175135163,
+   "eav_margin": 0.898740284908414
+  },
+  "pairs": 88596,
+  "receipt_script_sha256": "e7c1166ef45af695c405ed9a00bf9f8b27c5c14215e8cc90f60ef8d75456c317"
+ }
+}

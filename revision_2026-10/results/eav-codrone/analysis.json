@@ -1,0 +1,1486 @@
+{
+ "schema": "rotcert.eav-codrone-analysis.v3",
+ "alpha": 0.1,
+ "inputs": {
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard00-of05.npz": "99fff7fe0a0d57b4fc5abc0637ebf97d4c3a573a87e4b80e48f8f27fb15e241a",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard00-of05.json": "8107e21b6fc9949a94d2a9670e073259f1d6f116d8c488bb592586933cfde5ad",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard01-of05.npz": "878389b41fc8321d6c5ead467f0b0d2df5806bd066e06e74e9def29e7e6735ff",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard01-of05.json": "1facfc32958b222de420a2f9b1b83b4d7f7e162e516f0e6bbc4998fcf53a289c",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard02-of05.npz": "ec3206b9859c21aece20b3f5324f2ae86bf867a9feab3f448cb55c8c6553e57b",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard02-of05.json": "548d31785f6c8dd4e2ed51411d3501b2a3f1f96442ba4b2b7c7e31783b592e40",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard03-of05.npz": "41a2c2459835a0468ce0340dca1b0b700d0661c2a89f0fc0611794ecf2d5f2c2",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard03-of05.json": "baab1750f5092414bec20ff96d4afbd9d34a011cb1ae6cd6a1286ce542b2a362",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard04-of05.npz": "b223b78ed4aa4fea8202993bfd4f58fa068dcfc357c2aaa5e7c42fe71db94f20",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard04-of05.json": "16e90a60bd5dc3ed929cba1ed65e8e31d2ead574c0327d4886b1bd1b730b83ab",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard00-of05.npz": "6cff9aac7353180f0c09e44e3f1295fdcf403b8585cbbabaa28e654f89aba77a",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard00-of05.json": "2eb1f0a18b68be0003ae9fdf10c565f7f3de6581ed581ddaa512cbc1da475d2d",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard01-of05.npz": "4180fbf70304c488192fcfcc6cb1a7db4907d582459bed0b5688b1a8b6d849d9",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard01-of05.json": "8209a6cab472b4a70671dcb66702b4a1f2ee7a9ee3a939a42666605150d0da7a",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard02-of05.npz": "bd0343404ffcbba4625e5e5f835799cdb18c4eb106ad53054c4a850dac033b85",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard02-of05.json": "513d0742fd00990766e776d33fc14d24b0139f2160e03cde9c0a81519de5396b",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard03-of05.npz": "e7711f93b78f003c33df0044009703ffa001463cb9f37bd1b98bf390f4b06ff3",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard03-of05.json": "7e5b697325e24af274d540ac8bf07d77cee9678b97dd13bf310e0ecb16e92a21",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard04-of05.npz": "32bb36bfb00a621b31f67de89908464fa7b48b5d90cab66f85614d765cf6da8f",
+  "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard04-of05.json": "a993aff44914e0f4aa69219f717d607b1ae7d7fc51dac1b803aa762ccbbba53a"
+ },
+ "splits": {
+  "val": {
+   "tiles": 56000,
+   "frames": 2000,
+   "gt": 314324,
+   "kept_detections": 2170712,
+   "complete": true,
+   "split_tiles": 56000,
+   "shards": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "num_shards": 5
+  },
+  "test": {
+   "tiles": 84056,
+   "frames": 3002,
+   "gt": 469452,
+   "kept_detections": 3249703,
+   "complete": true,
+   "split_tiles": 84056,
+   "shards": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "num_shards": 5
+  }
+ },
+ "diagnostic_only": false,
+ "class_dictionary": [
+  "car",
+  "truck",
+  "traffic-sign",
+  "people",
+  "motor",
+  "bicycle",
+  "traffic-light",
+  "tricycle",
+  "bridge",
+  "bus",
+  "boat",
+  "ship"
+ ],
+ "bootstrap": {
+  "replicates": 1000,
+  "seed": 20261004,
+  "native_macro_seed": 20261005,
+  "unit": "frame",
+  "thresholds": "fixed",
+  "interval": "approximate percentile, 95%",
+  "missing_class_draws": "counted; interval unavailable if any required draw is undefined",
+  "sampling_population": "evaluation frames with at least one matched TP under each protocol"
+ },
+ "export_receipts": {
+  "val": {
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard00-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "val",
+    "shard": 0,
+    "num_shards": 5,
+    "tiles": 11200,
+    "split_tiles": 56000,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard00-of05.npz",
+    "out_sha256": "99fff7fe0a0d57b4fc5abc0637ebf97d4c3a573a87e4b80e48f8f27fb15e241a",
+    "seconds": 594.3110585212708,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard01-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "val",
+    "shard": 1,
+    "num_shards": 5,
+    "tiles": 11200,
+    "split_tiles": 56000,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard01-of05.npz",
+    "out_sha256": "878389b41fc8321d6c5ead467f0b0d2df5806bd066e06e74e9def29e7e6735ff",
+    "seconds": 612.4450776576996,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard02-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "val",
+    "shard": 2,
+    "num_shards": 5,
+    "tiles": 11200,
+    "split_tiles": 56000,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard02-of05.npz",
+    "out_sha256": "ec3206b9859c21aece20b3f5324f2ae86bf867a9feab3f448cb55c8c6553e57b",
+    "seconds": 618.285863161087,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard03-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "val",
+    "shard": 3,
+    "num_shards": 5,
+    "tiles": 11200,
+    "split_tiles": 56000,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard03-of05.npz",
+    "out_sha256": "41a2c2459835a0468ce0340dca1b0b700d0661c2a89f0fc0611794ecf2d5f2c2",
+    "seconds": 597.8491499423981,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard04-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "val",
+    "shard": 4,
+    "num_shards": 5,
+    "tiles": 11200,
+    "split_tiles": 56000,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/val-shard04-of05.npz",
+    "out_sha256": "b223b78ed4aa4fea8202993bfd4f58fa068dcfc357c2aaa5e7c42fe71db94f20",
+    "seconds": 581.6768290996552,
+    "torch": "2.4.0+cu121"
+   }
+  },
+  "test": {
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard00-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "test",
+    "shard": 0,
+    "num_shards": 5,
+    "tiles": 16812,
+    "split_tiles": 84056,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard00-of05.npz",
+    "out_sha256": "6cff9aac7353180f0c09e44e3f1295fdcf403b8585cbbabaa28e654f89aba77a",
+    "seconds": 883.0127596855164,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard01-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "test",
+    "shard": 1,
+    "num_shards": 5,
+    "tiles": 16811,
+    "split_tiles": 84056,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard01-of05.npz",
+    "out_sha256": "4180fbf70304c488192fcfcc6cb1a7db4907d582459bed0b5688b1a8b6d849d9",
+    "seconds": 888.1954245567322,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard02-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "test",
+    "shard": 2,
+    "num_shards": 5,
+    "tiles": 16811,
+    "split_tiles": 84056,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard02-of05.npz",
+    "out_sha256": "bd0343404ffcbba4625e5e5f835799cdb18c4eb106ad53054c4a850dac033b85",
+    "seconds": 901.8080279827118,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard03-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "test",
+    "shard": 3,
+    "num_shards": 5,
+    "tiles": 16811,
+    "split_tiles": 84056,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard03-of05.npz",
+    "out_sha256": "e7711f93b78f003c33df0044009703ffa001463cb9f37bd1b98bf390f4b06ff3",
+    "seconds": 903.7095077037811,
+    "torch": "2.4.0+cu121"
+   },
+   "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard04-of05.npz": {
+    "schema": "rotcert.eav-export.v2",
+    "split": "test",
+    "shard": 4,
+    "num_shards": 5,
+    "tiles": 16811,
+    "split_tiles": 84056,
+    "limit": 0,
+    "min_score": 0.05,
+    "checkpoint": "<compute-root>/eav-codrone-20261004/analysis-final-v2/checkpoint.pth",
+    "checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+    "checkpoint_epoch": 11,
+    "weights": "model",
+    "config": "<compute-root>/eav-codrone-20261004/src/EAV-DETR/configs/eavdetr/r50vd_codrone_rotcert.yml",
+    "config_sha256": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+    "class_names": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "box_format": "normalized-cxcywh-angle-radians",
+    "script_sha256": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "out": "<compute-root>/eav-codrone-20261004/analysis-final-v2/exports/test-shard04-of05.npz",
+    "out_sha256": "32bb36bfb00a621b31f67de89908464fa7b48b5d90cab66f85614d765cf6da8f",
+    "seconds": 888.0205819606781,
+    "torch": "2.4.0+cu121"
+   }
+  }
+ },
+ "limitations": [
+  "Coverage is conditional on matched detections, not all ground-truth objects.",
+  "Official val/test recordings and locations overlap; no independent-scene certificate is claimed.",
+  "Native pose is a filename-enabled reconstruction; native global reproduces released loader behavior.",
+  "Infinite thresholds are uninformative; conditional coverage alone is not detection quality."
+ ],
+ "dependencies": {
+  "<compute-root>/eav-codrone-20261004/s1/core.py": "3e8cd87d5cee1effbffad0966c96ae5c09701d51a8edb806fbcf4678aac0fe5d",
+  "<compute-root>/eav-codrone-20261004/s1/vendor/gwd.py": "4438a38b0773f5ceb095ac092d5474af41b7091b81b8add6becdda23474d52de",
+  "<compute-root>/eav-codrone-20261004/src/EAV-DETR/tools/geometry_utils.py": "4f9e13cb4142fd55d00ef8e397578f9d8a887ce40719a14137cd1047573dbca0",
+  "<compute-root>/eav-codrone-20261004/src/EAV-DETR/src/zoo/eavdetr/oriented_ops.py": "36f52e09ae951287f56bb4888be41451240cf9bfd2442b2fbf2e5690619e7c9f"
+ },
+ "independence": {
+  "frames_shared": 0,
+  "locations_val": 46,
+  "locations_test": 46,
+  "locations_shared": 46,
+  "recordings_val": 606,
+  "recordings_test": 646,
+  "recordings_shared": 576
+ },
+ "native": {
+  "test_pairs": 324088,
+  "val_pairs": 216081,
+  "variants": {
+   "pose-linear": {
+    "q_global": 14.329478228960035,
+    "q_by_condition": {
+     "100m_30deg": 9.345090264789466,
+     "100m_90deg": 14.340916956072427,
+     "30m_30deg": 18.072814912813072,
+     "30m_90deg": 28.916345272446453,
+     "60m_30deg": 12.180081690237541,
+     "60m_90deg": 17.622059779381836
+    },
+    "infinite_conditions": [],
+    "uninformative_test_pairs": 0,
+    "uninformative_test_pairs_by_gt_class": {
+     "car": 0,
+     "truck": 0,
+     "traffic-sign": 0,
+     "people": 0,
+     "motor": 0,
+     "bicycle": 0,
+     "traffic-light": 0,
+     "tricycle": 0,
+     "bridge": 0,
+     "bus": 0,
+     "boat": 0,
+     "ship": 0
+    },
+    "calib_pairs_by_condition": {
+     "100m_30deg": 47366,
+     "100m_90deg": 29406,
+     "30m_30deg": 39599,
+     "30m_90deg": 6395,
+     "60m_30deg": 64177,
+     "60m_90deg": 29138
+    },
+    "object_coverage": 0.9020821505270173,
+    "object_coverage_interval": [
+     0.8971466938195716,
+     0.9072506107543349
+    ],
+    "coverage_by_condition": {
+     "100m_30deg": 0.8958646852269877,
+     "100m_90deg": 0.9123577950295396,
+     "30m_30deg": 0.9024272779811212,
+     "30m_90deg": 0.9043717881879795,
+     "60m_30deg": 0.9039487833047911,
+     "60m_90deg": 0.8959679473818292
+    },
+    "frame_uniform_class_macro": {
+     "complete_dictionary_macro": 0.8205013591787186,
+     "complete_dictionary_status": "AVAILABLE",
+     "supported_class_macro": 0.8205013591787186,
+     "supported_classes": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ],
+     "n_supported": 12,
+     "n_dictionary": 12,
+     "missing_evaluation_classes": [],
+     "vacuous_infinite_threshold_classes": null,
+     "per_class": {
+      "car": 0.8739262527542128,
+      "truck": 0.8168085101807303,
+      "traffic-sign": 0.9046425930574256,
+      "people": 0.9591273201425262,
+      "motor": 0.8956133210229028,
+      "bicycle": 0.8722070308769913,
+      "traffic-light": 0.9019323753567058,
+      "tricycle": 0.8015119126556077,
+      "bridge": 0.9166666666666666,
+      "bus": 0.772711201136751,
+      "boat": 0.6841826538518181,
+      "ship": 0.44668647244228643
+     }
+    },
+    "frame_uniform_interval": {
+     "complete_dictionary": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_classes": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_class_list": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ]
+    },
+    "geometry_summary_scope": "object-pooled over all evaluation geometric matches; includes infinite thresholds",
+    "finite_threshold_test_pairs": 324088,
+    "normalized_margin_median": 0.22898811420355167,
+    "margin_px_median": 12.180081690237541
+   },
+   "global-linear": {
+    "q_global": 14.329478228960035,
+    "q_by_condition": null,
+    "infinite_conditions": null,
+    "uninformative_test_pairs": 0,
+    "uninformative_test_pairs_by_gt_class": {
+     "car": 0,
+     "truck": 0,
+     "traffic-sign": 0,
+     "people": 0,
+     "motor": 0,
+     "bicycle": 0,
+     "traffic-light": 0,
+     "tricycle": 0,
+     "bridge": 0,
+     "bus": 0,
+     "boat": 0,
+     "ship": 0
+    },
+    "calib_pairs_by_condition": {
+     "100m_30deg": 47366,
+     "100m_90deg": 29406,
+     "30m_30deg": 39599,
+     "30m_90deg": 6395,
+     "60m_30deg": 64177,
+     "60m_90deg": 29138
+    },
+    "object_coverage": 0.8968860309545555,
+    "object_coverage_interval": [
+     0.8907661466927085,
+     0.9028404488130389
+    ],
+    "coverage_by_condition": {
+     "100m_30deg": 0.9716108602959619,
+     "100m_90deg": 0.9123089692886089,
+     "30m_30deg": 0.8419219161369036,
+     "30m_90deg": 0.642883741714456,
+     "60m_30deg": 0.9358397387390975,
+     "60m_90deg": 0.8395284744899141
+    },
+    "frame_uniform_class_macro": {
+     "complete_dictionary_macro": 0.7992104514672049,
+     "complete_dictionary_status": "AVAILABLE",
+     "supported_class_macro": 0.7992104514672049,
+     "supported_classes": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ],
+     "n_supported": 12,
+     "n_dictionary": 12,
+     "missing_evaluation_classes": [],
+     "vacuous_infinite_threshold_classes": null,
+     "per_class": {
+      "car": 0.8346879014254996,
+      "truck": 0.7993146031585423,
+      "traffic-sign": 0.8998637302202263,
+      "people": 0.912744783160339,
+      "motor": 0.8554662203899331,
+      "bicycle": 0.7879787016490487,
+      "traffic-light": 0.8860576862438166,
+      "tricycle": 0.7721828188103848,
+      "bridge": 0.9166666666666666,
+      "bus": 0.7811517007648683,
+      "boat": 0.690663409160635,
+      "ship": 0.45374719595649826
+     }
+    },
+    "frame_uniform_interval": {
+     "complete_dictionary": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_classes": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_class_list": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ]
+    },
+    "geometry_summary_scope": "object-pooled over all evaluation geometric matches; includes infinite thresholds",
+    "finite_threshold_test_pairs": 324088,
+    "normalized_margin_median": 0.24777570195396342,
+    "margin_px_median": 14.329478228960035
+   },
+   "pose-conformal": {
+    "q_global": 14.3296906762339,
+    "q_by_condition": {
+     "100m_30deg": 9.346572227487016,
+     "100m_90deg": 14.346266855253704,
+     "30m_30deg": 18.072964560150307,
+     "30m_90deg": 28.97433933072008,
+     "60m_30deg": 12.180927842835297,
+     "60m_90deg": 17.6309600440703
+    },
+    "infinite_conditions": [],
+    "uninformative_test_pairs": 0,
+    "uninformative_test_pairs_by_gt_class": {
+     "car": 0,
+     "truck": 0,
+     "traffic-sign": 0,
+     "people": 0,
+     "motor": 0,
+     "bicycle": 0,
+     "traffic-light": 0,
+     "tricycle": 0,
+     "bridge": 0,
+     "bus": 0,
+     "boat": 0,
+     "ship": 0
+    },
+    "calib_pairs_by_condition": {
+     "100m_30deg": 47366,
+     "100m_90deg": 29406,
+     "30m_30deg": 39599,
+     "30m_90deg": 6395,
+     "60m_30deg": 64177,
+     "60m_90deg": 29138
+    },
+    "object_coverage": 0.9021500333242823,
+    "object_coverage_interval": [
+     0.8967830952713514,
+     0.9073201333737425
+    ],
+    "coverage_by_condition": {
+     "100m_30deg": 0.8958960371206421,
+     "100m_90deg": 0.9124066207704702,
+     "30m_30deg": 0.9024272779811212,
+     "30m_90deg": 0.9050420793922693,
+     "60m_30deg": 0.9039886096618742,
+     "60m_90deg": 0.8960837444127933
+    },
+    "frame_uniform_class_macro": {
+     "complete_dictionary_macro": 0.8205306941396451,
+     "complete_dictionary_status": "AVAILABLE",
+     "supported_class_macro": 0.8205306941396451,
+     "supported_classes": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ],
+     "n_supported": 12,
+     "n_dictionary": 12,
+     "missing_evaluation_classes": [],
+     "vacuous_infinite_threshold_classes": null,
+     "per_class": {
+      "car": 0.8739966205017341,
+      "truck": 0.8168386488184639,
+      "traffic-sign": 0.9046717713954275,
+      "people": 0.959221769808347,
+      "motor": 0.8957079371517,
+      "bicycle": 0.8722070308769913,
+      "traffic-light": 0.9019323753567058,
+      "tricycle": 0.8015119126556077,
+      "bridge": 0.9166666666666666,
+      "bus": 0.772711201136751,
+      "boat": 0.6842159228650592,
+      "ship": 0.44668647244228643
+     }
+    },
+    "frame_uniform_interval": {
+     "complete_dictionary": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_classes": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_class_list": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ]
+    },
+    "geometry_summary_scope": "object-pooled over all evaluation geometric matches; includes infinite thresholds",
+    "finite_threshold_test_pairs": 324088,
+    "normalized_margin_median": 0.2290228256120465,
+    "margin_px_median": 12.180927842835297
+   },
+   "global-conformal": {
+    "q_global": 14.3296906762339,
+    "q_by_condition": null,
+    "infinite_conditions": null,
+    "uninformative_test_pairs": 0,
+    "uninformative_test_pairs_by_gt_class": {
+     "car": 0,
+     "truck": 0,
+     "traffic-sign": 0,
+     "people": 0,
+     "motor": 0,
+     "bicycle": 0,
+     "traffic-light": 0,
+     "tricycle": 0,
+     "bridge": 0,
+     "bus": 0,
+     "boat": 0,
+     "ship": 0
+    },
+    "calib_pairs_by_condition": {
+     "100m_30deg": 47366,
+     "100m_90deg": 29406,
+     "30m_30deg": 39599,
+     "30m_90deg": 6395,
+     "60m_30deg": 64177,
+     "60m_90deg": 29138
+    },
+    "object_coverage": 0.8968891165362494,
+    "object_coverage_interval": [
+     0.8910924565878199,
+     0.9022407400127341
+    ],
+    "coverage_by_condition": {
+     "100m_30deg": 0.9716108602959619,
+     "100m_90deg": 0.9123089692886089,
+     "30m_30deg": 0.8419219161369036,
+     "30m_90deg": 0.642883741714456,
+     "60m_30deg": 0.9358397387390975,
+     "60m_90deg": 0.8395516338961069
+    },
+    "frame_uniform_class_macro": {
+     "complete_dictionary_macro": 0.7992108737951781,
+     "complete_dictionary_status": "AVAILABLE",
+     "supported_class_macro": 0.7992108737951781,
+     "supported_classes": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ],
+     "n_supported": 12,
+     "n_dictionary": 12,
+     "missing_evaluation_classes": [],
+     "vacuous_infinite_threshold_classes": null,
+     "per_class": {
+      "car": 0.8346929693611773,
+      "truck": 0.7993146031585423,
+      "traffic-sign": 0.8998637302202263,
+      "people": 0.912744783160339,
+      "motor": 0.8554662203899331,
+      "bicycle": 0.7879787016490487,
+      "traffic-light": 0.8860576862438166,
+      "tricycle": 0.7721828188103848,
+      "bridge": 0.9166666666666666,
+      "bus": 0.7811517007648683,
+      "boat": 0.690663409160635,
+      "ship": 0.45374719595649826
+     }
+    },
+    "frame_uniform_interval": {
+     "complete_dictionary": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_classes": {
+      "interval": null,
+      "undefined_draws": 47,
+      "draws": 1000,
+      "status": "UNAVAILABLE_MISSING_REQUIRED_DRAWS"
+     },
+     "supported_class_list": [
+      "car",
+      "truck",
+      "traffic-sign",
+      "people",
+      "motor",
+      "bicycle",
+      "traffic-light",
+      "tricycle",
+      "bridge",
+      "bus",
+      "boat",
+      "ship"
+     ]
+    },
+    "geometry_summary_scope": "object-pooled over all evaluation geometric matches; includes infinite thresholds",
+    "finite_threshold_test_pairs": 324088,
+    "normalized_margin_median": 0.247779375449367,
+    "margin_px_median": 14.3296906762339
+   }
+  },
+  "class_support_scope": "ground-truth class of class-agnostic geometric matches, not class-correct recall",
+  "class_support": {
+   "val": {
+    "car": {
+     "gt": 157993,
+     "geometric_pairs": 131664,
+     "tp_bearing_frames": 1809
+    },
+    "truck": {
+     "gt": 16711,
+     "geometric_pairs": 12882,
+     "tp_bearing_frames": 1062
+    },
+    "traffic-sign": {
+     "gt": 8000,
+     "geometric_pairs": 4163,
+     "tp_bearing_frames": 621
+    },
+    "people": {
+     "gt": 57718,
+     "geometric_pairs": 27357,
+     "tp_bearing_frames": 1086
+    },
+    "motor": {
+     "gt": 56601,
+     "geometric_pairs": 31323,
+     "tp_bearing_frames": 1240
+    },
+    "bicycle": {
+     "gt": 3128,
+     "geometric_pairs": 1116,
+     "tp_bearing_frames": 138
+    },
+    "traffic-light": {
+     "gt": 5208,
+     "geometric_pairs": 1412,
+     "tp_bearing_frames": 182
+    },
+    "tricycle": {
+     "gt": 2178,
+     "geometric_pairs": 1152,
+     "tp_bearing_frames": 237
+    },
+    "bridge": {
+     "gt": 143,
+     "geometric_pairs": 0,
+     "tp_bearing_frames": 0
+    },
+    "bus": {
+     "gt": 3084,
+     "geometric_pairs": 2211,
+     "tp_bearing_frames": 376
+    },
+    "boat": {
+     "gt": 3424,
+     "geometric_pairs": 2736,
+     "tp_bearing_frames": 79
+    },
+    "ship": {
+     "gt": 136,
+     "geometric_pairs": 65,
+     "tp_bearing_frames": 18
+    }
+   },
+   "test": {
+    "car": {
+     "gt": 231884,
+     "geometric_pairs": 193049,
+     "tp_bearing_frames": 2703
+    },
+    "truck": {
+     "gt": 23930,
+     "geometric_pairs": 18332,
+     "tp_bearing_frames": 1580
+    },
+    "traffic-sign": {
+     "gt": 11938,
+     "geometric_pairs": 6295,
+     "tp_bearing_frames": 952
+    },
+    "people": {
+     "gt": 90910,
+     "geometric_pairs": 45788,
+     "tp_bearing_frames": 1668
+    },
+    "motor": {
+     "gt": 82474,
+     "geometric_pairs": 45313,
+     "tp_bearing_frames": 1816
+    },
+    "bicycle": {
+     "gt": 4173,
+     "geometric_pairs": 1611,
+     "tp_bearing_frames": 233
+    },
+    "traffic-light": {
+     "gt": 7333,
+     "geometric_pairs": 2283,
+     "tp_bearing_frames": 281
+    },
+    "tricycle": {
+     "gt": 3128,
+     "geometric_pairs": 1475,
+     "tp_bearing_frames": 341
+    },
+    "bridge": {
+     "gt": 334,
+     "geometric_pairs": 16,
+     "tp_bearing_frames": 3
+    },
+    "bus": {
+     "gt": 4576,
+     "geometric_pairs": 3611,
+     "tp_bearing_frames": 591
+    },
+    "boat": {
+     "gt": 8331,
+     "geometric_pairs": 6075,
+     "tp_bearing_frames": 133
+    },
+    "ship": {
+     "gt": 441,
+     "geometric_pairs": 240,
+     "tp_bearing_frames": 30
+    }
+   }
+  }
+ },
+ "detection_test": {
+  "gt": 469452,
+  "tp": 392397,
+  "fp": 2857306,
+  "recall_pooled": 0.8358618133483295,
+  "recall_supported_gt_class_macro": 0.6478693941645449,
+  "recall_supported_gt_classes": [
+   "car",
+   "truck",
+   "traffic-sign",
+   "people",
+   "motor",
+   "bicycle",
+   "traffic-light",
+   "tricycle",
+   "bridge",
+   "bus",
+   "boat",
+   "ship"
+  ],
+  "recall_complete_dictionary_macro": 0.6478693941645449,
+  "fp_share": 0.8792514269765576,
+  "scope": "class-exact common matching; identical for margin-HCP and GWD-HCP",
+  "per_class": {
+   "car": {
+    "gt": 231884,
+    "tp": 216326,
+    "fp": 1008319,
+    "fn": 15558
+   },
+   "truck": {
+    "gt": 23930,
+    "tp": 15763,
+    "fp": 111932,
+    "fn": 8167
+   },
+   "traffic-sign": {
+    "gt": 11938,
+    "tp": 8873,
+    "fp": 77652,
+    "fn": 3065
+   },
+   "people": {
+    "gt": 90910,
+    "tp": 70130,
+    "fp": 901981,
+    "fn": 20780
+   },
+   "motor": {
+    "gt": 82474,
+    "tp": 62860,
+    "fp": 516058,
+    "fn": 19614
+   },
+   "bicycle": {
+    "gt": 4173,
+    "tp": 1690,
+    "fp": 30303,
+    "fn": 2483
+   },
+   "traffic-light": {
+    "gt": 7333,
+    "tp": 4275,
+    "fp": 58221,
+    "fn": 3058
+   },
+   "tricycle": {
+    "gt": 3128,
+    "tp": 1343,
+    "fp": 14128,
+    "fn": 1785
+   },
+   "bridge": {
+    "gt": 334,
+    "tp": 61,
+    "fp": 40217,
+    "fn": 273
+   },
+   "bus": {
+    "gt": 4576,
+    "tp": 3395,
+    "fp": 28492,
+    "fn": 1181
+   },
+   "boat": {
+    "gt": 8331,
+    "tp": 7382,
+    "fp": 56609,
+    "fn": 949
+   },
+   "ship": {
+    "gt": 441,
+    "tp": 299,
+    "fp": 13394,
+    "fn": 142
+   }
+  }
+ },
+ "protocol": {
+  "gwd-hcp": {
+   "q_by_class": {
+    "car": 17.78188244125829,
+    "truck": 22.71114272709895,
+    "traffic-sign": 14.787052290308438,
+    "people": 12.692315774543495,
+    "motor": 14.705775356894499,
+    "bicycle": 18.214077924578316,
+    "traffic-light": 18.332758959067785,
+    "tricycle": 21.240133357063424,
+    "bridge": 175.92705819028592,
+    "bus": 24.005979576311116,
+    "boat": 25.689165433486647,
+    "ship": 115.35311785689692
+   },
+   "test_pairs": 392397,
+   "uninformative_test_pairs": 0,
+   "infinite_classes": [],
+   "calib_pairs_by_class": {
+    "car": 147427,
+    "truck": 11564,
+    "traffic-sign": 6028,
+    "people": 44072,
+    "motor": 42988,
+    "bicycle": 1485,
+    "traffic-light": 2922,
+    "tricycle": 1088,
+    "bridge": 33,
+    "bus": 2163,
+    "boat": 3080,
+    "ship": 79
+   },
+   "test_pairs_by_class": {
+    "car": 216326,
+    "truck": 15763,
+    "traffic-sign": 8873,
+    "people": 70130,
+    "motor": 62860,
+    "bicycle": 1690,
+    "traffic-light": 4275,
+    "tricycle": 1343,
+    "bridge": 61,
+    "bus": 3395,
+    "boat": 7382,
+    "ship": 299
+   },
+   "calib_sources_by_class": {
+    "car": 1810,
+    "truck": 1011,
+    "traffic-sign": 731,
+    "people": 1241,
+    "motor": 1291,
+    "bicycle": 125,
+    "traffic-light": 284,
+    "tricycle": 223,
+    "bridge": 15,
+    "bus": 350,
+    "boat": 81,
+    "ship": 15
+   },
+   "frame_uniform_class_macro": {
+    "complete_dictionary_macro": 0.8983409346952995,
+    "complete_dictionary_status": "AVAILABLE",
+    "supported_class_macro": 0.8983409346952995,
+    "supported_classes": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "n_supported": 12,
+    "n_dictionary": 12,
+    "missing_evaluation_classes": [],
+    "vacuous_infinite_threshold_classes": [],
+    "per_class": {
+     "car": 0.9014609872224469,
+     "truck": 0.9178603616162593,
+     "traffic-sign": 0.8982665699851163,
+     "people": 0.8903555074176862,
+     "motor": 0.8864418679826699,
+     "bicycle": 0.9002694005192253,
+     "traffic-light": 0.8991039105668627,
+     "tricycle": 0.9230551472963953,
+     "bridge": 0.8870967741935484,
+     "bus": 0.8815235469296433,
+     "boat": 0.904180952137552,
+     "ship": 0.8904761904761906
+    }
+   },
+   "frame_uniform_interval": {
+    "complete_dictionary": {
+     "interval": [
+      0.883556253751365,
+      0.911972744134457
+     ],
+     "undefined_draws": 0,
+     "draws": 1000,
+     "status": "AVAILABLE_APPROXIMATE_PERCENTILE"
+    },
+    "supported_classes": {
+     "interval": [
+      0.883556253751365,
+      0.911972744134457
+     ],
+     "undefined_draws": 0,
+     "draws": 1000,
+     "status": "AVAILABLE_APPROXIMATE_PERCENTILE"
+    },
+    "supported_class_list": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ]
+   },
+   "object_coverage": 0.9400556069490847,
+   "object_coverage_interval": [
+    0.9361796244795718,
+    0.9438041373982486
+   ],
+   "per_class_frame_uniform": {
+    "car": 0.9014609872224469,
+    "truck": 0.9178603616162593,
+    "traffic-sign": 0.8982665699851163,
+    "people": 0.8903555074176862,
+    "motor": 0.8864418679826699,
+    "bicycle": 0.9002694005192253,
+    "traffic-light": 0.8991039105668627,
+    "tricycle": 0.9230551472963953,
+    "bridge": 0.8870967741935484,
+    "bus": 0.8815235469296433,
+    "boat": 0.904180952137552,
+    "ship": 0.8904761904761906
+   },
+   "geometry_summary_scope": "object-pooled over all evaluation TPs; includes infinite thresholds",
+   "finite_threshold_test_pairs": 392397,
+   "normalized_center_radius_median": 0.31302818884777883,
+   "normalized_center_radius_finite_threshold_only_median": 0.31302818884777883,
+   "informative_orientation_share": 0.3497121537626434,
+   "informative_orientation_share_scope": "object-pooled over evaluation TPs, not frame-uniform"
+  },
+  "margin-hcp": {
+   "q_by_class": {
+    "car": 19.958077837698458,
+    "truck": 24.89210677754473,
+    "traffic-sign": 15.378707775690158,
+    "people": 14.612805838972987,
+    "motor": 17.248990570110447,
+    "bicycle": 22.782210310176634,
+    "traffic-light": 20.632586210311608,
+    "tricycle": 29.551434289881293,
+    "bridge": 217.6796497592848,
+    "bus": 26.28105494138961,
+    "boat": 28.163726371978857,
+    "ship": 148.17449589925127
+   },
+   "test_pairs": 392397,
+   "uninformative_test_pairs": 0,
+   "infinite_classes": [],
+   "calib_pairs_by_class": {
+    "car": 147427,
+    "truck": 11564,
+    "traffic-sign": 6028,
+    "people": 44072,
+    "motor": 42988,
+    "bicycle": 1485,
+    "traffic-light": 2922,
+    "tricycle": 1088,
+    "bridge": 33,
+    "bus": 2163,
+    "boat": 3080,
+    "ship": 79
+   },
+   "test_pairs_by_class": {
+    "car": 216326,
+    "truck": 15763,
+    "traffic-sign": 8873,
+    "people": 70130,
+    "motor": 62860,
+    "bicycle": 1690,
+    "traffic-light": 4275,
+    "tricycle": 1343,
+    "bridge": 61,
+    "bus": 3395,
+    "boat": 7382,
+    "ship": 299
+   },
+   "calib_sources_by_class": {
+    "car": 1810,
+    "truck": 1011,
+    "traffic-sign": 731,
+    "people": 1241,
+    "motor": 1291,
+    "bicycle": 125,
+    "traffic-light": 284,
+    "tricycle": 223,
+    "bridge": 15,
+    "bus": 350,
+    "boat": 81,
+    "ship": 15
+   },
+   "frame_uniform_class_macro": {
+    "complete_dictionary_macro": 0.903523516383468,
+    "complete_dictionary_status": "AVAILABLE",
+    "supported_class_macro": 0.903523516383468,
+    "supported_classes": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ],
+    "n_supported": 12,
+    "n_dictionary": 12,
+    "missing_evaluation_classes": [],
+    "vacuous_infinite_threshold_classes": [],
+    "per_class": {
+     "car": 0.9012170348578695,
+     "truck": 0.9155712317871888,
+     "traffic-sign": 0.8971545716571406,
+     "people": 0.8894031299897109,
+     "motor": 0.8902889824294273,
+     "bicycle": 0.9137702498679231,
+     "traffic-light": 0.9064608203436229,
+     "tricycle": 0.9344778409995802,
+     "bridge": 0.9193548387096774,
+     "bus": 0.8794081197010404,
+     "boat": 0.8904134714965296,
+     "ship": 0.9047619047619049
+    }
+   },
+   "frame_uniform_interval": {
+    "complete_dictionary": {
+     "interval": [
+      0.8897339382103143,
+      0.9159214930638164
+     ],
+     "undefined_draws": 0,
+     "draws": 1000,
+     "status": "AVAILABLE_APPROXIMATE_PERCENTILE"
+    },
+    "supported_classes": {
+     "interval": [
+      0.8897339382103143,
+      0.9159214930638164
+     ],
+     "undefined_draws": 0,
+     "draws": 1000,
+     "status": "AVAILABLE_APPROXIMATE_PERCENTILE"
+    },
+    "supported_class_list": [
+     "car",
+     "truck",
+     "traffic-sign",
+     "people",
+     "motor",
+     "bicycle",
+     "traffic-light",
+     "tricycle",
+     "bridge",
+     "bus",
+     "boat",
+     "ship"
+    ]
+   },
+   "object_coverage": 0.9369057357726995,
+   "object_coverage_interval": [
+    0.9329642502121689,
+    0.9406889728520184
+   ],
+   "per_class_frame_uniform": {
+    "car": 0.9012170348578695,
+    "truck": 0.9155712317871888,
+    "traffic-sign": 0.8971545716571406,
+    "people": 0.8894031299897109,
+    "motor": 0.8902889824294273,
+    "bicycle": 0.9137702498679231,
+    "traffic-light": 0.9064608203436229,
+    "tricycle": 0.9344778409995802,
+    "bridge": 0.9193548387096774,
+    "bus": 0.8794081197010404,
+    "boat": 0.8904134714965296,
+    "ship": 0.9047619047619049
+   },
+   "geometry_summary_scope": "object-pooled over all evaluation TPs; includes infinite thresholds",
+   "finite_threshold_test_pairs": 392397,
+   "normalized_margin_median": 0.35596387717176164,
+   "normalized_margin_finite_threshold_only_median": 0.35596387717176164
+  }
+ },
+ "seconds": 603.2260653972626,
+ "seconds_scope": "analysis wall time including loading, matching, scores, bootstrap and summaries; excludes detector inference; not a per-arm or complete-system benchmark",
+ "script_sha256": "de6a4daeb295ee22a206c85fcf52a15ad8b3710f2ab5e17b73d76ba22cbd7445",
+ "contract_sha256": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+ "nonfinite_values": {}
+}

@@ -127,7 +127,8 @@ class TestRecall:
         r = _run(["recall", "--matched", str(pipeline_paths["matched"]), "--beta", "0.5", "--delta", "0.2", "-o", str(out)])
         assert r.returncode == 0, r.stderr
         res = json.loads(out.read_text())
-        assert "certified" in res
+        assert res["certified"] is False
+        assert res["validity"] == "diagnostic_only"
 
     def test_recall_mondrian_runs(self, pipeline_paths):
         out = pipeline_paths["tmp"] / "recall_mondrian.json"
@@ -136,7 +137,9 @@ class TestRecall:
         )
         assert r.returncode == 0, r.stderr
         res = json.loads(out.read_text())
-        assert "pooled_marginal" in res
+        assert res["pooled_marginal"] is None
+        assert res["n_classes_certified"] == 0
+        assert res["delta_per_class"] == pytest.approx(0.2 / res["n_classes"])
 
 
 class TestCertifyApply:
@@ -151,7 +154,8 @@ class TestCertifyApply:
         assert r.returncode == 0, r.stderr
         rows = [json.loads(l) for l in regions_out.read_text().strip().split("\n")]
         assert len(rows) > 0
-        assert "envelope" in rows[0]
+        assert rows[0]["envelope"]["continuous_outer_bound"] is False
+        assert rows[0]["coverage_scope"] == "matched_tp_under_exchangeability"
 
     def test_certify_refuses_for_non_gwd_score(self, pipeline_paths):
         cert_path = pipeline_paths["tmp"] / "cert_naive_for_apply.json"
@@ -204,3 +208,14 @@ def test_cli_help_runs():
     r = _run(["--help"])
     assert r.returncode == 0
     assert "rotcert" in r.stdout.lower() or "usage" in r.stdout.lower()
+
+
+def test_cli_keeps_absent_class_in_family(pipeline_paths):
+    out = pipeline_paths["tmp"] / "declared-family.json"
+    r = _run(["recall", "--matched", str(pipeline_paths["matched"]), "--mondrian",
+              "--classes", "ship", "harbor", "plane", "absent", "-o", str(out)])
+    assert r.returncode == 0, r.stderr
+    result = json.loads(out.read_text())
+    assert result["n_classes"] == 4
+    assert result["per_class"]["absent"]["reason"] == "no_class_data"
+    assert "diagnostic_only" in r.stdout

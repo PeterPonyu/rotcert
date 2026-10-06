@@ -1,35 +1,11 @@
-"""G1 coverage sets: the GWD-ball certificate and its conservative per-parameter
-envelope (design §2.3).
+"""GWD-ball membership, exact center bounds and sampled shape extents.
 
-**Reader warning, restated from the design doc (do not violate this in any consumer):**
-the certificate is the GWD-BALL ``S(p) = {b : GWD(p, b) <= q_hat}``. The per-parameter
-envelope computed here is a conservative BOUNDING BOX around that ball for
-visualization only -- it over-covers, and its per-axis widths are NOT calibrated
-marginal intervals. Never report an envelope width as if it carried the ``1 - alpha``
-guarantee on its own; only the ball does.
-
-Center envelope (exact, closed form)
---------------------------------------
-``GWD^2 = ||mu_pred - mu||^2 + Bures^2(Sigma_pred, Sigma)`` is additive with
-``Bures^2 >= 0``, so any point in the ball has ``||mu_pred - mu||^2 <= q_hat^2``,
-hence ``|cx - cx_pred| <= q_hat`` and ``|cy - cy_pred| <= q_hat`` individually -- a
-TIGHT bound (attained by any same-shape box shifted by exactly ``q_hat`` along one
-axis, which has ``Bures^2 = 0``).
-
-Shape envelope (w, h, theta): grid-search bound, not closed form
-----------------------------------------------------------------------
-Unlike the center, ``Bures^2(Sigma_pred, Sigma(w,h,theta))`` does not decompose per
-shape parameter, so there is no simple closed-form per-axis bound. We instead grid-scan
-the reachable ``(w, h, theta)`` neighborhood (canonical: ``h`` swept as a fraction of
-``w`` in ``(0, w]``, so every grid point is already le90-canonical) and report, PER
-AXIS, the min/max value attained by any grid point whose Bures^2 lies inside the
-remaining budget ``q_hat^2`` (full budget, since the worst case for shape spends none
-of it on center offset -- ``mu = mu_pred`` exactly). This is a genuine (not merely
-per-coordinate-conditional) marginal bound: for THETA specifically, because it is
-angular, the feasible set can WRAP through the le90 seam (``+-pi/2``) or, for a
-near-square predicted box, cover the FULL arc (the square-stratum "angular vacuity"
-the design calls out, §4.5) -- :func:`_circular_arc_bounds` detects both cases rather
-than reporting a naive (and wrong) ``[min, max]`` over the raw grid values.
+Center bounds follow analytically from nonnegative Bures distance. Shape extrema
+are from feasible grid points only, not conservative bounds on the continuous
+GWD ball and not calibrated marginal intervals. Increasing resolution or padding
+does not establish an outward error bound. Probability statements require the
+separate calibrated-score assumptions. These diagnostics do not certify false
+positives or membership of arbitrary deployment detections in the TP population.
 """
 
 from __future__ import annotations
@@ -47,7 +23,7 @@ def gwd_ball_membership(
     pred_obb: np.ndarray, candidate_obb: np.ndarray, q_hat: float
 ) -> np.ndarray:
     """Boolean: is ``candidate_obb`` inside the GWD-ball ``S(pred_obb)`` of radius
-    ``q_hat``? THIS is the certificate; :func:`envelope` is reporting-only."""
+    ``q_hat``? This is geometric set membership; a coverage interpretation requires valid calibration."""
     if q_hat < 0:
         raise ValueError("gwd_ball_membership: q_hat must be non-negative")
     return obb_gwd(pred_obb, candidate_obb) <= q_hat
@@ -64,12 +40,12 @@ def _circular_arc_bounds(feasible_thetas: np.ndarray, all_thetas: np.ndarray):
     """Smallest-enclosing circular arc (period ``pi``) covering ``feasible_thetas``.
 
     Returns ``(lo, hi, full_arc)``. ``full_arc=True`` means every grid angle is
-    feasible (the near-square case -- report the full ``[-pi/2, pi/2)`` arc, per the
-    design's square-stratum "angular vacuity" disclosure). Otherwise ``lo <= hi`` with
+    feasible on the sampled grid (report the full ``[-pi/2, pi/2)`` arc, per the
+    sampled angle range, without a continuous-set guarantee). Otherwise ``lo <= hi`` with
     ``hi`` possibly ``>= pi/2`` (a wrap through the seam is represented by letting the
     arc continue past ``pi/2``; callers wanting a display-range value should take
     ``hi - pi`` if ``hi >= pi/2``, but the raw ``(lo, hi)`` is the mathematically
-    correct arc and is what the ball-in-envelope containment check must use).
+    arc enclosing the sampled angles only).
     """
     if feasible_thetas.size == 0:
         return None
@@ -100,37 +76,21 @@ def shape_envelope(
     n_theta: int = 181,
     min_w_pad: float = 1e-3,
 ) -> Dict[str, Any]:
-    """Conservative grid-search envelope on ``(w, h, theta)`` (see module docstring).
+    """Sampled feasible shape extents, not an outer envelope.
 
-    Parameters
-    ----------
-    pred_obb:
-        ``(cx, cy, w, h, theta)`` -- only ``w, h, theta`` are used (canonicalized).
-    q_hat:
-        GWD-ball radius.
-    w_pad_factor, min_w_pad:
-        The ``w`` search window is
-        ``[max(eps, w_pred - pad), w_pred + pad]``, ``pad = w_pad_factor * q_hat +
-        min_w_pad``. Generous by construction (over-covers rather than clipping the
-        true boundary) -- raise ``w_pad_factor`` if :func:`shape_envelope` reports a
-        feasible region touching the grid edge (checked via ``touches_w_grid_edge``
-        in the returned dict; callers should treat that as "re-run with a wider pad,"
-        not as the true bound).
-    n_w, n_h, n_theta:
-        Grid resolution. ``h`` is swept as ``n_h`` fractions of each candidate ``w``
-        in ``(0, w]`` so every grid point is le90-canonical by construction.
-
-    Returns
-    -------
-    dict
-        ``w`` (lo, hi), ``h`` (lo, hi), ``theta`` (lo, hi, possibly wrapped past
-        ``pi/2`` -- see :func:`_circular_arc_bounds`), ``theta_full_arc`` (bool),
-        ``touches_w_grid_edge`` (bool, a resolution/padding warning), ``degenerate``
-        (bool: q_hat too small relative to grid resolution for any grid point to be
-        feasible -- the envelope collapses to the predicted box exactly, a
-        (correctly) conservative but not visually useful report; increase resolution
-        for very small q_hat).
+    ``bounds_kind`` is always ``sampled_feasible_extrema`` and
+    ``continuous_outer_bound`` is always false. If no grid point is feasible,
+    shape bounds are null, ``degenerate`` is true, and ``status`` reports
+    ``insufficient_grid_resolution``. The exact center bounds remain usable.
+    All-angle grid feasibility is budget saturation at this grid resolution;
+    it does not prove continuous angular coverage or identify near-square boxes.
     """
+    if not np.isfinite(q_hat) or q_hat < 0:
+        raise ValueError("shape diagnostics require a finite, non-negative radius")
+    if any(type(n) is not int or n < 2 for n in (n_w, n_h, n_theta)):
+        raise ValueError("grid dimensions must be integers of at least two")
+    if not np.isfinite(w_pad_factor) or w_pad_factor <= 0 or not np.isfinite(min_w_pad) or min_w_pad <= 0:
+        raise ValueError("grid padding must be finite and positive")
     pred_obb = np.asarray(pred_obb, dtype=float)
     w_p, h_p, theta_p = canonicalize_le90(pred_obb[2], pred_obb[3], pred_obb[4])
     w_p, h_p, theta_p = float(w_p), float(h_p), float(theta_p)
@@ -154,9 +114,12 @@ def shape_envelope(
 
     if not feasible.any():
         return {
-            "w": (w_p, w_p),
-            "h": (h_p, h_p),
-            "theta": (theta_p, theta_p),
+            "w": None,
+            "h": None,
+            "theta": None,
+            "status": "insufficient_grid_resolution",
+            "bounds_kind": "sampled_feasible_extrema",
+            "continuous_outer_bound": False,
             "theta_full_arc": False,
             "touches_w_grid_edge": False,
             "degenerate": True,
@@ -183,13 +146,14 @@ def shape_envelope(
         "theta_full_arc": bool(full_arc),
         "touches_w_grid_edge": touches_edge,
         "degenerate": False,
+        "status": "sampled_feasible_extrema",
+        "bounds_kind": "sampled_feasible_extrema",
+        "continuous_outer_bound": False,
     }
 
 
 def envelope(pred_obb: np.ndarray, q_hat: float, **shape_kwargs: Any) -> Dict[str, Any]:
-    """Full conservative per-parameter envelope: :func:`center_envelope` +
-    :func:`shape_envelope`, merged into one dict (``cx``, ``cy``, ``w``, ``h``,
-    ``theta``, ``theta_full_arc``, ``touches_w_grid_edge``, ``degenerate``)."""
+    """Exact center bounds plus explicitly uncalibrated sampled shape extents."""
     out = dict(center_envelope(pred_obb, q_hat))
     out.update(shape_envelope(pred_obb, q_hat, **shape_kwargs))
     return out

@@ -1,0 +1,83 @@
+[
+ {
+  "overlap_px": 0,
+  "sources": 458,
+  "tiles": 3579,
+  "tp_bearing_sources": 449,
+  "sources_used": 449,
+  "role_sources": {
+   "cal": 180,
+   "design": 90,
+   "eval": 179
+  },
+  "excluded_unmapped_sources": [],
+  "excluded_unmapped_tp_pairs": 0,
+  "matched_pairs": 40966,
+  "matched_pairs_used": 40966,
+  "role_changes_if_redrawn": 69,
+  "role_changes_if_redrawn_common_sources": 68,
+  "classes": 15,
+  "classes_defined": 15,
+  "pooled_macro": 0.8706567034203286,
+  "hcp_macro": 0.9362088813458761,
+  "pooled_min_class": 0.7825396825396825,
+  "hcp_min_class": 0.8714285714285713,
+  "hcp_classes_below_090": 4,
+  "pooled_classes_below_090": 10
+ },
+ {
+  "overlap_px": 200,
+  "sources": 458,
+  "tiles": 4652,
+  "tp_bearing_sources": 450,
+  "sources_used": 450,
+  "role_sources": {
+   "cal": 180,
+   "design": 90,
+   "eval": 180
+  },
+  "excluded_unmapped_sources": [],
+  "excluded_unmapped_tp_pairs": 0,
+  "matched_pairs": 48636,
+  "matched_pairs_used": 48636,
+  "role_changes_if_redrawn": 0,
+  "role_changes_if_redrawn_common_sources": 0,
+  "classes": 15,
+  "classes_defined": 15,
+  "pooled_macro": 0.855689132293655,
+  "hcp_macro": 0.9154816692495303,
+  "pooled_min_class": 0.7322866877599199,
+  "hcp_min_class": 0.7916666666666666,
+  "hcp_classes_below_090": 6,
+  "pooled_classes_below_090": 12
+ },
+ {
+  "overlap_px": 500,
+  "sources": 458,
+  "tiles": 8599,
+  "tp_bearing_sources": 451,
+  "sources_used": 449,
+  "role_sources": {
+   "cal": 180,
+   "design": 90,
+   "eval": 179
+  },
+  "excluded_unmapped_sources": [
+   "P1210",
+   "P1542"
+  ],
+  "excluded_unmapped_tp_pairs": 2,
+  "matched_pairs": 76091,
+  "matched_pairs_used": 76089,
+  "role_changes_if_redrawn": 117,
+  "role_changes_if_redrawn_common_sources": 114,
+  "classes": 15,
+  "classes_defined": 15,
+  "pooled_macro": 0.8550760499379518,
+  "hcp_macro": 0.9227821496885481,
+  "pooled_min_class": 0.7016414326374537,
+  "hcp_min_class": 0.8436803712645309,
+  "hcp_classes_below_090": 6,
+  "pooled_classes_below_090": 12
+ }
+]

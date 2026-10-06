@@ -1,0 +1,228 @@
+{
+ "schema": "rotcert.codrone-numbers.v1",
+ "numbers": {
+  "pose-linear": {
+   "per_class": {
+    "car": 0.8739262527542128,
+    "truck": 0.8168085101807303,
+    "traffic-sign": 0.9046425930574256,
+    "people": 0.9591273201425262,
+    "motor": 0.8956133210229028,
+    "bicycle": 0.8722070308769913,
+    "traffic-light": 0.9019323753567058,
+    "tricycle": 0.8015119126556077,
+    "bridge": 0.9166666666666666,
+    "bus": 0.772711201136751,
+    "boat": 0.6841826538518181,
+    "ship": 0.44668647244228643
+   },
+   "macro": 0.8205013591787186,
+   "macro_interval": null,
+   "undefined_draws": 47,
+   "draws": 1000,
+   "object": 0.9020821505270173,
+   "object_interval": [
+    0.8971466938195716,
+    0.9072506107543349
+   ],
+   "by_condition": {
+    "100m_30deg": 0.8958646852269877,
+    "100m_90deg": 0.9123577950295396,
+    "30m_30deg": 0.9024272779811212,
+    "30m_90deg": 0.9043717881879795,
+    "60m_30deg": 0.9039487833047911,
+    "60m_90deg": 0.8959679473818292
+   }
+  },
+  "global-linear": {
+   "per_class": {
+    "car": 0.8346879014254996,
+    "truck": 0.7993146031585423,
+    "traffic-sign": 0.8998637302202263,
+    "people": 0.912744783160339,
+    "motor": 0.8554662203899331,
+    "bicycle": 0.7879787016490487,
+    "traffic-light": 0.8860576862438166,
+    "tricycle": 0.7721828188103848,
+    "bridge": 0.9166666666666666,
+    "bus": 0.7811517007648683,
+    "boat": 0.690663409160635,
+    "ship": 0.45374719595649826
+   },
+   "macro": 0.7992104514672049,
+   "macro_interval": null,
+   "undefined_draws": 47,
+   "draws": 1000,
+   "object": 0.8968860309545555,
+   "object_interval": [
+    0.8907661466927085,
+    0.9028404488130389
+   ],
+   "by_condition": {
+    "100m_30deg": 0.9716108602959619,
+    "100m_90deg": 0.9123089692886089,
+    "30m_30deg": 0.8419219161369036,
+    "30m_90deg": 0.642883741714456,
+    "60m_30deg": 0.9358397387390975,
+    "60m_90deg": 0.8395284744899141
+   }
+  },
+  "margin-hcp": {
+   "per_class": {
+    "car": 0.9012170348578695,
+    "truck": 0.9155712317871888,
+    "traffic-sign": 0.8971545716571406,
+    "people": 0.8894031299897109,
+    "motor": 0.8902889824294273,
+    "bicycle": 0.9137702498679231,
+    "traffic-light": 0.9064608203436229,
+    "tricycle": 0.9344778409995802,
+    "bridge": 0.9193548387096774,
+    "bus": 0.8794081197010404,
+    "boat": 0.8904134714965296,
+    "ship": 0.9047619047619049
+   },
+   "macro": 0.903523516383468,
+   "macro_interval": [
+    0.8897339382103143,
+    0.9159214930638164
+   ],
+   "undefined_draws": 0,
+   "draws": 1000,
+   "object": 0.9369057357726995,
+   "object_interval": [
+    0.9329642502121689,
+    0.9406889728520184
+   ]
+  },
+  "gwd-hcp": {
+   "per_class": {
+    "car": 0.9014609872224469,
+    "truck": 0.9178603616162593,
+    "traffic-sign": 0.8982665699851163,
+    "people": 0.8903555074176862,
+    "motor": 0.8864418679826699,
+    "bicycle": 0.9002694005192253,
+    "traffic-light": 0.8991039105668627,
+    "tricycle": 0.9230551472963953,
+    "bridge": 0.8870967741935484,
+    "bus": 0.8815235469296433,
+    "boat": 0.904180952137552,
+    "ship": 0.8904761904761906
+   },
+   "macro": 0.8983409346952995,
+   "macro_interval": [
+    0.883556253751365,
+    0.911972744134457
+   ],
+   "undefined_draws": 0,
+   "draws": 1000,
+   "object": 0.9400556069490847,
+   "object_interval": [
+    0.9361796244795718,
+    0.9438041373982486
+   ]
+  },
+  "conformal_max_displayed_shift_points": "0.1",
+  "native_pairs": 324088,
+  "native_test_frames": {
+   "car": 2703,
+   "truck": 1580,
+   "traffic-sign": 952,
+   "people": 1668,
+   "motor": 1816,
+   "bicycle": 233,
+   "traffic-light": 281,
+   "tricycle": 341,
+   "bridge": 3,
+   "bus": 591,
+   "boat": 133,
+   "ship": 30
+  },
+  "protocol_pairs": 392397,
+  "gt": {
+   "car": 231884,
+   "truck": 23930,
+   "traffic-sign": 11938,
+   "people": 90910,
+   "motor": 82474,
+   "bicycle": 4173,
+   "traffic-light": 7333,
+   "tricycle": 3128,
+   "bridge": 334,
+   "bus": 4576,
+   "boat": 8331,
+   "ship": 441
+  },
+  "tp": {
+   "car": 216326,
+   "truck": 15763,
+   "traffic-sign": 8873,
+   "people": 70130,
+   "motor": 62860,
+   "bicycle": 1690,
+   "traffic-light": 4275,
+   "tricycle": 1343,
+   "bridge": 61,
+   "bus": 3395,
+   "boat": 7382,
+   "ship": 299
+  },
+  "gt_total": 469452,
+  "tp_total": 392397,
+  "fp_share": 0.8792514269765576,
+  "recall_pooled": 0.8358618133483295,
+  "recall_class_macro": 0.6478693941645449,
+  "gwd_informative_orientation_share": 0.3497121537626434,
+  "gwd_normalized_center_radius_median": 0.31302818884777883,
+  "splits": {
+   "val": {
+    "frames": 2000,
+    "tiles": 56000
+   },
+   "test": {
+    "frames": 3002,
+    "tiles": 84056
+   }
+  },
+  "locations_shared": 46,
+  "recordings_shared": 576,
+  "frames_shared": 0,
+  "locations": [
+   46,
+   46
+  ],
+  "ap": {
+   "AP50": 0.44390008848813917,
+   "AP75": 0.1913679959495841
+  },
+  "monitoring_check": {
+   "reconstructed": {
+    "mAP": 0.19144948610404652,
+    "AP50": 0.3868351425580292,
+    "AP75": 0.176888098458987
+   },
+   "logged": {
+    "mAP": 0.1921,
+    "AP50": 0.3881,
+    "AP75": 0.1776
+   },
+   "tiles": 560
+  },
+  "monitoring_max_gap_points": 0.12648574419708014,
+  "reported_AP75": "22.91"
+ },
+ "sources": {
+  "acceptance": "<rotcert-root>/var/eav-final-20261005/EAV-FINAL-ACCEPTANCE.json",
+  "acceptance_sha256": "2a5b5f1d0482a8479c2a5f03438367e8f49720412abd1e65cf57367ce695cf28",
+  "analysis": "<rotcert-root>/var/eav-final-20261005/analysis-final-v2/ANALYSIS.json",
+  "analysis_sha256": "18d886a990af1a9602f833ad20a0dcb2f663df7477c19d2dad066ac18af27732",
+  "ap_test": "<rotcert-root>/var/eav-final-20261005/detection-ap/AP-test-full.json",
+  "ap_test_sha256": "3a5fbc934cb2b81b038e383dd520aec7a0543d2ded2717cd155405a898342aa1",
+  "ap_check": "<rotcert-root>/var/eav-final-20261005/detection-ap/AP-val-first2800-rank0.json",
+  "ap_check_sha256": "3c24f5b686f66622cc74bcf880501d3949e0484ccd0c0c160a88e02c18526c2c",
+  "logged": "<rotcert-root>/var/eav-final-20261005/detection-ap/train-full-final-epoch-eval.json",
+  "logged_sha256": "2e1adf6bef7dd657595e8405e5a9cc352c3c9a758aae2f3d13cc72c5a6129636",
+  "reported_AP75": "abstract of the cited EAV-DETR article (DOI 10.1016/j.isprsjprs.2026.02.009)"
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "schema": "rotcert.eav-final-acceptance.v2",
+ "stage_dir": "<rotcert-root>/var/eav-final-20261005/analysis-final-v2",
+ "accepted": true,
+ "checks": {
+  "stage_files_present": true,
+  "no_failed_receipt": true,
+  "receipts_parse": true,
+  "completed_extends_started": true,
+  "final_stage_identity": true,
+  "final_weights": true,
+  "training_config": true,
+  "approved_stage_scripts": true,
+  "steps_exact": true,
+  "completed_binds_analysis": true,
+  "export_file_set": true,
+  "exports_pass_frozen_contract": true,
+  "export_receipt_fields": true,
+  "pulled_receipts_equal_consumed": true,
+  "analysis_inputs_exact": true,
+  "inventory_full_split_counts": true,
+  "inventory_prefix_matches_diagnostic": true,
+  "inventory_matches_image_folders": true,
+  "analysis_identity": true,
+  "analysis_dependencies_pinned": true,
+  "analysis_splits_match_exports": true,
+  "analysis_sections_complete": true,
+  "replay_reproduces_analysis": true
+ },
+ "details": {
+  "approved_stage_scripts": {
+   "recorded": {
+    "run_stage.py": "817264ec27286366b8c72eda3fd333a65ddcf903a8490106c0c2c56140377c23",
+    "export_eav.py": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "export_contract.py": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "analyze_eav.py": "de6a4daeb295ee22a206c85fcf52a15ad8b3710f2ab5e17b73d76ba22cbd7445"
+   },
+   "local_lane": {
+    "run_stage.py": "817264ec27286366b8c72eda3fd333a65ddcf903a8490106c0c2c56140377c23",
+    "export_eav.py": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+    "export_contract.py": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+    "analyze_eav.py": "de6a4daeb295ee22a206c85fcf52a15ad8b3710f2ab5e17b73d76ba22cbd7445"
+   },
+   "other_recorded_unused": [
+    "validate_numerics.py",
+    "validate_training_patches.py"
+   ]
+  },
+  "steps_exact": {
+   "exports": 10,
+   "analysis_ok": true
+  },
+  "export_file_set": {
+   "missing": [],
+   "extra": []
+  },
+  "export_receipt_fields": {
+   "mismatches": [],
+   "weights": [
+    "model"
+   ]
+  },
+  "pulled_receipts_equal_consumed": {
+   "differing": []
+  },
+  "analysis_inputs_exact": {
+   "differing": []
+  },
+  "inventory_prefix_matches_diagnostic": {
+   "val": {
+    "diagnostic_tiles": 200,
+    "equal": true,
+    "prefix_sha256": "6a80b58689775581cddbd9e161bb6e6cc6b91c9902f7bbcad6a713937f0b868f"
+   },
+   "test": {
+    "diagnostic_tiles": 200,
+    "equal": true,
+    "prefix_sha256": "2aa9c1e1eeb27c0ac529176935ba1bde3ca8957299db4303ad283fc9c01ef12a"
+   }
+  },
+  "inventory_matches_image_folders": {
+   "val": {
+    "listed": 56000,
+    "images": 56000,
+    "index_order_equals_listing": true,
+    "listing_sha256": "45e3b71abddb45780ea41f7f519947d6b4d938a57b16ae9b4529411db580c66e"
+   },
+   "test": {
+    "listed": 84056,
+    "images": 84056,
+    "index_order_equals_listing": true,
+    "listing_sha256": "47ad709e7ec1595760526277c479d2dcb9ca71159981f02eac35240f8d63f81e"
+   }
+  },
+  "analysis_dependencies_pinned": {
+   "differing": []
+  },
+  "analysis_splits_match_exports": {
+   "val": {},
+   "test": {}
+  },
+  "analysis_sections_complete": {
+   "native": true,
+   "protocol": true,
+   "detection": true,
+   "other": true,
+   "nonfinite_values": 0
+  },
+  "replay_reproduces_analysis": {
+   "replay_sha256": "c79da1ff328bc740a639094b5103cf23f1fedf98dfd4139ceac3215a234fe49b",
+   "differing_top_level_keys": [],
+   "seconds": [
+    603.2260653972626,
+    566.1573305130005
+   ]
+  }
+ },
+ "not_run": [],
+ "receipts_sha256": {
+  "STARTED.json": "29a59944fcde04eca73085966fa9988ac250efa63c78c986e9d2452651364cdc",
+  "COMPLETED.json": "a67a5b0f1c69a7fbc85d9da5ed73f76cee39e074bfef3f6495b17f71cef2bb9d",
+  "ANALYSIS.json": "18d886a990af1a9602f833ad20a0dcb2f663df7477c19d2dad066ac18af27732"
+ },
+ "spec": {
+  "final_checkpoint": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+  "config_hash": "10ebacb7f37f6679cd982a1cc73b0e3a6d1efc000f366f57848f76ec8c1bcc8e",
+  "approved_scripts": {
+   "run_stage.py": "817264ec27286366b8c72eda3fd333a65ddcf903a8490106c0c2c56140377c23",
+   "export_eav.py": "b079c82a46e71304aa144bf7c773a8abd7a28416faa6a9d2ca38a7259c362d90",
+   "export_contract.py": "c79b8d1b6df701a24f50d60246b2b894fe970b1ed887bff9ccc8263ef7f0ce95",
+   "analyze_eav.py": "de6a4daeb295ee22a206c85fcf52a15ad8b3710f2ab5e17b73d76ba22cbd7445"
+  },
+  "dependencies": {
+   "s1/core.py": "3e8cd87d5cee1effbffad0966c96ae5c09701d51a8edb806fbcf4678aac0fe5d",
+   "s1/vendor/gwd.py": "4438a38b0773f5ceb095ac092d5474af41b7091b81b8add6becdda23474d52de",
+   "src/EAV-DETR/tools/geometry_utils.py": "4f9e13cb4142fd55d00ef8e397578f9d8a887ce40719a14137cd1047573dbca0",
+   "src/EAV-DETR/src/zoo/eavdetr/oriented_ops.py": "36f52e09ae951287f56bb4888be41451240cf9bfd2442b2fbf2e5690619e7c9f"
+  },
+  "split_tiles": {
+   "val": 56000,
+   "test": 84056
+  },
+  "num_shards": 5,
+  "min_score": 0.05
+ },
+ "script_sha256": "91a152204560da0fa2aab493cdb673bcb7ddbe275d53ae009d4db97471cc306a",
+ "scope": "Engineering and provenance acceptance: the analysis is the single, complete, approved final-stage execution on the full official splits. The tile order is reconstructed from the split image folders listed on the box at pull time under the loader rule; it is not a list approved before training. Not a scientific judgement.",
+ "use_rule": "Only an accepted record may feed the manuscript, the supplement or the response. Earlier smoke and diagnostic analyses stay history."
+}

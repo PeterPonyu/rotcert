@@ -1,0 +1,1080 @@
+{
+ "schema": "rotcert.diorval-numbers.v1",
+ "families": {
+  "diorval-orcnn-s0": {
+   "name": "O-RCNN",
+   "pooled": 0.8692890793802895,
+   "hcp": 0.9070621124787719,
+   "gain": 0.037773033098482345,
+   "gain_interval": [
+    0.031117763545503028,
+    0.04100525607025312
+   ],
+   "hcp99": [
+    0.8938262951390563,
+    0.9082317124805995
+   ],
+   "hcp95": [
+    0.8957960501653169,
+    0.9064297174052248
+   ],
+   "frozen": "NO_UNDERCOVERAGE_DETECTED",
+   "amended": "WITHIN_1PP_SUPPORTED",
+   "mc": {
+    "lower_end_bracket": [
+     0.8929651619482302,
+     0.894150287284344
+    ],
+    "upper_end_bracket": [
+     0.9080391691734924,
+     0.908588201513173
+    ],
+    "frozen_rule_mc_sensitive": false,
+    "amendment_rule_mc_sensitive": false,
+    "five_block_labels": [
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ]
+    ],
+    "five_blocks_agree": true
+   },
+   "missing_draws": 0,
+   "draws": 5000,
+   "sources": 5337,
+   "fixed_hcp": 0.9218224268373156,
+   "fixed_pooled": 0.8875719560874901,
+   "fixed_hcp95": [
+    0.8976110523819645,
+    0.9311186938685098
+   ],
+   "counts": {
+    "tp": 29494,
+    "fp": 26077,
+    "fn": 5944,
+    "val_images_with_gt": 5863
+   },
+   "rerun": null,
+   "per_class": {
+    "airplane": [
+     0.8682781452770181,
+     0.8936089374104517
+    ],
+    "airport": [
+     0.9076959525338617,
+     0.9084535282914373
+    ],
+    "baseballfield": [
+     0.8715619616847714,
+     0.903687257260338
+    ],
+    "basketballcourt": [
+     0.893462808995146,
+     0.9103169774874402
+    ],
+    "bridge": [
+     0.8909558790752812,
+     0.899377857295425
+    ],
+    "chimney": [
+     0.8905054447783753,
+     0.918729081514347
+    ],
+    "dam": [
+     0.8974197440145397,
+     0.8974197440145397
+    ],
+    "expressway-service-area": [
+     0.8765539520754594,
+     0.9052260738318108
+    ],
+    "expressway-toll-station": [
+     0.925816639424981,
+     0.925816639424981
+    ],
+    "golffield": [
+     0.922544064845864,
+     0.9262722143335071
+    ],
+    "groundtrackfield": [
+     0.8852753201233232,
+     0.9066085485973522
+    ],
+    "harbor": [
+     0.8928561494759728,
+     0.9120275496893804
+    ],
+    "overpass": [
+     0.8949374532437169,
+     0.8976583332672894
+    ],
+    "ship": [
+     0.5144931807797904,
+     0.9039352575459187
+    ],
+    "stadium": [
+     0.9103005704405298,
+     0.9106733774580738
+    ],
+    "storagetank": [
+     0.8777407842223509,
+     0.9080450747956732
+    ],
+    "tenniscourt": [
+     0.8706257032589424,
+     0.9020075467473594
+    ],
+    "trainstation": [
+     0.9030633172110513,
+     0.9014760156237497
+    ],
+    "vehicle": [
+     0.8933404667076671,
+     0.9000093975705695
+    ],
+    "windmill": [
+     0.7983540494371488,
+     0.9098928374157916
+    ]
+   },
+   "infinite": {
+    "airplane": [
+     0.0,
+     0.0
+    ],
+    "airport": [
+     0.0,
+     0.0
+    ],
+    "baseballfield": [
+     0.0,
+     0.0
+    ],
+    "basketballcourt": [
+     0.0,
+     0.0
+    ],
+    "bridge": [
+     0.0,
+     0.0
+    ],
+    "chimney": [
+     0.0,
+     0.0
+    ],
+    "dam": [
+     0.0,
+     0.0
+    ],
+    "expressway-service-area": [
+     0.0,
+     0.0
+    ],
+    "expressway-toll-station": [
+     0.0,
+     0.0
+    ],
+    "golffield": [
+     0.0,
+     0.0
+    ],
+    "groundtrackfield": [
+     0.0,
+     0.0
+    ],
+    "harbor": [
+     0.0,
+     0.0
+    ],
+    "overpass": [
+     0.0,
+     0.0
+    ],
+    "ship": [
+     0.0,
+     0.0
+    ],
+    "stadium": [
+     0.0,
+     0.0
+    ],
+    "storagetank": [
+     0.0,
+     0.0
+    ],
+    "tenniscourt": [
+     0.0,
+     0.0
+    ],
+    "trainstation": [
+     0.0,
+     0.0
+    ],
+    "vehicle": [
+     0.0,
+     0.0
+    ],
+    "windmill": [
+     0.0,
+     0.0
+    ]
+   },
+   "classes": [
+    "airplane",
+    "airport",
+    "baseballfield",
+    "basketballcourt",
+    "bridge",
+    "chimney",
+    "dam",
+    "expressway-service-area",
+    "expressway-toll-station",
+    "golffield",
+    "groundtrackfield",
+    "harbor",
+    "overpass",
+    "ship",
+    "stadium",
+    "storagetank",
+    "tenniscourt",
+    "trainstation",
+    "vehicle",
+    "windmill"
+   ]
+  },
+  "diorval-roit-s0": {
+   "name": "RoI-T",
+   "pooled": 0.8737079889876694,
+   "hcp": 0.9073571191395435,
+   "gain": 0.033649130151874096,
+   "gain_interval": [
+    0.02969881357475445,
+    0.03924749094170703
+   ],
+   "hcp99": [
+    0.8936665579201142,
+    0.9080403931095528
+   ],
+   "hcp95": [
+    0.8957687457375103,
+    0.9068135455829477
+   ],
+   "frozen": "NO_UNDERCOVERAGE_DETECTED",
+   "amended": "WITHIN_1PP_SUPPORTED",
+   "mc": {
+    "lower_end_bracket": [
+     0.8929327747144639,
+     0.8938802733489322
+    ],
+    "upper_end_bracket": [
+     0.9078658650325672,
+     0.9086934737887159
+    ],
+    "frozen_rule_mc_sensitive": false,
+    "amendment_rule_mc_sensitive": false,
+    "five_block_labels": [
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ]
+    ],
+    "five_blocks_agree": true
+   },
+   "missing_draws": 0,
+   "draws": 5000,
+   "sources": 5322,
+   "fixed_hcp": 0.9063332556636459,
+   "fixed_pooled": 0.8719941183188796,
+   "fixed_hcp95": [
+    0.8804324561487219,
+    0.917628590418928
+   ],
+   "counts": {
+    "tp": 29621,
+    "fp": 19852,
+    "fn": 5817,
+    "val_images_with_gt": 5863
+   },
+   "rerun": null,
+   "per_class": {
+    "airplane": [
+     0.8795591354649565,
+     0.9082590834081508
+    ],
+    "airport": [
+     0.900786645032081,
+     0.900786645032081
+    ],
+    "baseballfield": [
+     0.8699954525193798,
+     0.8887249800796354
+    ],
+    "basketballcourt": [
+     0.8912327941973549,
+     0.9058557754667167
+    ],
+    "bridge": [
+     0.8795440045380003,
+     0.9030991618840497
+    ],
+    "chimney": [
+     0.8852225114517379,
+     0.8986968407995631
+    ],
+    "dam": [
+     0.9433409379781461,
+     0.9433409379781461
+    ],
+    "expressway-service-area": [
+     0.897677459499642,
+     0.9132403387073491
+    ],
+    "expressway-toll-station": [
+     0.9010973378102202,
+     0.9010973378102202
+    ],
+    "golffield": [
+     0.9056500020500117,
+     0.9076620934915383
+    ],
+    "groundtrackfield": [
+     0.8901867012950714,
+     0.9135607249670663
+    ],
+    "harbor": [
+     0.8891696989128514,
+     0.9131013562458593
+    ],
+    "overpass": [
+     0.9030599982203867,
+     0.9055703853411238
+    ],
+    "ship": [
+     0.5344133954172908,
+     0.901026010980539
+    ],
+    "stadium": [
+     0.917813620267928,
+     0.9183260659809859
+    ],
+    "storagetank": [
+     0.8892455382446984,
+     0.9069483354324606
+    ],
+    "tenniscourt": [
+     0.8828770920838837,
+     0.9149792837367258
+    ],
+    "trainstation": [
+     0.9003030582462633,
+     0.9003030582462633
+    ],
+    "vehicle": [
+     0.895804099930505,
+     0.8995459475268639
+    ],
+    "windmill": [
+     0.8171802965929753,
+     0.9030180196755362
+    ]
+   },
+   "infinite": {
+    "airplane": [
+     0.0,
+     0.0
+    ],
+    "airport": [
+     0.0,
+     0.0
+    ],
+    "baseballfield": [
+     0.0,
+     0.0
+    ],
+    "basketballcourt": [
+     0.0,
+     0.0
+    ],
+    "bridge": [
+     0.0,
+     0.0
+    ],
+    "chimney": [
+     0.0,
+     0.0
+    ],
+    "dam": [
+     1e-05,
+     1e-05
+    ],
+    "expressway-service-area": [
+     0.0,
+     0.0
+    ],
+    "expressway-toll-station": [
+     0.0,
+     0.0
+    ],
+    "golffield": [
+     0.0,
+     0.0
+    ],
+    "groundtrackfield": [
+     0.0,
+     0.0
+    ],
+    "harbor": [
+     0.0,
+     0.0
+    ],
+    "overpass": [
+     0.0,
+     0.0
+    ],
+    "ship": [
+     0.0,
+     0.0
+    ],
+    "stadium": [
+     0.0,
+     0.0
+    ],
+    "storagetank": [
+     0.0,
+     0.0
+    ],
+    "tenniscourt": [
+     0.0,
+     0.0
+    ],
+    "trainstation": [
+     0.0,
+     0.0
+    ],
+    "vehicle": [
+     0.0,
+     0.0
+    ],
+    "windmill": [
+     0.0,
+     0.0
+    ]
+   },
+   "classes": [
+    "airplane",
+    "airport",
+    "baseballfield",
+    "basketballcourt",
+    "bridge",
+    "chimney",
+    "dam",
+    "expressway-service-area",
+    "expressway-toll-station",
+    "golffield",
+    "groundtrackfield",
+    "harbor",
+    "overpass",
+    "ship",
+    "stadium",
+    "storagetank",
+    "tenniscourt",
+    "trainstation",
+    "vehicle",
+    "windmill"
+   ]
+  },
+  "diorval-rtmdet-s0": {
+   "name": "RTMDet-R",
+   "pooled": 0.8738644708896356,
+   "hcp": 0.9081445405083862,
+   "gain": 0.03428006961875063,
+   "gain_interval": [
+    0.030123798918864308,
+    0.039379160111799906
+   ],
+   "hcp99": [
+    0.8938630967113012,
+    0.908277154348632
+   ],
+   "hcp95": [
+    0.8956929031159093,
+    0.9063492143676251
+   ],
+   "frozen": "NO_UNDERCOVERAGE_DETECTED",
+   "amended": "WITHIN_1PP_SUPPORTED",
+   "mc": {
+    "lower_end_bracket": [
+     0.8932922834010419,
+     0.8942303506277518
+    ],
+    "upper_end_bracket": [
+     0.9078541077546053,
+     0.908666610835336
+    ],
+    "frozen_rule_mc_sensitive": false,
+    "amendment_rule_mc_sensitive": false,
+    "five_block_labels": [
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ]
+    ],
+    "five_blocks_agree": true
+   },
+   "missing_draws": 0,
+   "draws": 5000,
+   "sources": 5418,
+   "fixed_hcp": 0.9096044739267661,
+   "fixed_pooled": 0.8751930381049291,
+   "fixed_hcp95": [
+    0.8882554575493155,
+    0.9188141057115802
+   ],
+   "counts": {
+    "tp": 30720,
+    "fp": 60806,
+    "fn": 4718,
+    "val_images_with_gt": 5863
+   },
+   "rerun": null,
+   "per_class": {
+    "airplane": [
+     0.9013248820307156,
+     0.9152385085397328
+    ],
+    "airport": [
+     0.9149843768989246,
+     0.9149843768989246
+    ],
+    "baseballfield": [
+     0.8693144442108226,
+     0.8963576499431308
+    ],
+    "basketballcourt": [
+     0.8873591230611944,
+     0.8921924383938096
+    ],
+    "bridge": [
+     0.8871069204905838,
+     0.9033590319527262
+    ],
+    "chimney": [
+     0.8955067449843375,
+     0.919242238214984
+    ],
+    "dam": [
+     0.9329772926496475,
+     0.9341677688401235
+    ],
+    "expressway-service-area": [
+     0.8792014827168115,
+     0.8970453576257811
+    ],
+    "expressway-toll-station": [
+     0.9097683979359907,
+     0.9104440736116663
+    ],
+    "golffield": [
+     0.9195603691219343,
+     0.9230352258030932
+    ],
+    "groundtrackfield": [
+     0.8821712483099591,
+     0.9039982995862003
+    ],
+    "harbor": [
+     0.8802998679581799,
+     0.9016864904472597
+    ],
+    "overpass": [
+     0.9032165260594252,
+     0.9028199758839179
+    ],
+    "ship": [
+     0.5227263826426813,
+     0.9062812283581266
+    ],
+    "stadium": [
+     0.9132968644941682,
+     0.9164750426723464
+    ],
+    "storagetank": [
+     0.8927078518732188,
+     0.9043501793799585
+    ],
+    "tenniscourt": [
+     0.8748981285031776,
+     0.9101866296259649
+    ],
+    "trainstation": [
+     0.8965939327577577,
+     0.8965939327577577
+    ],
+    "vehicle": [
+     0.8949203282639271,
+     0.9041087540790954
+    ],
+    "windmill": [
+     0.8193542528292564,
+     0.9103236075531246
+    ]
+   },
+   "infinite": {
+    "airplane": [
+     0.0,
+     0.0
+    ],
+    "airport": [
+     0.0,
+     0.0
+    ],
+    "baseballfield": [
+     0.0,
+     0.0
+    ],
+    "basketballcourt": [
+     0.0,
+     0.0
+    ],
+    "bridge": [
+     0.0,
+     0.0
+    ],
+    "chimney": [
+     0.0,
+     0.0
+    ],
+    "dam": [
+     0.0,
+     0.0
+    ],
+    "expressway-service-area": [
+     0.0,
+     0.0
+    ],
+    "expressway-toll-station": [
+     0.0,
+     0.0
+    ],
+    "golffield": [
+     0.0,
+     0.0
+    ],
+    "groundtrackfield": [
+     0.0,
+     0.0
+    ],
+    "harbor": [
+     0.0,
+     0.0
+    ],
+    "overpass": [
+     0.0,
+     0.0
+    ],
+    "ship": [
+     0.0,
+     0.0
+    ],
+    "stadium": [
+     0.0,
+     0.0
+    ],
+    "storagetank": [
+     0.0,
+     0.0
+    ],
+    "tenniscourt": [
+     0.0,
+     0.0
+    ],
+    "trainstation": [
+     0.0,
+     0.0
+    ],
+    "vehicle": [
+     0.0,
+     0.0
+    ],
+    "windmill": [
+     0.0,
+     0.0
+    ]
+   },
+   "classes": [
+    "airplane",
+    "airport",
+    "baseballfield",
+    "basketballcourt",
+    "bridge",
+    "chimney",
+    "dam",
+    "expressway-service-area",
+    "expressway-toll-station",
+    "golffield",
+    "groundtrackfield",
+    "harbor",
+    "overpass",
+    "ship",
+    "stadium",
+    "storagetank",
+    "tenniscourt",
+    "trainstation",
+    "vehicle",
+    "windmill"
+   ]
+  },
+  "diorval-s2anet-s0": {
+   "name": "S2A-Net",
+   "pooled": 0.8617593488339962,
+   "hcp": 0.8990925710068118,
+   "gain": 0.03733322217281565,
+   "gain_interval": [
+    0.03313979360816997,
+    0.04229947391199648
+   ],
+   "hcp99": [
+    0.8932849004400413,
+    0.908857035832854
+   ],
+   "hcp95": [
+    0.8955389414338772,
+    0.906734946031737
+   ],
+   "frozen": "NO_UNDERCOVERAGE_DETECTED",
+   "amended": "WITHIN_1PP_SUPPORTED",
+   "mc": {
+    "lower_end_bracket": [
+     0.892712188113712,
+     0.8938483864679393
+    ],
+    "upper_end_bracket": [
+     0.90858668616871,
+     0.9091989659717765
+    ],
+    "frozen_rule_mc_sensitive": false,
+    "amendment_rule_mc_sensitive": false,
+    "five_block_labels": [
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ],
+     [
+      "NO_UNDERCOVERAGE_DETECTED",
+      "WITHIN_1PP_SUPPORTED"
+     ]
+    ],
+    "five_blocks_agree": true
+   },
+   "missing_draws": 0,
+   "draws": 5000,
+   "sources": 5287,
+   "fixed_hcp": 0.9129004638151293,
+   "fixed_pooled": 0.87832661172522,
+   "fixed_hcp95": [
+    0.8893407499602481,
+    0.9249531240936547
+   ],
+   "counts": {
+    "tp": 29413,
+    "fp": 164716,
+    "fn": 6025,
+    "val_images_with_gt": 5863
+   },
+   "rerun": null,
+   "per_class": {
+    "airplane": [
+     0.8604474871339127,
+     0.8931583312129836
+    ],
+    "airport": [
+     0.8964182398283846,
+     0.8964182398283846
+    ],
+    "baseballfield": [
+     0.8775737877950833,
+     0.895355582899383
+    ],
+    "basketballcourt": [
+     0.8691448347210399,
+     0.8903821564077562
+    ],
+    "bridge": [
+     0.8743670900352472,
+     0.8942694703844293
+    ],
+    "chimney": [
+     0.871861599640955,
+     0.8947291098590322
+    ],
+    "dam": [
+     0.8873729900818723,
+     0.8873729900818723
+    ],
+    "expressway-service-area": [
+     0.8809347170162676,
+     0.8965332509567807
+    ],
+    "expressway-toll-station": [
+     0.9003651291007921,
+     0.9069715203280848
+    ],
+    "golffield": [
+     0.8998266039773961,
+     0.8974125474456924
+    ],
+    "groundtrackfield": [
+     0.8787266651652746,
+     0.9061838611418398
+    ],
+    "harbor": [
+     0.8854137851670589,
+     0.9074791219140532
+    ],
+    "overpass": [
+     0.9148440691199176,
+     0.913265940016152
+    ],
+    "ship": [
+     0.4915276749013996,
+     0.887320879345053
+    ],
+    "stadium": [
+     0.8963885015979718,
+     0.9005635382203796
+    ],
+    "storagetank": [
+     0.8934011186209319,
+     0.9081918402991752
+    ],
+    "tenniscourt": [
+     0.8559471698499832,
+     0.9062921265968205
+    ],
+    "trainstation": [
+     0.895364100177277,
+     0.895364100177277
+    ],
+    "vehicle": [
+     0.8978163361436386,
+     0.9040855282390211
+    ],
+    "windmill": [
+     0.8074450766055181,
+     0.900501284782066
+    ]
+   },
+   "infinite": {
+    "airplane": [
+     0.0,
+     0.0
+    ],
+    "airport": [
+     0.0,
+     0.0
+    ],
+    "baseballfield": [
+     0.0,
+     0.0
+    ],
+    "basketballcourt": [
+     0.0,
+     0.0
+    ],
+    "bridge": [
+     0.0,
+     0.0
+    ],
+    "chimney": [
+     0.0,
+     0.0
+    ],
+    "dam": [
+     0.0,
+     0.0
+    ],
+    "expressway-service-area": [
+     0.0,
+     0.0
+    ],
+    "expressway-toll-station": [
+     0.0,
+     0.0
+    ],
+    "golffield": [
+     0.0,
+     0.0
+    ],
+    "groundtrackfield": [
+     0.0,
+     0.0
+    ],
+    "harbor": [
+     0.0,
+     0.0
+    ],
+    "overpass": [
+     0.0,
+     0.0
+    ],
+    "ship": [
+     0.0,
+     0.0
+    ],
+    "stadium": [
+     0.0,
+     0.0
+    ],
+    "storagetank": [
+     0.0,
+     0.0
+    ],
+    "tenniscourt": [
+     0.0,
+     0.0
+    ],
+    "trainstation": [
+     0.0,
+     0.0
+    ],
+    "vehicle": [
+     0.0,
+     0.0
+    ],
+    "windmill": [
+     0.0,
+     0.0
+    ]
+   },
+   "classes": [
+    "airplane",
+    "airport",
+    "baseballfield",
+    "basketballcourt",
+    "bridge",
+    "chimney",
+    "dam",
+    "expressway-service-area",
+    "expressway-toll-station",
+    "golffield",
+    "groundtrackfield",
+    "harbor",
+    "overpass",
+    "ship",
+    "stadium",
+    "storagetank",
+    "tenniscourt",
+    "trainstation",
+    "vehicle",
+    "windmill"
+   ]
+  }
+ },
+ "facts": {
+  "present": [
+   "diorval-orcnn-s0",
+   "diorval-roit-s0",
+   "diorval-rtmdet-s0",
+   "diorval-s2anet-s0"
+  ],
+  "missing": [],
+  "failed": [],
+  "unavailable": [],
+  "within": [
+   "O-RCNN",
+   "RoI-T",
+   "RTMDet-R",
+   "S2A-Net"
+  ],
+  "inconclusive": [],
+  "positive": [
+   "O-RCNN",
+   "RoI-T",
+   "RTMDet-R",
+   "S2A-Net"
+  ],
+  "sensitive": [],
+  "hcp_range": [
+   "89.9",
+   "90.8"
+  ],
+  "gain_range": [
+   "3.4",
+   "3.8"
+  ]
+ },
+ "n_train": 5862,
+ "n_val": 5863,
+ "sources": {
+  "results": "<rotcert-root>/var/diorval-heldout-20261004/VAL-RESULTS.json",
+  "results_sha256": "59d31cc8bf0d23a41eb3a38ff5f1bfef3cbf484f2e9881f52c86cb3b5b119a8f",
+  "cells": "<rotcert-root>/var/diorval-heldout-20261004/CELLS.json",
+  "cells_sha256": "65391948ce9d2addce6d72cd82fdc3f5d7ab5fdbe2fdd8f8f4805b3cd61a0049",
+  "pull": "<rotcert-root>/var/diorval-heldout-20261004/pulled/PULL-RECEIPT.json",
+  "pull_sha256": "dc4c27f303ffc00b531b3f25a63166bac8ffbdf6ec972012b56997fd8e0a09fd",
+  "verified": {
+   "primary": "771d07d858bad180e2d0bf49a085238abe8a0b247c0e5a34859db48bad6c338b",
+   "fixed-role": "d6c190144edbdf8ce0f68d86739203a4516f39c6823fa9c2b715ac6afe2eb3d1"
+  }
+ }
+}

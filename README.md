@@ -1,98 +1,111 @@
 # RotCert
 
 RotCert provides angle-aware conformal certification and reliability diagnostics
-for oriented object detection. Version 0.3.0 accompanies the revised article
-*Angle-aware conformal certification for oriented object detection in aerial imagery*.
-It contains the numerical package, revised analysis programs, accepted aggregate
-results and table inputs, and the historical result records already in 0.2.0.
+for oriented object detection. It supports the article *Angle-aware conformal
+certification for oriented object detection in optical aerial imagery*.
 
-- Source: [github.com/PeterPonyu/rotcert](https://github.com/PeterPonyu/rotcert).
-- Version 0.3.0 archive: [10.5281/zenodo.23184005](https://doi.org/10.5281/zenodo.23184005).
-- First-submission version 0.2.0: [10.5281/zenodo.22211671](https://doi.org/10.5281/zenodo.22211671).
+The published version 0.3.0 contains the numerical package, analysis programs,
+reported aggregate results and table inputs, together with historical results
+retained from version 0.2.0. This repository's documentation may be updated after
+a release; a version DOI and its tagged archive identify the unchanged software
+snapshot, not every later manuscript or illustration update.
+
+- Source: [GitHub repository](https://github.com/PeterPonyu/rotcert).
+- Version 0.3.0: [10.5281/zenodo.23184005](https://doi.org/10.5281/zenodo.23184005).
+- Historical version 0.2.0: [10.5281/zenodo.22211671](https://doi.org/10.5281/zenodo.22211671).
 - All versions: [10.5281/zenodo.21392292](https://doi.org/10.5281/zenodo.21392292).
 
 ## Scientific scope
 
-The revised protocol keeps its sampling targets explicit. Localization coverage
-concerns a matched-object draw from a new source, under the stated frozen-design
-and exchangeability assumptions. It does not imply conditional coverage of every
-individual detection, recall for missed objects, or a PAC guarantee for a fixed
-realized calibration. Source-level maxima, object-weighted CRC, source-uniform
-HCP and recall-risk certificates answer different questions.
+Localization coverage targets a matched object drawn uniformly within a new
+true-positive-bearing source scene, under the stated source-population and
+fixed-design assumptions. The article's proofs assume independent and identically
+distributed source scenes; objects within a source may be dependent. Marginal
+coverage averages over calibration and a future source. It is not conditional
+coverage of each prediction, recall for missed objects, or high-probability risk
+control after one realized calibration. Source-uniform calibration, object-weighted
+risk control, scene-simultaneous coverage and recall-risk validation have different
+targets.
 
-GWD is an established Gaussian Wasserstein representation, used here as a
-seam-continuous and square-safe nonconformity score. The geometric readouts connect
-its calibrated event to center and orientation projections with candidate box
-dimensions free. Smaller center regions can accompany broader orientation ranges;
-the experiments do not establish universal dominance over other scores.
+Gaussian Wasserstein distance and the general conformal and risk-control tools are
+established methods. The geometric analysis connects the calibrated score event
+to center and orientation projections with candidate dimensions free. A smaller
+center region may accompany a wider orientation range; no universal superiority
+over other scores is claimed. Falling within both projections is not sufficient
+for membership in the original score set.
 
-The empirical restrictions are part of the result: earlier DIOR-R design exposure
-is not erased by retraining or the validation-split check; CODrone validation and
-test share locations; seed arms are not independent geographic replications.
-EAV's native containment and common-HCP analyses use different matched populations.
-Missing support, infinite thresholds and unavailable endpoints are retained.
+Historical DIOR-R design exposure is not erased by retraining or the validation
+check. CODrone validation and test share locations and recordings, and different
+training seeds are not independent geographic replications. Native EAV
+margin-score coverage and common-HCP analyses use different matched populations;
+the score event must not be called rendered-polygon containment. Missed objects,
+unsupported targets, infinite thresholds and adverse results remain explicit.
+False-positive shares are separate detection readouts, not controlled by the
+localization or recall certificates. These results are not a safety-deployment
+guarantee.
 
 ## Install and test
 
-From this checkout, in a Python environment with the declared dependencies:
+In a Python environment with the declared dependencies:
 
 ```bash
 python -m pip install -e '.[test]'
 python -m pytest tests -q
 ```
 
-The package needs NumPy, SciPy and Shapely, and does not import a GPU framework.
-The four MIT-licensed `relmetrics` modules required by the legacy adapters are
-included, unmodified, under `rotcert._vendor.relmetrics`; no private sibling
-repository or unpublished PyPI package is needed. The original license is retained.
-See `TESTING.md` for exact verification scope and separate analysis-suite commands.
+The numerical package uses NumPy, SciPy and Shapely without importing a GPU
+framework. Required helper modules are included with their original MIT license.
+See [testing scope](TESTING.md) for analysis-suite commands, external input
+requirements and the limits of the software checks.
 
-## Revised interfaces
+## Interfaces and evidence
 
-- `rotcert.gwd`: canonical oriented boxes and the GWD score.
-- `rotcert.scene`: source-uniform HCP, object pooling, object-weighted CRC,
-  count-adaptive CRC and scene-maximum calibration.
-- `rotcert.geometry`: free-dimension center and orientation readouts.
-- `rotcert.g2`: recall-risk certification on a threshold grid fixed before testing.
-- `rotcert.e2e`: the distinct modular and direct end-to-end routes.
-- `rotcert.scores_ext`: score alternatives used in the revision.
-- [`revision_2026-10/`](revision_2026-10/README.md): analysis programs and their input contracts.
-- [`revision_2026-10/results/`](revision_2026-10/results/README.md): aggregate evidence and hash manifest.
+The package provides Gaussian Wasserstein scores, source-uniform hierarchical
+calibration, geometric projections, fixed-grid recall validation, and distinct
+modular and direct end-to-end routes. Their interfaces are `rotcert.gwd`,
+`rotcert.scene`, `rotcert.geometry`, `rotcert.g2`, `rotcert.e2e` and
+`rotcert.scores_ext`.
 
-For example, a source-uniform threshold uses one score vector per source:
+For example, one score vector per source gives a source-uniform threshold:
 
 ```python
 from rotcert.scene import hcp_threshold
 q = hcp_threshold([[0.2, 0.4], [0.3], [0.1, 0.5]], alpha=0.1)
-# This small calibration sample yields infinity. It is not a finite certificate.
+# Too few calibration sources: the result is infinity, not a finite certificate.
 ```
 
-The `rotcert` command-line interface and the first-submission records are retained
-for historical comparison. G2 outputs changed in 0.3.0: use version 0.2.0 to replay
-those historical outputs. The CLI's legacy object-pooled calibration must not be
-substituted for the revised source-uniform analysis drivers.
+The [analysis guide](revision_2026-10/README.md) describes the scientific questions
+and input requirements. The [aggregate evidence](revision_2026-10/results/README.md)
+contains reported values and their file hashes. The command-line interface's
+historical object-pooled calibration is not a substitute for the revised
+source-uniform analyses. Recall outputs changed in version 0.3.0; use version
+0.2.0 when inspecting its historical outputs.
 
 ## Reproducibility and availability
 
-`RELEASE-MANIFEST.json` binds the released files. The aggregate-evidence manifest
-also records hashes of the original accepted files before public path redaction.
-No reported experimental numbers were changed when creating this release.
+The release manifest identifies files in each archived snapshot. Aggregates
+permit inspection of reported values; statistical reanalysis additionally needs
+the identified source-level inputs. Recompiling an article, redrawing a figure,
+reanalysing exported detections and retraining a detector are different levels of
+reproducibility. Passing software tests does not establish full experimental
+reproduction.
 
-The newly added `revision_2026-10` evidence contains aggregates, not images,
-annotations, per-object exports, per-source replay inputs or detector weights.
-Historical first-submission directories retained from 0.2.0 do contain derived
-detection, ground-truth and matched-object records, including compressed copies;
-they are not new revision inputs or additional independent samples. The MIT
-license covers the original software, not a relicensing of provider data.
-Dataset files come from their original providers; underlying research records
-may be requested from the corresponding author subject to those terms. The EAV
-upstream geometry reference is not redistributed. The four DIOR-R validation-split weights had not been locally
-recovered at release preparation; their saved outputs and checkpoint identities
-are retained, but the weights are not promised as immediately available.
+Version 0.3.0 does not contain the later supplementary illustration generators or
+their scene and source-role records. Those additions must not be represented as
+already available under its DOI. Its new evidence is aggregate data, not dataset
+images, annotations, per-object exports, source-level reanalysis inputs or detector
+weights. Historical directories retained from version 0.2.0 do contain derived
+detection and ground-truth records, including compressed files; they are not new
+independent samples.
 
-The released aggregates allow inspection of the reported results. Full statistical
-replay requires the separately identified inputs and frozen provenance manifests;
-passing unit tests is not evidence that those full experiments were rerun from
-the public archive. No full manuscript or private review correspondence is published
-in this software release. See `CITATION.cff`, `LICENSE`, `ZENODO.md` and
-`revision_2026-10/README.md` for citation, license and scope.
+Dataset and upstream-code terms continue to apply. The MIT license covers the
+original software and does not relicense provider data. Underlying research
+records may be requested from the corresponding author, subject to those terms
+and actual availability. The four DIOR-R validation-check checkpoints are not
+included and their availability has not been confirmed; saved outputs and
+checkpoint hashes do not substitute for the weight files. No claim is made that
+all weights are lost or that replacement training recreates them.
+
+See `CITATION.cff`, `LICENSE` and [archive information](ZENODO.md) for citation and
+licensing. No new study, journal submission or publication decision is implied by
+this software release or its documentation updates.

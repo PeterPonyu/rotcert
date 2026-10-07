@@ -1,37 +1,37 @@
-# Aggregate evidence for the revised article
+# Aggregate evidence accompanying the article
 
-These files preserve accepted aggregate results, support counts, uncertainty
-intervals, and provenance of the revised article. `MANIFEST.json` lists the hash
-of each original record and of its public copy. The only transformations are JSON
-serialization and replacement of workstation/compute roots by labelled
-placeholders; numeric values, missing values, infinity encodings, and acceptance
-flags are unchanged. This is an evidence release, not a new analysis.
+The records contain reported aggregate results, support counts, uncertainty
+intervals and provenance. The file manifest identifies the original records and
+their public copies. Public preparation did not recalculate experimental values.
+These summaries allow inspection of results, not full statistical reanalysis
+without the separate source-level inputs.
 
-- `eav-codrone/`: the final full-split EAV-DETR analysis (56,000 validation tiles,
-  84,056 test tiles), full-test detection accuracy, and its acceptance checks.
-- `dior-validation/`: the four-family frozen validation-split results and primary
-  and fixed-role verification summaries.
-- `article-tables/`: saved numerical inputs and formatted values used in the
-  article's main and supplementary tables. These are transcriptions of accepted
-  outputs; no experimental quantities were recalculated for this release.
+The evidence covers complete validation and test exports of EAV-DETR on CODrone
+(56,000 and 84,056 tiles), full-test detection accuracy, the four-family DIOR-R
+validation check, and numerical inputs to the article's main and supplementary
+tables. Historical results retain their original interpretation and are not
+additional independent samples.
 
-The EAV detection class-macro recall is the arithmetic mean of each class's
-aggregated TP/GT, not a frame-uniform average. Native EAV containment and the
-common-HCP score events have different matched populations. CODrone validation
-and test data share all 46 locations and 576 recording IDs. Counts refer to
-overlapping tile instances, without physical-object deduplication. AP is reconstructed
-from exports retained at score >=0.05, which do not fully recover lower-score
-candidates in the authors' top-300 output; the comparison does not isolate training
-differences. The DIOR-R validation-split check avoids selection
-on its outcomes but does not repair prior exposure during method development.
-The per-class, aggregate, marginal and PAC targets must not be interchanged.
+The EAV class-macro recall is the mean of class-level TP/GT ratios, not a
+frame-uniform average. Native EAV margin-score coverage and common-HCP score
+events use different matched populations. Counts are overlapping tile instances,
+not deduplicated physical objects. CODrone validation and test share 46 locations
+and 576 recording identities. AP uses score-truncated exports and does not
+recover every lower-score candidate of the original system. The DIOR-R
+validation check avoids selection on its outputs but does not remove historical
+method-development exposure. Marginal, source-level, object-weighted and PAC
+targets must not be interchanged.
 
-These summaries are sufficient to inspect reported values, but are not the
-per-source inputs needed to rerun the full statistical pipelines. Images,
-annotations, per-object detections, per-source matching/calibration records,
-detector weights and third-party EAV code are not redistributed here. Obtain
-datasets and EAV code from their providers. Requests for underlying research
-records should identify the method, cell, split and the manifest hash; availability
-and redistribution are subject to the original providers' terms. In particular,
-the four DIOR-R validation-split weight files had not been locally recovered when
-this release was prepared; the saved outputs and checkpoint hashes are retained.
+Dataset images, annotations, per-object exports, source-level calibration and
+matching inputs, trained weights and third-party reference code are not supplied
+as new revision evidence. Historical derived records have a different scope and
+remain subject to provider terms. Requests for research records should identify
+the dataset, detector, split, method and result-file hash. The four DIOR-R
+validation-check weight files are not included, and availability has not been
+confirmed; hashes and saved outputs do not substitute for the files.
+
+Later supplementary illustration generators and their scene/source-role records
+are not present in version 0.3.0. Do not treat the software archive as a complete
+redrawing package for subsequent manuscript versions. Software checks, file
+hashes and reported coverage values do not prove the independence assumptions,
+safe deployment or publication acceptance.

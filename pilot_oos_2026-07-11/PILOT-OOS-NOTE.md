@@ -5,7 +5,7 @@ number the rotcert paper reports; does not touch frozen inputs.
 
 ## The defect (confirmed)
 The DOTA pilot's headline **G1 marginal coverage 0.9000** is an **in-sample** number, not a validity result.
-`orchestration/next_boot_rotcert.sh` (stage-4 pilot) passes the **same** `matched.jsonl` to both
+The stage-4 pilot chain passes the **same** `matched.jsonl` to both
 `rotcert calibrate` (which fits the split-conformal quantile $\hat q$ on that set) and `rotcert audit`
 (which measures coverage on that same set). By the split-conformal construction the calibration-set coverage
 is $\lceil(1-\alpha)(n+1)\rceil/n$ **by definition** — for the pilot, $48{,}719/54{,}131 = 0.900020\ldots$,

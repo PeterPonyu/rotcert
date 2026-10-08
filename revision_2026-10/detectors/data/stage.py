@@ -200,7 +200,7 @@ def xml_objects(path,dataset,content=None):
         try:
             box=polygon_obb(coords)
         except ValueError:
-            # Match orchestration/prepare_dior_gt.py's disclosed degenerate-GT
+            # Match pipeline/prepare_dior_gt.py's disclosed degenerate-GT
             # exclusion. Never alter native XML or invent positive dimensions.
             # Only finite DIOR polygons with an exactly zero fitted side qualify.
             import cv2

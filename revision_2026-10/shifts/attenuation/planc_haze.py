@@ -1,6 +1,6 @@
 """Declared synthetic attenuation inserted into a frozen test pipeline right after image loading.
 
-Arithmetic is identical to rotcert/orchestration/expansion_20261001/haze.py (haze_rgb): depth proxy 0.5+0.5*y/(H-1), transmission
+Arithmetic is identical to the frozen expansion design's haze function (haze_rgb): depth proxy 0.5+0.5*y/(H-1), transmission
 t = exp(-beta*depth), airlight 255 on every channel, float64, rint ties-to-even, uint8. It is channel independent, so it
 gives the same result on the BGR array mmcv hands over as on RGB. NOT physical haze and NOT measured depth; ground truth,
 splits, checkpoints and every other pipeline step are untouched.

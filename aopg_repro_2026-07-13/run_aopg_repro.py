@@ -3,7 +3,7 @@
 
 COMPUTE-ONLY runner. Recomputes the frozen K3 reproduction gate for the two
 in-house DIOR-R detectors against the AOPG published DIOR-R table, using the
-FROZEN gate function ``orchestration.phase0.reproduction_gate`` (tol=0.5, the
+FROZEN gate function ``pipeline.phase0.reproduction_gate`` (tol=0.5, the
 design's "±0.5"). No manuscript is touched.
 
 Measured DIOR-R *test*-split mAP (single-scale, no-TTA) is read from the
@@ -27,7 +27,7 @@ import sys
 from pathlib import Path
 
 ROTCERT_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROTCERT_ROOT / "orchestration"))
+sys.path.insert(0, str(ROTCERT_ROOT / "pipeline"))
 
 # FROZEN gate logic -- imported, not reimplemented.
 from phase0 import reproduction_gate, DEFAULT_REPRO_TOL  # noqa: E402

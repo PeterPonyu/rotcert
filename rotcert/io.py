@@ -1,7 +1,7 @@
 """Canonical JSONL schemas for detections, ground truth, and matched pairs.
 
 Every ``rotcert`` command consumes/produces these schemas exclusively -- adapters
-(``orchestration/score_rtmdet.py``) are the only format-aware code, mirroring
+(``pipeline/score_rtmdet.py``) are the only format-aware code, mirroring
 ``asr-gate``'s ``io.py`` design (see that module's docstring for the pattern this
 follows).
 

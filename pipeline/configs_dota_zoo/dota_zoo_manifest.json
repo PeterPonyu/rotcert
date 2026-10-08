@@ -7,7 +7,7 @@
   "checkpoint_host": "download.openmmlab.com",
   "url_liveness_checked": "2026-07-13 (curl -I, all 4 HTTP 200)",
   "angle_note": "Configs carry mixed angle conventions (le90 / le135); score_rtmdet.py canonicalizes every prediction to le90 before emitting the detections JSONL, so downstream certification is convention-uniform regardless.",
-  "base_note": "Every leaf config inherits only from ../_base_/{datasets,schedules,default_runtime}; no sibling-in-detector-dir base. Copying the leaf into $MMR/configs/<detector>/ (as dota_zoo_infer.sh does) resolves the whole _base_ chain against the installed mmrotate configs tree at the pinned commit.",
+  "base_note": "Every leaf config inherits only from ../_base_/{datasets,schedules,default_runtime}; no sibling-in-detector-dir base. Copying the leaf into $MMR/configs/<detector>/ (as the box-side inference chain does) resolves the whole _base_ chain against the installed mmrotate configs tree at the pinned commit.",
   "detectors": [
     {
       "detector": "RoI Transformer",

@@ -3,7 +3,7 @@
 Compute-only execution of the one remaining preregistration-gated slot: the
 K3 AOPG mAP reproduction gate for the DIOR-R arm of `rotcert`. No manuscript
 was edited. Gate verdict computed by the **frozen** function
-`orchestration/phase0.py:reproduction_gate` (tol = 0.5), imported not
+`pipeline/phase0.py:reproduction_gate` (tol = 0.5), imported not
 reimplemented.
 
 ## 1. Frozen wording (quoted)
@@ -61,7 +61,7 @@ source. Verified against both the arXiv Table I and the repo model-zoo.
 Recomputed from the **training-run per-class eval tables** in the pulled
 work_dirs (`dior_train_results_2026-07-10/pulled/rotcert_dior_train.tar.gz`),
 for the **deployed** checkpoints — the same checkpoints named in the inference
-provenance JSONs (`dior_infer_results_2026-07-11/.../*.provenance.json`). The
+provenance JSONs (`dior_infer_results_2026-07-11/*.provenance.json`). The
 mmrotate DIOR configs run the `val_evaluator` on `ImageSets/Main/test.txt`
 (11,738 images) trained on trainval — so the reported mAP **is** the DIOR-R
 **test**-split mAP, the same split AOPG publishes on (K3's val-vs-test gap does
@@ -129,15 +129,14 @@ a sanity check, not a load-bearing claim.
 
 ## 7. Provenance
 
-- Frozen gate fn: `reliability-commons/tools/rotcert/orchestration/phase0.py:82`
+- Frozen gate fn: `pipeline/phase0.py:82`
   (`reproduction_gate`, `DEFAULT_REPRO_TOL = 0.5`, line 24).
 - Measured mAP primaries (per-class tables + `Epoch(val)` summary lines):
   `dior_train_results_2026-07-10/pulled/rotcert_dior_train.tar.gz` →
-  `root/autodl-tmp/rotcert_dior_train_results/orcnn_dior_seed0_train.log` (ORCNN
+  `<compute-root>/rotcert_dior_train_results/orcnn_dior_seed0_train.log` (ORCNN
   epoch 12) and `rtmdet_r_dior_seed0_resume.log` (RTMDet epoch 36); scalars at
-  `root/autodl-tmp/dior_r/work_dirs/*/seed_0/*/vis_data/scalars.json`.
-- Deployed-checkpoint match: `dior_infer_results_2026-07-11${AUTODL_TMP}/`
-  `rotcert_dior_infer_results/dior_test_dets_{orcnn,rtmdet}.jsonl.provenance.json`
+  `<compute-root>/dior_r/work_dirs/*/seed_0/*/vis_data/scalars.json`.
+- Deployed-checkpoint match: `dior_infer_results_2026-07-11/dior_test_dets_{orcnn,rtmdet}.jsonl.provenance.json`
   (`epoch_12.pth` / `epoch_36.pth`; mmrotate commit `3ff004e`).
 - On-box AOPG repro markers were `AOPG_REPRO_ORCNN=SKIPPED_DISCLOSED` /
   `AOPG_REPRO_RTMDET=SKIPPED_DISCLOSED` — i.e., the gate was deferred to this

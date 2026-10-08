@@ -5,7 +5,7 @@ to stdout in addition to (or instead of) ``-o``.
 Backbone-agnostic by construction: ``ingest --detector jsonl`` is the only detector
 adapter wired up HERE (the certifier never sees pixels, only boxes+scores+GT, design
 §3.2); the mmrotate/RTMDet-R box-side adapter lives in
-``orchestration/score_rtmdet.py`` (lazy-imported, GPU-box-only) and simply EMITS the
+``pipeline/score_rtmdet.py`` (lazy-imported, GPU-box-only) and simply EMITS the
 same canonical detections-JSONL schema this CLI's ``ingest --detector jsonl`` also
 accepts -- so every certification command downstream is identical whether the
 detections came from a live mmrotate run or a precomputed table.
@@ -52,7 +52,7 @@ def _cmd_ingest(args: argparse.Namespace) -> int:
     if args.detector != "jsonl":
         print(
             f"error: ingest --detector {args.detector!r} requires the box-side GPU "
-            "adapter (orchestration/score_rtmdet.py); this CLI's ingest only wires up "
+            "adapter (pipeline/score_rtmdet.py); this CLI's ingest only wires up "
             "'jsonl' (a precomputed detections table) -- see that script's --help.",
             file=sys.stderr,
         )

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prepare the canonical DOTA val GT JSONL from mmrotate split annfiles.
 
-Fills the gap next_boot_rotcert.sh assumes away: ``DOTA_VAL_GT`` is
+Fills the gap the box-side chain assumes away: ``DOTA_VAL_GT`` is
 "box-side-prepared" but nothing prepared it until now. Reads every
 ``*.txt`` under ``--annfiles-dir`` (img_split output: one file per crop,
 lines ``x1 y1 x2 y2 x3 y3 x4 y4 class difficult``; original-DOTA header

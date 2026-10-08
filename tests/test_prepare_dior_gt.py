@@ -1,4 +1,4 @@
-"""Smoke tests for orchestration/prepare_dior_gt.py.
+"""Smoke tests for pipeline/prepare_dior_gt.py.
 
 No network, no GPU, no mmrotate (conftest convention). Synthetic DIOR-R xmls are
 built in-process; the 8-point/polygon path needs cv2 and is skipped where absent.
@@ -12,8 +12,8 @@ from pathlib import Path
 
 import pytest
 
-# prepare_dior_gt lives in orchestration/ (not an installed package); load it by path.
-_ORCH = Path(__file__).resolve().parents[1] / "orchestration" / "prepare_dior_gt.py"
+# prepare_dior_gt lives in pipeline/ (not an installed package); load it by path.
+_ORCH = Path(__file__).resolve().parents[1] / "pipeline" / "prepare_dior_gt.py"
 _spec = importlib.util.spec_from_file_location("prepare_dior_gt", _ORCH)
 pdg = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(pdg)

@@ -5,7 +5,7 @@ Same protocol as the ORCNN/DIOR run: 20 repeated scene-level splits (40/20/40, s
 = repeat index), global GWD q_hat fit on calibration scenes, marginal coverage measured
 on held-out EVAL scenes, BCa CI across the 20 repeats. alpha=0.10.
 
-Vendored (orchestration/) copy of dior_cert_results_2026-07-11/r20_generic.py. The ONLY
+Vendored (pipeline/) copy of dior_cert_results_2026-07-11/r20_generic.py. The ONLY
 change vs that file is that ROOT is resolved from $ROTCERT_ROOT or the script's location
 (so it runs on the box where the hard-coded local path does not exist); the emitted JSON
 is byte-for-byte identical to the frozen DIOR cell for the same matched.jsonl argument

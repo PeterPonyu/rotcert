@@ -13,7 +13,7 @@ mmrotate is stale (design §7 risk register: last release 2023-02) -- ``--mmrota
 is REQUIRED (no default baked in here) and is stamped into every output record's
 sibling ``.provenance.json`` file, per SOTA-REPRODUCTION-PLAN-2026-07-10.md's binding
 rule ("the SCORING script must pin a commit; our core never imports mmrotate" -- true
-here too: only THIS orchestration script imports mmrotate, ``rotcert``'s core package
+here too: only THIS scoring script imports mmrotate, ``rotcert``'s core package
 never does).
 
 Output schema (one JSON object per line, matches ``rotcert.io.validate_detection``)::
@@ -30,8 +30,8 @@ Phase-0 VERIFY items (per design §4.1/§7, not resolved by this script)
 --------------------------------------------------------------------------
 - mmrotate's actual pinned-commit ``angle_version`` for the RTMDet-R-l config
   (assumed ``le90`` per design §2.1, marked [VERIFY]).
-- Published VAL (not test) mAP for the reproduction gate (``rotcert.
-  orchestration.phase0`` consumes this script's output for that check).
+- Published VAL (not test) mAP for the reproduction gate (``pipeline/
+  phase0.py`` consumes this script's output for that check).
 """
 
 from __future__ import annotations

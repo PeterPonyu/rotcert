@@ -2,7 +2,7 @@
  "schema": "rotcert.release-file-manifest.v1",
  "version": "0.3.0",
  "doi": "10.5281/zenodo.23184005",
- "scope": "Exact public snapshot; this manifest excludes itself. Git tag v0.3.0 binds the manifest too.",
+ "scope": "Exact public snapshot of git tag v0.3.0 (the archived release); this manifest excludes itself. Later commits on main tidy the public tree, so main no longer matches every entry.",
  "files": [
   {
    "path": ".github/workflows/pages.yml",

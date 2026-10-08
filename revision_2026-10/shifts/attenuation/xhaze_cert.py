@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """X-HAZE certification analysis (local CPU; 2026-10-03).
 
-Follows the frozen expansion design (orchestration/expansion_20261001/design.json, "dior-haze"):
+Follows the frozen expansion design ("dior-haze" lane):
   - fixed seed-0 checkpoints, no retraining (seeds 1 and 2 were added afterwards as replication);
   - the frozen accepted clean DIOR-R calibration/evaluation source IDs (sources.jsonl, 5869/5869),
     never repartitioned after haze outcomes;

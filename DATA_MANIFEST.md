@@ -19,7 +19,7 @@ most once per PAPER, for the final reported mAP, never for certification.
 
 **DIOR-R** (oriented DIOR, Cheng et al., TGRS 2022 [VERIFY]). 20 classes, ~23k images
 800x800, ~190k oriented instances. **NOT in autodl-pub** — box-side download item,
-gated by `orchestration/fetch_dior_r.py`'s size/checksum/license/count audit (design
+gated by `pipeline/fetch_dior_r.py`'s size/checksum/license/count audit (design
 §4.2, a HARD Phase-0 gate). If any of those gates fails (download blocked, license
 non-permissive, counts mismatch), the second dataset falls back to **HRSC2016** or
 **DOTA-v2.0** — never DOTA-v1.5 (barred, see above).
@@ -34,12 +34,12 @@ non-permissive, counts mismatch), the second dataset falls back to **HRSC2016** 
   publishes DIOR-R tables but no downloadable weights, and LSKNet (CC-BY-NC) ships no
   DIOR-R weights either. So the DIOR-R arm is **inference + in-house training**: both
   detectors are trained on DIOR-R trainval via Apache-2.0 mmrotate dev-1.x
-  (`orchestration/next_boot_rotcert_dior_train.sh`; ~45-60 GPU-h, revised total budget
+  (training chain; ~45-60 GPU-h, revised total budget
   ~90-110 GPU-h). The DIOR-R **reproduction gate (K3)** targets the **AOPG published
   DIOR-R table** (`jbwang1997/AOPG`, Apache-2.0), NOT a zoo val mAP.
 - **License gate (HARD; addendum A7):** the DIOR-R terms review is a Phase-0 gate for
   *use* AND now governs *rehosting* of the in-house-trained weights. `fetch_dior_r.py`'s
-  `--confirm-license-reviewed` flag and `next_boot_rotcert_dior_train.sh`'s
+  `--confirm-license-reviewed` flag and the training chain's
   `DIOR_R_LICENSE_REVIEWED_MARKER` file gate both enforce it; if redistribution is barred
   or ambiguous, the release is **result-JSONs-only** (no checkpoint hosting).
 - **Training-seed policy — OPEN prereg decision:** 1 seed with disclosure (cheap) vs 3
@@ -84,7 +84,7 @@ optional `gt_id`. Matched record (`rotcert match` output): `image_id`, `scene_id
 DOTA-v1.0 mAP 81.3 MS / 78.9 SS (test-set, multi-scale) — the reproduction target
 (K3) is the **val, single-scale, no-TTA** zoo-consensus number instead (design §4.2's
 val-only protocol), within `ROTCERT_REPRO_TOL` (default 0.5 mAP points, env-
-overridable, `orchestration/phase0.py`).
+overridable, `pipeline/phase0.py`).
 
 **Oriented R-CNN** R-50-FPN (arXiv:2108.05699 [VERIFY]), mmrotate zoo, Apache-2.0 —
 the second detector (two-stage, tests score-agnosticism). **LSKNet-S+ORCNN**
@@ -94,9 +94,9 @@ are, per design §4.1).
 
 mmrotate is stale (last release 2023-02, design §7 risk register): **a commit MUST be
 pinned** (`--mmrotate-commit`, required, no default baked into
-`orchestration/score_rtmdet.py`), configs vendored, mmcv/mmdet versions recorded
+`pipeline/score_rtmdet.py`), configs vendored, mmcv/mmdet versions recorded
 alongside it. `rotcert`'s core package (`rotcert/*.py`, everything under `tests/`)
-**never imports mmrotate/mmcv/mmdet/torch** — only `orchestration/score_rtmdet.py`
+**never imports mmrotate/mmcv/mmdet/torch** — only `pipeline/score_rtmdet.py`
 does, lazily, so the core stays pip-installable and testable with numpy+scipy+shapely
 alone (SOTA-REPRODUCTION-PLAN's binding rule: "our core never imports mmrotate").
 

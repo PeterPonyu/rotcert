@@ -70,7 +70,6 @@ manuscripts/pr/
 
 # Scratch
 manuscripts/figures-src/review/
-orchestration/.omc/
 .cursor/
 .playwright-mcp/
 .env

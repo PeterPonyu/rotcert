@@ -2,7 +2,7 @@
 
 Config-B's HRSC 3-seed arm (box run, seeds 0,1,2 × {Oriented R-CNN 1x, RTMDet-R 3x},
 in-house training; seed 0 = the Config-A cells, seeds 1–2 certified locally via the
-byte-repro-verified `orchestration/cert_cell.sh` chain on the pulled detections).
+byte-repro-verified `pipeline/cert_cell.sh` chain on the pulled detections).
 Sources: `configA_cert_2026-07-14/hrsc_{orcnn,rtmdet}/` (seed 0) and
 `hrsc_seedcells_2026-07-14/{orcnn,rtmdet}_seed{1,2}/` — every number below is read
 directly from `audit_gwd.json` / `r20_coverage.json` / `recall.json`.

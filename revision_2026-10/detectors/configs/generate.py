@@ -59,7 +59,7 @@ def resolve_recipe(ref,family,dataset,env):
         staging=ROOT/'configs/generated/sources'/path.name; staging.parent.mkdir(parents=True,exist_ok=True)
         staging.write_text(chr(10).join(lines)+chr(10)); path=staging
     if dataset=='dior':
-        source=ROOT.parents[1]/'orchestration/configs_dior'/DIOR[family]; text=source.read_text(); tree=ast.parse(text)
+        source=ROOT.parents[1]/'pipeline/configs_dior'/DIOR[family]; text=source.read_text(); tree=ast.parse(text)
         base=next(n for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='_base_' for t in n.targets))
         absolute=[str((path.parent/p).resolve()) for p in ast.literal_eval(base.value)]
         lines=text.splitlines(); lines[base.lineno-1:base.end_lineno]=['_base_ = '+repr(absolute)]

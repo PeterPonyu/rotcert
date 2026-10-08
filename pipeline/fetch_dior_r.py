@@ -25,7 +25,7 @@ explicit ban on v1.5 as a superset arm)
 
 On ANY gate failure, this script exits non-zero and prints
 ``DIOR_R_GATE_FAILED -- falling back per design §4.2 (HRSC2016 or DOTA-v2.0)`` --
-callers (``next_boot_rotcert.sh``) are expected to branch on that, not retry blindly.
+callers (the box-side chain) are expected to branch on that, not retry blindly.
 """
 
 from __future__ import annotations

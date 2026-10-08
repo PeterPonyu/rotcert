@@ -38,3 +38,11 @@ The [source repository](https://github.com/PeterPonyu/rotcert) may receive
 documentation corrections independently of an immutable release. `CITATION.cff`
 and the version DOI identify the released software, while the current repository
 guide explains its scope and known limitations.
+
+## Separately released evaluated models
+
+The [public model collection](https://huggingface.co/PeterPonyu/rotcert-models) supplies five saved evaluated models
+and their portable configurations and parameter-verification records. Its
+[fixed repository revision](https://huggingface.co/PeterPonyu/rotcert-models/tree/a6303b7ab4effbe6cdde6757bd350bb9e5a802d7) identifies the added files.
+They are separate from the unchanged version 0.3.0 software archive. Do not
+cite the earlier DOI as if it already contained these model parameters.

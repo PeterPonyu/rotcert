@@ -1,0 +1,185 @@
+{
+  "schema": "evaluated-model-availability-v1",
+  "model_count": 5,
+  "repository": "https://huggingface.co/PeterPonyu/rotcert-models",
+  "repository_revision": "a6303b7ab4effbe6cdde6757bd350bb9e5a802d7",
+  "manifest": "https://huggingface.co/PeterPonyu/rotcert-models/blob/a6303b7ab4effbe6cdde6757bd350bb9e5a802d7/MANIFEST.json",
+  "models": [
+    {
+      "dataset": "CODrone",
+      "model": "eav-detr",
+      "seed": 42,
+      "modality": "optical",
+      "protocol": "final-epoch-evaluation",
+      "epochs_completed": 12,
+      "source_commit": "fb99da7b0f49edffcd1fa9e45a4424e9ae86e1eb",
+      "selected_parameter_branch": "model",
+      "public_top_level_key": "model",
+      "source_checkpoint_sha256": "bbf333bf4df6a09baae95741120d6f16849ab43f1a95a46e375afa3e1d549382",
+      "inference_sha256": "050773476f617f20f9ba53ff5e1c28823e737cd8d229256812b1a67f229709cf",
+      "inference_bytes": 174147787,
+      "parameter_manifest_sha256": "ff8be0754827f31b79285c323350d25a8a8a269c0ce4a10f7a143062c7c1234e",
+      "config_sha256": "e2a30da7b44b0089ef5c5cce13618229f13247b395e9c0539ef4b7b107e2710b",
+      "tensor_count": 762,
+      "path": "codrone/final-epoch-evaluation/eav-detr/seed-42",
+      "files": [
+        {
+          "path": "codrone/final-epoch-evaluation/eav-detr/seed-42/PARAMETER-VERIFICATION.json",
+          "bytes": 197731,
+          "sha256": "2cdff89b3303c523bb32ac7ba3982ccd32de80eef567204101c03671b4b7668f"
+        },
+        {
+          "path": "codrone/final-epoch-evaluation/eav-detr/seed-42/config.yml",
+          "bytes": 3297,
+          "sha256": "e2a30da7b44b0089ef5c5cce13618229f13247b395e9c0539ef4b7b107e2710b"
+        },
+        {
+          "path": "codrone/final-epoch-evaluation/eav-detr/seed-42/inference.pth",
+          "bytes": 174147787,
+          "sha256": "050773476f617f20f9ba53ff5e1c28823e737cd8d229256812b1a67f229709cf"
+        }
+      ]
+    },
+    {
+      "dataset": "DIOR-R",
+      "model": "oriented-rcnn",
+      "seed": 0,
+      "modality": "optical",
+      "protocol": "train-only-validation-check",
+      "epochs_completed": 12,
+      "source_commit": "3ff004eb21ea040455b5585db229edba4037f1bf",
+      "selected_parameter_branch": "state_dict",
+      "public_top_level_key": "state_dict",
+      "source_checkpoint_sha256": "14e019be7d1d3cfeb0aac5cdb0fe4ecdb8d93a805c43667fbe0923d0e079b871",
+      "inference_sha256": "c1306c7b690fd41407c8af2992df5296ea98f1f088cfe90ed72b29ba7c64a0e6",
+      "inference_bytes": 165801099,
+      "parameter_manifest_sha256": "3aa590b0588393fcf1beca92144e98c29e653b58d80d78784003f7d2587ec3ce",
+      "config_sha256": "caab0fed61977dacb8715e6cbec3123e1029b2c00649d35c5176078f0f968e3d",
+      "tensor_count": 348,
+      "path": "dior/train-only-validation-check/oriented-rcnn/seed-0",
+      "files": [
+        {
+          "path": "dior/train-only-validation-check/oriented-rcnn/seed-0/PARAMETER-VERIFICATION.json",
+          "bytes": 85025,
+          "sha256": "427ceaa841716d905592dcd1d531318e7c45996d480b324184b51c18ca977bdd"
+        },
+        {
+          "path": "dior/train-only-validation-check/oriented-rcnn/seed-0/config.py",
+          "bytes": 7356,
+          "sha256": "caab0fed61977dacb8715e6cbec3123e1029b2c00649d35c5176078f0f968e3d"
+        },
+        {
+          "path": "dior/train-only-validation-check/oriented-rcnn/seed-0/inference.pth",
+          "bytes": 165801099,
+          "sha256": "c1306c7b690fd41407c8af2992df5296ea98f1f088cfe90ed72b29ba7c64a0e6"
+        }
+      ]
+    },
+    {
+      "dataset": "DIOR-R",
+      "model": "roi-transformer",
+      "seed": 0,
+      "modality": "optical",
+      "protocol": "train-only-validation-check",
+      "epochs_completed": 12,
+      "source_commit": "3ff004eb21ea040455b5585db229edba4037f1bf",
+      "selected_parameter_branch": "state_dict",
+      "public_top_level_key": "state_dict",
+      "source_checkpoint_sha256": "7872031ee95296a04473fba281b6038f3bcd398096b5a13f3f7a4a754539ba85",
+      "inference_sha256": "57df028b64b2493acc4b51de480749ac062b3a1b376fff8df0450788ec110b5b",
+      "inference_bytes": 221876235,
+      "parameter_manifest_sha256": "f1a8a455b311339ea87bad62c5261aa202918b2823f7db4031871b4aed7f34b3",
+      "config_sha256": "290117281cafeab721c9a6149edbef500128c38107562e5c640ddb6f84cf53c7",
+      "tensor_count": 356,
+      "path": "dior/train-only-validation-check/roi-transformer/seed-0",
+      "files": [
+        {
+          "path": "dior/train-only-validation-check/roi-transformer/seed-0/PARAMETER-VERIFICATION.json",
+          "bytes": 87037,
+          "sha256": "a7627e2095f43ba53898054cf8df5ac0b0c195a3182a732a04b9f0bcec0e3bc4"
+        },
+        {
+          "path": "dior/train-only-validation-check/roi-transformer/seed-0/config.py",
+          "bytes": 8471,
+          "sha256": "290117281cafeab721c9a6149edbef500128c38107562e5c640ddb6f84cf53c7"
+        },
+        {
+          "path": "dior/train-only-validation-check/roi-transformer/seed-0/inference.pth",
+          "bytes": 221876235,
+          "sha256": "57df028b64b2493acc4b51de480749ac062b3a1b376fff8df0450788ec110b5b"
+        }
+      ]
+    },
+    {
+      "dataset": "DIOR-R",
+      "model": "rotated-rtmdet-l",
+      "seed": 0,
+      "modality": "optical",
+      "protocol": "train-only-validation-check",
+      "epochs_completed": 36,
+      "source_commit": "3ff004eb21ea040455b5585db229edba4037f1bf",
+      "selected_parameter_branch": "state_dict",
+      "public_top_level_key": "state_dict",
+      "source_checkpoint_sha256": "7e9405dc8b4a0e24599e582d76827cfc1ff857166bb72676dc11075c29fcecf2",
+      "inference_sha256": "243972b9ac5b06bc9ce06a57f8963b509b4ad2ce7ace0ed4c48c25b0a600804a",
+      "inference_bytes": 228561355,
+      "parameter_manifest_sha256": "9982a863463afc5667e18b7283dbd82febbb4b68e64eb81a0cb199c9b5230e0d",
+      "config_sha256": "0a8f464e30f449ba309aa31e0fb466547c5ef5bcfa3e67d00243fe00c428ac8d",
+      "tensor_count": 878,
+      "path": "dior/train-only-validation-check/rotated-rtmdet-l/seed-0",
+      "files": [
+        {
+          "path": "dior/train-only-validation-check/rotated-rtmdet-l/seed-0/PARAMETER-VERIFICATION.json",
+          "bytes": 227589,
+          "sha256": "78729e67fa64d89fb6964ba3fddb039dd1049a6703f0114be027a53e5c9f95f1"
+        },
+        {
+          "path": "dior/train-only-validation-check/rotated-rtmdet-l/seed-0/config.py",
+          "bytes": 6469,
+          "sha256": "0a8f464e30f449ba309aa31e0fb466547c5ef5bcfa3e67d00243fe00c428ac8d"
+        },
+        {
+          "path": "dior/train-only-validation-check/rotated-rtmdet-l/seed-0/inference.pth",
+          "bytes": 228561355,
+          "sha256": "243972b9ac5b06bc9ce06a57f8963b509b4ad2ce7ace0ed4c48c25b0a600804a"
+        }
+      ]
+    },
+    {
+      "dataset": "DIOR-R",
+      "model": "s2anet",
+      "seed": 0,
+      "modality": "optical",
+      "protocol": "train-only-validation-check",
+      "epochs_completed": 12,
+      "source_commit": "3ff004eb21ea040455b5585db229edba4037f1bf",
+      "selected_parameter_branch": "state_dict",
+      "public_top_level_key": "state_dict",
+      "source_checkpoint_sha256": "67729ff8273a7d8b35946f1a30bbb5a22600dcabc289a58b2de4bf2a2870aff1",
+      "inference_sha256": "b2e0e975bb03145296be5cd68f092fe22e1cade6a8b15f2763ed7fc8f9f6d3dd",
+      "inference_bytes": 146281483,
+      "parameter_manifest_sha256": "e94fac902119f91a014d574300b2dc213b6415559edbd3be5b29cd860d0a91c0",
+      "config_sha256": "5d2c9594d6aff5a4b9f12262dc12da57ecdb24d24f807ed98ddbc81ee7516ecc",
+      "tensor_count": 362,
+      "path": "dior/train-only-validation-check/s2anet/seed-0",
+      "files": [
+        {
+          "path": "dior/train-only-validation-check/s2anet/seed-0/PARAMETER-VERIFICATION.json",
+          "bytes": 88901,
+          "sha256": "db29c54f7fad2d399eed21da484d9a798fa6716ab9cdf9aa58d4ced9ae07d100"
+        },
+        {
+          "path": "dior/train-only-validation-check/s2anet/seed-0/config.py",
+          "bytes": 6898,
+          "sha256": "5d2c9594d6aff5a4b9f12262dc12da57ecdb24d24f807ed98ddbc81ee7516ecc"
+        },
+        {
+          "path": "dior/train-only-validation-check/s2anet/seed-0/inference.pth",
+          "bytes": 146281483,
+          "sha256": "b2e0e975bb03145296be5cd68f092fe22e1cade6a8b15f2763ed7fc8f9f6d3dd"
+        }
+      ]
+    }
+  ],
+  "complete_paper_reproduction_claimed": false
+}

@@ -27,8 +27,11 @@ matching inputs, trained weights and third-party reference code are not supplied
 as new revision evidence. Historical derived records have a different scope and
 remain subject to provider terms. Requests for research records should identify
 the dataset, detector, split, method and result-file hash. The four DIOR-R
-validation-check weight files are not included, and availability has not been
-confirmed; hashes and saved outputs do not substitute for the files.
+validation-check parameters are now publicly downloadable, together with the
+final evaluated EAV-DETR parameters, in
+the separate [model collection](https://huggingface.co/PeterPonyu/rotcert-models). Its [manifest](https://huggingface.co/PeterPonyu/rotcert-models/blob/a6303b7ab4effbe6cdde6757bd350bb9e5a802d7/MANIFEST.json)
+provides the file hashes and parameter-equivalence records. These later model
+files do not change the earlier archive or supply every missing analysis input.
 
 Later supplementary illustration generators and their scene/source-role records
 are not present in version 0.3.0. Do not treat the software archive as a complete

@@ -11,6 +11,7 @@ a release; a version DOI and its tagged archive identify the unchanged software
 snapshot, not every later manuscript or illustration update.
 
 - Source: [GitHub repository](https://github.com/PeterPonyu/rotcert).
+- Evaluated models: [public Hugging Face collection](https://huggingface.co/PeterPonyu/rotcert-models).
 - Version 0.3.0: [10.5281/zenodo.23184005](https://doi.org/10.5281/zenodo.23184005).
 - Historical version 0.2.0: [10.5281/zenodo.22211671](https://doi.org/10.5281/zenodo.22211671).
 - All versions: [10.5281/zenodo.21392292](https://doi.org/10.5281/zenodo.21392292).
@@ -101,10 +102,13 @@ independent samples.
 Dataset and upstream-code terms continue to apply. The MIT license covers the
 original software and does not relicense provider data. Underlying research
 records may be requested from the corresponding author, subject to those terms
-and actual availability. The four DIOR-R validation-check checkpoints are not
-included and their availability has not been confirmed; saved outputs and
-checkpoint hashes do not substitute for the weight files. No claim is made that
-all weights are lost or that replacement training recreates them.
+and actual availability. The four DIOR-R validation-check weights and the final evaluated EAV-DETR
+parameters are now publicly downloadable in the separate [model collection](https://huggingface.co/PeterPonyu/rotcert-models).
+That collection currently provides these five saved evaluated models,
+portable configurations and per-parameter
+verification. It is not a complete training-resume or full-paper replay bundle;
+see its [fixed revision](https://huggingface.co/PeterPonyu/rotcert-models/tree/a6303b7ab4effbe6cdde6757bd350bb9e5a802d7) and [model manifest](https://huggingface.co/PeterPonyu/rotcert-models/blob/a6303b7ab4effbe6cdde6757bd350bb9e5a802d7/MANIFEST.json).
+These later files are not retroactively included in the version 0.3.0 DOI.
 
 See `CITATION.cff`, `LICENSE` and [archive information](ZENODO.md) for citation and
 licensing. No new study, journal submission or publication decision is implied by

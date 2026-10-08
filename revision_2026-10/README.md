@@ -46,8 +46,11 @@ false-positive shares are separate from TP-conditional localization coverage.
 Infinite regions, missing support and non-issuance of a finite report must retain
 their distinct meanings.
 
-The four DIOR-R validation-check weight files are not in this release and their
-availability has not been confirmed. Saved detections and checkpoint identities
-remain available for the documented analysis; they are not the weight files.
-No substitute retraining is presented as recovery of the originals. EAV weight
-preservation does not imply that every detector checkpoint is included here.
+The saved four-family DIOR-R validation-check parameters and final EAV-DETR
+parameters are publicly available in the separate [model collection](https://huggingface.co/PeterPonyu/rotcert-models).
+It currently provides those five models. Further candidate main and
+supplementary checkpoints are not yet publicly provided. Its [manifest](https://huggingface.co/PeterPonyu/rotcert-models/blob/a6303b7ab4effbe6cdde6757bd350bb9e5a802d7/MANIFEST.json) identifies the exact
+datasets, seeds, configurations and evaluated branches. The model files are
+not part of the earlier software archive and do not replace missing
+source-level role, calibration or matching records. No retraining was
+substituted for the saved originals.
